@@ -9,82 +9,52 @@ const MediaBuying = () => {
     {
       icon: <Facebook className="h-10 w-10 text-[#33C3F0]" />,
       title: "Meta Ads",
-      description: "Campanhas estratégicas no Facebook, Instagram e Audience Network, com segmentações avançadas, funis estruturados e uso de automações como Advantage+ e catálogo dinâmico. Atuação completa da copy ao criativo, com foco em resultado."
+      description: "Gerenciamento estratégico de campanhas para Facebook, Instagram e Audience Network com segmentação avançada, funis estruturados e ferramentas de automação como Advantage+ e catálogo dinâmico. Serviço completo desde copywriting até criativos, focado em resultados."
     },
     {
       icon: <Search className="h-10 w-10 text-[#33C3F0]" />,
       title: "Google Ads",
-      description: "Campanhas de Search, Display, YouTube, Shopping e Performance Max, sempre com pesquisa aprofundada, estruturação de palavras-chave, bidding inteligente e otimização constante do ROAS."
+      description: "Campanhas de Search, Display, YouTube, Shopping e Performance Max, sempre com pesquisa aprofundada, estruturação de palavras-chave, lances inteligentes e otimização constante de ROAS."
     },
     {
       icon: <Instagram className="h-10 w-10 text-[#33C3F0]" />,
       title: "TikTok Ads",
-      description: "Criação de campanhas visuais com foco em engajamento e conversão. Estratégias que aproveitam o formato nativo da plataforma, com linguagem criativa e objetivos de performance."
+      description: "Criação de campanhas visuais focadas em engajamento e conversão. Estratégias que aproveitam o formato nativo da plataforma, com linguagem criativa e objetivos de performance."
     },
     {
       icon: <Bookmark className="h-10 w-10 text-[#33C3F0]" />,
       title: "Pinterest Ads",
-      description: "Campanhas voltadas para descoberta e conversão, com criativos pensados para o formato inspiracional da plataforma. Ideal para e-commerce, moda, decoração, beleza e segmentos visuais. Estratégias full-funnel com foco em crescimento sustentável e tráfego qualificado."
+      description: "Campanhas focadas em descoberta e conversão, com criativos desenhados para o formato inspiracional da plataforma. Ideal para e-commerce, moda, decoração, beleza e segmentos visuais. Estratégias de funil completo voltadas para crescimento sustentável e tráfego qualificado."
     },
     {
       icon: <Bot className="h-10 w-10 text-[#33C3F0]" />,
       title: "Inteligência Artificial Aplicada",
-      description: "Utilização de IA nas principais plataformas para otimizar entrega, segmentações, criativos dinâmicos e prever padrões de comportamento. Soluções que integram inteligência com performance."
+      description: "Uso de IA nas principais plataformas para otimizar entrega, segmentação, criativos dinâmicos e prever padrões de comportamento. Soluções que integram inteligência com performance."
     },
     {
       icon: <Target className="h-10 w-10 text-[#33C3F0]" />,
       title: "Otimização de Conversão (CRO)",
-      description: "Ações orientadas para reduzir o CAC e aumentar as taxas de conversão, por meio de ajustes estratégicos em campanhas, criativos, páginas de destino e mensagens."
+      description: "Ações voltadas para reduzir CAC e aumentar taxas de conversão através de ajustes estratégicos em campanhas, criativos, páginas de destino e mensagens."
     },
     {
       icon: <Database className="h-10 w-10 text-[#33C3F0]" />,
-      title: "Tracking e Análise Avançada",
+      title: "Rastreamento Avançado e Analytics",
       description: "Implementação de pixels, eventos personalizados, tagueamento com ferramentas como GTM, ctwaclid e UTMs. Dashboards personalizados com dados em tempo real e relatórios com insights acionáveis."
     }
   ];
 
   const portfolioItems = [
     {
-      title: "Loja Virtual Febracis — Da Crise ao Crescimento Exponencial",
-      description: "A loja enfrentava seis meses de prejuízo em mídia paga. Implementamos estratégias que resultaram em R$77.000 em faturamento (267% de crescimento) e ROAS de 963% com investimento de R$8.000.",
+      title: "Campanha de Conversão E-commerce",
+      description: "Campanha estratégica no Facebook e Instagram para um cliente de e-commerce que alcançou 450% de ROAS e diminuiu o CPA em 35%.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      tags: ["Meta Ads", "Google Ads", "ROAS 963%"]
+      tags: ["Meta Ads", "E-commerce", "ROAS"]
     },
     {
-      title: "Urban Effort — Do Zero ao Breakeven em 3 Meses",
-      description: "Marca americana de bonés que vendía apenas na Amazon conseguiu criar um canal próprio de vendas com +291% de crescimento no faturamento e breakeven atingido antes dos 3 meses.",
+      title: "Geração de Leads SaaS",
+      description: "Campanha do Google Ads para uma empresa SaaS que gerou mais de 200 leads qualificados por mês com 20% de conversão para clientes pagantes.",
       image: "https://images.unsplash.com/photo-1543286386-713bdd548da4",
-      tags: ["Meta Ads", "Google Ads", "Catálogo Dinâmico"]
-    },
-    {
-      title: "Borogodó Brasil — Reviravolta no Faturamento em 30 Dias",
-      description: "Após queda drástica nas vendas, implementamos estratégias focadas em Meta Ads que resultaram em +36% em visitas únicas, +24% em vendas, +40% em receita e +13% em ticket médio.",
-      image: "https://images.unsplash.com/photo-1579170053380-58a5b28fe766",
-      tags: ["Meta Ads", "Pixel Otimizado", "Advantage+"]
-    },
-    {
-      title: "Vamos — +50% nas Vendas com Aquisição Inteligente",
-      description: "Empresa de aluguel de veículos pesados conseguiu +50% nas vendas em um mês, expansão da base de leads e aumento do ticket médio via remarketing.",
-      image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312",
-      tags: ["Meta Ads", "Remarketing Dinâmico"]
-    },
-    {
-      title: "Qualicorp — Redução de 30% no CPL",
-      description: "Operadora enfrentava alto custo por lead. Com palavras-chave de fundo de funil e Smart Bidding, conseguiu -30% no CPL e maior qualidade nos leads captados.",
-      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf",
-      tags: ["Google Ads", "Smart Bidding"]
-    },
-    {
-      title: "Unileão — Redução de 118% no CPL com Performance Max",
-      description: "Instituição educacional conseguiu -118% no custo por lead, aumento expressivo de leads qualificados e ROI positivo já no primeiro mês após otimização.",
-      image: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11",
-      tags: ["Google Ads", "Performance Max"]
-    },
-    {
-      title: "Rastreamento Inteligente no WhatsApp — +462% em Conversas",
-      description: "Implementação de rastreamento via ctwaclid nas campanhas de Meta Ads resultou em aumento de +462,16% no volume de conversas iniciadas e redução de -81,34% no custo por mensagem.",
-      image: "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a",
-      tags: ["Meta Ads", "WhatsApp", "Tracking"]
+      tags: ["Google Ads", "SaaS", "Geração de Leads"]
     }
   ];
 
@@ -93,14 +63,14 @@ const MediaBuying = () => {
       <div className="max-w-6xl mx-auto">
         <Link to="/pt">
           <Button variant="ghost" className="mb-6 bg-white/50 hover:bg-white/70">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Início
+            <ArrowLeft className="mr-2 h-4 w-4" /> Voltar ao Início
           </Button>
         </Link>
         
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Serviços de Mídia Paga e Performance Inteligente</h1>
         <p className="text-xl text-white mb-12">
           Campanhas orientadas por dados, automações e inteligência artificial para escalar seus resultados.
-          Minha atuação une criatividade, tecnologia e performance em estratégias completas de mídia paga.
+          Minha abordagem combina criatividade, tecnologia e performance em estratégias completas de mídia paga.
         </p>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -120,7 +90,7 @@ const MediaBuying = () => {
         </div>
         
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-[#0EA5E9]">Portfólio e Cases Estratégicos</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[#0EA5E9]">Portfólio e Casos de Sucesso Estratégicos</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {portfolioItems.map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">

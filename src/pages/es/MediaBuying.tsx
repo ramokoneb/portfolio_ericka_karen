@@ -2,34 +2,44 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search, Bookmark, Bot, Settings, Zap } from "lucide-react";
+import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search, Bookmark, Youtube, Bot, Target, LineChart, Database, MessageSquare } from "lucide-react";
 
 const MediaBuying = () => {
   const services = [
     {
       icon: <Facebook className="h-10 w-10 text-[#33C3F0]" />,
       title: "Meta Ads",
-      description: "Gestión estratégica de campañas para Facebook, Instagram y Audience Network con segmentación optimizada y enfoques creativos."
+      description: "Gestión estratégica de campañas para Facebook, Instagram y Audience Network con segmentación avanzada, embudos estructurados y herramientas de automatización como Advantage+ y catálogo dinámico. Servicio completo desde copywriting hasta creativos, enfocado en resultados."
     },
     {
       icon: <Search className="h-10 w-10 text-[#33C3F0]" />,
       title: "Google Ads",
-      description: "Campañas de Search, Display y YouTube desarrolladas con investigación de palabras clave y análisis competitivo para maximizar tu ROAS."
+      description: "Campañas de Search, Display, YouTube, Shopping y Performance Max, siempre con investigación profunda, estructuración de palabras clave, pujas inteligentes y optimización constante de ROAS."
     },
     {
       icon: <Instagram className="h-10 w-10 text-[#33C3F0]" />,
       title: "TikTok Ads",
-      description: "Campañas publicitarias creativas que aprovechan el formato único de TikTok y las oportunidades de engagement con la audiencia."
+      description: "Creación de campañas visuales enfocadas en engagement y conversión. Estrategias que aprovechan el formato nativo de la plataforma, con lenguaje creativo y objetivos de rendimiento."
     },
     {
-      icon: <BarChart className="h-10 w-10 text-[#33C3F0]" />,
-      title: "Análisis de Rendimiento",
-      description: "Informes detallados y análisis para seguir el rendimiento de las campañas e identificar oportunidades de optimización."
+      icon: <Bookmark className="h-10 w-10 text-[#33C3F0]" />,
+      title: "Pinterest Ads",
+      description: "Campañas enfocadas en descubrimiento y conversión, con creativos diseñados para el formato inspiracional de la plataforma. Ideal para e-commerce, moda, decoración, belleza y segmentos visuales. Estrategias de embudo completo orientadas al crecimiento sostenible y tráfico cualificado."
     },
     {
-      icon: <TrendingUp className="h-10 w-10 text-[#33C3F0]" />,
-      title: "Optimización de Conversión",
-      description: "Estrategias enfocadas en mejorar las tasas de conversión y reducir los costos de adquisición de clientes."
+      icon: <Bot className="h-10 w-10 text-[#33C3F0]" />,
+      title: "Inteligencia Artificial Aplicada",
+      description: "Uso de IA en las principales plataformas para optimizar la entrega, segmentación, creativos dinámicos y predecir patrones de comportamiento. Soluciones que integran inteligencia con rendimiento."
+    },
+    {
+      icon: <Target className="h-10 w-10 text-[#33C3F0]" />,
+      title: "Optimización de Conversión (CRO)",
+      description: "Acciones dirigidas a reducir el CAC y aumentar las tasas de conversión mediante ajustes estratégicos en campañas, creativos, páginas de destino y mensajes."
+    },
+    {
+      icon: <Database className="h-10 w-10 text-[#33C3F0]" />,
+      title: "Seguimiento Avanzado y Analítica",
+      description: "Implementación de píxeles, eventos personalizados, etiquetado con herramientas como GTM, ctwaclid y UTMs. Paneles personalizados con datos en tiempo real e informes con insights accionables."
     }
   ];
 
@@ -44,7 +54,7 @@ const MediaBuying = () => {
       title: "Generación de Leads SaaS",
       description: "Campaña de Google Ads para una empresa SaaS que generó más de 200 leads calificados por mes con una conversión del 20% a clientes pagos.",
       image: "https://images.unsplash.com/photo-1543286386-713bdd548da4",
-      tags: ["Google Ads", "SaaS", "Generación de Leads"]
+      tags: ["Google Ads", "SaaS", "Lead Gen"]
     }
   ];
 
@@ -57,9 +67,10 @@ const MediaBuying = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white">Servicios de Medios Pagos</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Servicios de Medios Pagos e Performance Inteligente</h1>
         <p className="text-xl text-white mb-12">
-          Especialista en campañas de medios pagos enfocadas en resultados medibles y ROI positivo.
+          Campañas basadas en datos, automatizaciones e inteligencia artificial para escalar tus resultados.
+          Mi enfoque combina creatividad, tecnología y rendimiento en estrategias completas de medios pagos.
         </p>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -79,7 +90,7 @@ const MediaBuying = () => {
         </div>
         
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-[#0EA5E9]">Portafolio y Casos de Éxito</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[#0EA5E9]">Portafolio y Casos de Éxito Estratégicos</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {portfolioItems.map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
