@@ -1,23 +1,67 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { LineChart, Bot } from "lucide-react";
+import { LineChart, Bot, Linkedin, Mail, MessageSquare } from "lucide-react";
+import { useState } from "react";
 
 const Index = () => {
+  const [language, setLanguage] = useState<"en" | "pt">("en");
+  
+  const content = {
+    en: {
+      name: "Ericka Karen",
+      description: "Digital transformation specialist, combining paid media strategies with intelligent automation and AI solutions to drive exceptional results.",
+      mediaButton: "Paid Media Services",
+      automationButton: "Automation & AI",
+      contact: "Contact Me",
+      whatsapp: "WhatsApp",
+      linkedin: "LinkedIn",
+      email: "Email"
+    },
+    pt: {
+      name: "Ericka Karen",
+      description: "Especialista em transformação digital, combinando estratégias de mídia paga com soluções inteligentes de automação e IA para impulsionar resultados excepcionais.",
+      mediaButton: "Serviços de Mídia Paga",
+      automationButton: "Automação & IA",
+      contact: "Contato",
+      whatsapp: "WhatsApp",
+      linkedin: "LinkedIn",
+      email: "E-mail"
+    }
+  };
+  
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === "en" ? "pt" : "en");
+  };
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-gradient-to-br from-[#D3E4FD] via-white to-[#FFDEE2]">
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-gradient-to-br from-[#5BCEFA] via-white to-[#F5A9B8]">
+      <div className="absolute top-4 right-4">
+        <Button 
+          variant="outline" 
+          className="rounded-full bg-white text-gray-700 hover:bg-gray-100" 
+          onClick={toggleLanguage}
+        >
+          {language === "en" ? "PT" : "EN"}
+        </Button>
+      </div>
+      
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <div className="mb-12">
-          {/* Replace with your professional photo */}
-          <div className="w-48 h-48 rounded-full mx-auto mb-8 bg-[#FFDEE2] border-4 border-[#D3E4FD]">
-            {/* Add your photo here using the img tag */}
+          {/* Professional photo */}
+          <div className="w-48 h-48 rounded-full mx-auto mb-8 bg-[#F5A9B8] border-4 border-[#5BCEFA] overflow-hidden">
+            {/* Add Ericka's photo here */}
+            <img 
+              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500"
+              alt="Ericka Karen"
+            />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#D3E4FD] to-[#FFDEE2] mb-6">
-            Your Name
+          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#5BCEFA] to-[#F5A9B8] mb-6">
+            {content[language].name}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
-            Digital transformation specialist, combining paid media strategies with 
-            intelligent automation and AI solutions to drive exceptional results.
+          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
+            {content[language].description}
           </p>
         </div>
 
@@ -25,21 +69,36 @@ const Index = () => {
           <Link to="/media-buying">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#D3E4FD] hover:bg-[#FFDEE2] text-gray-700"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#5BCEFA] hover:bg-[#F5A9B8] text-white"
             >
               <LineChart className="mr-2" />
-              Media Buying
+              {content[language].mediaButton}
             </Button>
           </Link>
           <Link to="/automation-ai">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#FFDEE2] hover:bg-[#D3E4FD] text-gray-700"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#F5A9B8] hover:bg-[#5BCEFA] text-white"
             >
               <Bot className="mr-2" />
-              Automation & AI
+              {content[language].automationButton}
             </Button>
           </Link>
+        </div>
+
+        <div className="flex flex-wrap gap-4 justify-center mt-12">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#5BCEFA] hover:text-white">
+            <MessageSquare className="mr-2" />
+            {content[language].whatsapp}
+          </Button>
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#5BCEFA] hover:text-white">
+            <Linkedin className="mr-2" />
+            {content[language].linkedin}
+          </Button>
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#F5A9B8] hover:text-white">
+            <Mail className="mr-2" />
+            {content[language].email}
+          </Button>
         </div>
       </div>
     </div>
