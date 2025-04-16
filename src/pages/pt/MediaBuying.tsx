@@ -1,8 +1,7 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search, Pinterest, Youtube, Bot, Target, LineChart, Database, MessageSquare } from "lucide-react";
+import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search, Bookmark, Youtube, Bot, Target, LineChart, Database, MessageSquare } from "lucide-react";
 
 const MediaBuying = () => {
   const services = [
