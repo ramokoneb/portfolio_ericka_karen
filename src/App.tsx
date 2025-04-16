@@ -9,7 +9,6 @@ import Index from "./pages/Index";
 import MediaBuying from "./pages/MediaBuying";
 import AutomationAI from "./pages/AutomationAI";
 import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
@@ -31,7 +30,6 @@ const App = () => {
               <Route path="/media-buying" element={<MediaBuying />} />
               <Route path="/automation-ai" element={<AutomationAI />} />
               <Route path="/about" element={<About />} />
-              <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -22,7 +21,6 @@ const Navigation = () => {
       mediaBuying: "Media Buying",
       automation: "Automation & AI",
       about: "About",
-      portfolio: "Portfolio",
       contact: "Contact"
     },
     pt: {
@@ -30,7 +28,6 @@ const Navigation = () => {
       mediaBuying: "Mídia Paga",
       automation: "Automação & IA",
       about: "Sobre",
-      portfolio: "Portfólio",
       contact: "Contato"
     }
   };
@@ -92,14 +89,6 @@ const Navigation = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="/portfolio">
-                <NavigationMenuLink className="px-4 py-2 hover:text-[#F5A9B8]">
-                  {content[language].portfolio}
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            
-            <NavigationMenuItem>
               <Link to="/contact">
                 <Button className="bg-[#F5A9B8] hover:bg-[#5BCEFA]">
                   {content[language].contact}
@@ -152,9 +141,6 @@ const Navigation = () => {
                 </Link>
                 <Link to="/about" className="p-2 hover:bg-gray-100 rounded">
                   {content[language].about}
-                </Link>
-                <Link to="/portfolio" className="p-2 hover:bg-gray-100 rounded">
-                  {content[language].portfolio}
                 </Link>
                 <Link to="/contact" className="p-2 hover:bg-gray-100 rounded">
                   {content[language].contact}

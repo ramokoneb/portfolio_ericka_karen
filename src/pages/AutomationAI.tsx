@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -74,7 +73,50 @@ const AutomationAI = () => {
       ]
     }
   };
-  
+
+  const portfolioItems = {
+    en: [
+      {
+        title: "Customer Support Automation",
+        description: "WhatsApp automation solution that handled 80% of customer inquiries automatically, reducing response time by 95%.",
+        image: "https://images.unsplash.com/photo-1560807707-8cc77767d783?q=80&w=500",
+        tags: ["WhatsApp", "Customer Support", "Chatbot"]
+      },
+      {
+        title: "AI Lead Scoring System",
+        description: "Custom AI solution that analyzed customer behavior patterns to score leads, improving sales team efficiency by 65%.",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500",
+        tags: ["AI", "Machine Learning", "Lead Scoring"]
+      },
+      {
+        title: "Marketing & CRM Integration",
+        description: "End-to-end integration between marketing platforms and CRM system with automated lead qualification workflows.",
+        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=500",
+        tags: ["CRM", "Integration", "Workflow"]
+      }
+    ],
+    pt: [
+      {
+        title: "Automação de Suporte ao Cliente",
+        description: "Solução de automação do WhatsApp que tratou 80% das consultas de clientes automaticamente, reduzindo o tempo de resposta em 95%.",
+        image: "https://images.unsplash.com/photo-1560807707-8cc77767d783?q=80&w=500",
+        tags: ["WhatsApp", "Suporte ao Cliente", "Chatbot"]
+      },
+      {
+        title: "Sistema de Pontuação de Leads com IA",
+        description: "Solução de IA personalizada que analisou padrões de comportamento do cliente para pontuar leads, melhorando a eficiência da equipe de vendas em 65%.",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500",
+        tags: ["IA", "Machine Learning", "Pontuação de Leads"]
+      },
+      {
+        title: "Integração de Marketing & CRM",
+        description: "Integração completa entre plataformas de marketing e sistema CRM com fluxos de trabalho automatizados de qualificação de leads.",
+        image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=500",
+        tags: ["CRM", "Integração", "Workflow"]
+      }
+    ]
+  };
+
   const toggleLanguage = () => {
     setLanguage(prev => prev === "en" ? "pt" : "en");
   };
@@ -121,21 +163,36 @@ const AutomationAI = () => {
         
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-[#F5A9B8]">
-            {language === "en" ? "Automation Benefits" : "Benefícios da Automação"}
+            {language === "en" ? "Portfolio & Case Studies" : "Portfólio e Cases"}
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <p className="text-4xl font-bold text-[#5BCEFA]">70%</p>
-              <p className="text-lg mt-2">{language === "en" ? "Time Saved" : "Tempo Economizado"}</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <p className="text-4xl font-bold text-[#5BCEFA]">40%</p>
-              <p className="text-lg mt-2">{language === "en" ? "Error Reduction" : "Redução de Erros"}</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <p className="text-4xl font-bold text-[#5BCEFA]">2.5x</p>
-              <p className="text-lg mt-2">{language === "en" ? "Productivity Increase" : "Aumento de Produtividade"}</p>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioItems[language].map((item, index) => (
+              <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover transition-transform hover:scale-105"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 mb-4">{item.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {item.tags.map((tag) => (
+                      <span 
+                        key={tag}
+                        className="px-2 py-1 bg-[#5BCEFA]/10 text-[#5BCEFA] rounded-full text-xs font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

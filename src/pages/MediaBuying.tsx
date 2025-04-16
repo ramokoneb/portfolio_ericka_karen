@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -74,7 +73,38 @@ const MediaBuying = () => {
       ]
     }
   };
-  
+
+  const portfolioItems = {
+    en: [
+      {
+        title: "E-commerce Conversion Campaign",
+        description: "Strategic Facebook and Instagram campaign for an e-commerce client that achieved 450% ROAS and decreased CPA by 35%.",
+        image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=500",
+        tags: ["Meta Ads", "E-commerce", "ROAS"]
+      },
+      {
+        title: "SaaS Lead Generation",
+        description: "Google Ads campaign for a SaaS company that generated 200+ qualified leads per month with a 20% conversion to paid customers.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+        tags: ["Google Ads", "SaaS", "Lead Gen"]
+      }
+    ],
+    pt: [
+      {
+        title: "Campanha de Conversão E-commerce",
+        description: "Campanha estratégica no Facebook e Instagram para um cliente de e-commerce que alcançou 450% de ROAS e diminuiu o CPA em 35%.",
+        image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=500",
+        tags: ["Meta Ads", "E-commerce", "ROAS"]
+      },
+      {
+        title: "Geração de Leads SaaS",
+        description: "Campanha do Google Ads para uma empresa SaaS que gerou mais de 200 leads qualificados por mês com 20% de conversão para clientes pagantes.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+        tags: ["Google Ads", "SaaS", "Geração de Leads"]
+      }
+    ]
+  };
+
   const toggleLanguage = () => {
     setLanguage(prev => prev === "en" ? "pt" : "en");
   };
@@ -120,22 +150,37 @@ const MediaBuying = () => {
         </div>
         
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-[#5BCEFA]">
-            {language === "en" ? "Client Results" : "Resultados de Clientes"}
+          <h2 className="text-2xl font-bold mb-6 text-[#F5A9B8]">
+            {language === "en" ? "Portfolio & Case Studies" : "Portfólio e Cases"}
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <p className="text-4xl font-bold text-[#F5A9B8]">350%</p>
-              <p className="text-lg mt-2">{language === "en" ? "Average ROAS" : "ROAS Médio"}</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <p className="text-4xl font-bold text-[#F5A9B8]">-40%</p>
-              <p className="text-lg mt-2">{language === "en" ? "Reduced CPA" : "Redução de CPA"}</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <p className="text-4xl font-bold text-[#F5A9B8]">+25K</p>
-              <p className="text-lg mt-2">{language === "en" ? "Qualified Leads" : "Leads Qualificados"}</p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {portfolioItems[language].map((item, index) => (
+              <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover transition-transform hover:scale-105"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 mb-4">{item.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {item.tags.map((tag) => (
+                      <span 
+                        key={tag}
+                        className="px-2 py-1 bg-[#5BCEFA]/10 text-[#5BCEFA] rounded-full text-xs font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
