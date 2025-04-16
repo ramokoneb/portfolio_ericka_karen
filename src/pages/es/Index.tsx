@@ -36,7 +36,7 @@ const Index = () => {
           <Link to="/es/automation-ai">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#F5A9B8] hover:bg-[#0EA5E9] text-white"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#0EA5E9] hover:bg-[#1EAEDB] text-white"
             >
               <Bot className="mr-2" />
               Automatización & IA
