@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -45,46 +44,16 @@ const MediaBuying = () => {
 
   const portfolioItems = [
     {
-      title: "Febracis Virtual Store — From Crisis to Exponential Growth",
-      description: "The store was facing six months of losses in paid media. We implemented strategies that resulted in R$77,000 in revenue (267% growth) and a 963% ROAS with an investment of R$8,000.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=500",
-      tags: ["Meta Ads", "Google Ads", "963% ROAS"]
+      title: "E-commerce Conversion Campaign",
+      description: "Strategic Facebook and Instagram campaign for an e-commerce client that achieved 450% ROAS and decreased CPA by 35%.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6", // Monitor with data graph
+      tags: ["Meta Ads", "E-commerce", "ROAS"]
     },
     {
-      title: "Urban Effort — From Zero to Breakeven in 3 Months",
-      description: "American hat brand that only sold on Amazon was able to create its own sales channel with +291% revenue growth and breakeven achieved in less than 3 months.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500",
-      tags: ["Meta Ads", "Google Ads", "Dynamic Catalog"]
-    },
-    {
-      title: "Borogodó Brasil — Revenue Turnaround in 30 Days",
-      description: "After a drastic drop in sales, we implemented Meta Ads-focused strategies that resulted in +36% unique visits, +24% sales, +40% revenue and +13% average ticket.",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?q=80&w=500",
-      tags: ["Meta Ads", "Optimized Pixel", "Advantage+"]
-    },
-    {
-      title: "Vamos — +50% in Sales with Intelligent Acquisition",
-      description: "Heavy vehicle rental company achieved +50% in sales in one month, expansion of the lead base and increased average ticket via remarketing.",
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=500",
-      tags: ["Meta Ads", "Dynamic Remarketing"]
-    },
-    {
-      title: "Qualicorp — 30% Reduction in CPL",
-      description: "Healthcare operator was facing high cost per lead. With bottom-of-funnel keywords and Smart Bidding, they achieved -30% in CPL and higher quality leads.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=500",
-      tags: ["Google Ads", "Smart Bidding"]
-    },
-    {
-      title: "Unileão — 118% Reduction in CPL with Performance Max",
-      description: "Educational institution achieved -118% in cost per lead, significant increase in qualified leads and positive ROI in the first month after optimization.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=500",
-      tags: ["Google Ads", "Performance Max"]
-    },
-    {
-      title: "Intelligent WhatsApp Tracking — +462% in Conversations",
-      description: "Implementation of tracking via ctwaclid in Meta Ads campaigns resulted in a +462.16% increase in conversation volume and -81.34% reduction in cost per message sent.",
-      image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=500",
-      tags: ["Meta Ads", "WhatsApp", "Tracking"]
+      title: "SaaS Lead Generation",
+      description: "Google Ads campaign for a SaaS company that generated 200+ qualified leads per month with a 20% conversion to paid customers.",
+      image: "https://images.unsplash.com/photo-1504893524553-b855bce32c67", // Image representing growth
+      tags: ["Google Ads", "SaaS", "Lead Gen"]
     }
   ];
 
