@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -21,7 +22,7 @@ const MediaBuying = () => {
       description: "Criação de campanhas visuais com foco em engajamento e conversão. Estratégias que aproveitam o formato nativo da plataforma, com linguagem criativa e objetivos de performance."
     },
     {
-      icon: <Pinterest className="h-10 w-10 text-[#33C3F0]" />,
+      icon: <Bookmark className="h-10 w-10 text-[#33C3F0]" />,
       title: "Pinterest Ads",
       description: "Campanhas voltadas para descoberta e conversão, com criativos pensados para o formato inspiracional da plataforma. Ideal para e-commerce, moda, decoração, beleza e segmentos visuais. Estratégias full-funnel com foco em crescimento sustentável e tráfego qualificado."
     },
@@ -46,37 +47,37 @@ const MediaBuying = () => {
     {
       title: "Loja Virtual Febracis — Da Crise ao Crescimento Exponencial",
       description: "A loja enfrentava seis meses de prejuízo em mídia paga. Implementamos estratégias que resultaram em R$77.000 em faturamento (267% de crescimento) e ROAS de 963% com investimento de R$8.000.",
-      image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=500",
       tags: ["Meta Ads", "Google Ads", "ROAS 963%"]
     },
     {
       title: "Urban Effort — Do Zero ao Breakeven em 3 Meses",
       description: "Marca americana de bonés que vendía apenas na Amazon conseguiu criar um canal próprio de vendas com +291% de crescimento no faturamento e breakeven atingido antes dos 3 meses.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500",
       tags: ["Meta Ads", "Google Ads", "Catálogo Dinâmico"]
     },
     {
       title: "Borogodó Brasil — Reviravolta no Faturamento em 30 Dias",
       description: "Após queda drástica nas vendas, implementamos estratégias focadas em Meta Ads que resultaram em +36% em visitas únicas, +24% em vendas, +40% em receita e +13% em ticket médio.",
-      image: "https://images.unsplash.com/photo-1560807707-8cc77767d783?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?q=80&w=500",
       tags: ["Meta Ads", "Pixel Otimizado", "Advantage+"]
     },
     {
       title: "Vamos — +50% nas Vendas com Aquisição Inteligente",
       description: "Empresa de aluguel de veículos pesados conseguiu +50% nas vendas em um mês, expansão da base de leads e aumento do ticket médio via remarketing.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=500",
       tags: ["Meta Ads", "Remarketing Dinâmico"]
     },
     {
       title: "Qualicorp — Redução de 30% no CPL",
       description: "Operadora enfrentava alto custo por lead. Com palavras-chave de fundo de funil e Smart Bidding, conseguiu -30% no CPL e maior qualidade nos leads captados.",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=500",
       tags: ["Google Ads", "Smart Bidding"]
     },
     {
       title: "Unileão — Redução de 118% no CPL com Performance Max",
       description: "Instituição educacional conseguiu -118% no custo por lead, aumento expressivo de leads qualificados e ROI positivo já no primeiro mês após otimização.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=500",
       tags: ["Google Ads", "Performance Max"]
     },
     {
