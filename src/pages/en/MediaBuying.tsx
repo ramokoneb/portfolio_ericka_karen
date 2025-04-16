@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -46,13 +47,13 @@ const MediaBuying = () => {
     {
       title: "E-commerce Conversion Campaign",
       description: "Strategic Facebook and Instagram campaign for an e-commerce client that achieved 450% ROAS and decreased CPA by 35%.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6", // Monitor with data graph
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       tags: ["Meta Ads", "E-commerce", "ROAS"]
     },
     {
       title: "SaaS Lead Generation",
       description: "Google Ads campaign for a SaaS company that generated 200+ qualified leads per month with a 20% conversion to paid customers.",
-      image: "https://images.unsplash.com/photo-1504893524553-b855bce32c67", // Image representing growth
+      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4",
       tags: ["Google Ads", "SaaS", "Lead Gen"]
     }
   ];

@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search } from "lucide-react";
+import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search, Bookmark, Bot, Settings, Zap } from "lucide-react";
 
 const MediaBuying = () => {
   const services = [
@@ -37,13 +37,13 @@ const MediaBuying = () => {
     {
       title: "Campaña de Conversión E-commerce",
       description: "Campaña estratégica en Facebook e Instagram para un cliente de e-commerce que logró un 450% de ROAS y disminuyó el CPA en un 35%.",
-      image: "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       tags: ["Meta Ads", "E-commerce", "ROAS"]
     },
     {
       title: "Generación de Leads SaaS",
       description: "Campaña de Google Ads para una empresa SaaS que generó más de 200 leads calificados por mes con una conversión del 20% a clientes pagos.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4",
       tags: ["Google Ads", "SaaS", "Generación de Leads"]
     }
   ];

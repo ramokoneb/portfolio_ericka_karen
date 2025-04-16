@@ -47,43 +47,43 @@ const MediaBuying = () => {
     {
       title: "Loja Virtual Febracis — Da Crise ao Crescimento Exponencial",
       description: "A loja enfrentava seis meses de prejuízo em mídia paga. Implementamos estratégias que resultaram em R$77.000 em faturamento (267% de crescimento) e ROAS de 963% com investimento de R$8.000.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6", // Monitor com gráfico de dados
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       tags: ["Meta Ads", "Google Ads", "ROAS 963%"]
     },
     {
       title: "Urban Effort — Do Zero ao Breakeven em 3 Meses",
       description: "Marca americana de bonés que vendía apenas na Amazon conseguiu criar um canal próprio de vendas com +291% de crescimento no faturamento e breakeven atingido antes dos 3 meses.",
-      image: "https://images.unsplash.com/photo-1504893524553-b855bce32c67", // Imagem que representa crescimento
+      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4",
       tags: ["Meta Ads", "Google Ads", "Catálogo Dinâmico"]
     },
     {
       title: "Borogodó Brasil — Reviravolta no Faturamento em 30 Dias",
       description: "Após queda drástica nas vendas, implementamos estratégias focadas em Meta Ads que resultaram em +36% em visitas únicas, +24% em vendas, +40% em receita e +13% em ticket médio.",
-      image: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151", // Imagem que representa transformação
+      image: "https://images.unsplash.com/photo-1579170053380-58a5b28fe766",
       tags: ["Meta Ads", "Pixel Otimizado", "Advantage+"]
     },
     {
       title: "Vamos — +50% nas Vendas com Aquisição Inteligente",
       description: "Empresa de aluguel de veículos pesados conseguiu +50% nas vendas em um mês, expansão da base de leads e aumento do ticket médio via remarketing.",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22", // Imagem que sugere crescimento positivo
+      image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312",
       tags: ["Meta Ads", "Remarketing Dinâmico"]
     },
     {
       title: "Qualicorp — Redução de 30% no CPL",
       description: "Operadora enfrentava alto custo por lead. Com palavras-chave de fundo de funil e Smart Bidding, conseguiu -30% no CPL e maior qualidade nos leads captados.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b", // Laptop com gráfico
+      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf",
       tags: ["Google Ads", "Smart Bidding"]
     },
     {
       title: "Unileão — Redução de 118% no CPL com Performance Max",
       description: "Instituição educacional conseguiu -118% no custo por lead, aumento expressivo de leads qualificados e ROI positivo já no primeiro mês após otimização.",
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b", // Vista aérea sugerindo crescimento
+      image: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11",
       tags: ["Google Ads", "Performance Max"]
     },
     {
       title: "Rastreamento Inteligente no WhatsApp — +462% em Conversas",
       description: "Implementação de rastreamento via ctwaclid nas campanhas de Meta Ads resultou em aumento de +462,16% no volume de conversas iniciadas e redução de -81,34% no custo por mensagem.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158", // Laptop com gráficos
+      image: "https://images.unsplash.com/photo-1590859808308-3d2d9c515b1a",
       tags: ["Meta Ads", "WhatsApp", "Tracking"]
     }
   ];
