@@ -55,6 +55,24 @@ const MediaBuying = () => {
       description: "Campanha do Google Ads para uma empresa SaaS que gerou mais de 200 leads qualificados por mês com 20% de conversão para clientes pagantes.",
       image: "https://images.unsplash.com/photo-1543286386-713bdd548da4",
       tags: ["Google Ads", "SaaS", "Geração de Leads"]
+    },
+    {
+      title: "Automação de Suporte ao Cliente",
+      description: "Solução de automação do WhatsApp que tratou 80% das consultas de clientes automaticamente, reduzindo o tempo de resposta em 95%.",
+      image: "https://images.unsplash.com/photo-1560807707-8cc77767d783",
+      tags: ["WhatsApp", "Suporte ao Cliente", "Chatbot"]
+    },
+    {
+      title: "Sistema de Pontuação de Leads com IA",
+      description: "Solução de IA personalizada que analisou padrões de comportamento do cliente para pontuar leads, melhorando a eficiência da equipe de vendas em 65%.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      tags: ["IA", "Machine Learning", "Pontuação de Leads"]
+    },
+    {
+      title: "Integração de Marketing & CRM",
+      description: "Integração completa entre plataformas de marketing e sistema CRM com fluxos de trabalho automatizados de qualificação de leads.",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
+      tags: ["CRM", "Integração", "Workflow"]
     }
   ];
 
@@ -90,7 +108,7 @@ const MediaBuying = () => {
         </div>
         
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-[#0EA5E9]">Portfólio e Casos de Sucesso Estratégicos</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[#0EA5E9]">Casos de Sucesso Estratégicos</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {portfolioItems.map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">

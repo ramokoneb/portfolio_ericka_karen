@@ -55,6 +55,24 @@ const MediaBuying = () => {
       description: "Google Ads campaign for a SaaS company that generated 200+ qualified leads per month with a 20% conversion to paid customers.",
       image: "https://images.unsplash.com/photo-1543286386-713bdd548da4",
       tags: ["Google Ads", "SaaS", "Lead Gen"]
+    },
+    {
+      title: "Customer Support Automation",
+      description: "WhatsApp automation solution that handled 80% of customer inquiries automatically, reducing response time by 95%.",
+      image: "https://images.unsplash.com/photo-1560807707-8cc77767d783",
+      tags: ["WhatsApp", "Customer Support", "Chatbot"]
+    },
+    {
+      title: "AI Lead Scoring System",
+      description: "Custom AI solution that analyzed customer behavior patterns to score leads, improving sales team efficiency by 65%.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      tags: ["AI", "Machine Learning", "Lead Scoring"]
+    },
+    {
+      title: "Marketing & CRM Integration",
+      description: "End-to-end integration between marketing platforms and CRM system with automated lead qualification workflows.",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
+      tags: ["CRM", "Integration", "Workflow"]
     }
   ];
 
@@ -90,7 +108,7 @@ const MediaBuying = () => {
         </div>
         
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-[#0EA5E9]">Portfolio & Strategic Case Studies</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[#0EA5E9]">Strategic Case Studies</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {portfolioItems.map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
