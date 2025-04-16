@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LineChart, Bot, Linkedin, Mail, MessageSquare } from "lucide-react";
@@ -19,11 +18,7 @@ const Index = () => {
             Ericka Karen
           </h1>
           <div className="text-xl md:text-xl text-gray-700 max-w-2xl mx-auto space-y-3">
-            <p>Profesional enfocada en growth, con una base creativa y sólida experiencia en performance digital.</p>
-            <p>Especialista en convertir el caos digital en sistemas inteligentes, escalables y orientados a resultados.</p>
-            <p>Combina estrategia, automatización y medios pagos para crear motores de crecimiento eficientes.</p>
-            <p>Cree que las mejores campañas nacen de la fusión entre tecnología y creatividad.</p>
-            <p>Entrega soluciones híbridas que integran tráfico pago, automatización no-code e innovación inteligente.</p>
+            <p>Soy una profesional enfocada en el crecimiento, con base creativa y sólida experiencia en performance digital. Transformo el caos digital en sistemas escalables e inteligentes, combinando estrategia, automatización y medios pagos. Creo campañas más efectivas al fusionar creatividad y tecnología, y entrego soluciones híbridas que integran tráfico pago e innovación no-code.</p>
           </div>
         </div>
 
