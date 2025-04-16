@@ -8,14 +8,14 @@ const Index = () => {
     <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-[#000000]">
       <div className="max-w-4xl mx-auto text-center space-y-8 bg-white p-12 rounded-xl shadow-lg">
         <div className="mb-12">
-          <div className="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-[#33C3F0] overflow-hidden">
+          <div className="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-[#8A898C] overflow-hidden">
             <img 
               className="w-full h-full object-cover"
               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500"
               alt="Ericka Karen"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-[#33C3F0] mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#8A898C] mb-6">
             Ericka Karen
           </h1>
           <div className="text-xl md:text-xl text-gray-700 max-w-2xl mx-auto space-y-3">
@@ -45,15 +45,15 @@ const Index = () => {
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center mt-12">
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#33C3F0] hover:text-white">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#8A898C] hover:text-white">
             <MessageSquare className="mr-2" />
             WhatsApp
           </Button>
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#33C3F0] hover:text-white">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#8A898C] hover:text-white">
             <Linkedin className="mr-2" />
             LinkedIn
           </Button>
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#33C3F0] hover:text-white">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#8A898C] hover:text-white">
             <Mail className="mr-2" />
             Email
           </Button>
