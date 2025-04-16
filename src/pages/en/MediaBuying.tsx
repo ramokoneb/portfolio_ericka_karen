@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search, Pinterest, Youtube, Bot, Target, LineChart, Database, MessageSquare } from "lucide-react";
+import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search, BookMark, Youtube, Bot, Target, LineChart, Database, MessageSquare } from "lucide-react";
 
 const MediaBuying = () => {
   const services = [
@@ -22,7 +22,7 @@ const MediaBuying = () => {
       description: "Creation of visual campaigns focused on engagement and conversion. Strategies that leverage the platform's native format, with creative language and performance objectives."
     },
     {
-      icon: <Pinterest className="h-10 w-10 text-[#33C3F0]" />,
+      icon: <BookMark className="h-10 w-10 text-[#33C3F0]" />,
       title: "Pinterest Ads",
       description: "Campaigns focused on discovery and conversion, with creatives designed for the platform's inspirational format. Ideal for e-commerce, fashion, decoration, beauty and visual segments. Full-funnel strategies focused on sustainable growth and qualified traffic."
     },
