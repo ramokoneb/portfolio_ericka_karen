@@ -18,9 +18,13 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-[#33C3F0] mb-6">
             Ericka Karen
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
-            Especialista em transformação digital, combinando estratégias de mídia paga com soluções inteligentes de automação e IA para impulsionar resultados excepcionais.
-          </p>
+          <div className="text-xl md:text-xl text-gray-700 max-w-2xl mx-auto space-y-3">
+            <p>Profissional focada em growth, com raízes criativas e sólida experiência em performance digital.</p>
+            <p>Especialista em transformar o caos digital em sistemas inteligentes, escaláveis e orientados por resultados.</p>
+            <p>Une estratégia, automação e mídia paga para construir motores de crescimento eficientes.</p>
+            <p>Acredita que campanhas mais inteligentes nascem da fusão entre tecnologia e criatividade.</p>
+            <p>Entrega soluções híbridas que unem tráfego pago, automações no-code e inovação com inteligência.</p>
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-6 justify-center">
@@ -39,7 +43,7 @@ const Index = () => {
               className="w-full md:w-auto text-lg px-8 py-6 bg-[#0EA5E9] hover:bg-[#1EAEDB] text-white"
             >
               <Bot className="mr-2" />
-              Automação & IA
+              Serviços de Automação e IA
             </Button>
           </Link>
         </div>
