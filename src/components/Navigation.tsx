@@ -81,7 +81,7 @@ const Navigation = () => {
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center justify-between p-4 bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <Link to={`/${language}`} className="text-xl font-bold text-[#33C3F0]">
-          Ericka Karen
+          {/* Nome removido conforme solicitado */}
         </Link>
         
         <NavigationMenu>
@@ -134,7 +134,7 @@ const Navigation = () => {
             
             <NavigationMenuItem>
               <Link to={`/${language}/contact`}>
-                <Button className="bg-[#F5A9B8] hover:bg-[#33C3F0]">
+                <Button className="bg-[#33C3F0] hover:bg-[#1EAEDB]">
                   {content[language].contact}
                 </Button>
               </Link>
@@ -172,7 +172,7 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       <div className="md:hidden flex items-center justify-between p-4 bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <Link to={`/${language}`} className="text-xl font-bold text-[#33C3F0]">
-          Ericka Karen
+          {/* Nome removido conforme solicitado */}
         </Link>
         
         <div className="flex items-center gap-2">

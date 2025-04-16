@@ -1,10 +1,11 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LineChart, Bot, Linkedin, Mail, MessageSquare } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-[#33C3F0]">
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-[#000000]">
       <div className="max-w-4xl mx-auto text-center space-y-8 bg-white p-12 rounded-xl shadow-lg">
         <div className="mb-12">
           <div className="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-[#33C3F0] overflow-hidden">
@@ -26,7 +27,7 @@ const Index = () => {
           <Link to="/pt/media-buying">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#33C3F0] hover:bg-[#1EAEDB] text-white"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#8A898C] hover:bg-[#6A696C] text-white"
             >
               <LineChart className="mr-2" />
               Serviços de Mídia Paga
@@ -35,7 +36,7 @@ const Index = () => {
           <Link to="/pt/automation-ai">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#0EA5E9] hover:bg-[#1EAEDB] text-white"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#8A898C] hover:bg-[#6A696C] text-white"
             >
               <Bot className="mr-2" />
               Serviços de Automação e IA
@@ -52,7 +53,7 @@ const Index = () => {
             <Linkedin className="mr-2" />
             LinkedIn
           </Button>
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#0EA5E9] hover:text-white">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#33C3F0] hover:text-white">
             <Mail className="mr-2" />
             E-mail
           </Button>

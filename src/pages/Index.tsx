@@ -35,7 +35,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-[#33C3F0]">
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-[#000000]">
       <div className="absolute top-4 right-4">
         <Button 
           variant="outline" 
@@ -67,7 +67,7 @@ const Index = () => {
           <Link to="/media-buying">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#33C3F0] hover:bg-[#1EAEDB] text-white"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#8A898C] hover:bg-[#6A696C] text-white"
             >
               <LineChart className="mr-2" />
               {content[language].mediaButton}
@@ -76,7 +76,7 @@ const Index = () => {
           <Link to="/automation-ai">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#F5A9B8] hover:bg-[#33C3F0] text-white"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#8A898C] hover:bg-[#6A696C] text-white"
             >
               <Bot className="mr-2" />
               {content[language].automationButton}
@@ -93,7 +93,7 @@ const Index = () => {
             <Linkedin className="mr-2" />
             {content[language].linkedin}
           </Button>
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#F5A9B8] hover:text-white">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#33C3F0] hover:text-white">
             <Mail className="mr-2" />
             {content[language].email}
           </Button>
