@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -47,13 +46,13 @@ const MediaBuying = () => {
     {
       title: "Loja Virtual Febracis — Da Crise ao Crescimento Exponencial",
       description: "Após 6 meses de prejuízo em mídia paga, implementou-se abordagens estratégicas alcançando R$77.000 em faturamento mensal (267% de crescimento) com ROAS de 963% usando Meta Ads e Google Ads.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=500", // Business team analyzing growth
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=500",
       tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
     },
     {
       title: "Urban Effort — Do Zero ao Breakeven em 3 Meses",
       description: "Marca americana de bonés que vendia apenas na Amazon criou canal próprio de vendas atingindo breakeven em menos de 90 dias com +291% de crescimento no faturamento através de campanhas estratégicas.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=500", // Laptop with code and business analytics
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=500",
       tags: ["Meta Ads", "Google Ads", "E-commerce"]
     },
     {
