@@ -1,7 +1,37 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, SquareCode } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, SquareCode, BrainCircuit, Link2, Smartphone, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
+
+const portfolioItems = [
+    {
+      title: "Automatización de WhatsApp – +80% de consultas automatizadas",
+      description: "Solución de automatización desarrollada para servicio al cliente vía WhatsApp, con chatbot inteligente capaz de manejar el 80% de las preguntas frecuentes. Reducción del 95% en tiempo de respuesta y aumento en la satisfacción del servicio.",
+      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
+      tags: ["WhatsApp API", "n8n", "NLP", "Chatbot"],
+      tech: "WhatsApp API • n8n • NLP • Lógica condicional",
+      goal: "Atención al cliente automatizada y escalable",
+      highlight: "Reducción drástica en necesidad de atención humana"
+    },
+    {
+      title: "Sistema de Puntuación de Leads con IA – +65% de eficiencia",
+      description: "Sistema de puntuación de leads basado en machine learning, entrenado con patrones de comportamiento de usuarios reales. Mejoró la eficiencia del equipo de ventas en un 65%, priorizando leads con mayor probabilidad de conversión.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      tags: ["n8n", "Supabase", "Machine Learning", "LLMs"],
+      tech: "n8n • Supabase • LLMs personalizados",
+      goal: "Calificación automática de leads",
+      highlight: "Inteligencia aplicada al proceso de compra"
+    },
+    {
+      title: "Integración de Marketing & CRM",
+      description: "Integración completa entre plataformas de marketing y sistema CRM con flujos de trabajo automatizados de calificación de leads.",
+      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=500",
+      tags: ["CRM", "Integración", "Workflow"],
+      tech: "CRM • Integración • Workflow",
+      goal: "Automatización de procesos de ventas",
+      highlight: "Flujos de trabajo personalizados"
+    }
+];
 
 const AutomationAI = () => {
   const services = [
@@ -29,27 +59,6 @@ const AutomationAI = () => {
       icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
       title: "Automatización de Workflows",
       description: "Flujos personalizados para automatizar tareas repetitivas y optimizar las operaciones de su negocio en múltiples plataformas."
-    }
-  ];
-
-  const portfolioItems = [
-    {
-      title: "Automatización de Atención al Cliente",
-      description: "Solución de automatización de WhatsApp que gestionó el 80% de las consultas de los clientes automáticamente, reduciendo el tiempo de respuesta en un 95%.",
-      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
-      tags: ["WhatsApp", "Atención al Cliente", "Chatbot"]
-    },
-    {
-      title: "Sistema de Puntuación de Leads con IA",
-      description: "Solución de IA personalizada que analizó patrones de comportamiento del cliente para puntuar leads, mejorando la eficiencia del equipo de ventas en un 65%.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
-      tags: ["IA", "Machine Learning", "Puntuación de Leads"]
-    },
-    {
-      title: "Integración de Marketing & CRM",
-      description: "Integración completa entre plataformas de marketing y sistema CRM con flujos de trabajo automatizados de calificación de leads.",
-      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=500",
-      tags: ["CRM", "Integración", "Workflow"]
     }
   ];
 

@@ -1,7 +1,69 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, Code2, BrainCircuit, Link2, Smartphone, FileCode } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, SquareCode, BrainCircuit, Link2, Smartphone, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
+
+const portfolioItems = [
+    {
+      title: "WhatsApp Automation – +80% automated inquiries",
+      description: "Automation solution developed for WhatsApp customer service, with intelligent chatbot capable of handling 80% of frequently asked questions. 95% reduction in response time and increased service satisfaction.",
+      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
+      tags: ["WhatsApp API", "n8n", "NLP", "Chatbot"],
+      tech: "WhatsApp API • n8n • NLP • Conditional logic",
+      goal: "Automated and scalable customer service",
+      highlight: "Drastic reduction in need for human support"
+    },
+    {
+      title: "AI Lead Scoring System – +65% sales team efficiency",
+      description: "Lead scoring system based on machine learning, trained with real user behavior patterns. Improved sales team efficiency by 65%, prioritizing leads with higher conversion probability.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      tags: ["n8n", "Supabase", "Machine Learning", "LLMs"],
+      tech: "n8n • Supabase • Custom LLMs",
+      goal: "Automatic lead qualification",
+      highlight: "Intelligence applied to buying journey"
+    },
+    {
+      title: "Personal Lead Capture Website",
+      description: "Built with Lovable, integrating automated lead capture and qualification systems.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      tags: ["Lovable", "Lead Capture", "Automation"]
+    },
+    {
+      title: "WhatsApp Integration System",
+      description: "Creates lead cards automatically in CRM when conversations start, with automated follow-up sequences.",
+      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
+      tags: ["WhatsApp", "CRM", "Automation"]
+    },
+    {
+      title: "AI Campaign Assistant",
+      description: "Analyzes, writes, and optimizes campaigns using Meta Ads API and advanced AI capabilities.",
+      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=500",
+      tags: ["AI", "Meta Ads", "Campaign Optimization"]
+    }
+];
+
+const technologies = [
+    {
+      category: "Automation & Integration",
+      tools: ["n8n", "Make", "Zapier"],
+      icon: <Settings className="h-6 w-6" />
+    },
+    {
+      category: "Web & Mobile App Builders",
+      tools: ["Bubble", "FlutterFlow", "Lovable"],
+      icon: <Smartphone className="h-6 w-6" />
+    },
+    {
+      category: "AI & Smart Logic",
+      tools: ["ChatGPT + Plugins", "FlowiseAI", "Relevance AI", "Langflow"],
+      icon: <BrainCircuit className="h-6 w-6" />
+    },
+    {
+      category: "Databases & No-Code Backends",
+      tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
+      icon: <Database className="h-6 w-6" />
+    }
+];
 
 const AutomationAI = () => {
   const mainServices = [
@@ -24,50 +86,6 @@ const AutomationAI = () => {
       icon: <Code2 className="h-10 w-10 text-[#8A898C]" />,
       title: "No-Code Development & Workflow Automation",
       description: "Create web apps, dashboards, automations and full systems using intuitive platforms."
-    }
-  ];
-
-  const portfolioItems = [
-    {
-      title: "Personal Lead Capture Website",
-      description: "Built with Lovable, integrating automated lead capture and qualification systems.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
-      tags: ["Lovable", "Lead Capture", "Automation"]
-    },
-    {
-      title: "WhatsApp Integration System",
-      description: "Creates lead cards automatically in CRM when conversations start, with automated follow-up sequences.",
-      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
-      tags: ["WhatsApp", "CRM", "Automation"]
-    },
-    {
-      title: "AI Campaign Assistant",
-      description: "Analyzes, writes, and optimizes campaigns using Meta Ads API and advanced AI capabilities.",
-      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=500",
-      tags: ["AI", "Meta Ads", "Campaign Optimization"]
-    }
-  ];
-
-  const technologies = [
-    {
-      category: "Automation & Integration",
-      tools: ["n8n", "Make", "Zapier"],
-      icon: <Settings className="h-6 w-6" />
-    },
-    {
-      category: "Web & Mobile App Builders",
-      tools: ["Bubble", "FlutterFlow", "Lovable"],
-      icon: <Smartphone className="h-6 w-6" />
-    },
-    {
-      category: "AI & Smart Logic",
-      tools: ["ChatGPT + Plugins", "FlowiseAI", "Relevance AI", "Langflow"],
-      icon: <BrainCircuit className="h-6 w-6" />
-    },
-    {
-      category: "Databases & No-Code Backends",
-      tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
-      icon: <Database className="h-6 w-6" />
     }
   ];
 
