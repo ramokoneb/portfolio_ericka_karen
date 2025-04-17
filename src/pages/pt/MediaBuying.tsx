@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,37 +7,37 @@ import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search, Bookmark,
 const MediaBuying = () => {
   const services = [
     {
-      icon: <Facebook className="h-10 w-10 text-[#33C3F0]" />,
+      icon: <Facebook className="h-10 w-10 text-[#8A898C]" />,
       title: "Meta Ads",
       description: "Gerenciamento estratégico de campanhas para Facebook, Instagram e Audience Network com segmentação avançada, funis estruturados e ferramentas de automação como Advantage+ e catálogo dinâmico. Serviço completo desde copywriting até criativos, focado em resultados."
     },
     {
-      icon: <Search className="h-10 w-10 text-[#33C3F0]" />,
+      icon: <Search className="h-10 w-10 text-[#8A898C]" />,
       title: "Google Ads",
       description: "Campanhas de Search, Display, YouTube, Shopping e Performance Max, sempre com pesquisa aprofundada, estruturação de palavras-chave, lances inteligentes e otimização constante de ROAS."
     },
     {
-      icon: <Instagram className="h-10 w-10 text-[#33C3F0]" />,
+      icon: <Instagram className="h-10 w-10 text-[#8A898C]" />,
       title: "TikTok Ads",
       description: "Criação de campanhas visuais focadas em engajamento e conversão. Estratégias que aproveitam o formato nativo da plataforma, com linguagem criativa e objetivos de performance."
     },
     {
-      icon: <Bookmark className="h-10 w-10 text-[#33C3F0]" />,
+      icon: <Bookmark className="h-10 w-10 text-[#8A898C]" />,
       title: "Pinterest Ads",
       description: "Campanhas focadas em descoberta e conversão, com criativos desenhados para o formato inspiracional da plataforma. Ideal para e-commerce, moda, decoração, beleza e segmentos visuais. Estratégias de funil completo voltadas para crescimento sustentável e tráfego qualificado."
     },
     {
-      icon: <Bot className="h-10 w-10 text-[#33C3F0]" />,
+      icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
       title: "Inteligência Artificial Aplicada",
       description: "Uso de IA nas principais plataformas para otimizar entrega, segmentação, criativos dinâmicos e prever padrões de comportamento. Soluções que integram inteligência com performance."
     },
     {
-      icon: <Target className="h-10 w-10 text-[#33C3F0]" />,
+      icon: <Target className="h-10 w-10 text-[#8A898C]" />,
       title: "Otimização de Conversão (CRO)",
       description: "Ações voltadas para reduzir CAC e aumentar taxas de conversão através de ajustes estratégicos em campanhas, criativos, páginas de destino e mensagens."
     },
     {
-      icon: <Database className="h-10 w-10 text-[#33C3F0]" />,
+      icon: <Database className="h-10 w-10 text-[#8A898C]" />,
       title: "Rastreamento Avançado e Analytics",
       description: "Implementação de pixels, eventos personalizados, tagueamento com ferramentas como GTM, ctwaclid e UTMs. Dashboards personalizados com dados em tempo real e relatórios com insights acionáveis."
     }
@@ -46,52 +47,52 @@ const MediaBuying = () => {
     {
       title: "Loja Virtual Febracis — Da Crise ao Crescimento Exponencial",
       description: "Após 6 meses de prejuízo em mídia paga, implementou-se abordagens estratégicas alcançando R$77.000 em faturamento mensal (267% de crescimento) com ROAS de 963% usando Meta Ads e Google Ads.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      image: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=500",
       tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
     },
     {
       title: "Urban Effort — Do Zero ao Breakeven em 3 Meses",
       description: "Marca americana de bonés que vendia apenas na Amazon criou canal próprio de vendas atingindo breakeven em menos de 90 dias com +291% de crescimento no faturamento através de campanhas estratégicas.",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=500",
       tags: ["Meta Ads", "Google Ads", "E-commerce"]
     },
     {
       title: "Borogodó Brasil — Reviravolta no Faturamento em 30 Dias",
       description: "Após queda drástica nas vendas, estratégias focadas em Meta Ads alcançaram +36% em visitas únicas, +24% em vendas, +40% em receita e +13% em ticket médio em apenas um mês.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
       tags: ["Meta Ads", "E-commerce", "Faturamento"]
     },
     {
       title: "Vamos — +50% nas Vendas com Aquisição Inteligente",
       description: "Empresa de aluguel de veículos pesados escalou sua base de clientes com segmentação geográfica e demográfica direcionada, alcançando +50% nas vendas em um único mês.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      image: "https://images.unsplash.com/photo-1569025743873-ea3a9ade89f9?q=80&w=500",
       tags: ["Meta Ads", "Geração de Leads", "Vendas"]
     },
     {
       title: "Qualicorp — Redução de 30% no CPL com Segmentação de Fundo de Funil",
       description: "Operadora de saúde enfrentando alto custo por lead implementou palavras-chave de fundo de funil e smart bidding, reduzindo CPL em 30% com maior qualidade nos leads.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=500",
       tags: ["Google Ads", "Geração de Leads", "CPL"]
     },
     {
       title: "Unileão — Redução de 118% no CPL com Performance Max",
       description: "Instituição educacional otimizou captação de leads com campanhas Performance Max, alcançando 118% de redução no custo por lead e ROI positivo já no primeiro mês.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      image: "https://images.unsplash.com/photo-1616514197671-15d99ce7253f?q=80&w=500",
       tags: ["Google Ads", "Educação", "Performance Max"]
     },
     {
       title: "Rastreamento Inteligente no WhatsApp — +462% em Conversas",
       description: "Implementação de rastreamento via ctwaclid nas campanhas de Meta Ads levou a um aumento de +462,16% nas conversas iniciadas e redução de 81,34% no custo por mensagem enviada em apenas uma semana.",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      image: "https://images.unsplash.com/photo-1607703703674-df96aa081c7d?q=80&w=500",
       tags: ["Meta Ads", "WhatsApp", "Rastreamento"]
     }
   ];
 
   return (
-    <div className="min-h-screen p-8 bg-[#33C3F0]">
+    <div className="min-h-screen p-8 bg-[#000000]">
       <div className="max-w-6xl mx-auto">
         <Link to="/pt">
-          <Button variant="ghost" className="mb-6 bg-white/50 hover:bg-white/70">
+          <Button variant="ghost" className="mb-6 bg-white/20 hover:bg-white/30 text-white">
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar ao Início
           </Button>
         </Link>
@@ -104,25 +105,25 @@ const MediaBuying = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/10 backdrop-blur-sm text-white">
               <CardHeader>
                 <div className="mb-2">
                   {service.icon}
                 </div>
-                <CardTitle>{service.title}</CardTitle>
+                <CardTitle className="text-white">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">{service.description}</CardDescription>
+                <CardDescription className="text-base text-gray-300">{service.description}</CardDescription>
               </CardContent>
             </Card>
           ))}
         </div>
         
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-[#0EA5E9]">Casos de Sucesso Estratégicos</h2>
+        <div className="mt-16 bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-bold mb-6 text-[#8A898C]">Casos de Sucesso Estratégicos</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all">
+              <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all bg-white/5 backdrop-blur-sm">
                 <div className="h-48 overflow-hidden">
                   <img 
                     src={item.image} 
@@ -131,15 +132,15 @@ const MediaBuying = () => {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle>{item.title}</CardTitle>
+                  <CardTitle className="text-white">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 mb-4">{item.description}</p>
+                  <p className="text-gray-300 mb-4">{item.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
                       <span 
                         key={tag}
-                        className="px-2 py-1 bg-[#33C3F0]/10 text-[#33C3F0] rounded-full text-xs font-medium"
+                        className="px-2 py-1 bg-[#8A898C]/20 text-[#C8C8C9] rounded-full text-xs font-medium"
                       >
                         {tag}
                       </span>
