@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LineChart, Bot, Linkedin, Mail, MessageSquare } from "lucide-react";
@@ -39,7 +38,7 @@ const Index = () => {
               className="w-full md:w-auto text-lg px-8 py-6 bg-[#8A898C] hover:bg-[#6A696C] text-white"
             >
               <Bot className="mr-2" />
-              Serviços de Automação e IA
+              Automação, IA & Desenvolvimento No/Low-Code
             </Button>
           </Link>
         </div>

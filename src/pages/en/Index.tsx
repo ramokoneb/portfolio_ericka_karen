@@ -38,7 +38,7 @@ const Index = () => {
               className="w-full md:w-auto text-lg px-8 py-6 bg-[#8A898C] hover:bg-[#6A696C] text-white"
             >
               <Bot className="mr-2" />
-              Automation, AI and No-Code Development
+              Automation, AI & No/Low-Code Development
             </Button>
           </Link>
         </div>

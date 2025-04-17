@@ -48,7 +48,7 @@ const Navigation = () => {
     en: {
       home: "Home",
       mediaBuying: "Media Buying",
-      automation: "Automation, AI and No-Code Development",
+      automation: "Automation, AI & No/Low-Code Development",
       about: "About",
       contact: "Contact",
       services: "Services"
@@ -56,7 +56,7 @@ const Navigation = () => {
     pt: {
       home: "Início",
       mediaBuying: "Mídia Paga",
-      automation: "Automação, IA e Desenvolvimento No-Code",
+      automation: "Automação, IA & Desenvolvimento No/Low-Code",
       about: "Sobre",
       contact: "Contato",
       services: "Serviços"
@@ -64,7 +64,7 @@ const Navigation = () => {
     es: {
       home: "Inicio",
       mediaBuying: "Medios Pagos",
-      automation: "Automatización, IA y Desarrollo No-Code",
+      automation: "Automatización, IA & Desarrollo No/Low-Code",
       about: "Sobre",
       contact: "Contacto",
       services: "Servicios"

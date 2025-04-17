@@ -62,9 +62,9 @@ const AutomationAI = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Automatización, IA y Desarrollo Sin Código</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Automatización, IA & Desarrollo No/Low-Code</h1>
         <p className="text-xl text-white mb-12">
-          Implementación de soluciones inteligentes para automatizar procesos, optimizar resultados a través de IA y potenciar negocios con tecnologías sin código.
+          Implementación de soluciones inteligentes para automatizar procesos, optimizar resultados a través de IA y potenciar negocios con tecnologías no/low-code.
           Mi enfoque combina ciencia de datos, ingeniería y estrategias de negocio innovadoras.
         </p>
         
