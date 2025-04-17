@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -44,36 +43,6 @@ const MediaBuying = () => {
   ];
 
   const portfolioItems = [
-    {
-      title: "Campanha de Conversão E-commerce",
-      description: "Campanha estratégica no Facebook e Instagram para um cliente de e-commerce que alcançou 450% de ROAS e diminuiu o CPA em 35%.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      tags: ["Meta Ads", "E-commerce", "ROAS"]
-    },
-    {
-      title: "Geração de Leads SaaS",
-      description: "Campanha do Google Ads para uma empresa SaaS que gerou mais de 200 leads qualificados por mês com 20% de conversão para clientes pagantes.",
-      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4",
-      tags: ["Google Ads", "SaaS", "Geração de Leads"]
-    },
-    {
-      title: "Automação de Suporte ao Cliente",
-      description: "Solução de automação do WhatsApp que tratou 80% das consultas de clientes automaticamente, reduzindo o tempo de resposta em 95%.",
-      image: "https://images.unsplash.com/photo-1560807707-8cc77767d783",
-      tags: ["WhatsApp", "Suporte ao Cliente", "Chatbot"]
-    },
-    {
-      title: "Sistema de Pontuação de Leads com IA",
-      description: "Solução de IA personalizada que analisou padrões de comportamento do cliente para pontuar leads, melhorando a eficiência da equipe de vendas em 65%.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      tags: ["IA", "Machine Learning", "Pontuação de Leads"]
-    },
-    {
-      title: "Integração de Marketing & CRM",
-      description: "Integração completa entre plataformas de marketing e sistema CRM com fluxos de trabalho automatizados de qualificação de leads.",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
-      tags: ["CRM", "Integração", "Workflow"]
-    },
     {
       title: "Loja Virtual Febracis — Da Crise ao Crescimento Exponencial",
       description: "Após 6 meses de prejuízo em mídia paga, implementou-se abordagens estratégicas alcançando R$77.000 em faturamento mensal (267% de crescimento) com ROAS de 963% usando Meta Ads e Google Ads.",

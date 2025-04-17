@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -44,36 +43,6 @@ const MediaBuying = () => {
   ];
 
   const portfolioItems = [
-    {
-      title: "Campaña de Conversión E-commerce",
-      description: "Campaña estratégica en Facebook e Instagram para un cliente de e-commerce que logró un 450% de ROAS y disminuyó el CPA en un 35%.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      tags: ["Meta Ads", "E-commerce", "ROAS"]
-    },
-    {
-      title: "Generación de Leads SaaS",
-      description: "Campaña de Google Ads para una empresa SaaS que generó más de 200 leads calificados por mes con una conversión del 20% a clientes pagos.",
-      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4",
-      tags: ["Google Ads", "SaaS", "Lead Gen"]
-    },
-    {
-      title: "Automatización de Soporte al Cliente",
-      description: "Solución de automatización de WhatsApp que gestionó el 80% de las consultas de clientes automáticamente, reduciendo el tiempo de respuesta en un 95%.",
-      image: "https://images.unsplash.com/photo-1560807707-8cc77767d783",
-      tags: ["WhatsApp", "Soporte al Cliente", "Chatbot"]
-    },
-    {
-      title: "Sistema de Puntuación de Leads con IA",
-      description: "Solución de IA personalizada que analizó patrones de comportamiento del cliente para puntuar leads, mejorando la eficiencia del equipo de ventas en un 65%.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      tags: ["IA", "Machine Learning", "Puntuación de Leads"]
-    },
-    {
-      title: "Integración de Marketing y CRM",
-      description: "Integración completa entre plataformas de marketing y sistema CRM con flujos de trabajo automatizados de calificación de leads.",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
-      tags: ["CRM", "Integración", "Workflow"]
-    },
     {
       title: "Tienda Virtual Febracis — De la Crisis al Crecimiento Exponencial",
       description: "Después de 6 meses de pérdidas en medios pagos, se implementaron enfoques estratégicos logrando R$77.000 en ingresos mensuales (267% de crecimiento) con ROAS del 963% usando Meta Ads y Google Ads.",

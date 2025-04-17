@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -44,36 +43,6 @@ const MediaBuying = () => {
   ];
 
   const portfolioItems = [
-    {
-      title: "E-commerce Conversion Campaign",
-      description: "Strategic Facebook and Instagram campaign for an e-commerce client that achieved 450% ROAS and decreased CPA by 35%.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      tags: ["Meta Ads", "E-commerce", "ROAS"]
-    },
-    {
-      title: "SaaS Lead Generation",
-      description: "Google Ads campaign for a SaaS company that generated 200+ qualified leads per month with a 20% conversion to paid customers.",
-      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4",
-      tags: ["Google Ads", "SaaS", "Lead Gen"]
-    },
-    {
-      title: "Customer Support Automation",
-      description: "WhatsApp automation solution that handled 80% of customer inquiries automatically, reducing response time by 95%.",
-      image: "https://images.unsplash.com/photo-1560807707-8cc77767d783",
-      tags: ["WhatsApp", "Customer Support", "Chatbot"]
-    },
-    {
-      title: "AI Lead Scoring System",
-      description: "Custom AI solution that analyzed customer behavior patterns to score leads, improving sales team efficiency by 65%.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      tags: ["AI", "Machine Learning", "Lead Scoring"]
-    },
-    {
-      title: "Marketing & CRM Integration",
-      description: "End-to-end integration between marketing platforms and CRM system with automated lead qualification workflows.",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
-      tags: ["CRM", "Integration", "Workflow"]
-    },
     {
       title: "Febracis Virtual Store — From Crisis to Exponential Growth",
       description: "After 6 months of losses in paid media, implemented strategic approaches achieving R$77,000 in monthly revenue (267% growth) with 963% ROAS using Meta Ads and Google Ads.",
