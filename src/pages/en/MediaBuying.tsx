@@ -29,7 +29,7 @@ const MediaBuying = () => {
 
   const technologies = [
     {
-      category: "🎯 Paid Media Management",
+      category: "Technologies & Tools 🎯",
       tools: [
         "Meta Ads Manager (Facebook, Instagram, Audience Network)",
         "Google Ads (Search, Display, YouTube, Shopping, PMax)",
@@ -41,7 +41,7 @@ const MediaBuying = () => {
       icon: <Target className="h-6 w-6" />
     },
     {
-      category: "📊 Data Analysis & Performance",
+      category: "Technologies & Tools 📊",
       tools: [
         "Google Analytics (GA4)",
         "Google Tag Manager",
@@ -55,7 +55,7 @@ const MediaBuying = () => {
       icon: <LineChart className="h-6 w-6" />
     },
     {
-      category: "⚙️ Flow Automation & Integration",
+      category: "Technologies & Tools ⚙️",
       tools: [
         "n8n",
         "Make (Integromat)",
@@ -68,7 +68,7 @@ const MediaBuying = () => {
       icon: <Settings className="h-6 w-6" />
     },
     {
-      category: "🤖 AI Applied to Paid Media",
+      category: "Technologies & Tools 🤖",
       tools: [
         "ChatGPT + Plugins",
         "Langflow / FlowiseAI",
@@ -110,6 +110,12 @@ const MediaBuying = () => {
       description: "Implementation of ctwaclid tracking in Meta Ads campaigns led to +462.16% increase in initiated conversations and 81.34% reduction in cost per message sent in just one week.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500",
       tags: ["Meta Ads", "WhatsApp", "Tracking"]
+    },
+    {
+      title: "Unileão — 118% Reduction in CPL with Performance Max",
+      description: "Educational institution optimized lead capture with Performance Max campaigns, achieving 118% reduction in cost per lead and positive ROI from the first month.",
+      image: "https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=500",
+      tags: ["Google Ads", "Education", "Performance Max"]
     }
   ];
 
@@ -181,9 +187,9 @@ const MediaBuying = () => {
         </div>
 
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-black">Strategic Case Studies</h2>
+          <h2 className="text-2xl font-bold mb-6 text-black">Strategic Case Studies 🚀</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {portfolioItems.filter(item => !item.title.includes("Qualicorp")).map((item, index) => (
+            {portfolioItems.map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
                   <img 

@@ -29,7 +29,7 @@ const MediaBuying = () => {
 
   const technologies = [
     {
-      category: "🎯 Gestión de Medios Pagos",
+      category: "Tecnologías y Herramientas 🎯",
       tools: [
         "Meta Ads Manager (Facebook, Instagram, Audience Network)",
         "Google Ads (Search, Display, YouTube, Shopping, PMax)",
@@ -41,7 +41,7 @@ const MediaBuying = () => {
       icon: <Target className="h-6 w-6" />
     },
     {
-      category: "📊 Análisis de Datos y Performance",
+      category: "Tecnologías y Herramientas 📊",
       tools: [
         "Google Analytics (GA4)",
         "Google Tag Manager",
@@ -55,7 +55,7 @@ const MediaBuying = () => {
       icon: <LineChart className="h-6 w-6" />
     },
     {
-      category: "⚙️ Automatización e Integración de Flujos",
+      category: "Tecnologías y Herramientas ⚙️",
       tools: [
         "n8n",
         "Make (Integromat)",
@@ -68,7 +68,7 @@ const MediaBuying = () => {
       icon: <Settings className="h-6 w-6" />
     },
     {
-      category: "🤖 IA Aplicada a Medios Pagos",
+      category: "Tecnologías y Herramientas 🤖",
       tools: [
         "ChatGPT + Plugins",
         "Langflow / FlowiseAI",
@@ -187,9 +187,9 @@ const MediaBuying = () => {
         </div>
 
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-black">Casos de Éxito Estratégicos</h2>
+          <h2 className="text-2xl font-bold mb-6 text-black">Casos de Éxito Estratégicos 🚀</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {portfolioItems.filter(item => !item.title.includes("Qualicorp")).map((item, index) => (
+            {portfolioItems.map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
                   <img 
