@@ -58,7 +58,7 @@ const MediaBuying = () => {
     {
       title: "Borogodó Brasil — Cambio de Rumbo en Ingresos en 30 Días",
       description: "Tras una caída drástica en ventas, estrategias enfocadas en Meta Ads lograron +36% en visitas únicas, +24% en ventas, +40% en ingresos y +13% en ticket promedio en solo un mes.",
-      image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=500",
       tags: ["Meta Ads", "E-commerce", "Ingresos"]
     },
     {

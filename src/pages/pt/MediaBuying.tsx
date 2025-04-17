@@ -58,7 +58,7 @@ const MediaBuying = () => {
     {
       title: "Borogodó Brasil — Reviravolta no Faturamento em 30 Dias",
       description: "Após queda drástica nas vendas, estratégias focadas em Meta Ads alcançaram +36% em visitas únicas, +24% em vendas, +40% em receita e +13% em ticket médio em apenas um mês.",
-      image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=500",
       tags: ["Meta Ads", "E-commerce", "Faturamento"]
     },
     {
@@ -70,7 +70,7 @@ const MediaBuying = () => {
     {
       title: "Qualicorp — Redução de 30% no CPL com Segmentação de Fundo de Funil",
       description: "Operadora de saúde enfrentando alto custo por lead implementou palavras-chave de fundo de funil e smart bidding, reduzindo CPL em 30% com maior qualidade nos leads.",
-      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=500",
       tags: ["Google Ads", "Geração de Leads", "CPL"]
     },
     {
