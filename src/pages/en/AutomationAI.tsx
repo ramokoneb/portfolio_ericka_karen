@@ -1,15 +1,14 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, SquareCode } from "lucide-react";
 
 const AutomationAI = () => {
   const services = [
     {
       icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-      title: "AI-Powered Lead Qualification",
-      description: "Leverage AI to classify, score, and qualify leads for more efficient sales processes and higher conversion rates."
+      title: "AI Solutions",
+      description: "Implement intelligent systems to optimize processes and enhance decision-making through advanced artificial intelligence."
     },
     {
       icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
@@ -22,14 +21,14 @@ const AutomationAI = () => {
       description: "Seamless connection between your marketing tools, CRM systems, and sales processes with automated data flow."
     },
     {
-      icon: <Settings className="h-10 w-10 text-[#8A898C]" />,
-      title: "Workflow Automation",
-      description: "Custom n8n or Make workflows to automate repetitive tasks and streamline your business operations."
+      icon: <SquareCode className="h-10 w-10 text-[#8A898C]" />,
+      title: "No-Code Development",
+      description: "Create powerful applications and automate workflows using no-code platforms like Zapier, Make, and n8n."
     },
     {
-      icon: <Zap className="h-10 w-10 text-[#8A898C]" />,
-      title: "Marketing Automation",
-      description: "End-to-end automation solutions for email marketing, lead nurturing, and customer journey optimization."
+      icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
+      title: "Workflow Automation",
+      description: "Custom workflows to automate repetitive tasks and streamline your business operations across multiple platforms."
     }
   ];
 
@@ -63,10 +62,10 @@ const AutomationAI = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Automation & AI Services</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Automation, AI and No-Code Development</h1>
         <p className="text-xl text-white mb-12">
-          Implementation of intelligent solutions to automate processes and optimize results through AI.
-          My approach combines data science, engineering and business strategy.
+          Implementation of intelligent solutions to automate processes, optimize results through AI, and empower businesses with no-code technologies.
+          My approach combines data science, engineering, and innovative business strategies.
         </p>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

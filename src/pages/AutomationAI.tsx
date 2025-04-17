@@ -3,21 +3,21 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, SquareCode } from "lucide-react";
 
 const AutomationAI = () => {
   const [language, setLanguage] = useState<"en" | "pt">("en");
   
   const content = {
     en: {
-      title: "Automation & AI",
-      subtitle: "Implementation of intelligent solutions to automate processes and optimize results through AI. My approach combines data science, engineering and business strategy.",
+      title: "Automation, AI and No-Code Development",
+      subtitle: "Implementation of intelligent solutions to automate processes, optimize results through AI, and empower businesses with no-code technologies. My approach combines data science, engineering, and innovative business strategies.",
       backButton: "Back to Home",
       services: [
         {
           icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-          title: "AI-Powered Lead Qualification",
-          description: "Leverage AI to classify, score, and qualify leads for more efficient sales processes and higher conversion rates."
+          title: "AI Solutions",
+          description: "Implement intelligent systems to optimize processes and enhance decision-making through advanced artificial intelligence."
         },
         {
           icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
@@ -30,26 +30,26 @@ const AutomationAI = () => {
           description: "Seamless connection between your marketing tools, CRM systems, and sales processes with automated data flow."
         },
         {
-          icon: <Settings className="h-10 w-10 text-[#8A898C]" />,
-          title: "Workflow Automation",
-          description: "Custom n8n or Make workflows to automate repetitive tasks and streamline your business operations."
+          icon: <SquareCode className="h-10 w-10 text-[#8A898C]" />,
+          title: "No-Code Development",
+          description: "Create powerful applications and automate workflows using no-code platforms like Zapier, Make, and n8n."
         },
         {
-          icon: <Zap className="h-10 w-10 text-[#8A898C]" />,
-          title: "Marketing Automation",
-          description: "End-to-end automation solutions for email marketing, lead nurturing, and customer journey optimization."
+          icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
+          title: "Workflow Automation",
+          description: "Custom workflows to automate repetitive tasks and streamline your business operations across multiple platforms."
         }
       ]
     },
     pt: {
-      title: "Automação & IA",
-      subtitle: "Implementação de soluções inteligentes para automatizar processos e otimizar resultados através de IA. Minha abordagem combina ciência de dados, engenharia e estratégia de negócios.",
+      title: "Automação, IA e Desenvolvimento Sem Código",
+      subtitle: "Implementação de soluções inteligentes para automatizar processos, otimizar resultados através de IA e capacitar negócios com tecnologias sem código. Minha abordagem combina ciência de dados, engenharia e estratégias de negócios inovadoras.",
       backButton: "Voltar para Home",
       services: [
         {
           icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-          title: "Qualificação de Leads com IA",
-          description: "Utilize IA para classificar, pontuar e qualificar leads para processos de vendas mais eficientes e maiores taxas de conversão."
+          title: "Soluções de IA",
+          description: "Implemente sistemas inteligentes para otimizar processos e aprimorar a tomada de decisões através de inteligência artificial avançada."
         },
         {
           icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
@@ -58,18 +58,18 @@ const AutomationAI = () => {
         },
         {
           icon: <Database className="h-10 w-10 text-[#8A898C]" />,
-          title: "Integração com CRM",
+          title: "Integração de CRM",
           description: "Conexão perfeita entre suas ferramentas de marketing, sistemas CRM e processos de vendas com fluxo de dados automatizado."
         },
         {
-          icon: <Settings className="h-10 w-10 text-[#8A898C]" />,
-          title: "Automação de Workflows",
-          description: "Fluxos personalizados no n8n ou Make para automatizar tarefas repetitivas e otimizar operações do seu negócio."
+          icon: <SquareCode className="h-10 w-10 text-[#8A898C]" />,
+          title: "Desenvolvimento Sem Código",
+          description: "Crie aplicações poderosas e automatize fluxos de trabalho usando plataformas sem código como Zapier, Make e n8n."
         },
         {
-          icon: <Zap className="h-10 w-10 text-[#8A898C]" />,
-          title: "Automação de Marketing",
-          description: "Soluções de automação completas para email marketing, nutrição de leads e otimização da jornada do cliente."
+          icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
+          title: "Automação de Workflows",
+          description: "Fluxos personalizados para automatizar tarefas repetitivas e otimizar as operações do seu negócio em múltiplas plataformas."
         }
       ]
     }

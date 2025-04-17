@@ -1,15 +1,14 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, SquareCode } from "lucide-react";
 
 const AutomationAI = () => {
   const services = [
     {
       icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-      title: "Calificación de Leads con IA",
-      description: "Aprovecha la IA para clasificar, puntuar y calificar leads para procesos de ventas más eficientes y mayores tasas de conversión."
+      title: "Soluciones de IA",
+      description: "Implemente sistemas inteligentes para optimizar procesos y mejorar la toma de decisiones a través de inteligencia artificial avanzada."
     },
     {
       icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
@@ -18,18 +17,18 @@ const AutomationAI = () => {
     },
     {
       icon: <Database className="h-10 w-10 text-[#8A898C]" />,
-      title: "Integración con CRM",
-      description: "Conexión perfecta entre tus herramientas de marketing, sistemas CRM y procesos de ventas con flujo de datos automatizado."
+      title: "Integración de CRM",
+      description: "Conexión perfecta entre sus herramientas de marketing, sistemas CRM y procesos de ventas con flujo de datos automatizado."
     },
     {
-      icon: <Settings className="h-10 w-10 text-[#8A898C]" />,
+      icon: <SquareCode className="h-10 w-10 text-[#8A898C]" />,
+      title: "Desarrollo Sin Código",
+      description: "Cree aplicaciones potentes y automatice flujos de trabajo utilizando plataformas sin código como Zapier, Make y n8n."
+    },
+    {
+      icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
       title: "Automatización de Workflows",
-      description: "Flujos personalizados en n8n o Make para automatizar tareas repetitivas y optimizar las operaciones de tu negocio."
-    },
-    {
-      icon: <Zap className="h-10 w-10 text-[#8A898C]" />,
-      title: "Automatización de Marketing",
-      description: "Soluciones de automatización de extremo a extremo para email marketing, nutrición de leads y optimización del viaje del cliente."
+      description: "Flujos personalizados para automatizar tareas repetitivas y optimizar las operaciones de su negocio en múltiples plataformas."
     }
   ];
 
@@ -63,10 +62,10 @@ const AutomationAI = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Automatización & IA</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Automatización, IA y Desarrollo Sin Código</h1>
         <p className="text-xl text-white mb-12">
-          Implementación de soluciones inteligentes para automatizar procesos y optimizar resultados a través de IA.
-          Mi enfoque combina ciencia de datos, ingeniería y estrategia de negocio.
+          Implementación de soluciones inteligentes para automatizar procesos, optimizar resultados a través de IA y potenciar negocios con tecnologías sin código.
+          Mi enfoque combina ciencia de datos, ingeniería y estrategias de negocio innovadoras.
         </p>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
