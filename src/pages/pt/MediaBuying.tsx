@@ -1,7 +1,23 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, BrainCircuit, Target, Database, Settings, LineChart, Bot, Workflow, Code } from "lucide-react";
+import { 
+  ArrowLeft, 
+  BrainCircuit, 
+  Database, 
+  Settings, 
+  LineChart, 
+  Bot, 
+  Code, 
+  Link2, 
+  Smartphone, 
+  QrCode, 
+  FileCode, 
+  BarChart2, 
+  MessagesSquare, 
+  Target 
+} from "lucide-react";
 
 const mainServices = [
   {
@@ -10,7 +26,7 @@ const mainServices = [
     description: "Implemente sistemas inteligentes que melhoram a tomada de decisão, otimizam campanhas e potencializam seus fluxos de trabalho com inteligência."
   },
   {
-    icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
+    icon: <MessagesSquare className="h-10 w-10 text-[#8A898C]" />,
     title: "Automação de WhatsApp",
     description: "Fluxos de mensagens automatizados para atendimento ao cliente, vendas e qualificação de leads usando WhatsApp e APIs conectadas."
   },
@@ -93,8 +109,6 @@ const portfolioItems = [
     tags: ["Meta Ads", "WhatsApp", "Rastreamento"]
   }
 ];
-
-import { Link2, Smartphone, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
 
 const MediaBuying = () => {
   return (

@@ -1,7 +1,16 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, BrainCircuit, Target, Database, Settings, LineChart, Bot, Workflow, Code } from "lucide-react";
+import { 
+  ArrowLeft, 
+  BrainCircuit, 
+  Target, 
+  Database, 
+  Settings, 
+  LineChart, 
+  Bot 
+} from "lucide-react";
 
 const mainServices = [
   {
