@@ -1,55 +1,74 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, SquareCode } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, Code2, BrainCircuit, Link2, Mobile, QrCode, FileCode } from "lucide-react";
 
 const AutomationAI = () => {
-  const services = [
+  const mainServices = [
     {
-      icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-      title: "AI Solutions",
-      description: "Implement intelligent systems to optimize processes and enhance decision-making through advanced artificial intelligence."
+      icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+      title: "AI & Intelligent Automation",
+      description: "Implement smart systems that enhance decision-making, optimize campaigns, and power your workflows with intelligence."
     },
     {
       icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
       title: "WhatsApp Automation",
-      description: "Automated messaging solutions for customer service, sales support, and lead nurturing through WhatsApp."
+      description: "Automated messaging flows for customer service, sales, and lead qualification using WhatsApp and connected APIs."
     },
     {
-      icon: <Database className="h-10 w-10 text-[#8A898C]" />,
-      title: "CRM Integration",
-      description: "Seamless connection between your marketing tools, CRM systems, and sales processes with automated data flow."
+      icon: <Link2 className="h-10 w-10 text-[#8A898C]" />,
+      title: "CRM & Marketing Integrations",
+      description: "Seamless automation between marketing platforms, CRMs and communication channels."
     },
     {
-      icon: <SquareCode className="h-10 w-10 text-[#8A898C]" />,
-      title: "No-Code Development",
-      description: "Create powerful applications and automate workflows using no-code platforms like Zapier, Make, and n8n."
-    },
-    {
-      icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
-      title: "Workflow Automation",
-      description: "Custom workflows to automate repetitive tasks and streamline your business operations across multiple platforms."
+      icon: <Code2 className="h-10 w-10 text-[#8A898C]" />,
+      title: "No-Code Development & Workflow Automation",
+      description: "Create web apps, dashboards, automations and full systems using intuitive platforms."
     }
   ];
 
   const portfolioItems = [
     {
-      title: "Customer Support Automation",
-      description: "WhatsApp automation solution that handled 80% of customer inquiries automatically, reducing response time by 95%.",
-      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
-      tags: ["WhatsApp", "Customer Support", "Chatbot"]
-    },
-    {
-      title: "AI Lead Scoring System",
-      description: "Custom AI solution that analyzed customer behavior patterns to score leads, improving sales team efficiency by 65%.",
+      title: "Personal Lead Capture Website",
+      description: "Built with Lovable, integrating automated lead capture and qualification systems.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
-      tags: ["AI", "Machine Learning", "Lead Scoring"]
+      tags: ["Lovable", "Lead Capture", "Automation"]
     },
     {
-      title: "Marketing & CRM Integration",
-      description: "End-to-end integration between marketing platforms and CRM system with automated lead qualification workflows.",
+      title: "WhatsApp Integration System",
+      description: "Creates lead cards automatically in CRM when conversations start, with automated follow-up sequences.",
+      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
+      tags: ["WhatsApp", "CRM", "Automation"]
+    },
+    {
+      title: "AI Campaign Assistant",
+      description: "Analyzes, writes, and optimizes campaigns using Meta Ads API and advanced AI capabilities.",
       image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=500",
-      tags: ["CRM", "Integration", "Workflow"]
+      tags: ["AI", "Meta Ads", "Campaign Optimization"]
+    }
+  ];
+
+  const technologies = [
+    {
+      category: "Automation & Integration",
+      tools: ["n8n", "Make", "Zapier"],
+      icon: <Settings className="h-6 w-6" />
+    },
+    {
+      category: "Web & Mobile App Builders",
+      tools: ["Bubble", "FlutterFlow", "Lovable"],
+      icon: <Mobile className="h-6 w-6" />
+    },
+    {
+      category: "AI & Smart Logic",
+      tools: ["ChatGPT + Plugins", "FlowiseAI", "Relevance AI", "Langflow"],
+      icon: <BrainCircuit className="h-6 w-6" />
+    },
+    {
+      category: "Databases & No-Code Backends",
+      tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
+      icon: <Database className="h-6 w-6" />
     }
   ];
 
@@ -62,14 +81,22 @@ const AutomationAI = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Automation, AI & No/Low-Code Development</h1>
-        <p className="text-xl text-white mb-12">
-          Implementation of intelligent solutions to automate processes, optimize results through AI, and empower businesses with no/low-code technologies.
-          My approach combines data science, engineering, and innovative business strategies.
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">🚀 Automation, AI & No/Low-Code Development</h1>
+        <p className="text-xl text-white mb-6">
+          Intelligent systems to automate, scale, and innovate your digital operations.
         </p>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="bg-white/10 p-6 rounded-lg mb-12">
+          <p className="text-lg text-white mb-4">
+            Transform business routines into high-performance engines using automation, artificial intelligence and no-code platforms. I create solutions that reduce manual work, improve decision-making and connect tools to make your digital strategy truly scalable.
+          </p>
+          <p className="text-lg text-white">
+            My approach blends engineering mindset, business intelligence, and user-friendly platforms — empowering you to scale without increasing complexity.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {mainServices.map((service, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
               <CardHeader>
                 <div className="mb-2">
@@ -84,9 +111,9 @@ const AutomationAI = () => {
           ))}
         </div>
         
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-black">Case Studies</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-black">📁 Portfolio</h2>
+          <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
@@ -108,6 +135,34 @@ const AutomationAI = () => {
                         className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
                       >
                         {tag}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-bold mb-8 text-black">🧩 Technologies I Use</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {technologies.map((tech, index) => (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-center gap-2 mb-2">
+                    {tech.icon}
+                    <CardTitle className="text-lg">{tech.category}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {tech.tools.map((tool) => (
+                      <span 
+                        key={tool}
+                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
+                      >
+                        {tool}
                       </span>
                     ))}
                   </div>
