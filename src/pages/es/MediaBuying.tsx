@@ -105,25 +105,25 @@ const MediaBuying = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/10 backdrop-blur-sm text-white">
+            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
               <CardHeader>
                 <div className="mb-2">
                   {service.icon}
                 </div>
-                <CardTitle className="text-white">{service.title}</CardTitle>
+                <CardTitle className="text-black">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base text-gray-300">{service.description}</CardDescription>
+                <CardDescription className="text-base text-gray-700">{service.description}</CardDescription>
               </CardContent>
             </Card>
           ))}
         </div>
         
-        <div className="mt-16 bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-[#8A898C]">Casos de Éxito Estratégicos</h2>
+        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-bold mb-6 text-black">Casos de Éxito Estratégicos</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all bg-white/5 backdrop-blur-sm">
+              <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
                   <img 
                     src={item.image} 
@@ -132,15 +132,15 @@ const MediaBuying = () => {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-white">{item.title}</CardTitle>
+                  <CardTitle className="text-black">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 mb-4">{item.description}</p>
+                  <p className="text-gray-700 mb-4">{item.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
                       <span 
                         key={tag}
-                        className="px-2 py-1 bg-[#8A898C]/20 text-[#C8C8C9] rounded-full text-xs font-medium"
+                        className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
                       >
                         {tag}
                       </span>
