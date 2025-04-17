@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, BrainCircuit, Target, Database, Settings, LineChart, Bot, Workflow, Code } from "lucide-react";
+import { ArrowLeft, BrainCircuit, Target, Database, Settings, LineChart, Bot } from "lucide-react";
 
 const MediaBuying = () => {
   const mainServices = [
@@ -128,7 +128,7 @@ const MediaBuying = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Paid Media Services & Strategic Performance</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">🚀 Paid Media Services & Strategic Performance</h1>
         <p className="text-xl text-white mb-12">
           Data-driven campaigns, performance intelligence and advanced tracking to scale your results.
         </p>
@@ -144,29 +144,29 @@ const MediaBuying = () => {
         
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {mainServices.map((service, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
+            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/10 backdrop-blur-sm text-white">
               <CardHeader>
                 <div className="mb-2">
                   {service.icon}
                 </div>
-                <CardTitle className="text-black">{service.title}</CardTitle>
+                <CardTitle className="text-white">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base text-gray-700">{service.description}</CardDescription>
+                <CardDescription className="text-base text-gray-300">{service.description}</CardDescription>
               </CardContent>
             </Card>
           ))}
         </div>
         
-        <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-black">Technologies & Tools</h2>
+        <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-lg mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-white">Technologies & Tools 🛠️</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {technologies.map((tech, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/5 backdrop-blur-sm">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
                     {tech.icon}
-                    <CardTitle className="text-lg">{tech.category}</CardTitle>
+                    <CardTitle className="text-lg text-white">{tech.category}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -174,7 +174,7 @@ const MediaBuying = () => {
                     {tech.tools.map((tool) => (
                       <span 
                         key={tool}
-                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
+                        className="px-3 py-1 bg-white/10 text-gray-300 rounded-full text-sm"
                       >
                         {tool}
                       </span>
@@ -186,11 +186,11 @@ const MediaBuying = () => {
           </div>
         </div>
 
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-black">Strategic Case Studies 🚀</h2>
+        <div className="mt-16 bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-bold mb-6 text-white">Strategic Case Studies 🎯</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
+              <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all bg-white/5 backdrop-blur-sm">
                 <div className="h-48 overflow-hidden">
                   <img 
                     src={item.image} 
@@ -199,15 +199,15 @@ const MediaBuying = () => {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-black">{item.title}</CardTitle>
+                  <CardTitle className="text-white">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 mb-4">{item.description}</p>
+                  <p className="text-gray-300 mb-4">{item.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
                       <span 
                         key={tag}
-                        className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
+                        className="px-2 py-1 bg-white/10 text-gray-300 rounded-full text-xs font-medium"
                       >
                         {tag}
                       </span>
