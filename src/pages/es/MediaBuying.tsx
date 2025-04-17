@@ -47,13 +47,13 @@ const MediaBuying = () => {
     {
       title: "Tienda Virtual Febracis — De la Crisis al Crecimiento Exponencial",
       description: "Después de 6 meses de pérdidas en medios pagos, se implementaron enfoques estratégicos logrando R$77.000 en ingresos mensuales (267% de crecimiento) con ROAS del 963% usando Meta Ads y Google Ads.",
-      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=500", // Business team analyzing growth
       tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
     },
     {
       title: "Urban Effort — De Cero a Punto de Equilibrio en 3 Meses",
       description: "Marca americana de gorras que vendía solo en Amazon creó su propio canal de ventas alcanzando el punto de equilibrio en menos de 90 días con +291% de crecimiento en ingresos a través de campañas estratégicas.",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=500", // Laptop with code and business analytics
       tags: ["Meta Ads", "Google Ads", "E-commerce"]
     },
     {
@@ -83,7 +83,7 @@ const MediaBuying = () => {
     {
       title: "Seguimiento Inteligente en WhatsApp — +462% en Conversaciones",
       description: "Implementación de seguimiento via ctwaclid en campañas de Meta Ads llevó a un aumento de +462,16% en conversaciones iniciadas y reducción de 81,34% en el costo por mensaje enviado en solo una semana.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500", // Woman working on laptop analyzing data
       tags: ["Meta Ads", "WhatsApp", "Seguimiento"]
     }
   ];
