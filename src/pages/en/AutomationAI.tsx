@@ -23,22 +23,67 @@ const portfolioItems = [
       highlight: "Intelligence applied to buying journey"
     },
     {
-      title: "Personal Lead Capture Website",
-      description: "Built with Lovable, integrating automated lead capture and qualification systems.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
-      tags: ["Lovable", "Lead Capture", "Automation"]
-    },
-    {
-      title: "WhatsApp Integration System",
-      description: "Creates lead cards automatically in CRM when conversations start, with automated follow-up sequences.",
-      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
-      tags: ["WhatsApp", "CRM", "Automation"]
-    },
-    {
-      title: "AI Campaign Assistant",
-      description: "Analyzes, writes, and optimizes campaigns using Meta Ads API and advanced AI capabilities.",
+      title: "Automated CRM via WhatsApp – Real-time Integration",
+      description: "System that automatically creates a new lead card in CRM as soon as the first WhatsApp contact is initiated. Integration uses FlutterFlow + Lovable + n8n ensuring 100% automated flow.",
       image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=500",
-      tags: ["AI", "Meta Ads", "Campaign Optimization"]
+      tags: ["FlutterFlow", "Lovable", "n8n", "CRM"],
+      tech: "FlutterFlow • Lovable • n8n",
+      goal: "Automatic lead capture and organization",
+      highlight: "Immediate sync between WhatsApp and CRM"
+    },
+    {
+      title: "Smart Tracking with Meta API – +462% in conversations",
+      description: "Implementation of tracking via ctwaclid to accurately identify ads generating WhatsApp conversations. Increase of +462.16% in conversation volume and reduction of -81.34% in cost per message sent in a week.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500",
+      tags: ["Meta API", "n8n", "Supabase", "Analytics"],
+      tech: "Meta API • n8n • Supabase • UTMs",
+      goal: "Precise measurement of message campaigns",
+      highlight: "Advanced tracking with real conversion data"
+    },
+    {
+      title: "WhatsApp Metrics Bot – Real-time report automation",
+      description: "System that automatically sends Meta and Google Ads campaign metrics to WhatsApp groups. Team time savings with reliable data and customized delivery for each group.",
+      image: "https://images.unsplash.com/photo-1553484771-047a44eee27a?q=80&w=500",
+      tags: ["Meta API", "Google Ads API", "WhatsApp API", "n8n"],
+      tech: "Meta API • Google Ads API • Evolution API • WhatsApp API • n8n",
+      goal: "Automated campaign monitoring",
+      highlight: "Reports sent in real-time without manual intervention"
+    },
+    {
+      title: "Automated Follow-up – AI-powered lead recovery",
+      description: "System that identifies unanswered leads in WhatsApp and triggers automatic follow-up messages. Improves re-engagement time, reduces funnel abandonment and increases conversions.",
+      image: "https://images.unsplash.com/photo-1579389083078-4e7018379f7e?q=80&w=500",
+      tags: ["n8n", "Supabase", "WhatsApp API", "Automation"],
+      tech: "n8n • Supabase • WhatsApp API",
+      goal: "Active opportunity recovery",
+      highlight: "Automatic actions based on behavior"
+    },
+    {
+      title: "AI Agents – Automated service and campaigns",
+      description: "Creation of multiple AI agents: from basic service to in-depth analysis of paid media campaigns. One agent can analyze data, suggest optimizations, and even structure Meta Ads campaigns based on current results.",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=500",
+      tags: ["ChatGPT", "Langflow", "Relevance AI", "n8n"],
+      tech: "ChatGPT Plugins • Langflow • Relevance AI • n8n",
+      goal: "Intelligent service, analysis and execution",
+      highlight: "AI with autonomy to suggest and implement actions"
+    },
+    {
+      title: "QR Code System with Automated Instance",
+      description: "Development of platform that generates unique QR Codes for each client, activating a new instance integrated via Evolution API. Enables creation of customized environments with pre-configured logic for immediate use.",
+      image: "https://images.unsplash.com/photo-1598291286794-d417e2685f85?q=80&w=500",
+      tags: ["Lovable", "Evolution API", "n8n"],
+      tech: "Lovable • Evolution API • n8n",
+      goal: "Automatic generation of environments and flows",
+      highlight: "Scalability and zero manual intervention for activation"
+    },
+    {
+      title: "Lead Capture Website with Lovable",
+      description: "Landing page created with Lovable focusing on lead capture for service provision. Tracking integrations and form with direct sending to CRM and WhatsApp.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      tags: ["Lovable", "Webhooks", "Custom CRM"],
+      tech: "Lovable • Webhooks • Custom CRM",
+      goal: "Automated lead capture and qualification",
+      highlight: "Ready to run campaigns with complete tracking"
     }
 ];
 

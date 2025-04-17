@@ -1,38 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, SquareCode, BrainCircuit, Link2, Smartphone, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, Code, BrainCircuit, Link2, Smartphone, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
 
-const AutomationAI = () => {
-  const services = [
-    {
-      icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-      title: "Soluções de IA",
-      description: "Implemente sistemas inteligentes para otimizar processos e aprimorar a tomada de decisões através de inteligência artificial avançada."
-    },
-    {
-      icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
-      title: "Automação de WhatsApp",
-      description: "Soluções de mensagens automatizadas para atendimento ao cliente, suporte de vendas e nutrição de leads via WhatsApp."
-    },
-    {
-      icon: <Database className="h-10 w-10 text-[#8A898C]" />,
-      title: "Integração de CRM",
-      description: "Conexão perfeita entre suas ferramentas de marketing, sistemas CRM e processos de vendas com fluxo de dados automatizado."
-    },
-    {
-      icon: <SquareCode className="h-10 w-10 text-[#8A898C]" />,
-      title: "Desenvolvimento Sem Código",
-      description: "Crie aplicações poderosas e automatize fluxos de trabalho usando plataformas sem código como Zapier, Make e n8n."
-    },
-    {
-      icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
-      title: "Automação de Workflows",
-      description: "Fluxos personalizados para automatizar tarefas repetitivas e otimizar as operações do seu negócio em múltiplas plataformas."
-    }
-  ];
-
-  const portfolioItems = [
+const portfolioItems = [
     {
       title: "WhatsApp Automation – +80% de demandas automatizadas",
       description: "Solução de automação desenvolvida para atendimento via WhatsApp, com chatbot inteligente capaz de lidar com 80% das perguntas frequentes. Redução de 95% no tempo de resposta e aumento na satisfação do atendimento.",
@@ -70,7 +41,7 @@ const AutomationAI = () => {
       highlight: "Tracking avançado com dados reais de conversão"
     },
     {
-      title: "Bot de Métricas para WhatsApp – Relatórios em tempo real",
+      title: "Bot de Métricas para WhatsApp – Automação de relatórios",
       description: "Sistema que envia automaticamente as métricas de campanhas Meta e Google Ads para grupos de WhatsApp. Economia de tempo da equipe, com dados confiáveis e envio personalizado para cada grupo.",
       image: "https://images.unsplash.com/photo-1553484771-047a44eee27a?q=80&w=500",
       tags: ["Meta API", "Google Ads API", "WhatsApp API", "n8n"],
@@ -86,6 +57,62 @@ const AutomationAI = () => {
       tech: "n8n • Supabase • WhatsApp API",
       goal: "Recuperação ativa de oportunidades",
       highlight: "Ações automáticas baseadas em comportamento"
+    },
+    {
+      title: "Agentes de IA – Atendimento e campanhas automatizadas",
+      description: "Criação de múltiplos agentes de IA: desde atendimento básico até análise profunda de campanhas de mídia paga. Um dos agentes é capaz de analisar dados, sugerir otimizações e estruturar campanhas em Meta Ads.",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=500",
+      tags: ["ChatGPT", "Langflow", "Relevance AI", "n8n"],
+      tech: "ChatGPT Plugins • Langflow • Relevance AI • n8n",
+      goal: "Atendimento, análise e execução inteligente",
+      highlight: "IA com autonomia para sugerir e implementar ações"
+    },
+    {
+      title: "Sistema de QR Code com Instância Automatizada",
+      description: "Desenvolvimento de plataforma que gera QR Codes únicos para cada cliente, ativando uma nova instância integrada via Evolution API. Permite criação de ambientes personalizados com lógica pré-configurada.",
+      image: "https://images.unsplash.com/photo-1598291286794-d417e2685f85?q=80&w=500",
+      tags: ["Lovable", "Evolution API", "n8n"],
+      tech: "Lovable • Evolution API • n8n",
+      goal: "Geração automática de ambientes e fluxos",
+      highlight: "Escalabilidade e zero intervenção manual para ativação"
+    },
+    {
+      title: "Site de Captação com Lovable",
+      description: "Landing page criada com Lovable com foco em captação de leads para prestação de serviços. Integrações de tracking e formulário com envio direto ao CRM e ao WhatsApp.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      tags: ["Lovable", "Webhooks", "CRM personalizado"],
+      tech: "Lovable • Webhooks • CRM personalizado",
+      goal: "Captação e qualificação automatizada de leads",
+      highlight: "Pronto para rodar campanhas com tracking completo"
+    }
+];
+
+const AutomationAI = () => {
+  const services = [
+    {
+      icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
+      title: "Soluções de IA",
+      description: "Implemente sistemas inteligentes para otimizar processos e aprimorar a tomada de decisões através de inteligência artificial avançada."
+    },
+    {
+      icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
+      title: "Automação de WhatsApp",
+      description: "Soluções de mensagens automatizadas para atendimento ao cliente, suporte de vendas e nutrição de leads via WhatsApp."
+    },
+    {
+      icon: <Database className="h-10 w-10 text-[#8A898C]" />,
+      title: "Integração de CRM",
+      description: "Conexão perfeita entre suas ferramentas de marketing, sistemas CRM e processos de vendas com fluxo de dados automatizado."
+    },
+    {
+      icon: <SquareCode className="h-10 w-10 text-[#8A898C]" />,
+      title: "Desenvolvimento Sem Código",
+      description: "Crie aplicações poderosas e automatize fluxos de trabalho usando plataformas sem código como Zapier, Make e n8n."
+    },
+    {
+      icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
+      title: "Automação de Workflows",
+      description: "Fluxos personalizados para automatizar tarefas repetitivas e otimizar as operações do seu negócio em múltiplas plataformas."
     }
   ];
 
