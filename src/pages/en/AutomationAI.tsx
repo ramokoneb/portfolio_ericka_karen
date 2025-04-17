@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, SquareCode, BrainCircuit, Link2, Smartphone, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, Code, BrainCircuit, Link2, Smartphone, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
 
 const portfolioItems = [
     {
@@ -83,7 +83,7 @@ const AutomationAI = () => {
       description: "Seamless automation between marketing platforms, CRMs and communication channels."
     },
     {
-      icon: <Code2 className="h-10 w-10 text-[#8A898C]" />,
+      icon: <Code className="h-10 w-10 text-[#8A898C]" />,
       title: "No-Code Development & Workflow Automation",
       description: "Create web apps, dashboards, automations and full systems using intuitive platforms."
     }
