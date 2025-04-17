@@ -1,8 +1,7 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, Code2, BrainCircuit, Link2, Mobile, QrCode, FileCode } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, Code2, BrainCircuit, Link2, Smartphone, FileCode } from "lucide-react";
 
 const AutomationAI = () => {
   const mainServices = [
@@ -58,7 +57,7 @@ const AutomationAI = () => {
     {
       category: "Web & Mobile App Builders",
       tools: ["Bubble", "FlutterFlow", "Lovable"],
-      icon: <Mobile className="h-6 w-6" />
+      icon: <Smartphone className="h-6 w-6" />
     },
     {
       category: "AI & Smart Logic",
