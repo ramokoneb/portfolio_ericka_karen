@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -17,7 +16,6 @@ const Navigation = () => {
   const location = useLocation();
   const [language, setLanguage] = useState<"en" | "pt" | "es">("en");
   
-  // Determinar o idioma atual com base na URL
   useEffect(() => {
     const path = location.pathname;
     if (path.startsWith("/pt")) {
@@ -29,7 +27,6 @@ const Navigation = () => {
     }
   }, [location]);
   
-  // Função para obter o caminho equivalente no idioma selecionado
   const getPathInLanguage = (targetLang: "en" | "pt" | "es") => {
     const path = location.pathname;
     const currentLang = path.startsWith("/pt") ? "pt" : path.startsWith("/es") ? "es" : "en";
@@ -37,11 +34,9 @@ const Navigation = () => {
     
     if (currentLang !== targetLang) {
       if (path === `/${currentLang}`) {
-        // Na home page
         newPath = `/${targetLang}`;
       } else {
-        // Em outras páginas
-        const restOfPath = path.substring(3); // Remove "/en", "/pt" ou "/es"
+        const restOfPath = path.substring(3);
         newPath = `/${targetLang}${restOfPath}`;
       }
     }
@@ -53,7 +48,7 @@ const Navigation = () => {
     en: {
       home: "Home",
       mediaBuying: "Media Buying",
-      automation: "Automation & AI",
+      automation: "Automation, AI and No-Code Development",
       about: "About",
       contact: "Contact",
       services: "Services"
@@ -61,7 +56,7 @@ const Navigation = () => {
     pt: {
       home: "Início",
       mediaBuying: "Mídia Paga",
-      automation: "Automação & IA",
+      automation: "Automação, IA e Desenvolvimento No-Code",
       about: "Sobre",
       contact: "Contato",
       services: "Serviços"
@@ -69,7 +64,7 @@ const Navigation = () => {
     es: {
       home: "Inicio",
       mediaBuying: "Medios Pagos",
-      automation: "Automatización & IA",
+      automation: "Automatización, IA y Desarrollo No-Code",
       about: "Sobre",
       contact: "Contacto",
       services: "Servicios"
@@ -78,7 +73,6 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Desktop Navigation */}
       <div className="hidden md:flex items-center justify-between p-4 bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <Link to={`/${language}`} className="text-xl font-bold text-[#33C3F0]">
           {/* Nome removido conforme solicitado */}
@@ -169,7 +163,6 @@ const Navigation = () => {
         </div>
       </div>
       
-      {/* Mobile Navigation */}
       <div className="md:hidden flex items-center justify-between p-4 bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <Link to={`/${language}`} className="text-xl font-bold text-[#33C3F0]">
           {/* Nome removido conforme solicitado */}
@@ -228,7 +221,6 @@ const Navigation = () => {
         </div>
       </div>
       
-      {/* Spacer to prevent content from being hidden under the navbar */}
       <div className="h-16"></div>
     </>
   );

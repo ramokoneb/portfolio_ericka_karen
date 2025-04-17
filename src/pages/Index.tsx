@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LineChart, Bot, Linkedin, Mail, MessageSquare } from "lucide-react";
@@ -12,7 +11,7 @@ const Index = () => {
       name: "Ericka Karen",
       description: "Digital transformation specialist, combining paid media strategies with intelligent automation and AI solutions to drive exceptional results.",
       mediaButton: "Paid Media Services",
-      automationButton: "Automation & AI",
+      automationButton: "Automation, AI and No-Code Development",
       contact: "Contact Me",
       whatsapp: "WhatsApp",
       linkedin: "LinkedIn",
@@ -22,7 +21,7 @@ const Index = () => {
       name: "Ericka Karen",
       description: "Especialista em transformação digital, combinando estratégias de mídia paga com soluções inteligentes de automação e IA para impulsionar resultados excepcionais.",
       mediaButton: "Serviços de Mídia Paga",
-      automationButton: "Automação & IA",
+      automationButton: "Automação, IA e Desenvolvimento No-Code",
       contact: "Contato",
       whatsapp: "WhatsApp",
       linkedin: "LinkedIn",
