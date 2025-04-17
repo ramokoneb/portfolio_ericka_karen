@@ -1,44 +1,82 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search, Bookmark, Youtube, Bot, Target, LineChart, Database, MessageSquare } from "lucide-react";
+import { ArrowLeft, BrainCircuit, Target, Database, Settings, LineChart, Bot, Workflow, Code } from "lucide-react";
 
 const MediaBuying = () => {
-  const services = [
+  const mainServices = [
     {
-      icon: <Facebook className="h-10 w-10 text-[#8A898C]" />,
-      title: "Meta Ads",
-      description: "Strategic campaign management for Facebook, Instagram and Audience Network with advanced targeting, structured funnels and automation tools like Advantage+ and dynamic catalog. Complete service from copywriting to creative, focused on results."
-    },
-    {
-      icon: <Search className="h-10 w-10 text-[#8A898C]" />,
-      title: "Google Ads",
-      description: "Search, Display, YouTube, Shopping and Performance Max campaigns, always with in-depth research, keyword structuring, smart bidding and constant ROAS optimization."
-    },
-    {
-      icon: <Instagram className="h-10 w-10 text-[#8A898C]" />,
-      title: "TikTok Ads",
-      description: "Creation of visual campaigns focused on engagement and conversion. Strategies that leverage the platform's native format, with creative language and performance objectives."
-    },
-    {
-      icon: <Bookmark className="h-10 w-10 text-[#8A898C]" />,
-      title: "Pinterest Ads",
-      description: "Campaigns focused on discovery and conversion, with creatives designed for the platform's inspirational format. Ideal for e-commerce, fashion, decoration, beauty and visual segments. Full-funnel strategies focused on sustainable growth and qualified traffic."
-    },
-    {
-      icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-      title: "Applied Artificial Intelligence",
-      description: "Using AI on major platforms to optimize delivery, targeting, dynamic creatives and predict behavior patterns. Solutions that integrate intelligence with performance."
+      icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+      title: "Intelligence & Business Strategy",
+      description: "Development of media strategies aligned with business objectives, focused on scalable and sustainable results."
     },
     {
       icon: <Target className="h-10 w-10 text-[#8A898C]" />,
-      title: "Conversion Optimization (CRO)",
-      description: "Actions aimed at reducing CAC and increasing conversion rates through strategic adjustments in campaigns, creatives, landing pages and messaging."
+      title: "Advanced Media Planning",
+      description: "Strategic planning of paid campaigns with focus on qualified traffic, conversion optimization and positive ROI."
     },
     {
       icon: <Database className="h-10 w-10 text-[#8A898C]" />,
       title: "Advanced Tracking & Analytics",
-      description: "Implementation of pixels, custom events, tagging with tools such as GTM, ctwaclid and UTMs. Custom dashboards with real-time data and reports with actionable insights."
+      description: "Implementation of advanced tracking solutions, conversion API integration and data-driven optimization systems."
+    },
+    {
+      icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
+      title: "Applied Artificial Intelligence",
+      description: "Using AI to optimize campaign delivery, targeting, dynamic creatives and predict behavior patterns."
+    }
+  ];
+
+  const technologies = [
+    {
+      category: "🎯 Paid Media Management",
+      tools: [
+        "Meta Ads Manager (Facebook, Instagram, Audience Network)",
+        "Google Ads (Search, Display, YouTube, Shopping, PMax)",
+        "TikTok Ads Manager",
+        "Pinterest Ads",
+        "LinkedIn Ads (for B2B)",
+        "Google Merchant Center (for e-commerce Shopping)"
+      ],
+      icon: <Target className="h-6 w-6" />
+    },
+    {
+      category: "📊 Data Analysis & Performance",
+      tools: [
+        "Google Analytics (GA4)",
+        "Google Tag Manager",
+        "Meta Pixel & Conversion API (CAPI)",
+        "Meta Events Manager",
+        "Hotjar",
+        "Looker Studio / Data Studio",
+        "Supermetrics",
+        "UTMs, ctwaclid, fbclid, gclid"
+      ],
+      icon: <LineChart className="h-6 w-6" />
+    },
+    {
+      category: "⚙️ Flow Automation & Integration",
+      tools: [
+        "n8n",
+        "Make (Integromat)",
+        "Zapier",
+        "Lovable",
+        "Evolution API",
+        "Supabase",
+        "Firebase"
+      ],
+      icon: <Settings className="h-6 w-6" />
+    },
+    {
+      category: "🤖 AI Applied to Paid Media",
+      tools: [
+        "ChatGPT + Plugins",
+        "Langflow / FlowiseAI",
+        "Relevance AI",
+        "AI Campaign Generators",
+        "Custom LLMs for scoring and optimization"
+      ],
+      icon: <BrainCircuit className="h-6 w-6" />
     }
   ];
 
@@ -68,18 +106,6 @@ const MediaBuying = () => {
       tags: ["Meta Ads", "Lead Gen", "Sales"]
     },
     {
-      title: "Qualicorp — 30% CPL Reduction with Bottom-Funnel Segmentation",
-      description: "Healthcare operator facing high cost per lead implemented bottom-funnel keywords and smart bidding, reducing CPL by 30% with higher lead quality.",
-      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=500",
-      tags: ["Google Ads", "Lead Gen", "CPL"]
-    },
-    {
-      title: "Unileão — 118% CPL Reduction with Performance Max",
-      description: "Educational institution optimized lead acquisition with Performance Max campaigns, achieving 118% reduction in cost per lead and positive ROI in the first month.",
-      image: "https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=500",
-      tags: ["Google Ads", "Education", "Performance Max"]
-    },
-    {
       title: "Intelligent WhatsApp Tracking — +462% in Conversations",
       description: "Implementation of ctwaclid tracking in Meta Ads campaigns led to +462.16% increase in initiated conversations and 81.34% reduction in cost per message sent in just one week.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500",
@@ -96,14 +122,22 @@ const MediaBuying = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Paid Media Services & Intelligent Performance</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Paid Media Services & Strategic Performance</h1>
         <p className="text-xl text-white mb-12">
-          Data-driven campaigns, automations and artificial intelligence to scale your results.
-          My approach combines creativity, technology and performance in complete paid media strategies.
+          Data-driven campaigns, performance intelligence and advanced tracking to scale your results.
         </p>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="bg-white/10 p-6 rounded-lg mb-12">
+          <p className="text-lg text-white mb-4">
+            Transform your paid media investments into predictable and scalable growth engines. I combine strategic intelligence with advanced tracking systems to ensure every campaign generates measurable impact.
+          </p>
+          <p className="text-lg text-white">
+            My approach integrates business strategy, performance data and artificial intelligence — delivering campaigns that consistently achieve positive ROI.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {mainServices.map((service, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
               <CardHeader>
                 <div className="mb-2">
@@ -118,10 +152,38 @@ const MediaBuying = () => {
           ))}
         </div>
         
+        <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-black">Technologies & Tools</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {technologies.map((tech, index) => (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-center gap-2 mb-2">
+                    {tech.icon}
+                    <CardTitle className="text-lg">{tech.category}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-col space-y-2">
+                    {tech.tools.map((tool) => (
+                      <span 
+                        key={tool}
+                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-black">Strategic Case Studies</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {portfolioItems.map((item, index) => (
+            {portfolioItems.filter(item => !item.title.includes("Qualicorp")).map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
                   <img 

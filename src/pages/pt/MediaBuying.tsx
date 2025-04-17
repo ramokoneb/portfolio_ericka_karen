@@ -1,44 +1,82 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Facebook, Instagram, BarChart, TrendingUp, Search, Bookmark, Youtube, Bot, Target, LineChart, Database, MessageSquare } from "lucide-react";
+import { ArrowLeft, BrainCircuit, Target, Database, Settings, LineChart, Bot, Workflow, Code } from "lucide-react";
 
 const MediaBuying = () => {
-  const services = [
+  const mainServices = [
     {
-      icon: <Facebook className="h-10 w-10 text-[#8A898C]" />,
-      title: "Meta Ads",
-      description: "Gerenciamento estratégico de campanhas para Facebook, Instagram e Audience Network com segmentação avançada, funis estruturados e ferramentas de automação como Advantage+ e catálogo dinâmico. Serviço completo desde copywriting até criativos, focado em resultados."
+      icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+      title: "Inteligência & Estratégia de Negócio",
+      description: "Desenvolvimento de estratégias de mídia alinhadas aos objetivos de negócio, com foco em resultados escaláveis e sustentáveis."
     },
     {
-      icon: <Search className="h-10 w-10 text-[#8A898C]" />,
-      title: "Google Ads",
-      description: "Campanhas de Search, Display, YouTube, Shopping e Performance Max, sempre com pesquisa aprofundada, estruturação de palavras-chave, lances inteligentes e otimização constante de ROAS."
+      icon: <Target className="h-10 w-10 text-[#8A898C]" />,
+      title: "Planejamento Avançado de Mídia",
+      description: "Planejamento estratégico de campanhas pagas com foco em tráfego qualificado, otimização de conversão e ROI positivo."
     },
     {
-      icon: <Instagram className="h-10 w-10 text-[#8A898C]" />,
-      title: "TikTok Ads",
-      description: "Criação de campanhas visuais focadas em engajamento e conversão. Estratégias que aproveitam o formato nativo da plataforma, com linguagem criativa e objetivos de performance."
-    },
-    {
-      icon: <Bookmark className="h-10 w-10 text-[#8A898C]" />,
-      title: "Pinterest Ads",
-      description: "Campanhas focadas em descoberta e conversão, com criativos desenhados para o formato inspiracional da plataforma. Ideal para e-commerce, moda, decoração, beleza e segmentos visuais. Estratégias de funil completo voltadas para crescimento sustentável e tráfego qualificado."
+      icon: <Database className="h-10 w-10 text-[#8A898C]" />,
+      title: "Rastreamento e Analytics Avançado",
+      description: "Implementação de soluções avançadas de tracking, integração de API de conversão e sistemas de otimização orientados por dados."
     },
     {
       icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
       title: "Inteligência Artificial Aplicada",
-      description: "Uso de IA nas principais plataformas para otimizar entrega, segmentação, criativos dinâmicos e prever padrões de comportamento. Soluções que integram inteligência com performance."
+      description: "Uso de IA para otimizar entrega de campanhas, segmentação, criativos dinâmicos e prever padrões de comportamento."
+    }
+  ];
+
+  const technologies = [
+    {
+      category: "🎯 Gestão de Mídia Paga",
+      tools: [
+        "Meta Ads Manager (Facebook, Instagram, Audience Network)",
+        "Google Ads (Search, Display, YouTube, Shopping, PMax)",
+        "TikTok Ads Manager",
+        "Pinterest Ads",
+        "LinkedIn Ads (caso atenda B2B)",
+        "Google Merchant Center (para e-commerces em Shopping)"
+      ],
+      icon: <Target className="h-6 w-6" />
     },
     {
-      icon: <Target className="h-10 w-10 text-[#8A898C]" />,
-      title: "Otimização de Conversão (CRO)",
-      description: "Ações voltadas para reduzir CAC e aumentar taxas de conversão através de ajustes estratégicos em campanhas, criativos, páginas de destino e mensagens."
+      category: "📊 Análise de Dados e Performance",
+      tools: [
+        "Google Analytics (GA4)",
+        "Google Tag Manager",
+        "Meta Pixel & Conversion API (CAPI)",
+        "Meta Events Manager",
+        "Hotjar",
+        "Looker Studio / Data Studio",
+        "Supermetrics",
+        "UTMs, ctwaclid, fbclid, gclid"
+      ],
+      icon: <LineChart className="h-6 w-6" />
     },
     {
-      icon: <Database className="h-10 w-10 text-[#8A898C]" />,
-      title: "Rastreamento Avançado e Analytics",
-      description: "Implementação de pixels, eventos personalizados, tagueamento com ferramentas como GTM, ctwaclid e UTMs. Dashboards personalizados com dados em tempo real e relatórios com insights acionáveis."
+      category: "⚙️ Automação e Integração de Fluxos",
+      tools: [
+        "n8n",
+        "Make (Integromat)",
+        "Zapier",
+        "Lovable",
+        "Evolution API",
+        "Supabase",
+        "Firebase"
+      ],
+      icon: <Settings className="h-6 w-6" />
+    },
+    {
+      category: "🤖 IA Aplicada à Mídia Paga",
+      tools: [
+        "ChatGPT + Plugins",
+        "Langflow / FlowiseAI",
+        "Relevance AI",
+        "AI Campaign Generators",
+        "LLMs customizados para scoring e otimização"
+      ],
+      icon: <BrainCircuit className="h-6 w-6" />
     }
   ];
 
@@ -82,7 +120,7 @@ const MediaBuying = () => {
     {
       title: "Rastreamento Inteligente no WhatsApp — +462% em Conversas",
       description: "Implementação de rastreamento via ctwaclid nas campanhas de Meta Ads levou a um aumento de +462,16% nas conversas iniciadas e redução de 81,34% no custo por mensagem enviada em apenas uma semana.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500", // Woman working on laptop analyzing data
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500",
       tags: ["Meta Ads", "WhatsApp", "Rastreamento"]
     }
   ];
@@ -96,14 +134,22 @@ const MediaBuying = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Serviços de Mídia Paga e Performance Inteligente</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Serviços de Mídia Paga & Performance Estratégica</h1>
         <p className="text-xl text-white mb-12">
-          Campanhas orientadas por dados, automações e inteligência artificial para escalar seus resultados.
-          Minha abordagem combina criatividade, tecnologia e performance em estratégias completas de mídia paga.
+          Campanhas orientadas por dados, inteligência de performance e rastreamento avançado para escalar seus resultados.
         </p>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="bg-white/10 p-6 rounded-lg mb-12">
+          <p className="text-lg text-white mb-4">
+            Transforme seus investimentos em mídia paga em motores de crescimento previsíveis e escaláveis. Combino inteligência estratégica com sistemas avançados de tracking para garantir que cada campanha gere impacto mensurável.
+          </p>
+          <p className="text-lg text-white">
+            Minha abordagem integra estratégia de negócio, dados de performance e inteligência artificial — entregando campanhas que consistentemente alcançam ROI positivo.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {mainServices.map((service, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
               <CardHeader>
                 <div className="mb-2">
@@ -118,10 +164,38 @@ const MediaBuying = () => {
           ))}
         </div>
         
+        <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-black">Tecnologias & Ferramentas</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {technologies.map((tech, index) => (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-center gap-2 mb-2">
+                    {tech.icon}
+                    <CardTitle className="text-lg">{tech.category}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-col space-y-2">
+                    {tech.tools.map((tool) => (
+                      <span 
+                        key={tool}
+                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-black">Casos de Sucesso Estratégicos</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {portfolioItems.map((item, index) => (
+            {portfolioItems.filter(item => !item.title.includes("Qualicorp")).map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
                   <img 
