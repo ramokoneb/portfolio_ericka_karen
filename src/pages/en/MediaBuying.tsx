@@ -73,6 +73,48 @@ const MediaBuying = () => {
       description: "End-to-end integration between marketing platforms and CRM system with automated lead qualification workflows.",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
       tags: ["CRM", "Integration", "Workflow"]
+    },
+    {
+      title: "Febracis Virtual Store — From Crisis to Exponential Growth",
+      description: "After 6 months of losses in paid media, implemented strategic approaches achieving R$77,000 in monthly revenue (267% growth) with 963% ROAS using Meta Ads and Google Ads.",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
+    },
+    {
+      title: "Urban Effort — From Zero to Breakeven in 3 Months",
+      description: "American hat brand selling only on Amazon created its own sales channel reaching breakeven in under 90 days with +291% revenue growth through strategic campaigns.",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      tags: ["Meta Ads", "Google Ads", "E-commerce"]
+    },
+    {
+      title: "Borogodó Brasil — Revenue Turnaround in 30 Days",
+      description: "After a drastic drop in sales, focused Meta Ads strategies achieved +36% unique visits, +24% sales, +40% revenue and +13% average ticket in just one month.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      tags: ["Meta Ads", "E-commerce", "Revenue"]
+    },
+    {
+      title: "Vamos — +50% in Sales with Intelligent Acquisition",
+      description: "Heavy vehicle rental company scaled its customer base with targeted geographic and demographic segmentation, achieving +50% sales in a single month.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      tags: ["Meta Ads", "Lead Gen", "Sales"]
+    },
+    {
+      title: "Qualicorp — 30% CPL Reduction with Bottom-Funnel Segmentation",
+      description: "Healthcare operator facing high cost per lead implemented bottom-funnel keywords and smart bidding, reducing CPL by 30% with higher lead quality.",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+      tags: ["Google Ads", "Lead Gen", "CPL"]
+    },
+    {
+      title: "Unileão — 118% CPL Reduction with Performance Max",
+      description: "Educational institution optimized lead acquisition with Performance Max campaigns, achieving 118% reduction in cost per lead and positive ROI in the first month.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      tags: ["Google Ads", "Education", "Performance Max"]
+    },
+    {
+      title: "Intelligent WhatsApp Tracking — +462% in Conversations",
+      description: "Implementation of ctwaclid tracking in Meta Ads campaigns led to +462.16% increase in initiated conversations and 81.34% reduction in cost per message sent in just one week.",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      tags: ["Meta Ads", "WhatsApp", "Tracking"]
     }
   ];
 

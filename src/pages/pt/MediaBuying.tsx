@@ -73,6 +73,48 @@ const MediaBuying = () => {
       description: "Integração completa entre plataformas de marketing e sistema CRM com fluxos de trabalho automatizados de qualificação de leads.",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
       tags: ["CRM", "Integração", "Workflow"]
+    },
+    {
+      title: "Loja Virtual Febracis — Da Crise ao Crescimento Exponencial",
+      description: "Após 6 meses de prejuízo em mídia paga, implementou-se abordagens estratégicas alcançando R$77.000 em faturamento mensal (267% de crescimento) com ROAS de 963% usando Meta Ads e Google Ads.",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
+    },
+    {
+      title: "Urban Effort — Do Zero ao Breakeven em 3 Meses",
+      description: "Marca americana de bonés que vendia apenas na Amazon criou canal próprio de vendas atingindo breakeven em menos de 90 dias com +291% de crescimento no faturamento através de campanhas estratégicas.",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+      tags: ["Meta Ads", "Google Ads", "E-commerce"]
+    },
+    {
+      title: "Borogodó Brasil — Reviravolta no Faturamento em 30 Dias",
+      description: "Após queda drástica nas vendas, estratégias focadas em Meta Ads alcançaram +36% em visitas únicas, +24% em vendas, +40% em receita e +13% em ticket médio em apenas um mês.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      tags: ["Meta Ads", "E-commerce", "Faturamento"]
+    },
+    {
+      title: "Vamos — +50% nas Vendas com Aquisição Inteligente",
+      description: "Empresa de aluguel de veículos pesados escalou sua base de clientes com segmentação geográfica e demográfica direcionada, alcançando +50% nas vendas em um único mês.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      tags: ["Meta Ads", "Geração de Leads", "Vendas"]
+    },
+    {
+      title: "Qualicorp — Redução de 30% no CPL com Segmentação de Fundo de Funil",
+      description: "Operadora de saúde enfrentando alto custo por lead implementou palavras-chave de fundo de funil e smart bidding, reduzindo CPL em 30% com maior qualidade nos leads.",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+      tags: ["Google Ads", "Geração de Leads", "CPL"]
+    },
+    {
+      title: "Unileão — Redução de 118% no CPL com Performance Max",
+      description: "Instituição educacional otimizou captação de leads com campanhas Performance Max, alcançando 118% de redução no custo por lead e ROI positivo já no primeiro mês.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      tags: ["Google Ads", "Educação", "Performance Max"]
+    },
+    {
+      title: "Rastreamento Inteligente no WhatsApp — +462% em Conversas",
+      description: "Implementação de rastreamento via ctwaclid nas campanhas de Meta Ads levou a um aumento de +462,16% nas conversas iniciadas e redução de 81,34% no custo por mensagem enviada em apenas uma semana.",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      tags: ["Meta Ads", "WhatsApp", "Rastreamento"]
     }
   ];
 
