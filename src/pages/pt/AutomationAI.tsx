@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -5,7 +6,7 @@ import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, Code, Brain
 
 const portfolioItems = [
     {
-      title: "WhatsApp Automation – +80% de demandas automatizadas",
+      title: "💼 WhatsApp Automation – +80% de demandas automatizadas",
       description: "Solução de automação desenvolvida para atendimento via WhatsApp, com chatbot inteligente capaz de lidar com 80% das perguntas frequentes. Redução de 95% no tempo de resposta e aumento na satisfação do atendimento.",
       image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
       tags: ["WhatsApp API", "n8n", "NLP", "Chatbot"],
@@ -14,7 +15,7 @@ const portfolioItems = [
       highlight: "Redução drástica na necessidade de atendimento humano"
     },
     {
-      title: "AI Lead Scoring System – +65% de eficiência no time comercial",
+      title: "🧠 AI Lead Scoring System – +65% de eficiência no time comercial",
       description: "Sistema de pontuação de leads baseado em machine learning, treinado com padrões de comportamento de usuários reais. Melhorou a eficiência do time de vendas em 65%, priorizando leads com maior chance de conversão.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
       tags: ["n8n", "Supabase", "Machine Learning", "LLMs"],
@@ -23,7 +24,7 @@ const portfolioItems = [
       highlight: "Inteligência aplicada à jornada de compra"
     },
     {
-      title: "CRM Automático via WhatsApp – Integração em tempo real",
+      title: "🔗 CRM Automático via WhatsApp – Integração em tempo real",
       description: "Sistema que cria automaticamente um card de novo lead no CRM assim que o primeiro contato no WhatsApp é iniciado. A integração utiliza FlutterFlow + Lovable + n8n e garante um fluxo 100% automatizado.",
       image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=500",
       tags: ["FlutterFlow", "Lovable", "n8n", "CRM"],
@@ -32,8 +33,8 @@ const portfolioItems = [
       highlight: "Sincronização imediata entre WhatsApp e CRM"
     },
     {
-      title: "Smart Tracking com Meta API – +462% em conversas",
-      description: "Implementação de rastreamento via ctwaclid para identificar com precisão os anúncios que geravam conversas no WhatsApp. Aumento de +462,16% no volume de conversas e redução de -81,34% no custo por mensagem.",
+      title: "🧾 Smart Tracking com Meta API – +462% em conversas no WhatsApp",
+      description: "Implementação de rastreamento via ctwaclid para identificar com precisão os anúncios que geravam conversas no WhatsApp. Aumento de +462,16% no volume de conversas e redução de -81,34% no custo por mensagem enviada em uma semana.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500",
       tags: ["Meta API", "n8n", "Supabase", "Analytics"],
       tech: "Meta API • n8n • Supabase • UTMs",
@@ -41,8 +42,8 @@ const portfolioItems = [
       highlight: "Tracking avançado com dados reais de conversão"
     },
     {
-      title: "Bot de Métricas para WhatsApp – Automação de relatórios",
-      description: "Sistema que envia automaticamente as métricas de campanhas Meta e Google Ads para grupos de WhatsApp. Economia de tempo da equipe, com dados confiáveis e envio personalizado para cada grupo.",
+      title: "📊 Bot de Métricas para WhatsApp – Automação de relatórios em tempo real",
+      description: "Criação de um sistema que envia automaticamente as métricas de campanhas Meta e Google Ads para grupos de WhatsApp. Economia de tempo da equipe, com dados confiáveis e envio personalizado para cada grupo.",
       image: "https://images.unsplash.com/photo-1553484771-047a44eee27a?q=80&w=500",
       tags: ["Meta API", "Google Ads API", "WhatsApp API", "n8n"],
       tech: "Meta API • Google Ads API • Evolution API • WhatsApp API • n8n",
@@ -50,7 +51,7 @@ const portfolioItems = [
       highlight: "Relatórios enviados em tempo real, sem intervenção manual"
     },
     {
-      title: "Follow-up Automático – Recuperação de leads com IA",
+      title: "🔁 Follow-up Automático – Recuperação de leads com IA",
       description: "Sistema que identifica leads não respondidos no WhatsApp e aciona mensagens de follow-up automáticas. Melhora o tempo de reengajamento, reduz o abandono de funil e aumenta conversões.",
       image: "https://images.unsplash.com/photo-1579389083078-4e7018379f7e?q=80&w=500",
       tags: ["n8n", "Supabase", "WhatsApp API", "Automação"],
@@ -59,8 +60,8 @@ const portfolioItems = [
       highlight: "Ações automáticas baseadas em comportamento"
     },
     {
-      title: "Agentes de IA – Atendimento e campanhas automatizadas",
-      description: "Criação de múltiplos agentes de IA: desde atendimento básico até análise profunda de campanhas de mídia paga. Um dos agentes é capaz de analisar dados, sugerir otimizações e estruturar campanhas em Meta Ads.",
+      title: "🤖 Agentes de IA – Atendimento e campanhas automatizadas",
+      description: "Criação de múltiplos agentes de IA: desde atendimento básico até análise profunda de campanhas de mídia paga. Um dos agentes é capaz de analisar dados, sugerir otimizações e até estruturar campanhas em Meta Ads com base nos resultados atuais.",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=500",
       tags: ["ChatGPT", "Langflow", "Relevance AI", "n8n"],
       tech: "ChatGPT Plugins • Langflow • Relevance AI • n8n",
@@ -68,8 +69,8 @@ const portfolioItems = [
       highlight: "IA com autonomia para sugerir e implementar ações"
     },
     {
-      title: "Sistema de QR Code com Instância Automatizada",
-      description: "Desenvolvimento de plataforma que gera QR Codes únicos para cada cliente, ativando uma nova instância integrada via Evolution API. Permite criação de ambientes personalizados com lógica pré-configurada.",
+      title: "🌐 Sistema de QR Code com Instância Automatizada",
+      description: "Desenvolvimento de plataforma que gera QR Codes únicos para cada cliente, ativando uma nova instância integrada via Evolution API. Permite criação de ambientes personalizados com lógica pré-configurada para uso imediato.",
       image: "https://images.unsplash.com/photo-1598291286794-d417e2685f85?q=80&w=500",
       tags: ["Lovable", "Evolution API", "n8n"],
       tech: "Lovable • Evolution API • n8n",
@@ -77,13 +78,36 @@ const portfolioItems = [
       highlight: "Escalabilidade e zero intervenção manual para ativação"
     },
     {
-      title: "Site de Captação com Lovable",
+      title: "🎯 Site de Captação com Lovable – Portfólio com Lead Tracking",
       description: "Landing page criada com Lovable com foco em captação de leads para prestação de serviços. Integrações de tracking e formulário com envio direto ao CRM e ao WhatsApp.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
       tags: ["Lovable", "Webhooks", "CRM personalizado"],
       tech: "Lovable • Webhooks • CRM personalizado",
       goal: "Captação e qualificação automatizada de leads",
       highlight: "Pronto para rodar campanhas com tracking completo"
+    }
+];
+
+const technologies = [
+    {
+      category: "Automação & Integração",
+      tools: ["n8n", "Make", "Zapier"],
+      icon: <Settings className="h-6 w-6" />
+    },
+    {
+      category: "Web & Mobile App Builders",
+      tools: ["Bubble", "FlutterFlow", "Lovable"],
+      icon: <Smartphone className="h-6 w-6" />
+    },
+    {
+      category: "IA & Lógica Inteligente",
+      tools: ["ChatGPT + Plugins", "FlowiseAI", "Relevance AI", "Langflow"],
+      icon: <BrainCircuit className="h-6 w-6" />
+    },
+    {
+      category: "Bancos de Dados & Backends No-Code",
+      tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
+      icon: <Database className="h-6 w-6" />
     }
 ];
 
@@ -105,7 +129,7 @@ const AutomationAI = () => {
       description: "Conexão perfeita entre suas ferramentas de marketing, sistemas CRM e processos de vendas com fluxo de dados automatizado."
     },
     {
-      icon: <SquareCode className="h-10 w-10 text-[#8A898C]" />,
+      icon: <Code className="h-10 w-10 text-[#8A898C]" />,
       title: "Desenvolvimento Sem Código",
       description: "Crie aplicações poderosas e automatize fluxos de trabalho usando plataformas sem código como Zapier, Make e n8n."
     },
@@ -113,29 +137,6 @@ const AutomationAI = () => {
       icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
       title: "Automação de Workflows",
       description: "Fluxos personalizados para automatizar tarefas repetitivas e otimizar as operações do seu negócio em múltiplas plataformas."
-    }
-  ];
-
-  const technologies = [
-    {
-      category: "Automação & Integração",
-      tools: ["n8n", "Make", "Zapier"],
-      icon: <Settings className="h-6 w-6" />
-    },
-    {
-      category: "Web & Mobile App Builders",
-      tools: ["Bubble", "FlutterFlow", "Lovable"],
-      icon: <Smartphone className="h-6 w-6" />
-    },
-    {
-      category: "IA & Lógica Inteligente",
-      tools: ["ChatGPT + Plugins", "FlowiseAI", "Relevance AI", "Langflow"],
-      icon: <BrainCircuit className="h-6 w-6" />
-    },
-    {
-      category: "Bancos de Dados & Backends No-Code",
-      tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
-      icon: <Database className="h-6 w-6" />
     }
   ];
 
@@ -218,7 +219,7 @@ const AutomationAI = () => {
         
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-black">📚 Tecnologias</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {technologies.map((tech, index) => (
               <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
                 <CardHeader>

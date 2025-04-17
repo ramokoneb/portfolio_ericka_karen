@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, SquareCode } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, Code } from "lucide-react";
 
 const AutomationAI = () => {
   const [language, setLanguage] = useState<"en" | "pt">("en");
@@ -30,7 +30,7 @@ const AutomationAI = () => {
           description: "Seamless connection between your marketing tools, CRM systems, and sales processes with automated data flow."
         },
         {
-          icon: <SquareCode className="h-10 w-10 text-[#8A898C]" />,
+          icon: <Code className="h-10 w-10 text-[#8A898C]" />,
           title: "No-Code Development",
           description: "Create powerful applications and automate workflows using no-code platforms like Zapier, Make, and n8n."
         },
@@ -62,7 +62,7 @@ const AutomationAI = () => {
           description: "Conexão perfeita entre suas ferramentas de marketing, sistemas CRM e processos de vendas com fluxo de dados automatizado."
         },
         {
-          icon: <SquareCode className="h-10 w-10 text-[#8A898C]" />,
+          icon: <Code className="h-10 w-10 text-[#8A898C]" />,
           title: "Desenvolvimento Sem Código",
           description: "Crie aplicações poderosas e automatize fluxos de trabalho usando plataformas sem código como Zapier, Make e n8n."
         },
