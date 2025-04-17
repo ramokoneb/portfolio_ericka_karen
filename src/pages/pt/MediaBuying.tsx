@@ -47,43 +47,43 @@ const MediaBuying = () => {
     {
       title: "Loja Virtual Febracis — Da Crise ao Crescimento Exponencial",
       description: "Após 6 meses de prejuízo em mídia paga, implementou-se abordagens estratégicas alcançando R$77.000 em faturamento mensal (267% de crescimento) com ROAS de 963% usando Meta Ads e Google Ads.",
-      image: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=500",
       tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
     },
     {
       title: "Urban Effort — Do Zero ao Breakeven em 3 Meses",
       description: "Marca americana de bonés que vendia apenas na Amazon criou canal próprio de vendas atingindo breakeven em menos de 90 dias com +291% de crescimento no faturamento através de campanhas estratégicas.",
-      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=500",
       tags: ["Meta Ads", "Google Ads", "E-commerce"]
     },
     {
       title: "Borogodó Brasil — Reviravolta no Faturamento em 30 Dias",
       description: "Após queda drástica nas vendas, estratégias focadas em Meta Ads alcançaram +36% em visitas únicas, +24% em vendas, +40% em receita e +13% em ticket médio em apenas um mês.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=500",
       tags: ["Meta Ads", "E-commerce", "Faturamento"]
     },
     {
       title: "Vamos — +50% nas Vendas com Aquisição Inteligente",
       description: "Empresa de aluguel de veículos pesados escalou sua base de clientes com segmentação geográfica e demográfica direcionada, alcançando +50% nas vendas em um único mês.",
-      image: "https://images.unsplash.com/photo-1569025743873-ea3a9ade89f9?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500",
       tags: ["Meta Ads", "Geração de Leads", "Vendas"]
     },
     {
       title: "Qualicorp — Redução de 30% no CPL com Segmentação de Fundo de Funil",
       description: "Operadora de saúde enfrentando alto custo por lead implementou palavras-chave de fundo de funil e smart bidding, reduzindo CPL em 30% com maior qualidade nos leads.",
-      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=500",
       tags: ["Google Ads", "Geração de Leads", "CPL"]
     },
     {
       title: "Unileão — Redução de 118% no CPL com Performance Max",
       description: "Instituição educacional otimizou captação de leads com campanhas Performance Max, alcançando 118% de redução no custo por lead e ROI positivo já no primeiro mês.",
-      image: "https://images.unsplash.com/photo-1616514197671-15d99ce7253f?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=500",
       tags: ["Google Ads", "Educação", "Performance Max"]
     },
     {
       title: "Rastreamento Inteligente no WhatsApp — +462% em Conversas",
       description: "Implementação de rastreamento via ctwaclid nas campanhas de Meta Ads levou a um aumento de +462,16% nas conversas iniciadas e redução de 81,34% no custo por mensagem enviada em apenas uma semana.",
-      image: "https://images.unsplash.com/photo-1607703703674-df96aa081c7d?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=500",
       tags: ["Meta Ads", "WhatsApp", "Rastreamento"]
     }
   ];
@@ -123,7 +123,7 @@ const MediaBuying = () => {
           <h2 className="text-2xl font-bold mb-6 text-black">Casos de Sucesso Estratégicos</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all bg-white">
+              <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
                   <img 
                     src={item.image} 

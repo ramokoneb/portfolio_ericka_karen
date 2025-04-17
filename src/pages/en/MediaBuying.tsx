@@ -47,43 +47,43 @@ const MediaBuying = () => {
     {
       title: "Febracis Virtual Store — From Crisis to Exponential Growth",
       description: "After 6 months of losses in paid media, implemented strategic approaches achieving R$77,000 in monthly revenue (267% growth) with 963% ROAS using Meta Ads and Google Ads.",
-      image: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=500",
       tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
     },
     {
       title: "Urban Effort — From Zero to Breakeven in 3 Months",
       description: "American hat brand selling only on Amazon created its own sales channel reaching breakeven in under 90 days with +291% revenue growth through strategic campaigns.",
-      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=500",
       tags: ["Meta Ads", "Google Ads", "E-commerce"]
     },
     {
       title: "Borogodó Brasil — Revenue Turnaround in 30 Days",
       description: "After a drastic drop in sales, focused Meta Ads strategies achieved +36% unique visits, +24% sales, +40% revenue and +13% average ticket in just one month.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=500",
       tags: ["Meta Ads", "E-commerce", "Revenue"]
     },
     {
       title: "Vamos — +50% in Sales with Intelligent Acquisition",
       description: "Heavy vehicle rental company scaled its customer base with targeted geographic and demographic segmentation, achieving +50% sales in a single month.",
-      image: "https://images.unsplash.com/photo-1569025743873-ea3a9ade89f9?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500",
       tags: ["Meta Ads", "Lead Gen", "Sales"]
     },
     {
       title: "Qualicorp — 30% CPL Reduction with Bottom-Funnel Segmentation",
       description: "Healthcare operator facing high cost per lead implemented bottom-funnel keywords and smart bidding, reducing CPL by 30% with higher lead quality.",
-      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=500",
       tags: ["Google Ads", "Lead Gen", "CPL"]
     },
     {
       title: "Unileão — 118% CPL Reduction with Performance Max",
       description: "Educational institution optimized lead acquisition with Performance Max campaigns, achieving 118% reduction in cost per lead and positive ROI in the first month.",
-      image: "https://images.unsplash.com/photo-1616514197671-15d99ce7253f?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=500",
       tags: ["Google Ads", "Education", "Performance Max"]
     },
     {
       title: "Intelligent WhatsApp Tracking — +462% in Conversations",
       description: "Implementation of ctwaclid tracking in Meta Ads campaigns led to +462.16% increase in initiated conversations and 81.34% reduction in cost per message sent in just one week.",
-      image: "https://images.unsplash.com/photo-1607703703674-df96aa081c7d?q=80&w=500",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=500",
       tags: ["Meta Ads", "WhatsApp", "Tracking"]
     }
   ];
@@ -123,7 +123,7 @@ const MediaBuying = () => {
           <h2 className="text-2xl font-bold mb-6 text-black">Strategic Case Studies</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all bg-white">
+              <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
                   <img 
                     src={item.image} 
