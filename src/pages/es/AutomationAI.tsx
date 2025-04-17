@@ -1,7 +1,8 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, Code, BrainCircuit, Link2, Smartphone, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
+import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, Code, BrainCircuit, Link2, Smartphone } from "lucide-react";
 
 const portfolioItems = [
     {
@@ -89,7 +90,7 @@ const portfolioItems = [
 
 const technologies = [
     {
-      category: "Automation & Integration",
+      category: "Automatización & Integración",
       tools: ["n8n", "Make", "Zapier"],
       icon: <Settings className="h-6 w-6" />
     },
@@ -99,43 +100,38 @@ const technologies = [
       icon: <Smartphone className="h-6 w-6" />
     },
     {
-      category: "AI & Smart Logic",
+      category: "IA & Lógica Inteligente",
       tools: ["ChatGPT + Plugins", "FlowiseAI", "Relevance AI", "Langflow"],
       icon: <BrainCircuit className="h-6 w-6" />
     },
     {
-      category: "Databases & No-Code Backends",
+      category: "Bases de Datos & Backends No-Code",
       tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
       icon: <Database className="h-6 w-6" />
     }
 ];
 
 const AutomationAI = () => {
-  const services = [
+  const mainServices = [
     {
-      icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-      title: "Soluciones de IA",
-      description: "Implemente sistemas inteligentes para optimizar procesos y mejorar la toma de decisiones a través de inteligencia artificial avanzada."
+      icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+      title: "IA & Automatización Inteligente",
+      description: "Implemente sistemas inteligentes que mejoran la toma de decisiones, optimizan campañas y potencian sus flujos de trabajo con inteligencia."
     },
     {
       icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
       title: "Automatización de WhatsApp",
-      description: "Soluciones de mensajería automatizada para servicio al cliente, soporte de ventas y nutrición de leads a través de WhatsApp."
+      description: "Flujos de mensajes automatizados para atención al cliente, ventas y calificación de leads usando WhatsApp y APIs conectadas."
     },
     {
-      icon: <Database className="h-10 w-10 text-[#8A898C]" />,
-      title: "Integración de CRM",
-      description: "Conexión perfecta entre sus herramientas de marketing, sistemas CRM y procesos de ventas con flujo de datos automatizado."
+      icon: <Link2 className="h-10 w-10 text-[#8A898C]" />,
+      title: "CRM & Integraciones de Marketing",
+      description: "Automatización perfecta entre plataformas de marketing, CRMs y canales de comunicación."
     },
     {
       icon: <Code className="h-10 w-10 text-[#8A898C]" />,
-      title: "Desarrollo Sin Código",
-      description: "Cree aplicaciones potentes y automatice flujos de trabajo utilizando plataformas sin código como Zapier, Make y n8n."
-    },
-    {
-      icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
-      title: "Automatización de Workflows",
-      description: "Flujos personalizados para automatizar tareas repetitivas y optimizar las operaciones de su negocio en múltiples plataformas."
+      title: "Desarrollo No-Code & Automatización de Workflows",
+      description: "Cree aplicaciones web, dashboards, automatizaciones y sistemas completos usando plataformas intuitivas."
     }
   ];
 
@@ -148,14 +144,22 @@ const AutomationAI = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Automatización, IA & Desarrollo No/Low-Code</h1>
-        <p className="text-xl text-white mb-12">
-          Implementación de soluciones inteligentes para automatizar procesos, optimizar resultados a través de IA y potenciar negocios con tecnologías no/low-code.
-          Mi enfoque combina ciencia de datos, ingeniería y estrategias de negocio innovadoras.
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">🚀 Automatización, IA & Desarrollo No/Low-Code</h1>
+        <p className="text-xl text-white mb-6">
+          Sistemas inteligentes para automatizar, escalar e innovar sus operaciones digitales.
         </p>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="bg-white/10 p-6 rounded-lg mb-12">
+          <p className="text-lg text-white mb-4">
+            Transforme rutinas de negocio en motores de alto rendimiento usando automatización, inteligencia artificial y plataformas no-code. Creo soluciones que reducen el trabajo manual, mejoran la toma de decisiones y conectan herramientas para hacer su estrategia digital verdaderamente escalable.
+          </p>
+          <p className="text-lg text-white">
+            Mi enfoque combina mentalidad de ingeniería, inteligencia de negocios y plataformas amigables — permitiéndole escalar sin aumentar la complejidad.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {mainServices.map((service, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
               <CardHeader>
                 <div className="mb-2">
@@ -170,9 +174,9 @@ const AutomationAI = () => {
           ))}
         </div>
         
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-black">Portafolio y Casos de Éxito</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-black">📁 Portafolio</h2>
+          <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
@@ -204,7 +208,7 @@ const AutomationAI = () => {
         </div>
 
         <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-8 text-black">🧩 Technologies I Use</h2>
+          <h2 className="text-2xl font-bold mb-8 text-black">🧩 Tecnologías que Utilizo</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {technologies.map((tech, index) => (
               <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">

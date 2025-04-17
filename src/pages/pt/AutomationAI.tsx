@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -112,31 +111,26 @@ const technologies = [
 ];
 
 const AutomationAI = () => {
-  const services = [
+  const mainServices = [
     {
-      icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-      title: "Soluções de IA",
-      description: "Implemente sistemas inteligentes para otimizar processos e aprimorar a tomada de decisões através de inteligência artificial avançada."
+      icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+      title: "IA & Automação Inteligente",
+      description: "Implemente sistemas inteligentes que melhoram a tomada de decisão, otimizam campanhas e potencializam seus fluxos de trabalho com inteligência."
     },
     {
       icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
       title: "Automação de WhatsApp",
-      description: "Soluções de mensagens automatizadas para atendimento ao cliente, suporte de vendas e nutrição de leads via WhatsApp."
+      description: "Fluxos de mensagens automatizados para atendimento ao cliente, vendas e qualificação de leads usando WhatsApp e APIs conectadas."
     },
     {
-      icon: <Database className="h-10 w-10 text-[#8A898C]" />,
-      title: "Integração de CRM",
-      description: "Conexão perfeita entre suas ferramentas de marketing, sistemas CRM e processos de vendas com fluxo de dados automatizado."
+      icon: <Link2 className="h-10 w-10 text-[#8A898C]" />,
+      title: "CRM & Integrações de Marketing",
+      description: "Automação perfeita entre plataformas de marketing, CRMs e canais de comunicação."
     },
     {
       icon: <Code className="h-10 w-10 text-[#8A898C]" />,
-      title: "Desenvolvimento Sem Código",
-      description: "Crie aplicações poderosas e automatize fluxos de trabalho usando plataformas sem código como Zapier, Make e n8n."
-    },
-    {
-      icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
-      title: "Automação de Workflows",
-      description: "Fluxos personalizados para automatizar tarefas repetitivas e otimizar as operações do seu negócio em múltiplas plataformas."
+      title: "Desenvolvimento No-Code & Automação de Workflows",
+      description: "Crie aplicativos web, dashboards, automações e sistemas completos usando plataformas intuitivas."
     }
   ];
 
@@ -150,12 +144,21 @@ const AutomationAI = () => {
         </Link>
         
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">🚀 Automação, IA & Desenvolvimento No/Low-Code</h1>
-        <p className="text-xl text-white mb-12">
-          Implementação de soluções inteligentes para automatizar processos, otimizar resultados através de IA e capacitar negócios com tecnologias no/low-code.
+        <p className="text-xl text-white mb-6">
+          Sistemas inteligentes para automatizar, escalar e inovar suas operações digitais.
         </p>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="bg-white/10 p-6 rounded-lg mb-12">
+          <p className="text-lg text-white mb-4">
+            Transforme rotinas de negócios em motores de alto desempenho usando automação, inteligência artificial e plataformas no-code. Crio soluções que reduzem trabalho manual, melhoram a tomada de decisão e conectam ferramentas para tornar sua estratégia digital verdadeiramente escalável.
+          </p>
+          <p className="text-lg text-white">
+            Minha abordagem combina mentalidade de engenharia, inteligência de negócios e plataformas amigáveis — permitindo que você escale sem aumentar a complexidade.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {mainServices.map((service, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
               <CardHeader>
                 <div className="mb-2">
@@ -170,9 +173,9 @@ const AutomationAI = () => {
           ))}
         </div>
         
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-black">📁 Portfólio e Cases</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-black">📁 Portfólio</h2>
+          <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
@@ -183,53 +186,48 @@ const AutomationAI = () => {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-black text-lg">{item.title}</CardTitle>
+                  <CardTitle className="text-black">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">{item.description}</p>
-                  <div className="space-y-3">
-                    <div className="flex flex-col gap-1">
-                      <span className="text-sm font-medium text-gray-600">Tecnologias:</span>
-                      <span className="text-sm text-gray-800">{item.tech}</span>
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <span className="text-sm font-medium text-gray-600">Objetivo:</span>
-                      <span className="text-sm text-gray-800">{item.goal}</span>
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <span className="text-sm font-medium text-gray-600">Destaque:</span>
-                      <span className="text-sm text-gray-800">{item.highlight}</span>
-                    </div>
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {item.tags.map((tag) => (
-                        <span 
-                          key={tag}
-                          className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="flex flex-wrap gap-2">
+                    {item.tags.map((tag) => (
+                      <span 
+                        key={tag}
+                        className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
-        
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-black">📚 Tecnologias</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-bold mb-8 text-black">🧩 Tecnologias que Utilizo</h2>
+          <div className="grid md:grid-cols-2 gap-8">
             {technologies.map((tech, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
-                  <div className="mb-2">
+                  <div className="flex items-center gap-2 mb-2">
                     {tech.icon}
+                    <CardTitle className="text-lg">{tech.category}</CardTitle>
                   </div>
-                  <CardTitle className="text-black">{tech.category}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base text-gray-700">{tech.tools.join(", ")}</CardDescription>
+                  <div className="flex flex-wrap gap-2">
+                    {tech.tools.map((tool) => (
+                      <span 
+                        key={tool}
+                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}
