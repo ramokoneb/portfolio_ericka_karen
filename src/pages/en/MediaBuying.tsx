@@ -1,6 +1,7 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BrainCircuit, Database, Settings, Bot } from "lucide-react";
+import { ArrowLeft, BrainCircuit, Database, Settings, Bot, LineChart, Target } from "lucide-react";
 import { HeroSection } from "@/components/media-buying/HeroSection";
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
 import { TechnologySection } from "@/components/media-buying/TechnologySection";
@@ -13,7 +14,7 @@ const mainServices = [
     description: "Development of media strategies aligned with business objectives, focused on scalable and sustainable results."
   },
   {
-    icon: Bot,
+    icon: Target,
     title: "Advanced Media Planning",
     description: "Strategic planning of paid campaigns with focus on qualified traffic, conversion optimization and positive ROI."
   },
@@ -40,7 +41,7 @@ const technologies = [
       "LinkedIn Ads (for B2B)",
       "Google Merchant Center (for e-commerce Shopping)"
     ],
-    icon: BrainCircuit
+    icon: Target
   },
   {
     category: "Technologies & Tools 📊",
@@ -54,7 +55,7 @@ const technologies = [
       "Supermetrics",
       "UTMs, ctwaclid, fbclid, gclid"
     ],
-    icon: Database
+    icon: LineChart
   },
   {
     category: "Technologies & Tools ⚙️",
