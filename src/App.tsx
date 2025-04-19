@@ -1,10 +1,9 @@
-
-import React from "react";
+import React, { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Navigation from "./components/Navigation";
 
 // Páginas em inglês
@@ -33,6 +32,35 @@ import NotFound from "./pages/NotFound";
 // Create a client
 const queryClient = new QueryClient();
 
+const LanguageRedirect = () => {
+  const navigate = useNavigate();
+  
+  const { data: location } = useQuery({
+    queryKey: ['userLocation'],
+    queryFn: async () => {
+      const response = await fetch('https://api.ipapi.com/check?access_key=YOUR_API_KEY');
+      const data = await response.json();
+      return data;
+    },
+    enabled: window.location.pathname === '/',
+  });
+
+  useEffect(() => {
+    if (location) {
+      const country = location.country_code?.toLowerCase();
+      if (country === 'br' || country === 'pt') {
+        navigate('/pt', { replace: true });
+      } else if (country === 'es' || country === 'mx' || country === 'ar' || country === 'co' || country === 'pe' || country === 'cl' || country === 've') {
+        navigate('/es', { replace: true });
+      } else {
+        navigate('/en', { replace: true });
+      }
+    }
+  }, [location, navigate]);
+
+  return null;
+};
+
 const App = () => {
   return (
     <React.StrictMode>
@@ -43,6 +71,9 @@ const App = () => {
           <BrowserRouter>
             <Navigation />
             <Routes>
+              {/* IP-based language redirection */}
+              <Route path="/" element={<LanguageRedirect />} />
+              
               {/* Redirecionamento da raiz para a versão em inglês */}
               <Route path="/" element={<Navigate to="/en" replace />} />
               
