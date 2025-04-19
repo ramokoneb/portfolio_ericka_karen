@@ -1,92 +1,46 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { 
-  ArrowLeft, 
-  BrainCircuit, 
-  Target, 
-  Database, 
-  Settings, 
-  LineChart, 
-  Bot 
-} from "lucide-react";
+import { ArrowLeft, BrainCircuit, Database, Settings, Bot, LineChart, Target } from "lucide-react";
+import { HeroSection } from "@/components/media-buying/HeroSection";
+import { ServiceCard } from "@/components/media-buying/ServiceCard";
+import { TechnologySection } from "@/components/media-buying/TechnologySection";
+import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
 
-const mainServices = [
-  {
-    icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
-    title: "Inteligencia & Estrategia de Negocio",
-    description: "Desarrollo de estrategias de medios alineadas con los objetivos de negocio, enfocadas en resultados escalables y sostenibles."
-  },
-  {
-    icon: <Target className="h-10 w-10 text-[#8A898C]" />,
-    title: "Planificación Avanzada de Medios",
-    description: "Planificación estratégica de campañas pagas con foco en tráfico cualificado, optimización de conversión y ROI positivo."
-  },
-  {
-    icon: <Database className="h-10 w-10 text-[#8A898C]" />,
-    title: "Seguimiento y Analítica Avanzada",
-    description: "Implementación de soluciones avanzadas de tracking, integración de API de conversión y sistemas de optimización basados en datos."
-  },
-  {
-    icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-    title: "Inteligencia Artificial Aplicada",
-    description: "Uso de IA para optimizar entrega de campañas, segmentación, creativos dinámicos y predecir patrones de comportamiento."
-  }
-];
+const mainServices = [{
+  icon: BrainCircuit,
+  title: "Inteligencia & Estrategia de Negocio",
+  description: "Desarrollo de estrategias de medios alineadas con los objetivos de negocio, enfocadas en resultados escalables y sostenibles."
+}, {
+  icon: Target,
+  title: "Planificación Avanzada de Medios",
+  description: "Planificación estratégica de campañas pagas con foco en tráfico cualificado, optimización de conversión y ROI positivo."
+}, {
+  icon: Database,
+  title: "Seguimiento y Analítica Avanzada",
+  description: "Implementación de soluciones avanzadas de tracking, integración de API de conversión y sistemas de optimización basados en datos."
+}, {
+  icon: Bot,
+  title: "Inteligencia Artificial Aplicada",
+  description: "Uso de IA para optimizar entrega de campañas, segmentación, creativos dinámicos y predecir patrones de comportamiento."
+}];
 
-const technologies = [
-  {
-    category: "Tecnologías y Herramientas 🎯",
-    tools: [
-      "Meta Ads Manager (Facebook, Instagram, Audience Network)",
-      "Google Ads (Search, Display, YouTube, Shopping, PMax)",
-      "TikTok Ads Manager",
-      "Pinterest Ads",
-      "LinkedIn Ads (para B2B)",
-      "Google Merchant Center (para e-commerce en Shopping)"
-    ],
-    icon: <Target className="h-6 w-6" />
-  },
-  {
-    category: "Tecnologías y Herramientas 📊",
-    tools: [
-      "Google Analytics (GA4)",
-      "Google Tag Manager",
-      "Meta Pixel & Conversion API (CAPI)",
-      "Meta Events Manager",
-      "Hotjar",
-      "Looker Studio / Data Studio",
-      "Supermetrics",
-      "UTMs, ctwaclid, fbclid, gclid"
-    ],
-    icon: <LineChart className="h-6 w-6" />
-  },
-  {
-    category: "Tecnologías y Herramientas ⚙️",
-    tools: [
-      "n8n",
-      "Make (Integromat)",
-      "Zapier",
-      "Lovable",
-      "Evolution API",
-      "Supabase",
-      "Firebase"
-    ],
-    icon: <Settings className="h-6 w-6" />
-  },
-  {
-    category: "Tecnologías y Herramientas 🤖",
-    tools: [
-      "ChatGPT + Plugins",
-      "Langflow / FlowiseAI",
-      "Relevance AI",
-      "AI Campaign Generators",
-      "LLMs personalizados para scoring y optimización"
-    ],
-    icon: <BrainCircuit className="h-6 w-6" />
-  }
-];
+const technologies = [{
+  category: "Tecnologías y Herramientas 🎯",
+  tools: ["Meta Ads Manager (Facebook, Instagram, Audience Network)", "Google Ads (Search, Display, YouTube, Shopping, PMax)", "TikTok Ads Manager", "Pinterest Ads", "LinkedIn Ads (para B2B)", "Google Merchant Center (para e-commerce Shopping)"],
+  icon: Target
+}, {
+  category: "Tecnologías y Herramientas 📊",
+  tools: ["Google Analytics (GA4)", "Google Tag Manager", "Meta Pixel & Conversion API (CAPI)", "Meta Events Manager", "Hotjar", "Looker Studio / Data Studio", "Supermetrics", "UTMs, ctwaclid, fbclid, gclid"],
+  icon: LineChart
+}, {
+  category: "Tecnologías y Herramientas ⚙️",
+  tools: ["n8n", "Make (Integromat)", "Zapier", "Lovable", "Evolution API", "Supabase", "Firebase"],
+  icon: Settings
+}, {
+  category: "Tecnologías y Herramientas 🤖",
+  tools: ["ChatGPT + Plugins", "Langflow / FlowiseAI", "Relevance AI", "AI Campaign Generators", "LLMs personalizados para scoring y optimización"],
+  icon: BrainCircuit
+}];
 
 const portfolioItems = [
   {
@@ -129,104 +83,30 @@ const portfolioItems = [
 
 const MediaBuying = () => {
   return (
-    <div className="min-h-screen p-8 bg-[#000000]">
+    <div className="min-h-screen p-8 bg-nerd-purple matrix-bg bg-1c3454 bg-[1c3454]">
       <div className="max-w-6xl mx-auto">
         <Link to="/es">
-          <Button variant="ghost" className="mb-6 bg-white/20 hover:bg-white/30 text-white">
+          <Button variant="ghost" className="mb-6 glass-card text-#1C3454 text-[#1c3454] bg-[#6caddf]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">🚀 Servicios de Medios Pagos & Performance Estratégica</h1>
-        <p className="text-xl text-white mb-6">
-          Campañas basadas en datos, inteligencia de performance y seguimiento avanzado para escalar tus resultados.
-        </p>
-        
-        <div className="bg-white/10 p-6 rounded-lg mb-12">
-          <p className="text-lg text-white mb-4">
-            Transforma tus inversiones en medios pagos en motores de crecimiento predecibles y escalables. Combino inteligencia estratégica con sistemas avanzados de tracking para asegurar que cada campaña genere impacto medible.
-          </p>
-          <p className="text-lg text-white">
-            Mi enfoque integra estrategia de negocio, datos de performance e inteligencia artificial — entregando campañas que consistentemente alcanzan ROI positivo.
-          </p>
-        </div>
+        <HeroSection 
+          title={<>🚀 Servicios de Medios Pagos & <br /> Performance Estratégica</>}
+          subtitle="Campañas basadas en datos, inteligencia de performance y seguimiento avanzado para escalar tus resultados."
+          description1="Transforma tus inversiones en medios pagos en motores de crecimiento predecibles y escalables. Combino inteligencia estratégica con sistemas avanzados de tracking para asegurar que cada campaña genere impacto medible."
+          description2="Mi enfoque integra estrategia de negocio, datos de performance e inteligencia artificial — entregando campañas que consistentemente alcanzan ROI positivo."
+        />
         
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {mainServices.map((service, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
-              <CardHeader>
-                <div className="mb-2">
-                  {service.icon}
-                </div>
-                <CardTitle className="text-black">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base text-gray-700">{service.description}</CardDescription>
-              </CardContent>
-            </Card>
+            <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
           ))}
         </div>
         
-        <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-black">🛠️ Tecnologías & Herramientas</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {technologies.map((tech, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    {tech.icon}
-                    <CardTitle className="text-lg">{tech.category}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-col space-y-2">
-                    {tech.tools.map((tool) => (
-                      <span 
-                        key={tool}
-                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-8 text-black">📁 Casos de Éxito Estratégicos</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform hover:scale-105"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-black">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700 mb-4">{item.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {item.tags.map((tag) => (
-                      <span 
-                        key={tag}
-                        className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        <TechnologySection technologies={technologies} />
+        
+        <PortfolioSection items={portfolioItems} />
       </div>
     </div>
   );
