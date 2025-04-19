@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -45,32 +46,32 @@ const technologies = [{
 const portfolioItems = [{
   title: "Febracis Virtual Store — From Crisis to Exponential Growth",
   description: "After 6 months of losses in paid media, implemented strategic approaches achieving R$77,000 in monthly revenue (267% growth) with 963% ROAS using Meta Ads and Google Ads.",
-  image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+  image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
   tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
 }, {
   title: "Urban Effort — From Zero to Breakeven in 3 Months",
   description: "American hat brand selling only on Amazon created its own sales channel reaching breakeven in under 90 days with +291% revenue growth through strategic campaigns.",
-  image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+  image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
   tags: ["Meta Ads", "Google Ads", "E-commerce"]
 }, {
   title: "Borogodó Brasil — Revenue Turnaround in 30 Days",
   description: "After a drastic drop in sales, focused Meta Ads strategies achieved +36% unique visits, +24% sales, +40% revenue and +13% average ticket in just one month.",
-  image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+  image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
   tags: ["Meta Ads", "E-commerce", "Revenue"]
 }, {
   title: "Vamos — +50% in Sales with Intelligent Acquisition",
   description: "Heavy vehicle rental company scaled its customer base with targeted geographic and demographic segmentation, achieving +50% sales in a single month.",
-  image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+  image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
   tags: ["Meta Ads", "Lead Gen", "Sales"]
 }, {
   title: "Intelligent WhatsApp Tracking — +462% in Conversations",
   description: "Implementation of ctwaclid tracking in Meta Ads campaigns led to +462.16% increase in initiated conversations and 81.34% reduction in cost per message sent in just one week.",
-  image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+  image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
   tags: ["Meta Ads", "WhatsApp", "Tracking"]
 }, {
   title: "Unileão — 118% Reduction in CPL with Performance Max",
   description: "Educational institution optimized lead capture with Performance Max campaigns, achieving 118% reduction in cost per lead and positive ROI from the first month.",
-  image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+  image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
   tags: ["Google Ads", "Education", "Performance Max"]
 }];
 

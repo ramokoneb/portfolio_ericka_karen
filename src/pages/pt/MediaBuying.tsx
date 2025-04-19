@@ -46,37 +46,37 @@ const portfolioItems = [
   {
     title: "Loja Virtual Febracis — Da Crise ao Crescimento Exponencial",
     description: "Após 6 meses de prejuízo em mídia paga, implementou-se abordagens estratégicas alcançando R$77.000 em faturamento mensal (267% de crescimento) com ROAS de 963% usando Meta Ads e Google Ads.",
-    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+    image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
     tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
   },
   {
     title: "Urban Effort — Do Zero ao Breakeven em 3 Meses",
     description: "Marca americana de bonés que vendia apenas na Amazon criou canal próprio de vendas atingindo breakeven em menos de 90 dias com +291% de crescimento no faturamento através de campanhas estratégicas.",
-    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+    image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
     tags: ["Meta Ads", "Google Ads", "E-commerce"]
   },
   {
     title: "Borogodó Brasil — Reviravolta no Faturamento em 30 Dias",
     description: "Após queda drástica nas vendas, estratégias focadas em Meta Ads alcançaram +36% em visitas únicas, +24% em vendas, +40% em receita e +13% em ticket médio em apenas um mês.",
-    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+    image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
     tags: ["Meta Ads", "E-commerce", "Faturamento"]
   },
   {
     title: "Vamos — +50% nas Vendas com Aquisição Inteligente",
     description: "Empresa de aluguel de veículos pesados escalou sua base de clientes com segmentação geográfica e demográfica direcionada, alcançando +50% nas vendas em um único mês.",
-    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+    image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
     tags: ["Meta Ads", "Geração de Leads", "Vendas"]
   },
   {
     title: "Unileão — Redução de 118% no CPL com Performance Max",
     description: "Instituição educacional otimizou captação de leads com campanhas Performance Max, alcançando 118% de redução no custo por lead e ROI positivo já no primeiro mês.",
-    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+    image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
     tags: ["Google Ads", "Educação", "Performance Max"]
   },
   {
     title: "Rastreamento Inteligente no WhatsApp — +462% em Conversas",
     description: "Implementação de rastreamento via ctwaclid nas campanhas de Meta Ads levou a um aumento de +462,16% nas conversas iniciadas e redução de 81,34% no custo por mensagem enviada em apenas uma semana.",
-    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
+    image: "/lovable-uploads/5e7a3674-d884-47a0-92a9-19bd8db3611e.png",
     tags: ["Meta Ads", "WhatsApp", "Rastreamento"]
   }
 ];
