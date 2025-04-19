@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -77,7 +76,7 @@ const portfolioItems = [{
 
 const MediaBuying = () => {
   return (
-    <div className="min-h-screen p-8 bg-[#1c3454]">
+    <div className="min-h-screen p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/en">
           <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, BrainCircuit, Database, Settings, Bot, LineChart, Target } from "lucide-react";
-import { HeroSection } from "@/components/media-buying/HeroSection";
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
 import { TechnologySection } from "@/components/media-buying/TechnologySection";
 import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
@@ -89,7 +89,7 @@ const portfolioItems = [
 
 const MediaBuying = () => {
   return (
-    <div className="min-h-screen p-8 bg-[#1c3454]">
+    <div className="min-h-screen p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/pt">
           <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
