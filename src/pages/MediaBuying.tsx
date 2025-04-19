@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -39,6 +38,18 @@ const MediaBuying = () => {
           title: "Conversion Optimization",
           description: "Strategies focused on improving conversion rates and reducing customer acquisition costs."
         }
+      ],
+      technologies: [
+        {
+          icon: <Facebook className="h-10 w-10 text-[#8A898C]" />,
+          title: "Meta Ads Manager",
+          description: "Advanced ad platform for Facebook and Instagram campaigns."
+        },
+        {
+          icon: <Search className="h-10 w-10 text-[#8A898C]" />,
+          title: "Google Ads",
+          description: "Comprehensive advertising platform for search, display, and video ads."
+        }
       ]
     },
     pt: {
@@ -70,6 +81,18 @@ const MediaBuying = () => {
           icon: <TrendingUp className="h-10 w-10 text-[#8A898C]" />,
           title: "Otimização de Conversão",
           description: "Estratégias focadas em melhorar taxas de conversão e reduzir custos de aquisição de clientes."
+        }
+      ],
+      technologies: [
+        {
+          icon: <Facebook className="h-10 w-10 text-[#8A898C]" />,
+          title: "Meta Ads Manager",
+          description: "Plataforma avançada de anúncios para campanhas no Facebook e Instagram."
+        },
+        {
+          icon: <Search className="h-10 w-10 text-[#8A898C]" />,
+          title: "Google Ads",
+          description: "Plataforma abrangente de publicidade para anúncios de busca, display e vídeo."
         }
       ]
     }

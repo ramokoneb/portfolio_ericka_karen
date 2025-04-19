@@ -26,7 +26,7 @@ const mainServices = [{
 
 const technologies = [{
   category: "Technologies & Tools 🎯",
-  tools: ["Meta Ads Manager (Facebook, Instagram, Audience Network)", "Google Ads (Search, Display, YouTube, Shopping, PMax)", "TikTok Ads Manager", "Pinterest Ads", "LinkedIn Ads (for B2B)", "Google Merchant Center (for e-commerce Shopping)"],
+  tools: ["Meta Ads Manager", "Google Ads", "TikTok Ads Manager", "Pinterest Ads", "LinkedIn Ads", "Google Merchant Center"],
   icon: Target
 }, {
   category: "Technologies & Tools 📊",
