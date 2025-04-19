@@ -7,67 +7,42 @@ import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, MessageSquare, Linkedin, Mail, Send } from "lucide-react";
 
 const Contact = () => {
-  const contactMethods = [
-    {
-      icon: <MessageSquare className="h-5 w-5 text-[#6CAAD9]" />,
-      label: "WhatsApp",
-      value: "+1 234 567 8900",
-      link: "https://wa.me/12345678900"
-    },
-    {
-      icon: <Linkedin className="h-5 w-5 text-[#6CAAD9]" />,
-      label: "LinkedIn",
-      value: "ericka-karen",
-      link: "https://linkedin.com/in/ericka-karen"
-    },
-    {
-      icon: <Mail className="h-5 w-5 text-[#6CAAD9]" />,
-      label: "Correo",
-      value: "ericka@example.com",
-      link: "mailto:ericka@example.com"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen p-8 bg-[#1A3554]">
+  return <div className="min-h-screen p-8 bg-[#1c3454]">
       <div className="max-w-4xl mx-auto">
         <Link to="/es">
-          <Button variant="ghost" className="mb-6 bg-[#1A3554] text-white hover:bg-[#6CAAD9]">
+          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white">Contáctame</h1>
-        <p className="text-xl text-white mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-slate-50">Contáctame</h1>
+        <p className="text-xl text-[#6caddf] mb-12">
           Hablemos sobre cómo podemos trabajar juntos para lograr tus objetivos.
         </p>
         
         <div className="grid md:grid-cols-2 gap-8">
-          <Card className="border-none shadow-lg">
+          <Card className="border-none shadow-lg bg-white">
             <CardHeader>
-              <CardTitle>Enviar un Mensaje</CardTitle>
-              <CardDescription>
+              <CardTitle className="text-[#1c3454]">Enviar un Mensaje</CardTitle>
+              <CardDescription className="text-[#6caddf]">
                 Completa el formulario a continuación y me pondré en contacto contigo lo antes posible.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form className="space-y-4">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Tu Nombre</label>
+                  <label className="text-sm font-medium text-[#1c3454]">Tu Nombre</label>
                   <Input placeholder="Ingresa tu nombre" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Tu Correo</label>
-                  <Input type="email" placeholder="Ingresa tu correo electrónico" />
+                  <label className="text-sm font-medium text-[#1c3454]">Tu Email</label>
+                  <Input type="email" placeholder="Ingresa tu email" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Tu Mensaje</label>
-                  <Textarea 
-                    placeholder="¿Qué te gustaría discutir?" 
-                    className="min-h-[120px]" 
-                  />
+                  <label className="text-sm font-medium text-[#1c3454]">Tu Mensaje</label>
+                  <Textarea placeholder="¿Qué te gustaría discutir?" className="min-h-[120px]" />
                 </div>
-                <Button className="w-full bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
+                <Button className="w-full bg-[#6caddf] hover:bg-[#6caddf] text-[#1c3454]">
                   <Send className="mr-2 h-4 w-4" /> Enviar Mensaje
                 </Button>
               </form>
@@ -75,35 +50,45 @@ const Contact = () => {
           </Card>
           
           <div>
-            <Card className="border-none shadow-lg mb-8">
+            <Card className="border-none shadow-lg bg-white mb-8">
               <CardHeader>
-                <CardTitle>Información de Contacto</CardTitle>
+                <CardTitle className="text-[#1c3454]">Información de Contacto</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {contactMethods.map((method, index) => (
-                    <a 
-                      key={index} 
-                      href={method.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="p-2 bg-[#6CAAD9]/10 rounded-full mr-3">
-                        {method.icon}
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-gray-500">{method.label}</p>
-                        <p className="text-gray-700">{method.value}</p>
-                      </div>
-                    </a>
-                  ))}
+                  <a href="https://wa.me/12345678900" target="_blank" rel="noopener noreferrer" className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="p-2 bg-[#6caddf]/10 rounded-full mr-3">
+                      <MessageSquare className="h-5 w-5 text-[#6caddf]" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-gray-500">WhatsApp</p>
+                      <p className="text-gray-700">+1 234 567 8900</p>
+                    </div>
+                  </a>
+                  <a href="https://linkedin.com/in/ericka-karen" target="_blank" rel="noopener noreferrer" className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="p-2 bg-[#6caddf]/10 rounded-full mr-3">
+                      <Linkedin className="h-5 w-5 text-[#6caddf]" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-gray-500">LinkedIn</p>
+                      <p className="text-gray-700">ericka-karen</p>
+                    </div>
+                  </a>
+                  <a href="mailto:ericka@example.com" target="_blank" rel="noopener noreferrer" className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="p-2 bg-[#6caddf]/10 rounded-full mr-3">
+                      <Mail className="h-5 w-5 text-[#6caddf]" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-gray-500">Email</p>
+                      <p className="text-gray-700">ericka@example.com</p>
+                    </div>
+                  </a>
                 </div>
               </CardContent>
             </Card>
             
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-xl font-semibold mb-4 text-[#6CAAD9]">
+              <h2 className="text-xl font-semibold mb-4 text-[#1c3454]">
                 Horario de Oficina
               </h2>
               <div className="space-y-2">
@@ -124,8 +109,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
 
 export default Contact;
