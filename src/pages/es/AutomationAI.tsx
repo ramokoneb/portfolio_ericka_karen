@@ -7,7 +7,7 @@ const portfolioItems = [
     {
       title: "Automatización de WhatsApp – +80% de consultas automatizadas",
       description: "Solución de automatización desarrollada para servicio al cliente vía WhatsApp, con chatbot inteligente capaz de manejar el 80% de las preguntas frecuentes. Reducción del 95% en tiempo de respuesta y aumento en la satisfacción del servicio.",
-      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
+      image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
       tags: ["WhatsApp API", "n8n", "NLP", "Chatbot"],
       tech: "WhatsApp API • n8n • NLP • Lógica condicional",
       goal: "Atención al cliente automatizada y escalable",
