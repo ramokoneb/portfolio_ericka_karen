@@ -16,7 +16,7 @@ export const HeroSection = ({ title, subtitle, description1, description2 }: Her
         {subtitle}
       </p>
       
-      <div className="glass-card p-6 rounded-lg mb-12 bg-white border border-[#94C1E7]/20">
+      <div className="glass-card p-6 rounded-lg mb-12 bg-[#1A3554] border border-[#94C1E7]/20">
         <p className="text-lg text-[#6CADDE] mb-4">
           {description1}
         </p>
