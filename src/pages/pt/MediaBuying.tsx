@@ -68,12 +68,6 @@ const portfolioItems = [
     tags: ["Meta Ads", "Geração de Leads", "Vendas"]
   },
   {
-    title: "Qualicorp — Redução de 30% no CPL com Segmentação de Fundo de Funil",
-    description: "Operadora de saúde enfrentando alto custo por lead implementou palavras-chave de fundo de funil e smart bidding, reduzindo CPL em 30% com maior qualidade nos leads.",
-    image: "https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=500",
-    tags: ["Google Ads", "Geração de Leads", "CPL"]
-  },
-  {
     title: "Unileão — Redução de 118% no CPL com Performance Max",
     description: "Instituição educacional otimizou captação de leads com campanhas Performance Max, alcançando 118% de redução no custo por lead e ROI positivo já no primeiro mês.",
     image: "https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=500",
