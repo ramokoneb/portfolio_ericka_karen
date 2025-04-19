@@ -10,15 +10,15 @@ interface ServiceCardProps {
 
 export const ServiceCard = ({ icon: Icon, title, description }: ServiceCardProps) => {
   return (
-    <Card className="card hover:shadow-xl transition-shadow duration-300">
+    <Card className="card-base">
       <CardHeader>
         <div className="mb-2">
-          <Icon className="h-10 w-10 text-nerd-accent" />
+          <Icon className="h-10 w-10 text-primary" />
         </div>
-        <CardTitle className="text-white">{title}</CardTitle>
+        <CardTitle className="text-primary-darker">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription className="text-base text-gray-300">{description}</CardDescription>
+        <CardDescription className="text-base text-primary-dark/80">{description}</CardDescription>
       </CardContent>
     </Card>
   );

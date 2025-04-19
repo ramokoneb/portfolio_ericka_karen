@@ -14,11 +14,11 @@ interface PortfolioSectionProps {
 
 export const PortfolioSection = ({ items }: PortfolioSectionProps) => {
   return (
-    <div className="glass-card p-8 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-8 cult-heading">📁 Strategic Case Studies</h2>
+    <div className="glass-card p-8 rounded-lg shadow-sm">
+      <h2 className="section-title">📁 Strategic Case Studies</h2>
       <div className="grid md:grid-cols-3 gap-8">
         {items.map((item, index) => (
-          <Card key={index} className="card overflow-hidden">
+          <Card key={index} className="card-base overflow-hidden">
             <div className="h-48 overflow-hidden">
               <img 
                 src={item.image} 
@@ -27,15 +27,15 @@ export const PortfolioSection = ({ items }: PortfolioSectionProps) => {
               />
             </div>
             <CardHeader>
-              <CardTitle className="text-white">{item.title}</CardTitle>
+              <CardTitle className="text-primary-darker">{item.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-300 mb-4">{item.description}</p>
+              <p className="text-primary-dark/80 mb-4">{item.description}</p>
               <div className="flex flex-wrap gap-2">
                 {item.tags.map((tag) => (
                   <span 
                     key={tag}
-                    className="px-2 py-1 bg-nerd-accent/10 text-white rounded-full text-xs font-medium nerd-border"
+                    className="px-2 py-1 bg-primary-light/10 text-primary-dark rounded-full text-xs font-medium border border-primary-light/20"
                   >
                     {tag}
                   </span>

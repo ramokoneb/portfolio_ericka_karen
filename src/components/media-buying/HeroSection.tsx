@@ -11,16 +11,16 @@ interface HeroSectionProps {
 export const HeroSection = ({ title, subtitle, description1, description2 }: HeroSectionProps) => {
   return (
     <>
-      <h1 className="text-4xl md:text-5xl font-bold mb-4 cult-heading">{title}</h1>
-      <p className="text-xl text-white mb-6">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary-darker">{title}</h1>
+      <p className="text-xl text-primary-dark mb-6">
         {subtitle}
       </p>
       
       <div className="glass-card p-6 rounded-lg mb-12">
-        <p className="text-lg text-white mb-4">
+        <p className="text-lg text-primary-dark mb-4">
           {description1}
         </p>
-        <p className="text-lg text-white">
+        <p className="text-lg text-primary-dark">
           {description2}
         </p>
       </div>

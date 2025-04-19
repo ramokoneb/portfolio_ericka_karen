@@ -5,74 +5,43 @@
 
 @layer base {
   :root {
-    --background: 231 22% 14%;
-    --foreground: 0 0% 98%;
-    
-    --card: 232 23% 18%;
-    --card-foreground: 0 0% 98%;
-    
-    --popover: 232 23% 18%;
-    --popover-foreground: 0 0% 98%;
-    
-    --primary: 262 83% 58%;
-    --primary-foreground: 0 0% 100%;
-    
-    --secondary: 232 23% 28%;
-    --secondary-foreground: 0 0% 98%;
-    
-    --muted: 232 23% 28%;
-    --muted-foreground: 240 5% 84%;
-    
-    --accent: 262 83% 68%;
-    --accent-foreground: 0 0% 98%;
-    
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-    
-    --border: 232 23% 28%;
-    --input: 232 23% 28%;
-    --ring: 262 83% 58%;
-    
+    --background: #FFFFFF;
+    --foreground: #122D4D;
+    --card: #FFFFFF;
+    --card-foreground: #122D4D;
+    --popover: #FFFFFF;
+    --popover-foreground: #122D4D;
+    --border: #94C1E7;
+    --input: #94C1E7;
+    --ring: #6CAAD9;
     --radius: 0.5rem;
   }
 
   * {
-    @apply border-border selection:bg-nerd-accent/20 selection:text-white;
+    @apply border-border;
   }
 
   body {
-    @apply bg-nerd-purple text-foreground antialiased;
-    background-image: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%),
-                    linear-gradient(to bottom, rgba(30, 174, 219, 0.05) 0%, transparent 100%);
-    background-attachment: fixed;
-  }
-
-  .card {
-    @apply backdrop-blur-sm bg-card/90 border border-nerd-accent/20 shadow-[0_4px_12px_-2px_rgba(139,92,246,0.2)];
-  }
-
-  .tech-text {
-    @apply font-mono text-matrix-green;
-  }
-
-  .cult-heading {
-    @apply font-sans font-bold text-transparent bg-clip-text bg-gradient-to-r from-cult-gold via-nerd-accent to-tech-blue;
-  }
-
-  .nerd-border {
-    @apply border border-nerd-accent/30 shadow-[0_0_15px_rgba(139,92,246,0.2)];
-  }
-
-  .matrix-bg {
-    @apply relative overflow-hidden;
-  }
-
-  .matrix-bg::before {
-    content: '';
-    @apply absolute inset-0 bg-circuit-pattern opacity-5 z-0;
+    @apply bg-white text-foreground antialiased;
   }
 
   .glass-card {
-    @apply backdrop-blur-md bg-white/5 border border-white/10;
+    @apply bg-white/90 backdrop-blur-sm border border-primary-light/20 shadow-sm;
+  }
+
+  .minimalist-button {
+    @apply bg-primary hover:bg-primary-dark text-white transition-colors duration-200;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-semibold text-primary-darker mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-primary-dark/80 mb-8;
+  }
+
+  .card-base {
+    @apply bg-white border border-primary-light/20 shadow-sm hover:shadow-md transition-shadow duration-200;
   }
 }
