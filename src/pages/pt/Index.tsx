@@ -6,7 +6,7 @@ const Index = () => {
       <div className="max-w-4xl mx-auto text-center space-y-8 bg-white p-12 rounded-xl shadow-lg">
         <div className="mb-12">
           <div className="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-[#1A3554] overflow-hidden">
-            <img alt="Ericka Karen" src="/lovable-uploads/218cab45-793f-46f0-b487-d673f9577cfe.jpg" className="w-full h-full object-cover" />
+            <img alt="Ericka Karen" className="w-full h-full object-cover" src="/lovable-uploads/31af75f9-f2e1-431e-bba7-4249d8dd0ffa.png" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-[#6CAAD9] mb-6">
             Ericka Karen
