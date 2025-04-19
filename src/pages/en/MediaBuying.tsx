@@ -71,10 +71,10 @@ const portfolioItems = [{
   tags: ["Google Ads", "Education", "Performance Max"]
 }];
 const MediaBuying = () => {
-  return <div className="min-h-screen p-8 bg-nerd-purple matrix-bg bg-1c3454">
+  return <div className="min-h-screen p-8 bg-nerd-purple matrix-bg bg-1c3454 bg-[1c3454]">
       <div className="max-w-6xl mx-auto">
         <Link to="/en">
-          <Button variant="ghost" className="mb-6 glass-card hover:bg-white/20 text-white">
+          <Button variant="ghost" className="mb-6 glass-card text-#1C3454 text-[#1c3454] bg-[#6caddf]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
