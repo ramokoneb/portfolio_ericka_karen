@@ -1,11 +1,9 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, MessageSquare, Linkedin, Mail, Send } from "lucide-react";
-
 const Contact = () => {
   return <div className="min-h-screen p-8 bg-[#1c3454]">
       <div className="max-w-4xl mx-auto">
@@ -98,7 +96,7 @@ const Contact = () => {
                 </p>
                 <p className="flex justify-between">
                   <span className="font-medium">Sábado</span>
-                  <span>10:00 - 14:00</span>
+                  <span>Cerrado</span>
                 </p>
                 <p className="flex justify-between">
                   <span className="font-medium">Domingo</span>
@@ -111,5 +109,4 @@ const Contact = () => {
       </div>
     </div>;
 };
-
 export default Contact;
