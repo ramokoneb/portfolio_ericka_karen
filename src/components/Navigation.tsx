@@ -49,7 +49,7 @@ const Navigation = () => {
     en: {
       home: "Home",
       mediaBuying: "Media Buying",
-      automation: "Automation, AI & No/Low-Code Development",
+      automation: "Automation, AI & No-Code",
       about: "About",
       contact: "Contact",
       services: "Services"
@@ -57,7 +57,7 @@ const Navigation = () => {
     pt: {
       home: "Início",
       mediaBuying: "Mídia Paga",
-      automation: "Automação, IA & Desenvolvimento No/Low-Code",
+      automation: "Automação, IA & No-Code",
       about: "Sobre",
       contact: "Contato",
       services: "Serviços"
@@ -65,7 +65,7 @@ const Navigation = () => {
     es: {
       home: "Inicio",
       mediaBuying: "Medios Pagos",
-      automation: "Automatización, IA & Desarrollo No/Low-Code",
+      automation: "Automatización, IA & No-Code",
       about: "Sobre",
       contact: "Contacto",
       services: "Servicios"
@@ -74,6 +74,7 @@ const Navigation = () => {
 
   return (
     <>
+      {/* Desktop Navigation */}
       <div className="hidden md:flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
         <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]">
           {/* Nome removido conforme solicitado */}
@@ -164,20 +165,22 @@ const Navigation = () => {
         </div>
       </div>
       
+      {/* Mobile Navigation */}
       <div className="md:hidden flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
         <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]">
           {/* Nome removido conforme solicitado */}
+          EK
         </Link>
         
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-[#1A3554] bg-white">
-                  <Globe className="h-4 w-4" />
+                <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-[#1A3554] bg-white h-9 w-9 p-0 flex items-center justify-center">
+                  <Globe className="h-5 w-5" />
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="p-2 w-[100px] bg-white">
+                  <div className="p-2 w-[100px] bg-white z-50">
                     <Link to={getPathInLanguage("en")} className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
                       EN
                     </Link>
@@ -195,26 +198,31 @@ const Navigation = () => {
           
           <Sheet>
             <SheetTrigger asChild>
-              <Button size="icon" variant="outline" className="bg-white text-[#1A3554]">
+              <Button size="icon" variant="outline" className="bg-white text-[#1A3554] h-9 w-9 p-0">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent className="bg-white">
+            <SheetContent side="right" className="w-[80%] bg-white">
               <div className="flex flex-col gap-4 pt-10">
-                <Link to={`/${language}`} className="p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
+                <Link to={`/${language}`} className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
                   {content[language].home}
                 </Link>
-                <Link to={`/${language}/media-buying`} className="p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
+                <p className="px-3 pt-4 text-sm font-semibold text-gray-500">
+                  {content[language].services}
+                </p>
+                <Link to={`/${language}/media-buying`} className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
                   {content[language].mediaBuying}
                 </Link>
-                <Link to={`/${language}/automation-ai`} className="p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
+                <Link to={`/${language}/automation-ai`} className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
                   {content[language].automation}
                 </Link>
-                <Link to={`/${language}/about`} className="p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
+                <Link to={`/${language}/about`} className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
                   {content[language].about}
                 </Link>
-                <Link to={`/${language}/contact`} className="p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
-                  {content[language].contact}
+                <Link to={`/${language}/contact`} className="mt-4">
+                  <Button className="w-full bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
+                    {content[language].contact}
+                  </Button>
                 </Link>
               </div>
             </SheetContent>
@@ -222,6 +230,7 @@ const Navigation = () => {
         </div>
       </div>
       
+      {/* Spacing for the fixed navbar */}
       <div className="h-16"></div>
     </>
   );
