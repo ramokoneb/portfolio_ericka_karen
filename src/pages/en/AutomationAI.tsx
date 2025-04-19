@@ -153,7 +153,7 @@ const AutomationAI = () => {
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
                     {tech.icon}
-                    <CardTitle className="text-lg">{tech.category}</CardTitle>
+                    <CardTitle className="text-lg text-[#1c3454]">{tech.category}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -168,14 +168,14 @@ const AutomationAI = () => {
         </div>
         
         <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-8 text-black">📁 Portfolio</h2>
+          <h2 className="text-2xl font-bold mb-8 text-[#1c3454]">📁 Portfolio</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform hover:scale-105" />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-black">{item.title}</CardTitle>
+                  <CardTitle className="text-[#1c3454]">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">{item.description}</p>
