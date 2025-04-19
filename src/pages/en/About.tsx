@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Briefcase, Building, Globe } from "lucide-react";
+import { ArrowLeft, Building, Briefcase } from "lucide-react";
 
 const About = () => {
   return (
@@ -49,21 +49,7 @@ const About = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-[#6CADDE]">Brazilian agency specialized in paid media campaigns with focus on measurable results and positive ROI for small and medium businesses.</p>
-            </CardContent>
-          </Card>
-          
-          <Card className="border-none shadow-lg">
-            <CardHeader>
-              <div className="flex items-center">
-                <div className="mr-4">
-                  <Globe className="h-10 w-10 text-[#6CAAD9]" />
-                </div>
-                <CardTitle className="text-[#1A3554]">Zona de Conversão Space</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-[#6CADDE]">AI and automation solutions specifically designed for digital marketing needs, helping businesses scale their marketing operations.</p>
+              <p className="text-[#6CADDE]">Brazilian agency specialized in paid media campaigns with focus on measurable results and positive ROI for small and medium businesses. Develops technological solutions for digital marketing, combining performance, automation, and data intelligence.</p>
             </CardContent>
           </Card>
           
@@ -77,7 +63,7 @@ const About = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-[#6CADDE]">Innovation lab focused on developing automation and AI solutions beyond marketing, creating new possibilities for business transformation.</p>
+              <p className="text-[#6CADDE]">Innovation lab focused on developing no-code automation and AI solutions for businesses. Creates custom solutions with n8n, Make, Supabase, and applied AI, optimizing processes, customer service, and decision-making across various areas beyond marketing.</p>
             </CardContent>
           </Card>
         </div>

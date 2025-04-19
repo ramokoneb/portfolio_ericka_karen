@@ -1,8 +1,7 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Briefcase, Building, Globe } from "lucide-react";
+import { ArrowLeft, Building, Briefcase } from "lucide-react";
 
 const About = () => {
   return (
@@ -50,21 +49,7 @@ const About = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700">Agencia brasileña especializada en campañas de medios pagos con enfoque en resultados medibles y ROI positivo para pequeñas y medianas empresas.</p>
-            </CardContent>
-          </Card>
-          
-          <Card className="border-none shadow-lg">
-            <CardHeader>
-              <div className="flex items-center">
-                <div className="mr-4">
-                  <Globe className="h-10 w-10 text-[#F5A9B8]" />
-                </div>
-                <CardTitle>Zona de Conversão Space</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700">Soluciones de IA y automatización específicamente diseñadas para necesidades de marketing digital, ayudando a las empresas a escalar sus operaciones de marketing.</p>
+              <p className="text-gray-700">Agencia brasileña especializada en campañas de medios pagos con enfoque en resultados medibles y ROI positivo para pequeñas y medianas empresas. Desarrolla soluciones tecnológicas para marketing digital, combinando rendimiento, automatización e inteligencia de datos.</p>
             </CardContent>
           </Card>
           
@@ -78,7 +63,7 @@ const About = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700">Laboratorio de innovación enfocado en el desarrollo de soluciones de automatización e IA más allá del marketing, creando nuevas posibilidades para la transformación empresarial.</p>
+              <p className="text-gray-700">Laboratorio de innovación enfocado en desarrollar soluciones de automatización e IA sin código para empresas. Crea soluciones personalizadas con n8n, Make, Supabase e IA aplicada, optimizando procesos, atención al cliente y toma de decisiones en diversas áreas más allá del marketing.</p>
             </CardContent>
           </Card>
         </div>

@@ -58,21 +58,13 @@ const About = () => {
 
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">💼 Meus projetos</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <Card className="bg-[#1C3454] border-[#6CAAD9]">
               <CardHeader>
                 <CardTitle>Zona de Conversão Digital</CardTitle>
               </CardHeader>
               <CardContent>
                 <p>Agência de performance especializada em campanhas de mídia paga com foco em ROI, escala e resultados mensuráveis. Além da gestão de tráfego, desenvolve soluções tecnológicas voltadas para o mercado de marketing digital, unindo performance, automação e inteligência de dados para pequenas e médias empresas.</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-[#1C3454] border-[#6CAAD9]">
-              <CardHeader>
-                <CardTitle>Zona de Conversão Space</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>Plataforma de soluções de automação e inteligência artificial voltadas para o marketing digital. Ideal para empresas que querem escalar com eficiência.</p>
               </CardContent>
             </Card>
             <Card className="bg-[#1C3454] border-[#6CAAD9]">
