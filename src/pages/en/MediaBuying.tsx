@@ -34,7 +34,7 @@ const technologies = [{
   icon: LineChart
 }, {
   category: "Technologies & Tools ⚙️",
-  tools: ["n8n", "Make (Integromat)", "Zapier", "Lovable", "Evolution API", "Supabase", "Firebase"],
+  tools: ["n8n", "Make (Integromat)", "Zapier", "Evolution API", "Supabase"],
   icon: Settings
 }, {
   category: "Technologies & Tools 🤖",

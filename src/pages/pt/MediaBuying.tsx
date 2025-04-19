@@ -34,11 +34,11 @@ const technologies = [{
   icon: LineChart
 }, {
   category: "Tecnologias & Ferramentas ⚙️",
-  tools: ["n8n", "Make (Integromat)", "Zapier", "Lovable", "Evolution API", "Supabase", "Firebase"],
+  tools: ["n8n", "Make (Integromat)", "Zapier", "Evolution API", "Supabase"],
   icon: Settings
 }, {
   category: "Tecnologias & Ferramentas 🤖",
-  tools: ["ChatGPT + Plugins", "Langflow / FlowiseAI", "Relevance AI", "AI Campaign Generators", "LLMs personalizados para scoring e otimização"],
+  tools: ["ChatGPT + Plugins", "Langflow / FlowiseAI", "Relevance AI", "AI Campaign Generators", "Custom LLMs for scoring and optimization"],
   icon: BrainCircuit
 }];
 
