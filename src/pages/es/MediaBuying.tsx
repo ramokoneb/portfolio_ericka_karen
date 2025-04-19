@@ -83,20 +83,27 @@ const portfolioItems = [
 
 const MediaBuying = () => {
   return (
-    <div className="min-h-screen p-8 bg-nerd-purple matrix-bg bg-1c3454 bg-[1c3454]">
+    <div className="min-h-screen p-8 bg-[#1c3454]">
       <div className="max-w-6xl mx-auto">
         <Link to="/es">
-          <Button variant="ghost" className="mb-6 glass-card text-#1C3454 text-[#1c3454] bg-[#6caddf]">
+          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>
         
-        <HeroSection 
-          title={<>🚀 Servicios de Medios Pagos & <br /> Performance Estratégica</>}
-          subtitle="Campañas basadas en datos, inteligencia de performance y seguimiento avanzado para escalar tus resultados."
-          description1="Transforma tus inversiones en medios pagos en motores de crecimiento predecibles y escalables. Combino inteligencia estratégica con sistemas avanzados de tracking para asegurar que cada campaña genere impacto medible."
-          description2="Mi enfoque integra estrategia de negocio, datos de performance e inteligencia artificial — entregando campañas que consistentemente alcanzan ROI positivo."
-        />
+        <h1 className="text-4xl font-bold mb-4 text-[#1c3454] md:text-5xl">🚀 Servicios de Medios Pagos & Performance Estratégica</h1>
+        <p className="text-xl mb-6 text-[#6caddf]">
+          Campañas basadas en datos, inteligencia de performance y seguimiento avanzado para escalar tus resultados.
+        </p>
+        
+        <div className="p-6 rounded-lg mb-12 bg-[#6caddf]">
+          <p className="text-lg text-[#1c3454] mb-4">
+            Transforma tus inversiones en medios pagos en motores de crecimiento predecibles y escalables. Combino inteligencia estratégica con sistemas avanzados de tracking para asegurar que cada campaña genere impacto medible.
+          </p>
+          <p className="text-lg text-[#1c3454]">
+            Mi enfoque integra estrategia de negocio, datos de performance e inteligencia artificial — entregando campañas que consistentemente alcanzan ROI positivo.
+          </p>
+        </div>
         
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {mainServices.map((service, index) => (
