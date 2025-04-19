@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -38,7 +39,7 @@ const LanguageRedirect = () => {
   const { data: location } = useQuery({
     queryKey: ['userLocation'],
     queryFn: async () => {
-      const response = await fetch('https://api.ipapi.com/check?access_key=YOUR_API_KEY');
+      const response = await fetch('https://api.ipapi.com/check?access_key=4ddc86bc520fe4e9cda58050ba47beb3');
       const data = await response.json();
       return data;
     },
