@@ -1,55 +1,23 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Target, BrainCircuit, Bot, LineChart } from "lucide-react";
-
 const About = () => {
-  const expertiseAreas = [
-    {
-      title: "Mídia Paga e Performance",
-      items: [
-        "Meta Ads, Google Ads, TikTok Ads, Pinterest Ads",
-        "Estratégias Full Funnel, otimização de ROAS e CAC",
-        "Testes A/B, criativos adaptativos e campanhas de mensagens"
-      ]
-    },
-    {
-      title: "Automação e No-Code",
-      items: [
-        "n8n, Make, Zapier",
-        "Integração entre WhatsApp, CRMs, APIs e plataformas de mídia",
-        "FlutterFlow, Lovable, Supabase, Firebase"
-      ]
-    },
-    {
-      title: "IA e Lógica Inteligente",
-      items: [
-        "Agentes conversacionais e analíticos com LLMs",
-        "IA para análise de campanhas e criação de criativos",
-        "Scoring de leads, atendimento automatizado, otimização autônoma de anúncios"
-      ]
-    },
-    {
-      title: "Dados e Rastreamento",
-      items: [
-        "Meta Pixel, CAPI, Google Tag Manager",
-        "ctwaclid, Supabase para tracking de campanhas",
-        "Dashboards em Looker Studio e relatórios automatizados"
-      ]
-    }
-  ];
-
-  const achievements = [
-    "+963% de ROAS com reestruturação de campanhas para e-commerce",
-    "+462% de aumento em conversas no WhatsApp com tracking inteligente",
-    "-118% de CPL para instituição de ensino usando Performance Max",
-    "Break-even em 3 meses para marca internacional com canal de vendas próprio",
-    "Automação completa de atendimento e follow-up com IA e no-code"
-  ];
-
-  return (
-    <div className="min-h-screen bg-[#1A3554] text-white">
+  const expertiseAreas = [{
+    title: "Mídia Paga e Performance",
+    items: ["Meta Ads, Google Ads, TikTok Ads, Pinterest Ads", "Estratégias Full Funnel, otimização de ROAS e CAC", "Testes A/B, criativos adaptativos e campanhas de mensagens"]
+  }, {
+    title: "Automação e No-Code",
+    items: ["n8n, Make, Zapier", "Integração entre WhatsApp, CRMs, APIs e plataformas de mídia", "FlutterFlow, Lovable, Supabase, Firebase"]
+  }, {
+    title: "IA e Lógica Inteligente",
+    items: ["Agentes conversacionais e analíticos com LLMs", "IA para análise de campanhas e criação de criativos", "Scoring de leads, atendimento automatizado, otimização autônoma de anúncios"]
+  }, {
+    title: "Dados e Rastreamento",
+    items: ["Meta Pixel, CAPI, Google Tag Manager", "ctwaclid, Supabase para tracking de campanhas", "Dashboards em Looker Studio e relatórios automatizados"]
+  }];
+  const achievements = ["+963% de ROAS com reestruturação de campanhas para e-commerce", "+462% de aumento em conversas no WhatsApp com tracking inteligente", "-118% de CPL para instituição de ensino usando Performance Max", "Break-even em 3 meses para marca internacional com canal de vendas próprio", "Automação completa de atendimento e follow-up com IA e no-code"];
+  return <div className="min-h-screen bg-[#1A3554] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link to="/pt">
           <Button variant="outline" className="mb-8">
@@ -60,11 +28,7 @@ const About = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="md:col-span-1">
             <div className="w-48 h-48 rounded-full mx-auto overflow-hidden border-4 border-[#6CAAD9]">
-              <img
-                src="/professional-photo.png"
-                alt="Ericka Karen"
-                className="w-full h-full object-cover"
-              />
+              <img alt="Ericka Karen" className="w-full h-full object-cover" src="/lovable-uploads/c50dc637-9f5b-40f7-bf8a-adb3743f5ff8.png" />
             </div>
           </div>
           <div className="md:col-span-2">
@@ -91,7 +55,7 @@ const About = () => {
         </Card>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">💼 Minhas empresas e projetos</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">💼 Meus projetos</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="bg-[#1C3454] border-[#6CAAD9]">
               <CardHeader>
@@ -123,33 +87,27 @@ const About = () => {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">🧠 Expertise Técnica</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {expertiseAreas.map((area, index) => (
-              <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
+            {expertiseAreas.map((area, index) => <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
                 <CardHeader>
                   <CardTitle className="text-xl">{area.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc pl-6 space-y-2">
-                    {area.items.map((item, idx) => (
-                      <li key={idx}>{item}</li>
-                    ))}
+                    {area.items.map((item, idx) => <li key={idx}>{item}</li>)}
                   </ul>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </section>
 
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">📁 Resultados entregues</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
+            {achievements.map((achievement, index) => <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
                 <CardContent className="pt-6">
                   <p className="text-lg">{achievement}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </section>
 
@@ -179,8 +137,6 @@ const About = () => {
           </Card>
         </section>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
