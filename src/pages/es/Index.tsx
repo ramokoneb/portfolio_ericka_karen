@@ -15,10 +15,10 @@ const Index = () => {
               alt="Ericka Karen"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-[#1A3554] mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#6CAAD9] mb-6">
             Ericka Karen
           </h1>
-          <div className="text-xl md:text-xl text-[#6CADDE] max-w-2xl mx-auto space-y-3">
+          <div className="text-xl md:text-xl text-[#1C3454] max-w-2xl mx-auto space-y-3">
             <p>Soy una profesional enfocada en el crecimiento, con base creativa y sólida experiencia en performance digital. Transformo el caos digital en sistemas escalables e inteligentes, combinando estrategia, automatización y medios pagos. Creo campañas más efectivas al fusionar creatividad y tecnología, y entrego soluciones híbridas que integran tráfico pago e innovación no-code.</p>
           </div>
         </div>
@@ -27,7 +27,7 @@ const Index = () => {
           <Link to="/es/media-buying">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#1A3554] hover:bg-[#00275B] text-white"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white"
             >
               <LineChart className="mr-2" />
               Servicios de Medios Pagos
@@ -36,7 +36,7 @@ const Index = () => {
           <Link to="/es/automation-ai">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#1A3554] hover:bg-[#00275B] text-white"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white"
             >
               <Bot className="mr-2" />
               Automatización, IA & Desarrollo No/Low-Code
@@ -45,15 +45,15 @@ const Index = () => {
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center mt-12">
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#94C1E7] hover:text-white border-[#94C1E7] text-[#1A3554]">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#6CAAD9] hover:text-white border-[#94C1E7] text-[#1A3554]">
             <MessageSquare className="mr-2" />
             WhatsApp
           </Button>
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#94C1E7] hover:text-white border-[#94C1E7] text-[#1A3554]">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#6CAAD9] hover:text-white border-[#94C1E7] text-[#1A3554]">
             <Linkedin className="mr-2" />
             LinkedIn
           </Button>
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#94C1E7] hover:text-white border-[#94C1E7] text-[#1A3554]">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#6CAAD9] hover:text-white border-[#94C1E7] text-[#1A3554]">
             <Mail className="mr-2" />
             Correo
           </Button>
