@@ -7,7 +7,7 @@ const portfolioItems = [
     {
       title: "Automatización de WhatsApp – +80% de consultas automatizadas",
       description: "Solución de automatización desarrollada para servicio al cliente vía WhatsApp, con chatbot inteligente capaz de manejar el 80% de las preguntas frecuentes. Reducción del 95% en tiempo de respuesta y aumento en la satisfacción del servicio.",
-      image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
+      image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
       tags: ["WhatsApp API", "n8n", "NLP", "Chatbot"],
       tech: "WhatsApp API • n8n • NLP • Lógica condicional",
       goal: "Atención al cliente automatizada y escalable",
@@ -16,7 +16,7 @@ const portfolioItems = [
     {
       title: "Sistema de Puntuación de Leads con IA – +65% de eficiencia",
       description: "Sistema de puntuación de leads basado en machine learning, entrenado con patrones de comportamiento de usuarios reales. Mejoró la eficiencia del equipo de ventas en un 65%, priorizando leads con mayor probabilidad de conversión.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
       tags: ["n8n", "Supabase", "Machine Learning", "LLMs"],
       tech: "n8n • Supabase • LLMs personalizados",
       goal: "Calificación automática de leads",
@@ -25,7 +25,7 @@ const portfolioItems = [
     {
       title: "CRM Automático vía WhatsApp – Integración en tiempo real",
       description: "Sistema que crea automáticamente una tarjeta de nuevo lead en CRM tan pronto como se inicia el primer contacto en WhatsApp. La integración utiliza FlutterFlow + Lovable + n8n y garantiza un flujo 100% automatizado.",
-      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=500",
+      image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
       tags: ["FlutterFlow", "Lovable", "n8n", "CRM"],
       tech: "FlutterFlow • Lovable • n8n",
       goal: "Captura y organización automática de leads",
@@ -34,7 +34,7 @@ const portfolioItems = [
     {
       title: "Smart Tracking con Meta API – +462% en conversaciones",
       description: "Implementación de seguimiento vía ctwaclid para identificar con precisión los anuncios que generaban conversaciones en WhatsApp. Aumento de +462.16% en volumen de conversaciones y reducción de -81.34% en costo por mensaje.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500",
+      image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
       tags: ["Meta API", "n8n", "Supabase", "Analytics"],
       tech: "Meta API • n8n • Supabase • UTMs",
       goal: "Medición precisa de campañas de mensajes",
@@ -43,7 +43,7 @@ const portfolioItems = [
     {
       title: "Bot de Métricas para WhatsApp – Automatización de informes",
       description: "Sistema que envía automáticamente las métricas de campañas Meta y Google Ads a grupos de WhatsApp. Ahorro de tiempo del equipo, con datos confiables y envío personalizado para cada grupo.",
-      image: "https://images.unsplash.com/photo-1553484771-047a44eee27a?q=80&w=500",
+      image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
       tags: ["Meta API", "Google Ads API", "WhatsApp API", "n8n"],
       tech: "Meta API • Google Ads API • Evolution API • WhatsApp API • n8n",
       goal: "Seguimiento automatizado de campañas",
@@ -52,7 +52,7 @@ const portfolioItems = [
     {
       title: "Follow-up Automático – Recuperación de leads con IA",
       description: "Sistema que identifica leads no respondidos en WhatsApp y activa mensajes de follow-up automáticos. Mejora el tiempo de reenganche, reduce el abandono del embudo y aumenta conversiones.",
-      image: "https://images.unsplash.com/photo-1579389083078-4e7018379f7e?q=80&w=500",
+      image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
       tags: ["n8n", "Supabase", "WhatsApp API", "Automation"],
       tech: "n8n • Supabase • WhatsApp API",
       goal: "Recuperación activa de oportunidades",
@@ -61,7 +61,7 @@ const portfolioItems = [
     {
       title: "Agentes de IA – Atención y campañas automatizadas",
       description: "Creación de múltiples agentes de IA: desde atención básica hasta análisis profundo de campañas de medios pagados. Un agente puede analizar datos, sugerir optimizaciones y estructurar campañas en Meta Ads.",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=500",
+      image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
       tags: ["ChatGPT", "Langflow", "Relevance AI", "n8n"],
       tech: "ChatGPT Plugins • Langflow • Relevance AI • n8n",
       goal: "Atención, análisis y ejecución inteligente",
@@ -70,7 +70,7 @@ const portfolioItems = [
     {
       title: "Sistema de QR Code con Instancia Automatizada",
       description: "Desarrollo de plataforma que genera QR Codes únicos para cada cliente, activando una nueva instancia integrada vía Evolution API. Permite creación de entornos personalizados con lógica preconfigurada.",
-      image: "https://images.unsplash.com/photo-1598291286794-d417e2685f85?q=80&w=500",
+      image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
       tags: ["Lovable", "Evolution API", "n8n"],
       tech: "Lovable • Evolution API • n8n",
       goal: "Generación automática de entornos y flujos",
@@ -79,7 +79,7 @@ const portfolioItems = [
     {
       title: "Sitio de Captación con Lovable",
       description: "Landing page creada con Lovable enfocada en captación de leads para prestación de servicios. Integraciones de tracking y formulario con envío directo a CRM y WhatsApp.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
+      image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
       tags: ["Lovable", "Webhooks", "CRM personalizado"],
       tech: "Lovable • Webhooks • CRM personalizado",
       goal: "Captación y calificación automatizada de leads",
