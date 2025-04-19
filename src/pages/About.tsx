@@ -89,7 +89,7 @@ const About = () => {
             <div className="w-48 h-48 rounded-full mx-auto bg-[#F5A9B8] border-4 border-[#5BCEFA] overflow-hidden">
               <img 
                 className="w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500"
+                src="/professional-photo.png"
                 alt="Ericka Karen"
               />
             </div>

@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LineChart, Bot, Linkedin, Mail, MessageSquare } from "lucide-react";
@@ -50,7 +51,7 @@ const Index = () => {
           <div className="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-[#33C3F0] overflow-hidden">
             <img 
               className="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500"
+              src="/professional-photo.png"
               alt="Ericka Karen"
             />
           </div>
