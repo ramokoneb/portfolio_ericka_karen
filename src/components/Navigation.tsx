@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -73,8 +74,8 @@ const Navigation = () => {
 
   return (
     <>
-      <div className="hidden md:flex items-center justify-between p-4 bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
-        <Link to={`/${language}`} className="text-xl font-bold text-[#33C3F0]">
+      <div className="hidden md:flex items-center justify-between p-4 bg-[#1A3554] fixed top-0 left-0 right-0 z-50">
+        <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]">
           {/* Nome removido conforme solicitado */}
         </Link>
         
@@ -82,21 +83,21 @@ const Navigation = () => {
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link to={`/${language}`}>
-                <NavigationMenuLink className="px-4 py-2 hover:text-[#F5A9B8]">
+                <NavigationMenuLink className="px-4 py-2 hover:text-[#6CAAD9] text-white">
                   {content[language].home}
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="hover:text-[#F5A9B8]">
+              <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-white bg-[#1A3554]">
                 {content[language].services}
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="w-[400px] p-4 grid grid-cols-2 gap-3">
-                  <Link to={`/${language}/media-buying`} className="block p-3 rounded-lg hover:bg-gray-50">
+                <div className="w-[400px] p-4 grid grid-cols-2 gap-3 bg-[#1A3554]">
+                  <Link to={`/${language}/media-buying`} className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-white">
                     <div className="font-medium">{content[language].mediaBuying}</div>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-white">
                       {language === "en" 
                         ? "Strategic paid advertising campaigns" 
                         : language === "pt"
@@ -104,9 +105,9 @@ const Navigation = () => {
                           : "Campañas estratégicas de publicidad paga"}
                     </p>
                   </Link>
-                  <Link to={`/${language}/automation-ai`} className="block p-3 rounded-lg hover:bg-gray-50">
+                  <Link to={`/${language}/automation-ai`} className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-white">
                     <div className="font-medium">{content[language].automation}</div>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-white">
                       {language === "en" 
                         ? "Intelligent automation solutions" 
                         : language === "pt"
@@ -120,7 +121,7 @@ const Navigation = () => {
             
             <NavigationMenuItem>
               <Link to={`/${language}/about`}>
-                <NavigationMenuLink className="px-4 py-2 hover:text-[#F5A9B8]">
+                <NavigationMenuLink className="px-4 py-2 hover:text-[#6CAAD9] text-white">
                   {content[language].about}
                 </NavigationMenuLink>
               </Link>
@@ -128,7 +129,7 @@ const Navigation = () => {
             
             <NavigationMenuItem>
               <Link to={`/${language}/contact`}>
-                <Button className="bg-[#33C3F0] hover:bg-[#1EAEDB]">
+                <Button className="bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
                   {content[language].contact}
                 </Button>
               </Link>
@@ -140,19 +141,19 @@ const Navigation = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="hover:text-[#33C3F0]">
+                <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-white bg-[#1A3554]">
                   <Globe className="mr-2 h-4 w-4" />
                   {language.toUpperCase()}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="p-2 w-[100px]">
-                    <Link to={getPathInLanguage("en")} className="block p-2 hover:bg-gray-100 rounded">
+                  <div className="p-2 w-[100px] bg-[#1A3554]">
+                    <Link to={getPathInLanguage("en")} className="block p-2 hover:bg-[#6CAAD9] rounded text-white">
                       EN
                     </Link>
-                    <Link to={getPathInLanguage("pt")} className="block p-2 hover:bg-gray-100 rounded">
+                    <Link to={getPathInLanguage("pt")} className="block p-2 hover:bg-[#6CAAD9] rounded text-white">
                       PT
                     </Link>
-                    <Link to={getPathInLanguage("es")} className="block p-2 hover:bg-gray-100 rounded">
+                    <Link to={getPathInLanguage("es")} className="block p-2 hover:bg-[#6CAAD9] rounded text-white">
                       ES
                     </Link>
                   </div>
@@ -163,8 +164,8 @@ const Navigation = () => {
         </div>
       </div>
       
-      <div className="md:hidden flex items-center justify-between p-4 bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
-        <Link to={`/${language}`} className="text-xl font-bold text-[#33C3F0]">
+      <div className="md:hidden flex items-center justify-between p-4 bg-[#1A3554] fixed top-0 left-0 right-0 z-50">
+        <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]">
           {/* Nome removido conforme solicitado */}
         </Link>
         
@@ -172,18 +173,18 @@ const Navigation = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="hover:text-[#33C3F0]">
+                <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-white bg-[#1A3554]">
                   <Globe className="h-4 w-4" />
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="p-2 w-[100px]">
-                    <Link to={getPathInLanguage("en")} className="block p-2 hover:bg-gray-100 rounded">
+                  <div className="p-2 w-[100px] bg-[#1A3554]">
+                    <Link to={getPathInLanguage("en")} className="block p-2 hover:bg-[#6CAAD9] rounded text-white">
                       EN
                     </Link>
-                    <Link to={getPathInLanguage("pt")} className="block p-2 hover:bg-gray-100 rounded">
+                    <Link to={getPathInLanguage("pt")} className="block p-2 hover:bg-[#6CAAD9] rounded text-white">
                       PT
                     </Link>
-                    <Link to={getPathInLanguage("es")} className="block p-2 hover:bg-gray-100 rounded">
+                    <Link to={getPathInLanguage("es")} className="block p-2 hover:bg-[#6CAAD9] rounded text-white">
                       ES
                     </Link>
                   </div>
@@ -194,25 +195,25 @@ const Navigation = () => {
           
           <Sheet>
             <SheetTrigger asChild>
-              <Button size="icon" variant="outline">
+              <Button size="icon" variant="outline" className="bg-[#1A3554] text-white">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent className="bg-[#1A3554]">
               <div className="flex flex-col gap-4 pt-10">
-                <Link to={`/${language}`} className="p-2 hover:bg-gray-100 rounded">
+                <Link to={`/${language}`} className="p-2 hover:bg-[#6CAAD9] rounded text-white">
                   {content[language].home}
                 </Link>
-                <Link to={`/${language}/media-buying`} className="p-2 hover:bg-gray-100 rounded">
+                <Link to={`/${language}/media-buying`} className="p-2 hover:bg-[#6CAAD9] rounded text-white">
                   {content[language].mediaBuying}
                 </Link>
-                <Link to={`/${language}/automation-ai`} className="p-2 hover:bg-gray-100 rounded">
+                <Link to={`/${language}/automation-ai`} className="p-2 hover:bg-[#6CAAD9] rounded text-white">
                   {content[language].automation}
                 </Link>
-                <Link to={`/${language}/about`} className="p-2 hover:bg-gray-100 rounded">
+                <Link to={`/${language}/about`} className="p-2 hover:bg-[#6CAAD9] rounded text-white">
                   {content[language].about}
                 </Link>
-                <Link to={`/${language}/contact`} className="p-2 hover:bg-gray-100 rounded">
+                <Link to={`/${language}/contact`} className="p-2 hover:bg-[#6CAAD9] rounded text-white">
                   {content[language].contact}
                 </Link>
               </div>

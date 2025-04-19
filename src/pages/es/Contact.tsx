@@ -9,19 +9,19 @@ import { ArrowLeft, MessageSquare, Linkedin, Mail, Send } from "lucide-react";
 const Contact = () => {
   const contactMethods = [
     {
-      icon: <MessageSquare className="h-5 w-5 text-[#F5A9B8]" />,
+      icon: <MessageSquare className="h-5 w-5 text-[#6CAAD9]" />,
       label: "WhatsApp",
       value: "+1 234 567 8900",
       link: "https://wa.me/12345678900"
     },
     {
-      icon: <Linkedin className="h-5 w-5 text-[#F5A9B8]" />,
+      icon: <Linkedin className="h-5 w-5 text-[#6CAAD9]" />,
       label: "LinkedIn",
       value: "ericka-karen",
       link: "https://linkedin.com/in/ericka-karen"
     },
     {
-      icon: <Mail className="h-5 w-5 text-[#F5A9B8]" />,
+      icon: <Mail className="h-5 w-5 text-[#6CAAD9]" />,
       label: "Correo",
       value: "ericka@example.com",
       link: "mailto:ericka@example.com"
@@ -29,10 +29,10 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen p-8 bg-[#33C3F0]">
+    <div className="min-h-screen p-8 bg-[#1A3554]">
       <div className="max-w-4xl mx-auto">
         <Link to="/es">
-          <Button variant="ghost" className="mb-6 bg-white/50 hover:bg-white/70">
+          <Button variant="ghost" className="mb-6 bg-[#1A3554] text-white hover:bg-[#6CAAD9]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>
@@ -67,7 +67,7 @@ const Contact = () => {
                     className="min-h-[120px]" 
                   />
                 </div>
-                <Button className="w-full bg-[#0EA5E9] hover:bg-[#33C3F0] text-white">
+                <Button className="w-full bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
                   <Send className="mr-2 h-4 w-4" /> Enviar Mensaje
                 </Button>
               </form>
@@ -89,7 +89,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
                     >
-                      <div className="p-2 bg-[#33C3F0]/10 rounded-full mr-3">
+                      <div className="p-2 bg-[#6CAAD9]/10 rounded-full mr-3">
                         {method.icon}
                       </div>
                       <div>
@@ -103,7 +103,7 @@ const Contact = () => {
             </Card>
             
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-xl font-semibold mb-4 text-[#33C3F0]">
+              <h2 className="text-xl font-semibold mb-4 text-[#6CAAD9]">
                 Horario de Oficina
               </h2>
               <div className="space-y-2">

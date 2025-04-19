@@ -35,11 +35,11 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-[#000000]">
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-[#1A3554]">
       <div className="absolute top-4 right-4">
         <Button 
           variant="outline" 
-          className="rounded-full bg-white text-gray-700 hover:bg-gray-100" 
+          className="rounded-full bg-[#1A3554] text-white hover:bg-[#6CAAD9]" 
           onClick={toggleLanguage}
         >
           {language === "en" ? "PT" : "EN"}
@@ -48,17 +48,17 @@ const Index = () => {
       
       <div className="max-w-4xl mx-auto text-center space-y-8 bg-white p-12 rounded-xl shadow-lg">
         <div className="mb-12">
-          <div className="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-[#33C3F0] overflow-hidden">
+          <div className="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-[#1A3554] overflow-hidden">
             <img 
               className="w-full h-full object-cover"
               src="/professional-photo.png"
               alt="Ericka Karen"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-[#33C3F0] mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#6CAAD9] mb-6">
             {content[language].name}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-[#1A3554] max-w-2xl mx-auto">
             {content[language].description}
           </p>
         </div>
@@ -67,7 +67,7 @@ const Index = () => {
           <Link to="/media-buying">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#8A898C] hover:bg-[#6A696C] text-white"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white"
             >
               <LineChart className="mr-2" />
               {content[language].mediaButton}
@@ -76,7 +76,7 @@ const Index = () => {
           <Link to="/automation-ai">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#8A898C] hover:bg-[#6A696C] text-white"
+              className="w-full md:w-auto text-lg px-8 py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white"
             >
               <Bot className="mr-2" />
               {content[language].automationButton}
@@ -85,15 +85,15 @@ const Index = () => {
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center mt-12">
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#33C3F0] hover:text-white">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#6CAAD9] hover:text-white border-[#94C1E7] text-[#1A3554]">
             <MessageSquare className="mr-2" />
             {content[language].whatsapp}
           </Button>
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#33C3F0] hover:text-white">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#6CAAD9] hover:text-white border-[#94C1E7] text-[#1A3554]">
             <Linkedin className="mr-2" />
             {content[language].linkedin}
           </Button>
-          <Button variant="outline" size="lg" className="bg-white hover:bg-[#33C3F0] hover:text-white">
+          <Button variant="outline" size="lg" className="bg-white hover:bg-[#6CAAD9] hover:text-white border-[#94C1E7] text-[#1A3554]">
             <Mail className="mr-2" />
             {content[language].email}
           </Button>
