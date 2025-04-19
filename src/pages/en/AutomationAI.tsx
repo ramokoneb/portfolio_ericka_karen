@@ -113,17 +113,17 @@ const AutomationAI = () => {
   return <div className="min-h-screen p-8 bg-[#000000]">
       <div className="max-w-6xl mx-auto">
         <Link to="/en">
-          <Button variant="ghost" className="mb-6 bg-white/20 hover:bg-white/30 text-white">
+          <Button variant="ghost" className="mb-6 text-white bg-[#6caddf]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
         
         <h1 className="text-4xl font-bold mb-4 text-[#1c3454] md:text-5xl">🚀 Automation, AI & No/Low-Code Development</h1>
-        <p className="text-xl text-white mb-6">
+        <p className="text-xl mb-6 text-[#6caddf]">
           Intelligent systems to automate, scale, and innovate your digital operations.
         </p>
         
-        <div className="p-6 rounded-lg mb-12 bg-white/10">
+        <div className="p-6 rounded-lg mb-12 bg-[#6caddf]">
           <p className="text-lg text-1C3454 mb-4 text-[#1c3454]">
             Transform business routines into high-performance engines using automation, artificial intelligence and no-code platforms. I create solutions that reduce manual work, improve decision-making and connect tools to make your digital strategy truly scalable.
           </p>
@@ -141,7 +141,7 @@ const AutomationAI = () => {
                 <CardTitle className="text-[#1c3454]">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base text-gray-700">{service.description}</CardDescription>
+                <CardDescription className="text-base text-[#6caddf]">{service.description}</CardDescription>
               </CardContent>
             </Card>)}
         </div>
@@ -158,7 +158,7 @@ const AutomationAI = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
-                    {tech.tools.map(tool => <span key={tool} className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">
+                    {tech.tools.map(tool => <span key={tool} className="px-3 py-1 bg-gray-100 rounded-full text-sm text-[#6caddf]">
                         {tool}
                       </span>)}
                   </div>
@@ -178,9 +178,9 @@ const AutomationAI = () => {
                   <CardTitle className="text-[#1c3454]">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 mb-4">{item.description}</p>
+                  <p className="mb-4 text-[#6caddf]">{item.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {item.tags.map(tag => <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium">
+                    {item.tags.map(tag => <span key={tag} className="px-2 py-1 bg-gray-100 rounded-full text-xs font-medium text-[#6caddf]">
                         {tag}
                       </span>)}
                   </div>
