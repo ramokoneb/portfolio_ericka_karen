@@ -5,7 +5,6 @@ import { ArrowLeft, BrainCircuit, Database, Settings, Bot, LineChart, Target } f
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
 import { TechnologySection } from "@/components/media-buying/TechnologySection";
 import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
-
 const mainServices = [{
   icon: BrainCircuit,
   title: "Inteligência & Estratégia de Negócio",
@@ -23,7 +22,6 @@ const mainServices = [{
   title: "Inteligência Artificial Aplicada",
   description: "Uso de IA para otimizar entrega de campanhas, segmentação, criativos dinâmicos e prever padrões de comportamento."
 }];
-
 const technologies = [{
   category: "Tecnologias & Ferramentas 🎯",
   tools: ["Meta Ads Manager", "Google Ads", "TikTok Ads Manager", "Pinterest Ads", "LinkedIn Ads", "Google Merchant Center"],
@@ -41,7 +39,6 @@ const technologies = [{
   tools: ["ChatGPT + Plugins", "Langflow / FlowiseAI", "Relevance AI", "AI Campaign Generators", "Custom LLMs for scoring and optimization"],
   icon: BrainCircuit
 }];
-
 const portfolioItems = [{
   title: "Loja Virtual Febracis — Da Crise ao Crescimento Exponencial",
   description: "Após 6 meses de prejuízo em mídia paga, implementou-se abordagens estratégicas alcançando R$77.000 em faturamento mensal (267% de crescimento) com ROAS de 963% usando Meta Ads e Google Ads.",
@@ -73,7 +70,6 @@ const portfolioItems = [{
   image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
   tags: ["Meta Ads", "WhatsApp", "Rastreamento"]
 }];
-
 const MediaBuying = () => {
   return <div className="min-h-screen p-8 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -89,10 +85,10 @@ const MediaBuying = () => {
         </p>
         
         <div className="p-6 rounded-lg mb-12 bg-[#6caddf]">
-          <p className="text-lg mb-4 text-slate-50">
+          <p className="text-lg mb-4 text-[#1c3454]">
             Transforme seus investimentos em mídia paga em motores de crescimento previsíveis e escaláveis. Combino inteligência estratégica com sistemas avançados de tracking para garantir que cada campanha gere impacto mensurável.
           </p>
-          <p className="text-lg text-slate-50">
+          <p className="text-lg text-[#1c3454]">
             Minha abordagem integra estratégia de negócio, dados de performance e inteligência artificial — entregando campanhas que consistentemente alcançam ROI positivo.
           </p>
         </div>
@@ -107,5 +103,4 @@ const MediaBuying = () => {
       </div>
     </div>;
 };
-
 export default MediaBuying;
