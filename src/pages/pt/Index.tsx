@@ -1,19 +1,12 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LineChart, Bot, Linkedin, Mail, MessageSquare } from "lucide-react";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-[#1A3554]">
+  return <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-[#1A3554]">
       <div className="max-w-4xl mx-auto text-center space-y-8 bg-white p-12 rounded-xl shadow-lg">
         <div className="mb-12">
           <div className="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-[#1A3554] overflow-hidden">
-            <img 
-              className="w-full h-full object-cover"
-              src="/professional-photo.png"
-              alt="Ericka Karen"
-            />
+            <img alt="Ericka Karen" src="/lovable-uploads/218cab45-793f-46f0-b487-d673f9577cfe.jpg" className="w-full h-full object-cover" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-[#6CAAD9] mb-6">
             Ericka Karen
@@ -25,19 +18,13 @@ const Index = () => {
 
         <div className="flex flex-col md:flex-row gap-6 justify-center">
           <Link to="/pt/media-buying">
-            <Button 
-              size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white"
-            >
+            <Button size="lg" className="w-full md:w-auto text-lg px-8 py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
               <LineChart className="mr-2" />
               Serviços de Mídia Paga
             </Button>
           </Link>
           <Link to="/pt/automation-ai">
-            <Button 
-              size="lg" 
-              className="w-full md:w-auto text-lg px-8 py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white"
-            >
+            <Button size="lg" className="w-full md:w-auto text-lg px-8 py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
               <Bot className="mr-2" />
               Automação, IA & Desenvolvimento No/Low-Code
             </Button>
@@ -59,8 +46,6 @@ const Index = () => {
           </Button>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
