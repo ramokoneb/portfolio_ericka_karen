@@ -135,24 +135,24 @@ const AutomationAI = () => {
   ];
 
   return (
-    <div className="min-h-screen p-8 bg-[#000000]">
+    <div className="min-h-screen p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/pt">
-          <Button variant="ghost" className="mb-6 bg-white/20 hover:bg-white/30 text-white">
+          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Início
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">🚀 Automação, IA & Desenvolvimento No/Low-Code</h1>
-        <p className="text-xl text-white mb-6">
+        <h1 className="text-4xl font-bold mb-4 text-[#1c3454] md:text-5xl">🚀 Automação, IA & Desenvolvimento No/Low-Code</h1>
+        <p className="text-xl mb-6 text-[#6caddf]">
           Sistemas inteligentes para automatizar, escalar e inovar suas operações digitais.
         </p>
         
-        <div className="bg-white/10 p-6 rounded-lg mb-12">
-          <p className="text-lg text-white mb-4">
+        <div className="p-6 rounded-lg mb-12 bg-[#6caddf]">
+          <p className="text-lg text-1C3454 mb-4 text-[#1c3454]">
             Transforme rotinas de negócios em motores de alto desempenho usando automação, inteligência artificial e plataformas no-code. Crio soluções que reduzem trabalho manual, melhoram a tomada de decisão e conectam ferramentas para tornar sua estratégia digital verdadeiramente escalável.
           </p>
-          <p className="text-lg text-white">
+          <p className="text-lg text-[#1c3454]">
             Minha abordagem combina mentalidade de engenharia, inteligência de negócios e plataformas amigáveis — permitindo que você escale sem aumentar a complexidade.
           </p>
         </div>
@@ -164,24 +164,24 @@ const AutomationAI = () => {
                 <div className="mb-2">
                   {service.icon}
                 </div>
-                <CardTitle className="text-black">{service.title}</CardTitle>
+                <CardTitle className="text-[#1c3454]">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base text-gray-700">{service.description}</CardDescription>
+                <CardDescription className="text-base text-[#6caddf]">{service.description}</CardDescription>
               </CardContent>
             </Card>
           ))}
         </div>
         
         <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-black">🧩 Tecnologias que Utilizo</h2>
+          <h2 className="text-2xl font-bold mb-8 text-[#1c3454]">🧩 Tecnologias que Utilizo</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {technologies.map((tech, index) => (
               <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
                     {tech.icon}
-                    <CardTitle className="text-lg">{tech.category}</CardTitle>
+                    <CardTitle className="text-lg text-[#1c3454]">{tech.category}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -189,7 +189,7 @@ const AutomationAI = () => {
                     {tech.tools.map((tool) => (
                       <span 
                         key={tool}
-                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
+                        className="px-3 py-1 bg-gray-100 rounded-full text-sm text-[#6caddf]"
                       >
                         {tool}
                       </span>
@@ -202,7 +202,7 @@ const AutomationAI = () => {
         </div>
         
         <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-8 text-black">📁 Portfólio</h2>
+          <h2 className="text-2xl font-bold mb-8 text-[#1c3454]">📁 Portfólio</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
               <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
@@ -214,15 +214,15 @@ const AutomationAI = () => {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-black">{item.title}</CardTitle>
+                  <CardTitle className="text-[#1c3454]">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 mb-4">{item.description}</p>
+                  <p className="mb-4 text-[#6caddf]">{item.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
                       <span 
                         key={tag}
-                        className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
+                        className="px-2 py-1 bg-gray-100 rounded-full text-xs font-medium text-[#1c3454]"
                       >
                         {tag}
                       </span>
