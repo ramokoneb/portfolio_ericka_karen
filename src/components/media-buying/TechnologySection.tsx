@@ -10,10 +10,12 @@ interface Technology {
 
 interface TechnologySectionProps {
   technologies: Technology[];
+  language?: "en" | "pt" | "es";
 }
 
 export const TechnologySection = ({
-  technologies
+  technologies,
+  language = "en"
 }: TechnologySectionProps) => {
   // Group technologies by type (we'll show them in specific sections)
   const getTechByType = (type: string) => {
@@ -25,12 +27,41 @@ export const TechnologySection = ({
   const aiTools = getTechByType("🤖");
   const adPlatformTools = getTechByType("🎯");
 
+  // Translation mapping
+  const translations = {
+    title: {
+      en: "Technologies I Use",
+      pt: "Tecnologias que Utilizo",
+      es: "Tecnologías que Utilizo"
+    },
+    automation: {
+      en: "Automation & Integration",
+      pt: "Automação & Integração",
+      es: "Automatización & Integración"
+    },
+    adsPlataforms: {
+      en: "Ads Platforms",
+      pt: "Plataformas de Anúncios",
+      es: "Plataformas de Anuncios"
+    },
+    ai: {
+      en: "AI & Intelligent Logic",
+      pt: "IA & Lógica Inteligente",
+      es: "IA & Lógica Inteligente" 
+    },
+    analytics: {
+      en: "Analytics & Tracking",
+      pt: "Analytics & Rastreamento",
+      es: "Analytics & Seguimiento"
+    }
+  };
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="flex items-center gap-3 mb-8">
         <span className="text-2xl">🧩</span>
         <h2 className="text-2xl md:text-3xl font-bold text-[#1A3554]">
-          {technologies[0]?.category.split("🎯")[0] || "Technologies I Use"}
+          {translations.title[language]}
         </h2>
       </div>
 
@@ -40,7 +71,7 @@ export const TechnologySection = ({
           <div className="flex items-center gap-3 mb-6">
             <Settings className="w-6 h-6" />
             <h3 className="text-xl font-semibold text-[#1A3554]">
-              Automação & Integração
+              {translations.automation[language]}
             </h3>
           </div>
           <CardContent className="p-0 flex flex-wrap gap-2">
@@ -60,7 +91,7 @@ export const TechnologySection = ({
           <div className="flex items-center gap-3 mb-6">
             <Target className="w-6 h-6" />
             <h3 className="text-xl font-semibold text-[#1A3554]">
-              Ads Platforms
+              {translations.adsPlataforms[language]}
             </h3>
           </div>
           <CardContent className="p-0 flex flex-wrap gap-2">
@@ -80,7 +111,7 @@ export const TechnologySection = ({
           <div className="flex items-center gap-3 mb-6">
             <BrainCircuit className="w-6 h-6" />
             <h3 className="text-xl font-semibold text-[#1A3554]">
-              IA & Lógica Inteligente
+              {translations.ai[language]}
             </h3>
           </div>
           <CardContent className="p-0 flex flex-wrap gap-2">
@@ -95,12 +126,12 @@ export const TechnologySection = ({
           </CardContent>
         </Card>
 
-        {/* Databases & No-Code Backends Section */}
+        {/* Analytics & Tracking Section */}
         <Card className="p-6 shadow-lg rounded-xl border-none bg-white">
           <div className="flex items-center gap-3 mb-6">
             <Database className="w-6 h-6" />
             <h3 className="text-xl font-semibold text-[#1A3554]">
-              Bancos de Dados & Backends No-Code
+              {translations.analytics[language]}
             </h3>
           </div>
           <CardContent className="p-0 flex flex-wrap gap-2">

@@ -111,7 +111,7 @@ const MediaBuying = () => {
           ))}
         </div>
         
-        <TechnologySection technologies={technologies} />
+        <TechnologySection technologies={technologies} language="es" />
         
         <PortfolioSection items={portfolioItems} />
       </div>
