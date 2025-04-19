@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -169,7 +168,6 @@ const Navigation = () => {
       <div className="md:hidden flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
         <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]">
           {/* Nome removido conforme solicitado */}
-          EK
         </Link>
         
         <div className="flex items-center gap-3">

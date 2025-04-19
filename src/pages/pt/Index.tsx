@@ -27,9 +27,9 @@ const Index = () => {
             </Button>
           </Link>
           <Link to="/pt/automation-ai" className="w-full md:w-auto">
-            <Button size="lg" className="w-full text-sm md:text-base px-3 py-4 md:px-6 md:py-5 lg:px-8 lg:py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
+            <Button size="lg" className="w-full min-h-[4rem] text-sm md:text-base px-3 py-4 md:px-6 md:py-5 lg:px-8 lg:py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
               <Bot className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-              Automação, IA & Desenvolvimento No/Low-Code
+              <span className="whitespace-normal">Automação, IA & Desenvolvimento No/Low-Code</span>
             </Button>
           </Link>
         </div>
