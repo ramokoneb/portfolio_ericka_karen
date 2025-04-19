@@ -1,90 +1,138 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Building, Briefcase } from "lucide-react";
+import { ArrowLeft, Target, BrainCircuit, Bot, LineChart } from "lucide-react";
 
 const About = () => {
-  return (
-    <div className="min-h-screen p-8 bg-[#1c3454]">
-      <div className="max-w-4xl mx-auto">
+  const expertiseAreas = [{
+    title: "Paid Media and Performance",
+    items: ["Meta Ads, Google Ads, TikTok Ads, Pinterest Ads", "Full Funnel Strategies, ROAS and CAC optimization", "A/B Tests, adaptive creatives and message campaigns"]
+  }, {
+    title: "Automation and No-Code",
+    items: ["n8n, Make, Zapier", "Integration between WhatsApp, CRMs, APIs and media platforms", "FlutterFlow, Lovable, Supabase, Firebase"]
+  }, {
+    title: "AI and Intelligent Logic",
+    items: ["Conversational and analytical agents with LLMs", "AI for campaign analysis and creative generation", "Lead scoring, automated service, autonomous ad optimization"]
+  }, {
+    title: "Data and Tracking",
+    items: ["Meta Pixel, CAPI, Google Tag Manager", "ctwaclid, Supabase for campaign tracking", "Dashboards in Looker Studio and automated reports"]
+  }];
+  const achievements = ["+963% ROAS with e-commerce campaign restructuring", "+462% increase in WhatsApp conversations with intelligent tracking", "-118% CPL for educational institution using Performance Max", "Break-even in 3 months for international brand with own sales channel", "Complete service and follow-up automation with AI and no-code"];
+
+  return <div className="min-h-screen bg-[#1A3554] text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link to="/en">
-          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
+          <Button variant="outline" className="mb-8">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
-        
-        <div className="flex flex-col md:flex-row items-center mb-12">
-          <div className="md:w-1/3 mb-8 md:mb-0">
-            <div className="w-48 h-48 rounded-full mx-auto bg-white border-4 border-[#6caddf] overflow-hidden">
-              <img 
-                className="w-full h-full object-cover"
-                src="/professional-photo.png"
-                alt="Ericka Karen"
-              />
+
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="md:col-span-1">
+            <div className="w-48 h-48 rounded-full mx-auto overflow-hidden border-4 border-[#6CAAD9]">
+              <img alt="Ericka Karen" className="w-full h-full object-cover" src="/lovable-uploads/c50dc637-9f5b-40f7-bf8a-adb3743f5ff8.png" />
             </div>
           </div>
-          <div className="md:w-2/3 md:pl-8">
-            <h1 className="text-4xl font-bold mb-4 text-[#1c3454]">About Ericka Karen</h1>
-            <p className="text-xl text-[#6caddf] mb-6">
-              Digital transformation specialist with expertise in paid media, automation and artificial intelligence.
+          <div className="md:col-span-2">
+            <h1 className="text-4xl font-bold mb-4 text-[#6CAAD9]">👩‍💻 About Ericka Karen</h1>
+            <p className="text-xl mb-6">Where performance, technology and creativity meet to scale businesses</p>
+            <p className="text-lg mb-6">
+              With over a decade of experience in digital marketing, I am a professional specialized in paid media, automation, and artificial intelligence applied to business. My journey began in 2014 in the creative area, focusing on content and social media. But it was in 2019 that I took a strategic step: I migrated to the performance universe, where I began building data-driven solutions to generate real results — from qualified leads to exponential revenue.
             </p>
-            <p className="text-lg text-[#6caddf]">
-              With over a decade of experience in digital marketing and technology, Ericka Karen has established herself as a leading expert in paid media strategies and innovative automation solutions. Her unique approach combines data-driven marketing techniques with cutting-edge AI applications to deliver exceptional results for businesses across multiple industries.
+            <p className="text-lg">
+              Since then, I have served companies of various sizes and segments, always with a clear goal: to scale businesses with intelligence.
             </p>
           </div>
         </div>
-        
-        <h2 className="text-2xl font-bold mb-6 text-[#1c3454]">
-          Founded Companies
-        </h2>
-        
-        <div className="space-y-6 mb-12">
-          <Card className="border-none shadow-lg">
-            <CardHeader>
-              <div className="flex items-center">
-                <div className="mr-4">
-                  <Building className="h-10 w-10 text-[#6CAAD9]" />
-                </div>
-                <CardTitle className="text-[#1A3554]">Zona de Conversão Digital</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-[#6CADDE]">Brazilian agency specialized in paid media campaigns with focus on measurable results and positive ROI for small and medium businesses. Develops technological solutions for digital marketing, combining performance, automation, and data intelligence.</p>
+
+        <Card className="bg-[#1C3454] border-[#6CAAD9] mb-12">
+          <CardHeader>
+            <CardTitle className="text-2xl text-[#6CAAD9]">🎯 What drives me</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-lg">
+              I believe that the future of performance lies in the union between data, automation, and accessible technology. That's why I develop solutions that connect paid media, automated flows, and intelligent AI agents, optimizing digital operations end-to-end — from lead capture to conversion.
+            </p>
+          </CardContent>
+        </Card>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">💼 My projects</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="bg-[#1C3454] border-[#6CAAD9]">
+              <CardHeader>
+                <CardTitle>Zona de Conversão Digital</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Performance agency specialized in paid media campaigns focused on ROI, scale, and measurable results. Beyond traffic management, it develops technological solutions aimed at the digital marketing market, combining performance, automation, and data intelligence for small and medium businesses.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[#1C3454] border-[#6CAAD9]">
+              <CardHeader>
+                <CardTitle>Nocodeverse</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Automation and artificial intelligence laboratory for businesses looking to scale with no-code technology. Creates custom solutions with n8n, Make, Supabase, and applied AI, optimizing processes, customer service, and decision-making across different areas beyond marketing.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">🧠 Technical Expertise</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {expertiseAreas.map((area, index) => <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
+                <CardHeader>
+                  <CardTitle className="text-xl">{area.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {area.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                  </ul>
+                </CardContent>
+              </Card>)}
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">📁 Delivered Results</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {achievements.map((achievement, index) => <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
+                <CardContent className="pt-6">
+                  <p className="text-lg">{achievement}</p>
+                </CardContent>
+              </Card>)}
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">🚀 What I can build with you</h2>
+          <Card className="bg-[#1C3454] border-[#6CAAD9]">
+            <CardContent className="pt-6">
+              <p className="mb-4">If you seek predictable, scalable, and intelligent growth, I can help you:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Scale campaigns with a focus on results</li>
+                <li>Automate processes to save time and reduce errors</li>
+                <li>Use artificial intelligence to make better and faster decisions</li>
+                <li>Connect your tools, data, and channels in a single efficient flow</li>
+              </ul>
             </CardContent>
           </Card>
-          
-          <Card className="border-none shadow-lg">
-            <CardHeader>
-              <div className="flex items-center">
-                <div className="mr-4">
-                  <Briefcase className="h-10 w-10 text-[#6CAAD9]" />
-                </div>
-                <CardTitle className="text-[#1A3554]">Nocoverse</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-[#6CADDE]">Innovation lab focused on developing no-code automation and AI solutions for businesses. Creates custom solutions with n8n, Make, Supabase, and applied AI, optimizing processes, customer service, and decision-making across various areas beyond marketing.</p>
+        </section>
+
+        <section>
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">🤝 Let's talk?</h2>
+          <Card className="bg-[#1C3454] border-[#6CAAD9]">
+            <CardContent className="pt-6">
+              <p className="text-lg">
+                I am ready to collaborate with companies, startups, or agencies that see technology and performance as the most direct path to growth. Whether in Portuguese, English, or Spanish — let's take your digital operation to the next level.
+              </p>
             </CardContent>
           </Card>
-        </div>
-        
-        <h2 className="text-2xl font-bold mb-6 text-[#1c3454]">
-          Skills & Expertise
-        </h2>
-        
-        <div className="flex flex-wrap gap-3 mb-8">
-          {["Paid Media Management", "Marketing Automation", "AI Implementation", "CRM Integration", "Data Analysis", "Lead Generation", "Conversion Optimization"].map((skill, index) => (
-            <span 
-              key={index}
-              className="px-4 py-2 bg-[#6caddf] rounded-full text-[#1c3454] shadow"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
+        </section>
       </div>
-    </div>
-  );
+    </div>;
 };
 
 export default About;

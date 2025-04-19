@@ -1,90 +1,138 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Building, Briefcase } from "lucide-react";
+import { ArrowLeft, Target, BrainCircuit, Bot, LineChart } from "lucide-react";
 
 const About = () => {
-  return (
-    <div className="min-h-screen p-8 bg-[#33C3F0]">
-      <div className="max-w-4xl mx-auto">
+  const expertiseAreas = [{
+    title: "Medios Pagos y Performance",
+    items: ["Meta Ads, Google Ads, TikTok Ads, Pinterest Ads", "Estrategias Full Funnel, optimización de ROAS y CAC", "Tests A/B, creativos adaptativos y campañas de mensajes"]
+  }, {
+    title: "Automatización y No-Code",
+    items: ["n8n, Make, Zapier", "Integración entre WhatsApp, CRMs, APIs y plataformas de medios", "FlutterFlow, Lovable, Supabase, Firebase"]
+  }, {
+    title: "IA y Lógica Inteligente",
+    items: ["Agentes conversacionales y analíticos con LLMs", "IA para análisis de campañas y creación de creativos", "Scoring de leads, atención automatizada, optimización autónoma de anuncios"]
+  }, {
+    title: "Datos y Seguimiento",
+    items: ["Meta Pixel, CAPI, Google Tag Manager", "ctwaclid, Supabase para tracking de campañas", "Dashboards en Looker Studio y reportes automatizados"]
+  }];
+  const achievements = ["+963% de ROAS con reestructuración de campañas para e-commerce", "+462% de aumento en conversaciones en WhatsApp con tracking inteligente", "-118% de CPL para institución educativa usando Performance Max", "Break-even en 3 meses para marca internacional con canal de ventas propio", "Automatización completa de atención y seguimiento con IA y no-code"];
+
+  return <div className="min-h-screen bg-[#1A3554] text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link to="/es">
-          <Button variant="ghost" className="mb-6 bg-white/50 hover:bg-white/70">
+          <Button variant="outline" className="mb-8">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>
-        
-        <div className="flex flex-col md:flex-row items-center mb-12">
-          <div className="md:w-1/3 mb-8 md:mb-0">
-            <div className="w-48 h-48 rounded-full mx-auto bg-[#F5A9B8] border-4 border-[#1EAEDB] overflow-hidden">
-              <img 
-                className="w-full h-full object-cover"
-                src="/professional-photo.png"
-                alt="Ericka Karen"
-              />
+
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="md:col-span-1">
+            <div className="w-48 h-48 rounded-full mx-auto overflow-hidden border-4 border-[#6CAAD9]">
+              <img alt="Ericka Karen" className="w-full h-full object-cover" src="/lovable-uploads/c50dc637-9f5b-40f7-bf8a-adb3743f5ff8.png" />
             </div>
           </div>
-          <div className="md:w-2/3 md:pl-8">
-            <h1 className="text-4xl font-bold mb-4 text-white">Sobre Ericka Karen</h1>
-            <p className="text-xl text-white mb-6">
-              Especialista en transformación digital con experiencia en medios pagos, automatización e inteligencia artificial.
+          <div className="md:col-span-2">
+            <h1 className="text-4xl font-bold mb-4 text-[#6CAAD9]">👩‍💻 Sobre Ericka Karen</h1>
+            <p className="text-xl mb-6">Donde el rendimiento, la tecnología y la creatividad se encuentran para escalar negocios</p>
+            <p className="text-lg mb-6">
+              Con más de una década de experiencia en marketing digital, soy una profesional especializada en medios pagos, automatización e inteligencia artificial aplicada a negocios. Mi trayectoria comenzó en 2014 en el área creativa, con foco en contenido y redes sociales. Pero fue en 2019 cuando di un paso estratégico: migré al universo del performance, donde comencé a construir soluciones orientadas a datos para generar resultados reales — desde leads calificados hasta facturación exponencial.
             </p>
-            <p className="text-lg text-white/90">
-              Con más de una década de experiencia en marketing digital y tecnología, Ericka Karen se ha establecido como una experta líder en estrategias de medios pagos y soluciones innovadoras de automatización. Su enfoque único combina técnicas de marketing basadas en datos con aplicaciones de IA de vanguardia para ofrecer resultados excepcionales a empresas de múltiples sectores.
+            <p className="text-lg">
+              Desde entonces, he atendido empresas de diversos tamaños y segmentos, siempre con un objetivo claro: escalar negocios con inteligencia.
             </p>
           </div>
         </div>
-        
-        <h2 className="text-2xl font-bold mb-6 text-white">
-          Empresas Fundadas
-        </h2>
-        
-        <div className="space-y-6 mb-12">
-          <Card className="border-none shadow-lg">
-            <CardHeader>
-              <div className="flex items-center">
-                <div className="mr-4">
-                  <Building className="h-10 w-10 text-[#33C3F0]" />
-                </div>
+
+        <Card className="bg-[#1C3454] border-[#6CAAD9] mb-12">
+          <CardHeader>
+            <CardTitle className="text-2xl text-[#6CAAD9]">🎯 Lo que me mueve</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-lg">
+              Creo que el futuro del performance está en la unión entre datos, automatización y tecnología accesible. Por eso, desarrollo soluciones que conectan medios pagos, flujos automatizados y agentes inteligentes de IA, optimizando la operación digital de punta a punta — desde la captación hasta la conversión.
+            </p>
+          </CardContent>
+        </Card>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">💼 Mis proyectos</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="bg-[#1C3454] border-[#6CAAD9]">
+              <CardHeader>
                 <CardTitle>Zona de Conversão Digital</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700">Agencia brasileña especializada en campañas de medios pagos con enfoque en resultados medibles y ROI positivo para pequeñas y medianas empresas. Desarrolla soluciones tecnológicas para marketing digital, combinando rendimiento, automatización e inteligencia de datos.</p>
+              </CardHeader>
+              <CardContent>
+                <p>Agencia de performance especializada en campañas de medios pagos con foco en ROI, escala y resultados medibles. Además de la gestión de tráfico, desarrolla soluciones tecnológicas orientadas al mercado de marketing digital, uniendo performance, automatización e inteligencia de datos para pequeñas y medianas empresas.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[#1C3454] border-[#6CAAD9]">
+              <CardHeader>
+                <CardTitle>Nocodeverse</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Laboratorio de automatización e inteligencia artificial para negocios que quieren escalar con tecnología sin código. Crea soluciones personalizadas con n8n, Make, Supabase e IA aplicada, optimizando procesos, atención y toma de decisiones en diferentes áreas más allá del marketing.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">🧠 Expertise Técnica</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {expertiseAreas.map((area, index) => <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
+                <CardHeader>
+                  <CardTitle className="text-xl">{area.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {area.items.map((item, idx) => <li key={idx}>{item}</li>)}
+                  </ul>
+                </CardContent>
+              </Card>)}
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">📁 Resultados entregados</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {achievements.map((achievement, index) => <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
+                <CardContent className="pt-6">
+                  <p className="text-lg">{achievement}</p>
+                </CardContent>
+              </Card>)}
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">🚀 Qué puedo construir contigo</h2>
+          <Card className="bg-[#1C3454] border-[#6CAAD9]">
+            <CardContent className="pt-6">
+              <p className="mb-4">Si buscas crecimiento previsible, escalable e inteligente, puedo ayudarte a:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Escalar campañas con foco en resultados</li>
+                <li>Automatizar procesos para ganar tiempo y reducir errores</li>
+                <li>Usar inteligencia artificial para tomar decisiones mejores y más rápidas</li>
+                <li>Conectar tus herramientas, datos y canales en un solo flujo eficiente</li>
+              </ul>
             </CardContent>
           </Card>
-          
-          <Card className="border-none shadow-lg">
-            <CardHeader>
-              <div className="flex items-center">
-                <div className="mr-4">
-                  <Briefcase className="h-10 w-10 text-[#0EA5E9]" />
-                </div>
-                <CardTitle>Nocoverse</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-700">Laboratorio de innovación enfocado en desarrollar soluciones de automatización e IA sin código para empresas. Crea soluciones personalizadas con n8n, Make, Supabase e IA aplicada, optimizando procesos, atención al cliente y toma de decisiones en diversas áreas más allá del marketing.</p>
+        </section>
+
+        <section>
+          <h2 className="text-3xl font-bold mb-8 text-[#6CAAD9]">🤝 ¿Conversamos?</h2>
+          <Card className="bg-[#1C3454] border-[#6CAAD9]">
+            <CardContent className="pt-6">
+              <p className="text-lg">
+                Estoy lista para colaborar con empresas, startups o agencias que ven en la tecnología y el performance el camino más directo hacia el crecimiento. Ya sea en portugués, inglés o español — llevemos tu operación digital al siguiente nivel.
+              </p>
             </CardContent>
           </Card>
-        </div>
-        
-        <h2 className="text-2xl font-bold mb-6 text-white">
-          Habilidades & Experiencia
-        </h2>
-        
-        <div className="flex flex-wrap gap-3 mb-8">
-          {["Gestión de Medios Pagos", "Automatización de Marketing", "Implementación de IA", "Integración con CRM", "Análisis de Datos", "Generación de Leads", "Optimización de Conversión"].map((skill, index) => (
-            <span 
-              key={index}
-              className="px-4 py-2 bg-white rounded-full text-[#33C3F0] shadow"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
+        </section>
       </div>
-    </div>
-  );
+    </div>;
 };
 
 export default About;
