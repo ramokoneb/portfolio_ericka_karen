@@ -4,10 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, MessageSquare, Linkedin, Mail, Send } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <div className="min-h-screen p-8 bg-[#1c3454]">
+  return <div className="min-h-screen p-8 bg-[#1c3454]">
       <div className="max-w-4xl mx-auto">
         <Link to="/en">
           <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
@@ -15,7 +13,7 @@ const Contact = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-[#1c3454]">Contact Me</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-slate-50">Contact Me</h1>
         <p className="text-xl text-[#6caddf] mb-12">
           Let's discuss how we can work together to achieve your goals.
         </p>
@@ -40,10 +38,7 @@ const Contact = () => {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-[#1c3454]">Your Message</label>
-                  <Textarea 
-                    placeholder="What would you like to discuss?" 
-                    className="min-h-[120px]" 
-                  />
+                  <Textarea placeholder="What would you like to discuss?" className="min-h-[120px]" />
                 </div>
                 <Button className="w-full bg-[#6caddf] hover:bg-[#6caddf] text-[#1c3454]">
                   <Send className="mr-2 h-4 w-4" /> Send Message
@@ -59,12 +54,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <a 
-                    href="https://wa.me/12345678900" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                  >
+                  <a href="https://wa.me/12345678900" target="_blank" rel="noopener noreferrer" className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
                     <div className="p-2 bg-[#6caddf]/10 rounded-full mr-3">
                       <MessageSquare className="h-5 w-5 text-[#6caddf]" />
                     </div>
@@ -73,12 +63,7 @@ const Contact = () => {
                       <p className="text-gray-700">+1 234 567 8900</p>
                     </div>
                   </a>
-                  <a 
-                    href="https://linkedin.com/in/ericka-karen" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                  >
+                  <a href="https://linkedin.com/in/ericka-karen" target="_blank" rel="noopener noreferrer" className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
                     <div className="p-2 bg-[#6caddf]/10 rounded-full mr-3">
                       <Linkedin className="h-5 w-5 text-[#6caddf]" />
                     </div>
@@ -87,12 +72,7 @@ const Contact = () => {
                       <p className="text-gray-700">ericka-karen</p>
                     </div>
                   </a>
-                  <a 
-                    href="mailto:ericka@example.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                  >
+                  <a href="mailto:ericka@example.com" target="_blank" rel="noopener noreferrer" className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors">
                     <div className="p-2 bg-[#6caddf]/10 rounded-full mr-3">
                       <Mail className="h-5 w-5 text-[#6caddf]" />
                     </div>
@@ -127,8 +107,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
