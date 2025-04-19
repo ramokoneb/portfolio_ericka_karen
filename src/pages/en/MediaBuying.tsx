@@ -8,22 +8,22 @@ import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
 
 const mainServices = [
   {
-    icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+    icon: BrainCircuit,
     title: "Intelligence & Business Strategy",
     description: "Development of media strategies aligned with business objectives, focused on scalable and sustainable results."
   },
   {
-    icon: <Target className="h-10 w-10 text-[#8A898C]" />,
+    icon: Bot,
     title: "Advanced Media Planning",
     description: "Strategic planning of paid campaigns with focus on qualified traffic, conversion optimization and positive ROI."
   },
   {
-    icon: <Database className="h-10 w-10 text-[#8A898C]" />,
+    icon: Database,
     title: "Advanced Tracking & Analytics",
     description: "Implementation of advanced tracking solutions, conversion API integration and data-driven optimization systems."
   },
   {
-    icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
+    icon: Bot,
     title: "Applied Artificial Intelligence",
     description: "Using AI to optimize campaign delivery, targeting, dynamic creatives and predict behavior patterns."
   }
@@ -40,7 +40,7 @@ const technologies = [
       "LinkedIn Ads (for B2B)",
       "Google Merchant Center (for e-commerce Shopping)"
     ],
-    icon: <Target className="h-6 w-6" />
+    icon: BrainCircuit
   },
   {
     category: "Technologies & Tools 📊",
@@ -54,7 +54,7 @@ const technologies = [
       "Supermetrics",
       "UTMs, ctwaclid, fbclid, gclid"
     ],
-    icon: <LineChart className="h-6 w-6" />
+    icon: Database
   },
   {
     category: "Technologies & Tools ⚙️",
@@ -67,7 +67,7 @@ const technologies = [
       "Supabase",
       "Firebase"
     ],
-    icon: <Settings className="h-6 w-6" />
+    icon: Settings
   },
   {
     category: "Technologies & Tools 🤖",
@@ -78,7 +78,7 @@ const technologies = [
       "AI Campaign Generators",
       "Custom LLMs for scoring and optimization"
     ],
-    icon: <BrainCircuit className="h-6 w-6" />
+    icon: BrainCircuit
   }
 ];
 
