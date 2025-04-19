@@ -53,4 +53,76 @@
   .mobile-section {
     @apply py-6 md:py-8 lg:py-12;
   }
+
+  /* Responsive text classes */
+  .text-responsive-xs {
+    @apply text-xs md:text-sm lg:text-base;
+  }
+  
+  .text-responsive-sm {
+    @apply text-sm md:text-base lg:text-lg;
+  }
+  
+  .text-responsive-base {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+  
+  .text-responsive-xl {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+  
+  .text-responsive-2xl {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  .text-responsive-3xl {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  /* Responsive padding and margin */
+  .p-responsive {
+    @apply p-3 md:p-4 lg:p-6;
+  }
+  
+  .px-responsive {
+    @apply px-3 md:px-4 lg:px-6;
+  }
+  
+  .py-responsive {
+    @apply py-3 md:py-4 lg:py-6;
+  }
+  
+  .m-responsive {
+    @apply m-2 md:m-4 lg:m-6;
+  }
+  
+  .mx-responsive {
+    @apply mx-2 md:mx-4 lg:mx-6;
+  }
+  
+  .my-responsive {
+    @apply my-3 md:my-4 lg:my-6;
+  }
+  
+  /* Responsive gap */
+  .gap-responsive {
+    @apply gap-2 md:gap-4 lg:gap-6;
+  }
+  
+  /* Responsive width/height */
+  .size-responsive-sm {
+    @apply w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40;
+  }
+  
+  .size-responsive-md {
+    @apply w-28 h-28 md:w-36 md:h-36 lg:w-48 lg:h-48;
+  }
+  
+  .size-responsive-lg {
+    @apply w-36 h-36 md:w-48 md:h-48 lg:w-56 lg:h-56;
+  }
 }
