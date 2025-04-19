@@ -1,7 +1,8 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, BrainCircuit, Database, Settings, Bot, LineChart, Target } from "lucide-react";
-import { HeroSection } from "@/components/media-buying/HeroSection";
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
 import { TechnologySection } from "@/components/media-buying/TechnologySection";
 import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
@@ -100,80 +101,13 @@ const MediaBuying = () => {
         
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {mainServices.map((service, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
-              <CardHeader>
-                <div className="mb-2">
-                  {service.icon}
-                </div>
-                <CardTitle className="text-[#1c3454]">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base text-[#6caddf]">{service.description}</CardDescription>
-              </CardContent>
-            </Card>
+            <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
           ))}
         </div>
         
-        <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-[#1c3454]">🧩 Technologies I Use</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {technologies.map((tech, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    {tech.icon}
-                    <CardTitle className="text-lg text-[#1c3454]">{tech.category}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {tech.tools.map((tool) => (
-                      <span 
-                        key={tool}
-                        className="px-3 py-1 bg-gray-100 rounded-full text-sm text-[#6caddf]"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        <TechnologySection technologies={technologies} />
         
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-8 text-[#1c3454]">📁 Portfolio</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform hover:scale-105"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-[#1c3454]">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-4 text-[#6caddf]">{item.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {item.tags.map((tag) => (
-                      <span 
-                        key={tag}
-                        className="px-2 py-1 bg-gray-100 rounded-full text-xs font-medium text-[#1c3454]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        <PortfolioSection items={portfolioItems} />
       </div>
     </div>
   );
