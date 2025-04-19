@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -144,17 +143,17 @@ const AutomationAI = () => {
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">🚀 Automatización, IA & Desarrollo No/Low-Code</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">🚀 Automatización, IA y Desarrollo No/Low-Code</h1>
         <p className="text-xl text-white mb-6">
-          Sistemas inteligentes para automatizar, escalar e innovar sus operaciones digitales.
+          Sistemas inteligentes para automatizar, escalar e innovar tus operaciones digitales.
         </p>
         
         <div className="bg-white/10 p-6 rounded-lg mb-12">
           <p className="text-lg text-white mb-4">
-            Transforme rutinas de negocio en motores de alto rendimiento usando automatización, inteligencia artificial y plataformas no-code. Creo soluciones que reducen el trabajo manual, mejoran la toma de decisiones y conectan herramientas para hacer su estrategia digital verdaderamente escalable.
+            Transforma las rutinas empresariales en motores de alto rendimiento utilizando automatización, inteligencia artificial y plataformas no-code. Creo soluciones que reducen el trabajo manual, mejoran la toma de decisiones y conectan herramientas para hacer tu estrategia digital verdaderamente escalable.
           </p>
           <p className="text-lg text-white">
-            Mi enfoque combina mentalidad de ingeniería, inteligencia de negocios y plataformas amigables — permitiéndole escalar sin aumentar la complejidad.
+            Mi enfoque combina mentalidad de ingeniería, inteligencia empresarial y plataformas fáciles de usar, permitiéndote escalar sin aumentar la complejidad.
           </p>
         </div>
         
@@ -175,6 +174,34 @@ const AutomationAI = () => {
         </div>
         
         <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-black">🧩 Tecnologías que Utilizo</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {technologies.map((tech, index) => (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-center gap-2 mb-2">
+                    {tech.icon}
+                    <CardTitle className="text-lg">{tech.category}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {tech.tools.map((tool) => (
+                      <span 
+                        key={tool}
+                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+        
+        <div className="bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-8 text-black">📁 Portafolio</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
@@ -198,34 +225,6 @@ const AutomationAI = () => {
                         className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
                       >
                         {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-8 text-black">🧩 Tecnologías que Utilizo</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {technologies.map((tech, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    {tech.icon}
-                    <CardTitle className="text-lg">{tech.category}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {tech.tools.map((tool) => (
-                      <span 
-                        key={tool}
-                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
-                      >
-                        {tool}
                       </span>
                     ))}
                   </div>

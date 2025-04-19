@@ -174,6 +174,34 @@ const AutomationAI = () => {
         </div>
         
         <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-black">🧩 Technologies I Use</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {technologies.map((tech, index) => (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-center gap-2 mb-2">
+                    {tech.icon}
+                    <CardTitle className="text-lg">{tech.category}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {tech.tools.map((tool) => (
+                      <span 
+                        key={tool}
+                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+        
+        <div className="bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-8 text-black">📁 Portfolio</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
@@ -197,34 +225,6 @@ const AutomationAI = () => {
                         className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
                       >
                         {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-8 text-black">🧩 Technologies I Use</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {technologies.map((tech, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    {tech.icon}
-                    <CardTitle className="text-lg">{tech.category}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {tech.tools.map((tool) => (
-                      <span 
-                        key={tool}
-                        className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm"
-                      >
-                        {tool}
                       </span>
                     ))}
                   </div>
