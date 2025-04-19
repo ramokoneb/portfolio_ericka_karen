@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Target, BrainCircuit, Bot, LineChart } from "lucide-react";
+
 const About = () => {
   const expertiseAreas = [{
     title: "Mídia Paga e Performance",
@@ -17,6 +18,7 @@ const About = () => {
     items: ["Meta Pixel, CAPI, Google Tag Manager", "ctwaclid, Supabase para tracking de campanhas", "Dashboards em Looker Studio e relatórios automatizados"]
   }];
   const achievements = ["+963% de ROAS com reestruturação de campanhas para e-commerce", "+462% de aumento em conversas no WhatsApp com tracking inteligente", "-118% de CPL para instituição de ensino usando Performance Max", "Break-even em 3 meses para marca internacional com canal de vendas próprio", "Automação completa de atendimento e follow-up com IA e no-code"];
+
   return <div className="min-h-screen bg-[#1A3554] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link to="/pt">
@@ -62,7 +64,7 @@ const About = () => {
                 <CardTitle>Zona de Conversão Digital</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Agência especializada em tráfego pago e performance para PMEs. Foco em campanhas com ROAS positivo, estruturação de funis e inteligência de dados.</p>
+                <p>Agência de performance especializada em campanhas de mídia paga com foco em ROI, escala e resultados mensuráveis. Além da gestão de tráfego, desenvolve soluções tecnológicas voltadas para o mercado de marketing digital, unindo performance, automação e inteligência de dados para pequenas e médias empresas.</p>
               </CardContent>
             </Card>
             <Card className="bg-[#1C3454] border-[#6CAAD9]">
@@ -75,10 +77,10 @@ const About = () => {
             </Card>
             <Card className="bg-[#1C3454] border-[#6CAAD9]">
               <CardHeader>
-                <CardTitle>Nocoverse</CardTitle>
+                <CardTitle>Nocodeverse</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Laboratório de inovação para desenvolvimento de sistemas com IA e automação aplicados a diferentes áreas — de operações internas a atendimento.</p>
+                <p>Laboratório de automação e inteligência artificial para negócios que querem escalar com tecnologia sem código. Cria soluções personalizadas com n8n, Make, Supabase e IA aplicada, otimizando processos, atendimento e tomada de decisão em diferentes áreas além do marketing.</p>
               </CardContent>
             </Card>
           </div>
@@ -139,4 +141,5 @@ const About = () => {
       </div>
     </div>;
 };
+
 export default About;
