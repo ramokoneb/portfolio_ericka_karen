@@ -1,5 +1,5 @@
 
-import { LucideIcon, Settings, Smartphone, Database, BrainCircuit } from "lucide-react";
+import { LucideIcon, Settings, Target, Database, BrainCircuit } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface Technology {
@@ -23,7 +23,7 @@ export const TechnologySection = ({
   const automationTools = getTechByType("⚙️");
   const databaseTools = getTechByType("📊");
   const aiTools = getTechByType("🤖");
-  const targetTools = getTechByType("🎯");
+  const adPlatformTools = getTechByType("🎯");
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -55,16 +55,16 @@ export const TechnologySection = ({
           </CardContent>
         </Card>
 
-        {/* Web & Mobile Builders Section */}
+        {/* Ads Platforms Section */}
         <Card className="p-6 shadow-lg rounded-xl border-none bg-white">
           <div className="flex items-center gap-3 mb-6">
-            <Smartphone className="w-6 h-6" />
+            <Target className="w-6 h-6" />
             <h3 className="text-xl font-semibold text-[#1A3554]">
-              Web & Mobile App Builders
+              Ads Platforms
             </h3>
           </div>
           <CardContent className="p-0 flex flex-wrap gap-2">
-            {targetTools.map((tool) => (
+            {adPlatformTools.map((tool) => (
               <span
                 key={tool}
                 className="px-4 py-2 bg-gray-50 text-gray-600 rounded-full text-sm"
