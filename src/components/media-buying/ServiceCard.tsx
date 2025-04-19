@@ -13,12 +13,12 @@ export const ServiceCard = ({ icon: Icon, title, description }: ServiceCardProps
     <Card className="card-base">
       <CardHeader>
         <div className="mb-2">
-          <Icon className="h-10 w-10 text-primary" />
+          <Icon className="h-10 w-10 text-[#6CAAD9]" />
         </div>
-        <CardTitle className="text-primary-darker">{title}</CardTitle>
+        <CardTitle className="text-[#1A3554]">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription className="text-base text-primary-dark/80">{description}</CardDescription>
+        <CardDescription className="text-base text-[#6CADDE]">{description}</CardDescription>
       </CardContent>
     </Card>
   );

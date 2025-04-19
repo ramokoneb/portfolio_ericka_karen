@@ -6,17 +6,17 @@ import { ArrowLeft, Briefcase, Building, Globe } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="min-h-screen p-8 bg-[#33C3F0]">
+    <div className="min-h-screen p-8 bg-[#1A3554]">
       <div className="max-w-4xl mx-auto">
         <Link to="/en">
-          <Button variant="ghost" className="mb-6 bg-white/50 hover:bg-white/70">
+          <Button variant="ghost" className="mb-6 bg-white/50 hover:bg-white/70 text-white">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
         
         <div className="flex flex-col md:flex-row items-center mb-12">
           <div className="md:w-1/3 mb-8 md:mb-0">
-            <div className="w-48 h-48 rounded-full mx-auto bg-[#F5A9B8] border-4 border-[#1EAEDB] overflow-hidden">
+            <div className="w-48 h-48 rounded-full mx-auto bg-white border-4 border-[#94C1E7] overflow-hidden">
               <img 
                 className="w-full h-full object-cover"
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500"
@@ -29,7 +29,7 @@ const About = () => {
             <p className="text-xl text-white mb-6">
               Digital transformation specialist with expertise in paid media, automation and artificial intelligence.
             </p>
-            <p className="text-lg text-white/90">
+            <p className="text-lg text-[#6CADDE]">
               With over a decade of experience in digital marketing and technology, Ericka Karen has established herself as a leading expert in paid media strategies and innovative automation solutions. Her unique approach combines data-driven marketing techniques with cutting-edge AI applications to deliver exceptional results for businesses across multiple industries.
             </p>
           </div>
@@ -44,13 +44,13 @@ const About = () => {
             <CardHeader>
               <div className="flex items-center">
                 <div className="mr-4">
-                  <Building className="h-10 w-10 text-[#33C3F0]" />
+                  <Building className="h-10 w-10 text-[#6CAAD9]" />
                 </div>
-                <CardTitle>Zona de Conversão Digital</CardTitle>
+                <CardTitle className="text-[#1A3554]">Zona de Conversão Digital</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700">Brazilian agency specialized in paid media campaigns with focus on measurable results and positive ROI for small and medium businesses.</p>
+              <p className="text-[#6CADDE]">Brazilian agency specialized in paid media campaigns with focus on measurable results and positive ROI for small and medium businesses.</p>
             </CardContent>
           </Card>
           
@@ -58,13 +58,13 @@ const About = () => {
             <CardHeader>
               <div className="flex items-center">
                 <div className="mr-4">
-                  <Globe className="h-10 w-10 text-[#F5A9B8]" />
+                  <Globe className="h-10 w-10 text-[#6CAAD9]" />
                 </div>
-                <CardTitle>Zona de Conversão Space</CardTitle>
+                <CardTitle className="text-[#1A3554]">Zona de Conversão Space</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700">AI and automation solutions specifically designed for digital marketing needs, helping businesses scale their marketing operations.</p>
+              <p className="text-[#6CADDE]">AI and automation solutions specifically designed for digital marketing needs, helping businesses scale their marketing operations.</p>
             </CardContent>
           </Card>
           
@@ -72,13 +72,13 @@ const About = () => {
             <CardHeader>
               <div className="flex items-center">
                 <div className="mr-4">
-                  <Briefcase className="h-10 w-10 text-[#0EA5E9]" />
+                  <Briefcase className="h-10 w-10 text-[#6CAAD9]" />
                 </div>
-                <CardTitle>Nocoverse</CardTitle>
+                <CardTitle className="text-[#1A3554]">Nocoverse</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700">Innovation lab focused on developing automation and AI solutions beyond marketing, creating new possibilities for business transformation.</p>
+              <p className="text-[#6CADDE]">Innovation lab focused on developing automation and AI solutions beyond marketing, creating new possibilities for business transformation.</p>
             </CardContent>
           </Card>
         </div>
@@ -91,7 +91,7 @@ const About = () => {
           {["Paid Media Management", "Marketing Automation", "AI Implementation", "CRM Integration", "Data Analysis", "Lead Generation", "Conversion Optimization"].map((skill, index) => (
             <span 
               key={index}
-              className="px-4 py-2 bg-white rounded-full text-[#33C3F0] shadow"
+              className="px-4 py-2 bg-white rounded-full text-[#1A3554] shadow"
             >
               {skill}
             </span>
