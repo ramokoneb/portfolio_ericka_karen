@@ -110,10 +110,10 @@ const AutomationAI = () => {
     title: "No-Code Development & Workflow Automation",
     description: "Create web apps, dashboards, automations and full systems using intuitive platforms."
   }];
-  return <div className="min-h-screen p-8 bg-[#000000]">
+  return <div className="min-h-screen p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/en">
-          <Button variant="ghost" className="mb-6 text-white bg-[#6caddf]">
+          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
@@ -180,7 +180,7 @@ const AutomationAI = () => {
                 <CardContent>
                   <p className="mb-4 text-[#6caddf]">{item.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {item.tags.map(tag => <span key={tag} className="px-2 py-1 bg-gray-100 rounded-full text-xs font-medium text-[#6caddf]">
+                    {item.tags.map(tag => <span key={tag} className="px-2 py-1 bg-gray-100 rounded-full text-xs font-medium text-[#1c3454]">
                         {tag}
                       </span>)}
                   </div>
