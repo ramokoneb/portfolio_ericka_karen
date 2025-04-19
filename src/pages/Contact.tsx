@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -88,11 +87,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen p-8 bg-gradient-to-br from-[#5BCEFA] via-white to-[#F5A9B8]">
+    <div className="min-h-screen p-8 bg-[#1A3554]">
       <div className="absolute top-4 right-4">
         <Button 
           variant="outline" 
-          className="rounded-full bg-white text-gray-700 hover:bg-gray-100" 
+          className="rounded-full bg-[#1A3554] text-white hover:bg-[#6CAAD9]" 
           onClick={toggleLanguage}
         >
           {language === "en" ? "PT" : "EN"}
@@ -112,7 +111,7 @@ const Contact = () => {
         </p>
         
         <div className="grid md:grid-cols-2 gap-8">
-          <Card className="border-none shadow-lg">
+          <Card className="border-none shadow-lg bg-white">
             <CardHeader>
               <CardTitle>{content[language].formTitle}</CardTitle>
               <CardDescription>
@@ -136,7 +135,7 @@ const Contact = () => {
                     className="min-h-[120px]" 
                   />
                 </div>
-                <Button className="w-full bg-[#F5A9B8] hover:bg-[#5BCEFA] text-white">
+                <Button className="w-full bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
                   <Send className="mr-2 h-4 w-4" /> {content[language].submitButton}
                 </Button>
               </form>
@@ -144,7 +143,7 @@ const Contact = () => {
           </Card>
           
           <div>
-            <Card className="border-none shadow-lg mb-8">
+            <Card className="border-none shadow-lg bg-white mb-8">
               <CardHeader>
                 <CardTitle>{content[language].contactTitle}</CardTitle>
               </CardHeader>
@@ -158,7 +157,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
                     >
-                      <div className="p-2 bg-[#5BCEFA]/10 rounded-full mr-3">
+                      <div className="p-2 bg-[#6CAAD9]/10 rounded-full mr-3">
                         {method.icon}
                       </div>
                       <div>
@@ -172,7 +171,7 @@ const Contact = () => {
             </Card>
             
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-xl font-semibold mb-4 text-[#5BCEFA]">
+              <h2 className="text-xl font-semibold mb-4 text-[#6CAAD9]">
                 {language === "en" ? "Office Hours" : "Horário de Atendimento"}
               </h2>
               <div className="space-y-2">
