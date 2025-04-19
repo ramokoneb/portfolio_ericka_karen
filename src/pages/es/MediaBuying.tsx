@@ -46,37 +46,37 @@ const portfolioItems = [
   {
     title: "Tienda Virtual Febracis — De la Crisis al Crecimiento Exponencial",
     description: "Después de 6 meses de pérdidas en medios pagos, se implementaron enfoques estratégicos logrando R$77.000 en ingresos mensuales (267% de crecimiento) con ROAS del 963% usando Meta Ads y Google Ads.",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=500",
+    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
     tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
   },
   {
     title: "Urban Effort — De Cero a Punto de Equilibrio en 3 Meses",
     description: "Marca americana de gorras que vendía solo en Amazon creó su propio canal de ventas alcanzando el punto de equilibrio en menos de 90 días con +291% de crecimiento en ingresos a través de campañas estratégicas.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=500",
+    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
     tags: ["Meta Ads", "Google Ads", "E-commerce"]
   },
   {
     title: "Borogodó Brasil — Cambio de Rumbo en Ingresos en 30 Días",
     description: "Tras una caída drástica en ventas, estrategias enfocadas en Meta Ads lograron +36% en visitas únicas, +24% en ventas, +40% en ingresos y +13% en ticket promedio en solo un mes.",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=500",
+    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
     tags: ["Meta Ads", "E-commerce", "Ingresos"]
   },
   {
     title: "Vamos — +50% en Ventas con Adquisición Inteligente",
     description: "Empresa de alquiler de vehículos pesados escaló su base de clientes con segmentación geográfica y demográfica dirigida, logrando +50% en ventas en un solo mes.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500",
+    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
     tags: ["Meta Ads", "Generación de Leads", "Ventas"]
   },
   {
     title: "Unileão — Reducción del 118% en CPL con Performance Max",
     description: "Institución educativa optimizó la captación de leads con campañas Performance Max, logrando una reducción del 118% en el costo por lead y ROI positivo ya en el primer mes.",
-    image: "https://images.unsplash.com/photo-1590402494610-2c378a9114c6?q=80&w=500",
+    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
     tags: ["Google Ads", "Educación", "Performance Max"]
   },
   {
     title: "Intelligent WhatsApp Tracking — +462% in Conversations",
     description: "Implementation of ctwaclid tracking in Meta Ads campaigns led to +462.16% increase in initiated conversations and 81.34% reduction in cost per message sent in just one week.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=500",
+    image: "/lovable-uploads/9636f5f3-d6c9-4897-9657-e4d4141d5fd1.png",
     tags: ["Meta Ads", "WhatsApp", "Tracking"]
   }
 ];
