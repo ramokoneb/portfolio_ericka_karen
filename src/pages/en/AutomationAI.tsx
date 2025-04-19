@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, Code, BrainCircuit, Link2, Smartphone, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
-
 const portfolioItems = [{
   title: "WhatsApp Automation – +80% automated inquiries",
   description: "Automation solution developed for WhatsApp customer service, with intelligent chatbot capable of handling 80% of frequently asked questions. 95% reduction in response time and increased service satisfaction.",
@@ -76,7 +75,6 @@ const portfolioItems = [{
   goal: "Automated lead capture and qualification",
   highlight: "Ready to run campaigns with complete tracking"
 }];
-
 const technologies = [{
   category: "Automation & Integration",
   tools: ["n8n", "Make", "Zapier"],
@@ -94,33 +92,25 @@ const technologies = [{
   tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
   icon: <Database className="h-6 w-6" />
 }];
-
 const AutomationAI = () => {
-  const mainServices = [
-    {
-      icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
-      title: "AI & Intelligent Automation",
-      description: "Implement intelligent systems that enhance decision-making, optimize campaigns, and power your workflows with intelligence."
-    },
-    {
-      icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
-      title: "WhatsApp Automation",
-      description: "Automated messaging flows for customer service, sales, and lead qualification using WhatsApp and connected APIs."
-    },
-    {
-      icon: <Link2 className="h-10 w-10 text-[#8A898C]" />,
-      title: "CRM & Marketing Integrations",
-      description: "Seamless automation between marketing platforms, CRMs and communication channels."
-    },
-    {
-      icon: <Code className="h-10 w-10 text-[#8A898C]" />,
-      title: "No-Code Development & Workflow Automation",
-      description: "Create web apps, dashboards, automations and full systems using intuitive platforms."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen p-8 bg-white">
+  const mainServices = [{
+    icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+    title: "AI & Intelligent Automation",
+    description: "Implement intelligent systems that enhance decision-making, optimize campaigns, and power your workflows with intelligence."
+  }, {
+    icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
+    title: "WhatsApp Automation",
+    description: "Automated messaging flows for customer service, sales, and lead qualification using WhatsApp and connected APIs."
+  }, {
+    icon: <Link2 className="h-10 w-10 text-[#8A898C]" />,
+    title: "CRM & Marketing Integrations",
+    description: "Seamless automation between marketing platforms, CRMs and communication channels."
+  }, {
+    icon: <Code className="h-10 w-10 text-[#8A898C]" />,
+    title: "No-Code Development & Workflow Automation",
+    description: "Create web apps, dashboards, automations and full systems using intuitive platforms."
+  }];
+  return <div className="min-h-screen p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/en">
           <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
@@ -143,8 +133,7 @@ const AutomationAI = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {mainServices.map((service, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
+          {mainServices.map((service, index) => <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
               <CardHeader>
                 <div className="mb-2">
                   {service.icon}
@@ -154,15 +143,13 @@ const AutomationAI = () => {
               <CardContent>
                 <CardDescription className="text-base text-[#6caddf]">{service.description}</CardDescription>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
         
         <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
           <h2 className="text-2xl font-bold mb-8 text-[#1c3454]">🧩 Technologies I Use</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {technologies.map((tech, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+            {technologies.map((tech, index) => <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
                     {tech.icon}
@@ -171,56 +158,37 @@ const AutomationAI = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
-                    {tech.tools.map((tool) => (
-                      <span 
-                        key={tool}
-                        className="px-3 py-1 bg-gray-100 rounded-full text-sm text-[#6caddf]"
-                      >
+                    {tech.tools.map(tool => <span key={tool} className="px-3 py-1 bg-gray-100 rounded-full text-sm text-[#6caddf]">
                         {tool}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
         
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-8 text-[#1c3454]">📁 Portfolio</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
+            {portfolioItems.map((item, index) => <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform hover:scale-105"
-                  />
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform hover:scale-105" />
                 </div>
                 <CardHeader>
                   <CardTitle className="text-[#1c3454]">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4 text-[#6caddf]">{item.description}</p>
+                  <p className="mb-4 text-[#1c3454]">{item.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {item.tags.map((tag) => (
-                      <span 
-                        key={tag}
-                        className="px-2 py-1 bg-gray-100 rounded-full text-xs font-medium text-[#1c3454]"
-                      >
+                    {item.tags.map(tag => <span key={tag} className="px-2 py-1 bg-gray-100 rounded-full text-xs font-medium text-[#1c3454]">
                         {tag}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default AutomationAI;
