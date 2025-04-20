@@ -1,8 +1,8 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Target, BrainCircuit, Bot, LineChart } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import PhotoGallery from "@/components/PhotoGallery";
 
 const About = () => {
   const expertiseAreas = [{
@@ -143,10 +143,17 @@ const About = () => {
             </CardContent>
           </Card>
         </section>
+
+        <section className="mb-6 md:mb-12">
+          <Card className="bg-[#1C3454] border-[#6CAAD9]">
+            <CardContent className="pt-6">
+              <PhotoGallery />
+            </CardContent>
+          </Card>
+        </section>
       </div>
     </div>
   );
 };
 
 export default About;
-
