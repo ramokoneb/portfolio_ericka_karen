@@ -4,12 +4,14 @@ import { MessageSquare, Linkedin, Mail } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contato" className="py-20 px-8 bg-[#1A3554]">
+    <section id="contato" className="py-8 md:py-20 px-4 md:px-8 bg-[#1A3554]">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Vamos Conversar?</h2>
-        <Card className="bg-white">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 md:mb-12 text-white">
+          Vamos Conversar?
+        </h2>
+        <Card className="bg-white shadow-lg">
           <CardHeader>
-            <CardTitle>Informações de Contato</CardTitle>
+            <CardTitle className="text-xl md:text-2xl">Informações de Contato</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -23,8 +25,8 @@ const Contact = () => {
                   <MessageSquare className="h-5 w-5 text-[#6caddf]" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-500">WhatsApp</p>
-                  <p className="text-gray-700">+55 11 94200-2308</p>
+                  <p className="text-xs md:text-sm font-medium text-gray-500">WhatsApp</p>
+                  <p className="text-sm md:text-base text-gray-700">+55 11 94200-2308</p>
                 </div>
               </a>
               <a 
@@ -37,8 +39,8 @@ const Contact = () => {
                   <Linkedin className="h-5 w-5 text-[#6caddf]" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-500">LinkedIn</p>
-                  <p className="text-gray-700">ekarenramos</p>
+                  <p className="text-xs md:text-sm font-medium text-gray-500">LinkedIn</p>
+                  <p className="text-sm md:text-base text-gray-700">ekarenramos</p>
                 </div>
               </a>
               <a 
@@ -51,8 +53,8 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-[#6caddf]" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-500">Email</p>
-                  <p className="text-gray-700">contato@zonadeconversao.space</p>
+                  <p className="text-xs md:text-sm font-medium text-gray-500">Email</p>
+                  <p className="text-sm md:text-base text-gray-700">contato@zonadeconversao.space</p>
                 </div>
               </a>
             </div>
