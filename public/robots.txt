@@ -1,14 +1,37 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://zonadeconversao.space/sitemap.xml
+
+# Allow search engines to crawl all important paths
+Allow: /en/*
+Allow: /pt/*
+Allow: /es/*
+Allow: /media-buying
+Allow: /automation-ai
+Allow: /about
+Allow: /contact
+
+# Discourage crawling of non-essential paths
+Disallow: /assets/
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Set crawl rate limits
+Crawl-delay: 10
+
+# Additional language alternatives
+Allow: /en/media-buying
+Allow: /pt/media-buying
+Allow: /es/media-buying
+Allow: /en/automation-ai
+Allow: /pt/automation-ai
+Allow: /es/automation-ai
+Allow: /en/about
+Allow: /pt/about
+Allow: /es/about
+Allow: /en/contact
+Allow: /pt/contact
+Allow: /es/contact
