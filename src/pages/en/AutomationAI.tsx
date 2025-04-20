@@ -12,7 +12,8 @@ const portfolioItems = [
     tech: "WhatsApp API • n8n • NLP • Conditional logic",
     goal: "Automated and scalable customer service",
     highlight: "Drastic reduction in need for human support"
-  }, {
+  },
+  {
     title: "AI Lead Scoring System – +65% sales team efficiency",
     description: "Lead scoring system based on machine learning, trained with real user behavior patterns. Improved sales team efficiency by 65%, prioritizing leads with higher conversion probability.",
     image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
@@ -20,7 +21,8 @@ const portfolioItems = [
     tech: "n8n • Supabase • Custom LLMs",
     goal: "Automatic lead qualification",
     highlight: "Intelligence applied to buying journey"
-  }, {
+  },
+  {
     title: "Automated CRM via WhatsApp – Real-time Integration",
     description: "System that automatically creates a new lead card in CRM as soon as the first WhatsApp contact is initiated. Integration uses FlutterFlow + Lovable + n8n ensuring 100% automated flow.",
     image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
@@ -28,7 +30,8 @@ const portfolioItems = [
     tech: "FlutterFlow • Lovable • n8n",
     goal: "Automatic lead capture and organization",
     highlight: "Immediate sync between WhatsApp and CRM"
-  }, {
+  },
+  {
     title: "Smart Tracking with Meta API – +462% in conversations",
     description: "Implementation of tracking via ctwaclid to accurately identify ads generating WhatsApp conversations. Increase of +462.16% in conversation volume and reduction of -81.34% in cost per message sent in a week.",
     image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
@@ -36,7 +39,8 @@ const portfolioItems = [
     tech: "Meta API • n8n • Supabase • UTMs",
     goal: "Precise measurement of message campaigns",
     highlight: "Advanced tracking with real conversion data"
-  }, {
+  },
+  {
     title: "WhatsApp Metrics Bot – Real-time report automation",
     description: "System that automatically sends Meta and Google Ads campaign metrics to WhatsApp groups. Team time savings with reliable data and customized delivery for each group.",
     image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
@@ -44,7 +48,8 @@ const portfolioItems = [
     tech: "Meta API • Google Ads API • Evolution API • WhatsApp API • n8n",
     goal: "Automated campaign monitoring",
     highlight: "Reports sent in real-time without manual intervention"
-  }, {
+  },
+  {
     title: "Automated Follow-up – AI-powered lead recovery",
     description: "System that identifies unanswered leads in WhatsApp and triggers automatic follow-up messages. Improves re-engagement time, reduces funnel abandonment and increases conversions.",
     image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
@@ -52,7 +57,8 @@ const portfolioItems = [
     tech: "n8n • Supabase • WhatsApp API",
     goal: "Active opportunity recovery",
     highlight: "Automatic actions based on behavior"
-  }, {
+  },
+  {
     title: "AI Agents – Automated service and campaigns",
     description: "Creation of multiple AI agents: from basic service to in-depth analysis of paid media campaigns. One agent can analyze data, suggest optimizations, and even structure Meta Ads campaigns based on current results.",
     image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
@@ -60,7 +66,8 @@ const portfolioItems = [
     tech: "ChatGPT Plugins • Langflow • Relevance AI • n8n",
     goal: "Intelligent service, analysis and execution",
     highlight: "AI with autonomy to suggest and implement actions"
-  }, {
+  },
+  {
     title: "QR Code System with Automated Instance",
     description: "Development of platform that generates unique QR Codes for each client, activating a new instance integrated via Evolution API. Enables creation of customized environments with pre-configured logic for immediate use.",
     image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
@@ -68,7 +75,8 @@ const portfolioItems = [
     tech: "Lovable • Evolution API • n8n",
     goal: "Automatic generation of environments and flows",
     highlight: "Scalability and zero manual intervention for activation"
-  }, {
+  },
+  {
     title: "Lead Capture Website with Lovable",
     description: "Landing page created with Lovable focusing on lead capture for service provision. Tracking integrations and form with direct sending to CRM and WhatsApp.",
     image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
@@ -84,20 +92,41 @@ const technologies = [
     category: "Automation & Integration",
     tools: ["n8n", "Make", "Zapier"],
     icon: <Settings className="h-6 w-6" />
-  }, {
+  },
+  {
     category: "Web & Mobile App Builders",
     tools: ["Bubble", "FlutterFlow", "Lovable"],
     icon: <Smartphone className="h-6 w-6" />
-  }, {
+  },
+  {
     category: "AI & Smart Logic",
     tools: ["ChatGPT + Plugins", "FlowiseAI", "Relevance AI", "Langflow"],
     icon: <BrainCircuit className="h-6 w-6" />
-  }, {
+  },
+  {
     category: "Databases & No-Code Backends",
     tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
     icon: <Database className="h-6 w-6" />
   }
 ];
+
+const mainServices = [{
+  icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+  title: "AI & Intelligent Automation",
+  description: "Implement intelligent systems that improve decision making, optimize campaigns and enhance workflows with intelligence."
+}, {
+  icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
+  title: "WhatsApp Automation",
+  description: "Automated messaging flows for customer service, sales and lead qualification using WhatsApp and connected APIs."
+}, {
+  icon: <Link2 className="h-10 w-10 text-[#8A898C]" />,
+  title: "CRM & Marketing Integrations",
+  description: "Seamless automation between marketing platforms, CRMs, and communication channels."
+}, {
+  icon: <Code className="h-10 w-10 text-[#8A898C]" />,
+  title: "No-Code Development & Workflow Automation",
+  description: "Create web apps, dashboards, automations and complete systems using intuitive platforms."
+}];
 
 const AutomationAI = () => {
   return (
