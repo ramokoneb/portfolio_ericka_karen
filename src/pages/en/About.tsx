@@ -1,8 +1,8 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
-import PhotoGallery from "@/components/PhotoGallery";
 
 const About = () => {
   const expertiseAreas = [{
@@ -128,14 +128,6 @@ const About = () => {
                 <li>Use artificial intelligence to make better and faster decisions</li>
                 <li>Connect your tools, data, and channels in a single efficient flow</li>
               </ul>
-            </CardContent>
-          </Card>
-        </section>
-
-        <section className="mb-6 md:mb-12">
-          <Card className="bg-[#1C3454] border-[#6CAAD9]">
-            <CardContent className="pt-6">
-              <PhotoGallery />
             </CardContent>
           </Card>
         </section>
