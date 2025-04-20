@@ -1,3 +1,5 @@
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
@@ -11,6 +13,12 @@ interface DesktopNavigationProps {
 }
 
 export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNavigationProps) => {
+  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+  
+  const closeServicesMenu = () => setIsServicesMenuOpen(false);
+  const closeLanguageMenu = () => setIsLanguageMenuOpen(false);
+
   return (
     <div className="hidden md:flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
       <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]">
@@ -28,12 +36,20 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
           </NavigationMenuItem>
           
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-[#1A3554] bg-white">
+            <NavigationMenuTrigger 
+              className="hover:text-[#6CAAD9] text-[#1A3554] bg-white"
+              onClick={() => setIsServicesMenuOpen(prev => !prev)}
+              open={isServicesMenuOpen}
+            >
               {navigationContent[language].services}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="w-[400px] p-4 grid grid-cols-2 gap-3 bg-white">
-                <Link to={`/${language}/media-buying`} className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white">
+                <Link 
+                  to={`/${language}/media-buying`} 
+                  className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white"
+                  onClick={closeServicesMenu}
+                >
                   <div className="font-medium">{navigationContent[language].mediaBuying}</div>
                   <p className="text-sm text-[#1A3554]">
                     {language === "en" 
@@ -43,7 +59,11 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
                         : "Campañas estratégicas de publicidad paga"}
                   </p>
                 </Link>
-                <Link to={`/${language}/automation-ai`} className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white">
+                <Link 
+                  to={`/${language}/automation-ai`} 
+                  className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white"
+                  onClick={closeServicesMenu}
+                >
                   <div className="font-medium">{navigationContent[language].automation}</div>
                   <p className="text-sm text-[#1A3554]">
                     {language === "en" 
@@ -76,7 +96,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
       </NavigationMenu>
       
       <div className="flex items-center gap-2">
-        <NavigationMenu>
+        <NavigationMenu open={isLanguageMenuOpen} onOpenChange={setIsLanguageMenuOpen}>
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-[#1A3554] bg-white">
@@ -85,13 +105,25 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="p-2 w-[100px] bg-white">
-                  <Link to={getPathInLanguage("en")} className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
+                  <Link 
+                    to={getPathInLanguage("en")} 
+                    className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                    onClick={closeLanguageMenu}
+                  >
                     EN
                   </Link>
-                  <Link to={getPathInLanguage("pt")} className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
+                  <Link 
+                    to={getPathInLanguage("pt")} 
+                    className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                    onClick={closeLanguageMenu}
+                  >
                     PT
                   </Link>
-                  <Link to={getPathInLanguage("es")} className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white">
+                  <Link 
+                    to={getPathInLanguage("es")} 
+                    className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                    onClick={closeLanguageMenu}
+                  >
                     ES
                   </Link>
                 </div>
