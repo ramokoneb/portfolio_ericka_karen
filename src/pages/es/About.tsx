@@ -64,6 +64,14 @@ const About = () => {
         </Card>
 
         <section className="mb-6 md:mb-12">
+          <Card className="bg-[#1C3454] border-[#6CAAD9]">
+            <CardContent className="pt-6">
+              <PhotoGallery />
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-6 md:mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">Mis proyectos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <Card className="bg-[#1C3454] border-[#6CAAD9]">
@@ -140,14 +148,6 @@ const About = () => {
               <p className="text-lg">
                 Estoy lista para colaborar con empresas, startups o agencias que ven tecnología y rendimiento como el camino más directo para el crecimiento. Ya sea en portugués, inglés o español — vamos a llevar tu operación digital al siguiente nivel.
               </p>
-            </CardContent>
-          </Card>
-        </section>
-
-        <section className="mb-6 md:mb-12">
-          <Card className="bg-[#1C3454] border-[#6CAAD9]">
-            <CardContent className="pt-6">
-              <PhotoGallery />
             </CardContent>
           </Card>
         </section>
