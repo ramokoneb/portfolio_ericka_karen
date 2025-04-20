@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, BrainCircuit, Database, Settings, Bot, LineChart, Target } from "lucide-react";
+import { ArrowLeft, MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone } from "lucide-react";
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
 import { TechnologySection } from "@/components/media-buying/TechnologySection";
 import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
+import { HeroSection } from "@/components/media-buying/HeroSection";
 
 const mainServices = [{
   icon: BrainCircuit,
   title: "Inteligência & Estratégia de Negócio",
   description: "Desenvolvimento de estratégias de mídia alinhadas com objetivos de negócio, focadas em resultados escaláveis e sustentáveis."
 }, {
-  icon: Target,
+  icon: Link2,
   title: "Planejamento Avançado de Mídia",
   description: "Planejamento estratégico de campanhas pagas com foco em tráfego qualificado, otimização de conversão e ROI positivo."
 }, {
@@ -19,7 +19,7 @@ const mainServices = [{
   title: "Rastreamento & Análise Avançada",
   description: "Implementação de soluções avançadas de tracking, integração de API de conversão e sistemas de otimização baseados em dados."
 }, {
-  icon: Bot,
+  icon: Smartphone,
   title: "Inteligência Artificial Aplicada",
   description: "Uso de IA para otimizar entrega de campanhas, segmentação, criativos dinâmicos e prever padrões de comportamento."
 }];
@@ -27,11 +27,11 @@ const mainServices = [{
 const technologies = [{
   category: "Tecnologias & Ferramentas 🎯",
   tools: ["Meta Ads Manager", "Google Ads", "TikTok Ads Manager", "Pinterest Ads", "LinkedIn Ads", "Google Merchant Center"],
-  icon: Target
+  icon: Link2
 }, {
   category: "Tecnologias & Ferramentas 📊",
   tools: ["Google Analytics (GA4)", "Google Tag Manager", "Meta Pixel & Conversion API (CAPI)", "Meta Events Manager", "Hotjar", "Looker Studio / Data Studio", "Supermetrics", "UTMs, ctwaclid, fbclid, gclid"],
-  icon: LineChart
+  icon: Code
 }, {
   category: "Tecnologias & Ferramentas ⚙️",
   tools: ["n8n", "Make (Integromat)", "Zapier", "Evolution API", "Supabase"],
@@ -79,32 +79,41 @@ const MediaBuying = () => {
     <div className="min-h-screen p-4 md:p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/pt">
-          <Button variant="ghost" className="mb-6 w-full sm:w-auto bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-4 md:mb-6 bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Início
           </Button>
         </Link>
+
+        <HeroSection 
+          title="🚀 Serviços de Mídia Paga & Performance Estratégica"
+          subtitle="Campanhas orientadas por dados, inteligência de performance e rastreamento avançado para escalar seus resultados."
+          description1="Transforme seus investimentos em mídia paga em motores de crescimento previsíveis e escaláveis. Combino inteligência estratégica com sistemas avançados de tracking para garantir que cada campanha gere impacto mensurável."
+          description2="Minha abordagem integra estratégia de negócio, dados de performance e inteligência artificial — entregando campanhas que consistentemente alcançam ROI positivo."
+        />
         
-        <h1 className="text-4xl font-bold mb-4 text-[#1c3454] md:text-5xl">🚀 Serviços de Mídia Paga & Performance Estratégica</h1>
-        <p className="text-xl mb-6 text-[#6caddf]">
-          Campanhas orientadas por dados, inteligência de performance e rastreamento avançado para escalar seus resultados.
-        </p>
-        
-        <div className="p-6 rounded-lg mb-12 bg-[#6caddf]">
-          <p className="text-lg mb-4 text-[#1c3454]">
-            Transforme seus investimentos em mídia paga em motores de crescimento previsíveis e escaláveis. Combino inteligência estratégica com sistemas avançados de tracking para garantir que cada campanha gere impacto mensurável.
-          </p>
-          <p className="text-lg text-[#1c3454]">
-            Minha abordagem integra estratégia de negócio, dados de performance e inteligência artificial — entregando campanhas que consistentemente alcançam ROI positivo.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
+          {mainServices.map((service, index) => (
+            <ServiceCard key={index} service={service} />
+          ))}
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {mainServices.map((service, index) => <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />)}
+        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8 md:mb-16">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">🧩 Tecnologias que Utilizo</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {technologies.map((tech, index) => (
+              <TechnologyCard key={index} tech={tech} />
+            ))}
+          </div>
         </div>
         
-        <TechnologySection technologies={technologies} language="pt" />
-        
-        <PortfolioSection items={portfolioItems} />
+        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">📁 Portfólio</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {portfolioItems.map((item, index) => (
+              <PortfolioCard key={index} item={item} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

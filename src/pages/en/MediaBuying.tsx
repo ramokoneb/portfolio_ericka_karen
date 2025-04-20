@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, BrainCircuit, Database, Settings, Bot, LineChart, Target } from "lucide-react";
+import { ArrowLeft, MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone } from "lucide-react";
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
 import { TechnologySection } from "@/components/media-buying/TechnologySection";
 import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
+import { HeroSection } from "@/components/media-buying/HeroSection";
 
 const mainServices = [{
   icon: BrainCircuit,
@@ -79,36 +79,41 @@ const MediaBuying = () => {
     <div className="min-h-screen p-4 md:p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/en">
-          <Button variant="ghost" className="mb-6 w-full sm:w-auto bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-4 md:mb-6 bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
-        
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-[#1c3454]">
-          🚀 Paid Media Services & Strategic Performance
-        </h1>
-        <p className="text-lg sm:text-xl mb-6 text-[#6caddf]">
-          Data-driven campaigns, performance intelligence and advanced tracking to scale your results.
-        </p>
-        
-        <div className="p-4 md:p-6 rounded-lg mb-8 md:mb-12 bg-[#6caddf] text-[#1c3454]">
-          <p className="text-lg text-[#1c3454] mb-4">
-            Transform your paid media investments into predictable and scalable growth engines. I combine strategic intelligence with advanced tracking systems to ensure every campaign generates measurable impact.
-          </p>
-          <p className="text-lg text-[#1c3454]">
-            My approach integrates business strategy, performance data and artificial intelligence — delivering campaigns that consistently achieve positive ROI.
-          </p>
-        </div>
+
+        <HeroSection 
+          title="🚀 Paid Media Services & Strategic Performance"
+          subtitle="Data-driven campaigns, performance intelligence and advanced tracking to scale your results."
+          description1="Transform your paid media investments into predictable and scalable growth engines. I combine strategic intelligence with advanced tracking systems to ensure every campaign generates measurable impact."
+          description2="My approach integrates business strategy, performance data and artificial intelligence — delivering campaigns that consistently achieve positive ROI."
+        />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
           {mainServices.map((service, index) => (
-            <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
+            <ServiceCard key={index} service={service} />
           ))}
         </div>
         
-        <TechnologySection technologies={technologies} language="en" />
+        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8 md:mb-16">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">🧩 Technologies I Use</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {technologies.map((tech, index) => (
+              <TechnologyCard key={index} tech={tech} />
+            ))}
+          </div>
+        </div>
         
-        <PortfolioSection items={portfolioItems} />
+        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">📁 Portfolio</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {portfolioItems.map((item, index) => (
+              <PortfolioCard key={index} item={item} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
