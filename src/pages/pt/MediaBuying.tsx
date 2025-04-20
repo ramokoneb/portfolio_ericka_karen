@@ -1,9 +1,21 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone } from "lucide-react";
+import { 
+  ArrowLeft, 
+  MessageSquare, 
+  Code, 
+  BrainCircuit, 
+  Link2, 
+  Database, 
+  Settings, 
+  Smartphone,
+  Target,
+  LineChart
+} from "lucide-react";
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
-import { TechnologySection } from "@/components/media-buying/TechnologySection";
-import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
+import { TechnologyCard } from "@/components/media-buying/TechnologyCard";
+import { PortfolioCard } from "@/components/media-buying/PortfolioCard";
 import { HeroSection } from "@/components/media-buying/HeroSection";
 
 const mainServices = [{
@@ -93,7 +105,7 @@ const MediaBuying = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
           {mainServices.map((service, index) => (
-            <ServiceCard key={index} service={service} />
+            <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
           ))}
         </div>
         
