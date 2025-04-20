@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
@@ -14,7 +13,9 @@ interface DesktopNavigationProps {
 export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNavigationProps) => {
   return (
     <div className="hidden md:flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
-      <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]" />
+      <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]">
+        ERICKA KAREN
+      </Link>
       
       <NavigationMenu>
         <NavigationMenuList>

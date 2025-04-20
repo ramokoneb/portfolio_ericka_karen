@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LineChart, Bot, Linkedin, Mail, MessageSquare } from "lucide-react";
@@ -21,14 +20,14 @@ const Index = () => {
 
         <div className="flex flex-col gap-3 md:flex-row md:gap-6 justify-center">
           <Link to="/en/media-buying" className="w-full md:w-auto">
-            <Button size="lg" className="w-full text-sm md:text-base px-3 py-4 md:px-6 md:py-5 lg:px-8 lg:py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
-              <LineChart className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+            <Button size="lg" className="w-full text-sm md:text-base px-3 py-4 md:px-6 md:py-4 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
+              <LineChart className="mr-2 h-4 w-4" />
               Paid Media Services
             </Button>
           </Link>
           <Link to="/en/automation-ai" className="w-full md:w-auto">
-            <Button size="lg" className="w-full text-sm md:text-base px-3 py-4 md:px-6 md:py-5 lg:px-8 lg:py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
-              <Bot className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+            <Button size="lg" className="w-full text-sm md:text-base px-3 py-4 md:px-6 md:py-4 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white whitespace-normal md:whitespace-nowrap">
+              <Bot className="mr-2 h-4 w-4" />
               Automation, AI & No/Low-Code
             </Button>
           </Link>

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -88,30 +87,22 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen p-8 bg-[#1A3554]">
-      <div className="absolute top-4 right-4">
-        <Button 
-          variant="outline" 
-          className="rounded-full bg-[#1A3554] text-white hover:bg-[#6CAAD9]" 
-          onClick={toggleLanguage}
-        >
-          {language === "en" ? "PT" : "EN"}
-        </Button>
-      </div>
-      
+    <div className="min-h-screen p-4 md:p-8 bg-[#1A3554]">
       <div className="max-w-4xl mx-auto">
         <Link to="/">
-          <Button variant="ghost" className="mb-6 bg-[#1A3554] text-white hover:bg-[#6CAAD9]">
+          <Button variant="ghost" className="mb-6 w-full md:w-auto bg-[#1A3554] text-white hover:bg-[#6CAAD9]">
             <ArrowLeft className="mr-2 h-4 w-4" /> {content[language].backButton}
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white">{content[language].title}</h1>
-        <p className="text-xl text-white mb-12">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+          {content[language].title}
+        </h1>
+        <p className="text-lg md:text-xl mb-8 text-white">
           {content[language].subtitle}
         </p>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <Card className="border-none shadow-lg bg-white">
             <CardHeader>
               <CardTitle>{content[language].formTitle}</CardTitle>

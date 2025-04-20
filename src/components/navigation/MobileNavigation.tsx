@@ -15,7 +15,9 @@ interface MobileNavigationProps {
 export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigationProps) => {
   return (
     <div className="md:hidden flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
-      <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]" />
+      <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]">
+        EK
+      </Link>
       
       <div className="flex items-center gap-3">
         <NavigationMenu>

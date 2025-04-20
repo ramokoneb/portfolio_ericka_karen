@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -35,7 +34,7 @@ const About = () => {
               <img 
                 alt="Ericka Karen" 
                 className="w-full h-full object-cover" 
-                src="/lovable-uploads/c50dc637-9f5b-40f7-bf8a-adb3743f5ff8.png" 
+                src="/professional-photo.png" 
               />
             </div>
           </div>

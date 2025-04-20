@@ -76,20 +76,22 @@ const portfolioItems = [{
 
 const MediaBuying = () => {
   return (
-    <div className="min-h-screen p-8 bg-white">
+    <div className="min-h-screen p-4 md:p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/en">
-          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454] w-full md:w-auto">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
         
-        <h1 className="text-4xl font-bold mb-4 text-[#1c3454] md:text-5xl">🚀 Paid Media Services & Strategic Performance</h1>
-        <p className="text-xl mb-6 text-[#6caddf]">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#1c3454]">
+          🚀 Paid Media Services & Strategic Performance
+        </h1>
+        <p className="text-lg md:text-xl mb-6 text-[#6caddf]">
           Data-driven campaigns, performance intelligence and advanced tracking to scale your results.
         </p>
         
-        <div className="p-6 rounded-lg mb-12 bg-[#6caddf]">
+        <div className="p-4 md:p-6 rounded-lg mb-8 md:mb-12 bg-[#6caddf] text-[#1c3454]">
           <p className="text-lg text-[#1c3454] mb-4">
             Transform your paid media investments into predictable and scalable growth engines. I combine strategic intelligence with advanced tracking systems to ensure every campaign generates measurable impact.
           </p>
@@ -98,7 +100,7 @@ const MediaBuying = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
           {mainServices.map((service, index) => (
             <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
           ))}
