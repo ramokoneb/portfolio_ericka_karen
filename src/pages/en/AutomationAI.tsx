@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone, Bot, Layers3, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
+import { ArrowLeft, MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone } from "lucide-react";
+import { ServiceCard } from "@/components/automation/ServiceCard";
+import { TechnologyCard } from "@/components/automation/TechnologyCard";
+import { PortfolioCard } from "@/components/automation/PortfolioCard";
+import { MainService, Technology, PortfolioItem } from "@/types/automation";
 
-const portfolioItems = [
+const portfolioItems: PortfolioItem[] = [
   {
     title: "WhatsApp Automation – +80% automated inquiries",
     description: "Automation solution developed for WhatsApp customer service, with intelligent chatbot capable of handling 80% of frequently asked questions. 95% reduction in response time and increased service satisfaction.",
@@ -87,62 +90,59 @@ const portfolioItems = [
   }
 ];
 
-const technologies = [
+const technologies: Technology[] = [
   {
     category: "Automation & Integration",
     tools: ["n8n", "Make", "Zapier"],
     icon: <Settings className="h-6 w-6" />
-  },
-  {
+  }, {
     category: "Web & Mobile App Builders",
     tools: ["Bubble", "FlutterFlow", "Lovable"],
     icon: <Smartphone className="h-6 w-6" />
-  },
-  {
+  }, {
     category: "AI & Smart Logic",
     tools: ["ChatGPT + Plugins", "FlowiseAI", "Relevance AI", "Langflow"],
     icon: <BrainCircuit className="h-6 w-6" />
-  },
-  {
+  }, {
     category: "Databases & No-Code Backends",
     tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
     icon: <Database className="h-6 w-6" />
   }
 ];
 
-const mainServices = [{
-  icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+const mainServices: MainService[] = [{
+  icon: <BrainCircuit className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
   title: "AI & Intelligent Automation",
   description: "Implement intelligent systems that improve decision making, optimize campaigns and enhance workflows with intelligence."
 }, {
-  icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
+  icon: <MessageSquare className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
   title: "WhatsApp Automation",
   description: "Automated messaging flows for customer service, sales and lead qualification using WhatsApp and connected APIs."
 }, {
-  icon: <Link2 className="h-10 w-10 text-[#8A898C]" />,
+  icon: <Link2 className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
   title: "CRM & Marketing Integrations",
   description: "Seamless automation between marketing platforms, CRMs, and communication channels."
 }, {
-  icon: <Code className="h-10 w-10 text-[#8A898C]" />,
+  icon: <Code className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
   title: "No-Code Development & Workflow Automation",
   description: "Create web apps, dashboards, automations and complete systems using intuitive platforms."
 }];
 
 const AutomationAI = () => {
   return (
-    <div className="min-h-screen p-4 md:p-8 bg-[#000000]">
+    <div className="min-h-screen p-4 md:p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/en">
-          <Button variant="ghost" className="mb-6 w-full sm:w-auto bg-white/20 hover:bg-white/30 text-white">
+          <Button variant="ghost" className="mb-4 md:mb-6 bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
         
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
-          Automation, AI and No-Code Development
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 text-[#1c3454]">
+          🚀 Automation, AI and No/Low-Code Development
         </h1>
-        <p className="text-lg sm:text-xl mb-8 text-white">
-          Implementation of intelligent solutions to automate processes, optimize results through AI, and empower businesses with no-code technologies.
+        <p className="text-lg md:text-xl mb-4 md:mb-6 text-[#6caddf]">
+          Intelligent systems to automate, scale and innovate your digital operations.
         </p>
         
         <div className="p-4 md:p-6 rounded-lg mb-8 md:mb-12 bg-[#6caddf]">
@@ -156,17 +156,7 @@ const AutomationAI = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
           {mainServices.map((service, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
-              <CardHeader>
-                <div className="mb-2">
-                  {service.icon}
-                </div>
-                <CardTitle className="text-[#1c3454]">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-sm md:text-base text-[#6caddf]">{service.description}</CardDescription>
-              </CardContent>
-            </Card>
+            <ServiceCard key={index} service={service} />
           ))}
         </div>
         
@@ -174,23 +164,7 @@ const AutomationAI = () => {
           <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">🧩 Technologies I Use</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {technologies.map((tech, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    {tech.icon}
-                    <CardTitle className="text-base md:text-lg text-[#1c3454]">{tech.category}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {tech.tools.map(tool => (
-                      <span key={tool} className="px-2 py-1 md:px-3 md:py-1 bg-gray-100 rounded-full text-xs md:text-sm text-[#6caddf]">
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <TechnologyCard key={index} tech={tech} />
             ))}
           </div>
         </div>
@@ -199,24 +173,7 @@ const AutomationAI = () => {
           <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">📁 Portfolio</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
-                <div className="h-40 md:h-48 overflow-hidden">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform hover:scale-105" />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-base md:text-lg text-[#1c3454]">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm md:text-base mb-4 text-[#1c3454]">{item.description}</p>
-                  <div className="flex flex-wrap gap-1 md:gap-2">
-                    {item.tags.map(tag => (
-                      <span key={tag} className="px-2 py-1 bg-gray-100 rounded-full text-xs font-medium text-[#1c3454]">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <PortfolioCard key={index} item={item} />
             ))}
           </div>
         </div>

@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone } from "lucide-react";
@@ -103,19 +104,19 @@ const technologies: Technology[] = [
 ];
 
 const mainServices: MainService[] = [{
-  icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+  icon: <BrainCircuit className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
   title: "IA & Automação Inteligente",
   description: "Implemente sistemas inteligentes que melhoram a tomada de decisão, otimizam campanhas e potencializam seus fluxos de trabalho com inteligência."
 }, {
-  icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
+  icon: <MessageSquare className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
   title: "Automação de WhatsApp",
   description: "Fluxos de mensagens automatizados para atendimento ao cliente, vendas e qualificação de leads usando WhatsApp e APIs conectadas."
 }, {
-  icon: <Link2 className="h-10 w-10 text-[#8A898C]" />,
+  icon: <Link2 className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
   title: "CRM & Integrações de Marketing",
   description: "Automação perfeita entre plataformas de marketing, CRMs e canais de comunicação."
 }, {
-  icon: <Code className="h-10 w-10 text-[#8A898C]" />,
+  icon: <Code className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
   title: "Desenvolvimento No-Code & Automação de Workflows",
   description: "Crie aplicativos web, dashboards, automações e sistemas completos usando plataformas intuitivas."
 }];
@@ -125,24 +126,24 @@ const AutomationAI = () => {
     <div className="min-h-screen p-4 md:p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/pt">
-          <Button variant="ghost" className="mb-6 w-full sm:w-auto bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-4 md:mb-6 bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Início
           </Button>
         </Link>
         
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-[#1c3454]">
-          🚀 Automação, IA & Desenvolvimento No/Low-Code
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 text-[#1c3454]">
+          🚀 Automação, IA e Desenvolvimento No/Low-Code
         </h1>
-        <p className="text-lg sm:text-xl mb-6 text-[#6caddf]">
+        <p className="text-lg md:text-xl mb-4 md:mb-6 text-[#6caddf]">
           Sistemas inteligentes para automatizar, escalar e inovar suas operações digitais.
         </p>
         
         <div className="p-4 md:p-6 rounded-lg mb-8 md:mb-12 bg-[#6caddf]">
           <p className="text-base md:text-lg text-1C3454 mb-3 md:mb-4 text-[#1c3454]">
-            Transforme rotinas de negócios em motores de alto desempenho usando automação, inteligência artificial e plataformas no-code. Crio soluções que reduzem trabalho manual, melhoram a tomada de decisão e conectam ferramentas para tornar sua estratégia digital verdadeiramente escalável.
+            Transforme rotinas empresariais em motores de alto desempenho usando automação, inteligência artificial e plataformas no-code. Crio soluções que reduzem trabalho manual, melhoram a tomada de decisão e conectam ferramentas para tornar sua estratégia digital verdadeiramente escalável.
           </p>
           <p className="text-base md:text-lg text-[#1c3454]">
-            Minha abordagem combina mentalidade de engenharia, inteligência de negócios e plataformas amigáveis — permitindo que você escale sem aumentar a complexidade.
+            Minha abordagem combina mentalidade de engenharia, inteligência empresarial e plataformas amigáveis — permitindo que você escale sem aumentar a complexidade.
           </p>
         </div>
         
