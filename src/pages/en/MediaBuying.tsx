@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -97,7 +96,7 @@ const MediaBuying = () => {
         </Link>
 
         <HeroSection 
-          title="🚀 Paid Media Services & Strategic Performance"
+          title="Paid Media Services & Strategic Performance"
           subtitle="Data-driven campaigns, performance intelligence and advanced tracking to scale your results."
           description1="Transform your paid media investments into predictable and scalable growth engines. I combine strategic intelligence with advanced tracking systems to ensure every campaign generates measurable impact."
           description2="My approach integrates business strategy, performance data and artificial intelligence — delivering campaigns that consistently achieve positive ROI."
@@ -110,7 +109,7 @@ const MediaBuying = () => {
         </div>
         
         <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8 md:mb-16">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">🧩 Technologies I Use</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">Technologies I Use</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {technologies.map((tech, index) => (
               <TechnologyCard key={index} tech={tech} />
@@ -119,7 +118,7 @@ const MediaBuying = () => {
         </div>
         
         <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">📁 Portfolio</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">Portfolio</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {portfolioItems.map((item, index) => (
               <PortfolioCard key={index} item={item} />

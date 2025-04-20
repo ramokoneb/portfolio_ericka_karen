@@ -36,13 +36,10 @@ const About = () => {
                 className="w-full h-full object-cover" 
                 src="/lovable-uploads/c50dc637-9f5b-40f7-bf8a-adb3743f5ff8.png" 
               />
-              <div className="absolute top-0 right-0 text-xl md:text-2xl lg:text-3xl">
-                🇧🇷
-              </div>
             </div>
           </div>
           <div className="md:col-span-2 text-center md:text-left">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-[#6CAAD9]">👩‍💻 About Ericka Karen</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-[#6CAAD9]">About Ericka Karen</h1>
             <p className="text-lg sm:text-xl mb-4">Where performance, technology and creativity meet to scale businesses</p>
             <p className="text-base sm:text-lg mb-4">
               With over a decade of experience in digital marketing, I am a professional specialized in paid media, automation, and artificial intelligence applied to business. My journey began in 2014 in the creative area, focusing on content and social media. But it was in 2019 that I took a strategic step: I migrated to the performance universe, where I began building data-driven solutions to generate real results — from qualified leads to exponential revenue.
@@ -55,7 +52,7 @@ const About = () => {
 
         <Card className="bg-[#1C3454] border-[#6CAAD9] mb-6 md:mb-12">
           <CardHeader>
-            <CardTitle className="text-xl sm:text-2xl text-[#6CAAD9]">🎯 What drives me</CardTitle>
+            <CardTitle className="text-xl sm:text-2xl text-[#6CAAD9]">What drives me</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-base sm:text-lg">
@@ -65,7 +62,7 @@ const About = () => {
         </Card>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">💼 My projects</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">My projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <Card className="bg-[#1C3454] border-[#6CAAD9]">
               <CardHeader>
@@ -87,7 +84,7 @@ const About = () => {
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">🧠 Technical Expertise</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">Technical Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {expertiseAreas.map((area, index) => (
               <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
@@ -107,7 +104,7 @@ const About = () => {
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">📁 Delivered Results</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">Delivered Results</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {achievements.map((achievement, index) => (
               <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
@@ -120,7 +117,7 @@ const About = () => {
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">🚀 What I can build with you</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">What I can build with you</h2>
           <Card className="bg-[#1C3454] border-[#6CAAD9]">
             <CardContent className="pt-6">
               <p className="mb-4">If you seek predictable, scalable, and intelligent growth, I can help you:</p>
@@ -135,7 +132,7 @@ const About = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">🤝 Let's talk?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">Let's talk?</h2>
           <Card className="bg-[#1C3454] border-[#6CAAD9]">
             <CardContent className="pt-6">
               <p className="text-lg">

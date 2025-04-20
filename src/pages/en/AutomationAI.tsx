@@ -139,7 +139,7 @@ const AutomationAI = () => {
         </Link>
         
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 text-[#1c3454]">
-          🚀 Automation, AI and No/Low-Code Development
+          Automation, AI and No/Low-Code Development
         </h1>
         <p className="text-lg md:text-xl mb-4 md:mb-6 text-[#6caddf]">
           Intelligent systems to automate, scale and innovate your digital operations.
@@ -161,7 +161,7 @@ const AutomationAI = () => {
         </div>
         
         <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8 md:mb-16">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">🧩 Technologies I Use</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">Technologies I Use</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {technologies.map((tech, index) => (
               <TechnologyCard key={index} tech={tech} />
@@ -170,7 +170,7 @@ const AutomationAI = () => {
         </div>
         
         <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">📁 Portfolio</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">Portfolio</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {portfolioItems.map((item, index) => (
               <PortfolioCard key={index} item={item} />

@@ -48,13 +48,10 @@ const About = () => {
                 className="w-full h-full object-cover" 
                 src="/lovable-uploads/c50dc637-9f5b-40f7-bf8a-adb3743f5ff8.png" 
               />
-              <div className="absolute top-0 right-0 text-xl md:text-2xl lg:text-3xl">
-                🇧🇷
-              </div>
             </div>
           </div>
           <div className="md:col-span-2 text-center md:text-left">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-[#6CAAD9]">👩‍💻 Sobre Ericka Karen</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-[#6CAAD9]">Sobre Ericka Karen</h1>
             <p className="text-lg sm:text-xl mb-4">Donde el rendimiento, la tecnología y la creatividad se encuentran para escalar negocios</p>
             <p className="text-base sm:text-lg mb-4">
               Con más de una década de experiencia en marketing digital, soy una profesional especializada en medios pagos, automatización e inteligencia artificial aplicada a negocios. Mi trayectoria comenzó en 2014 en el área creativa, con foco en contenido y redes sociales. Pero fue en 2019 cuando di un paso estratégico: migré al universo del performance, donde comencé a construir soluciones orientadas a datos para generar resultados reales — desde leads calificados hasta facturación exponencial.
@@ -67,7 +64,7 @@ const About = () => {
 
         <Card className="bg-[#1C3454] border-[#6CAAD9] mb-6 md:mb-12">
           <CardHeader>
-            <CardTitle className="text-xl sm:text-2xl text-[#6CAAD9]">🎯 Lo que me mueve</CardTitle>
+            <CardTitle className="text-xl sm:text-2xl text-[#6CAAD9]">Lo que me mueve</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-base sm:text-lg">
@@ -77,7 +74,7 @@ const About = () => {
         </Card>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">💼 Mis proyectos</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">Mis proyectos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <Card className="bg-[#1C3454] border-[#6CAAD9]">
               <CardHeader>
@@ -99,7 +96,7 @@ const About = () => {
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">🧠 Expertise Técnica</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">Expertise Técnica</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {expertiseAreas.map((area, index) => (
               <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
@@ -119,7 +116,7 @@ const About = () => {
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">📁 Resultados entregados</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">Resultados entregados</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {achievements.map((achievement, index) => (
               <Card key={index} className="bg-[#1C3454] border-[#6CAAD9]">
@@ -132,7 +129,7 @@ const About = () => {
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">🚀 Qué puedo construir contigo</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">Qué puedo construir contigo</h2>
           <Card className="bg-[#1C3454] border-[#6CAAD9]">
             <CardContent className="pt-6">
               <p className="text-sm sm:text-base mb-4">Si buscas crecimiento previsible, escalable e inteligente, puedo ayudarte a:</p>
@@ -147,7 +144,7 @@ const About = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">🤝 ¿Conversamos?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#6CAAD9]">¿Conversamos?</h2>
           <Card className="bg-[#1C3454] border-[#6CAAD9]">
             <CardContent className="pt-6">
               <p className="text-sm sm:text-base">
