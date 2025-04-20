@@ -100,36 +100,20 @@ const technologies = [
 ];
 
 const AutomationAI = () => {
-  const mainServices = [{
-    icon: <BrainCircuit className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
-    title: "AI & Intelligent Automation",
-    description: "Implement intelligent systems that enhance decision-making, optimize campaigns, and power your workflows with intelligence."
-  }, {
-    icon: <MessageSquare className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
-    title: "WhatsApp Automation",
-    description: "Automated messaging flows for customer service, sales, and lead qualification using WhatsApp and connected APIs."
-  }, {
-    icon: <Link2 className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
-    title: "CRM & Marketing Integrations",
-    description: "Seamless automation between marketing platforms, CRMs and communication channels."
-  }, {
-    icon: <Code className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
-    title: "No-Code Development & Workflow Automation",
-    description: "Create web apps, dashboards, automations and full systems using intuitive platforms."
-  }];
-  
   return (
-    <div className="min-h-screen p-4 md:p-8 bg-white">
+    <div className="min-h-screen p-4 md:p-8 bg-[#000000]">
       <div className="max-w-6xl mx-auto">
         <Link to="/en">
-          <Button variant="ghost" className="mb-4 md:mb-6 bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-6 w-full sm:w-auto bg-white/20 hover:bg-white/30 text-white">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
         
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 text-[#1c3454]">🚀 Automation, AI & No/Low-Code Development</h1>
-        <p className="text-lg md:text-xl mb-4 md:mb-6 text-[#6caddf]">
-          Intelligent systems to automate, scale, and innovate your digital operations.
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
+          Automation, AI and No-Code Development
+        </h1>
+        <p className="text-lg sm:text-xl mb-8 text-white">
+          Implementation of intelligent solutions to automate processes, optimize results through AI, and empower businesses with no-code technologies.
         </p>
         
         <div className="p-4 md:p-6 rounded-lg mb-8 md:mb-12 bg-[#6caddf]">

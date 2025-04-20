@@ -122,29 +122,29 @@ const AutomationAI = () => {
       backButton: "Voltar para Início"
     }
   };
-  return <div className="min-h-screen p-8 bg-white">
+  return <div className="min-h-screen p-4 md:p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/pt">
-          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-6 w-full sm:w-auto bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> {content.pt.backButton}
           </Button>
         </Link>
         
-        <h1 className="text-4xl font-bold mb-4 text-[#1c3454] md:text-5xl">🚀 Automação, IA & Desenvolvimento No/Low-Code</h1>
-        <p className="text-xl mb-6 text-[#6caddf]">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-[#1c3454]">🚀 Automação, IA & Desenvolvimento No/Low-Code</h1>
+        <p className="text-lg sm:text-xl mb-6 text-[#6caddf]">
           Sistemas inteligentes para automatizar, escalar e inovar suas operações digitais.
         </p>
         
-        <div className="p-6 rounded-lg mb-12 bg-[#6caddf]">
-          <p className="text-lg text-1C3454 mb-4 text-[#1c3454]">
+        <div className="p-4 md:p-6 rounded-lg mb-8 md:mb-12 bg-[#6caddf]">
+          <p className="text-base md:text-lg text-1C3454 mb-3 md:mb-4 text-[#1c3454]">
             Transforme rotinas de negócios em motores de alto desempenho usando automação, inteligência artificial e plataformas no-code. Crio soluções que reduzem trabalho manual, melhoram a tomada de decisão e conectam ferramentas para tornar sua estratégia digital verdadeiramente escalável.
           </p>
-          <p className="text-lg text-[#1c3454]">
+          <p className="text-base md:text-lg text-[#1c3454]">
             Minha abordagem combina mentalidade de engenharia, inteligência de negócios e plataformas amigáveis — permitindo que você escale sem aumentar a complexidade.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
           {mainServices.map((service, index) => <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
               <CardHeader>
                 <div className="mb-2">
@@ -153,24 +153,24 @@ const AutomationAI = () => {
                 <CardTitle className="text-[#1c3454]">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base text-[#6caddf]">{service.description}</CardDescription>
+                <CardDescription className="text-sm md:text-base text-[#6caddf]">{service.description}</CardDescription>
               </CardContent>
             </Card>)}
         </div>
         
-        <div className="bg-white p-8 rounded-lg shadow-lg mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-[#1c3454]">🧩 Tecnologias que Utilizo</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8 md:mb-16">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">🧩 Tecnologias que Utilizo</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {technologies.map((tech, index) => <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
                     {tech.icon}
-                    <CardTitle className="text-lg text-[#1c3454]">{tech.category}</CardTitle>
+                    <CardTitle className="text-base md:text-lg text-[#1c3454]">{tech.category}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
-                    {tech.tools.map(tool => <span key={tool} className="px-3 py-1 bg-gray-100 rounded-full text-sm text-[#6caddf]">
+                    {tech.tools.map(tool => <span key={tool} className="px-2 py-1 md:px-3 md:py-1 bg-gray-100 rounded-full text-xs md:text-sm text-[#6caddf]">
                         {tool}
                       </span>)}
                   </div>
@@ -179,19 +179,19 @@ const AutomationAI = () => {
           </div>
         </div>
         
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-8 text-[#1c3454]">📁 Portfólio</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">📁 Portfólio</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {portfolioItems.map((item, index) => <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
-                <div className="h-48 overflow-hidden">
+                <div className="h-40 md:h-48 overflow-hidden">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform hover:scale-105" />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-[#1c3454]">{item.title}</CardTitle>
+                  <CardTitle className="text-base md:text-lg text-[#1c3454]">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4 text-[#1c3454]">{item.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <p className="text-sm md:text-base mb-4 text-[#1c3454]">{item.description}</p>
+                  <div className="flex flex-wrap gap-1 md:gap-2">
                     {item.tags.map(tag => <span key={tag} className="px-2 py-1 bg-gray-100 rounded-full text-xs font-medium text-[#1c3454]">
                         {tag}
                       </span>)}

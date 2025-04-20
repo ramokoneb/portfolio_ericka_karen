@@ -5,6 +5,7 @@ import { ArrowLeft, BrainCircuit, Database, Settings, Bot, LineChart, Target } f
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
 import { TechnologySection } from "@/components/media-buying/TechnologySection";
 import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
+
 const mainServices = [{
   icon: BrainCircuit,
   title: "Inteligencia & Estrategia de Negocio",
@@ -22,6 +23,7 @@ const mainServices = [{
   title: "Inteligencia Artificial Aplicada",
   description: "Uso de IA para optimizar entrega de campañas, segmentación, creativos dinámicos y predecir patrones de comportamiento."
 }];
+
 const technologies = [{
   category: "Tecnologías y Herramientas 🎯",
   tools: ["Meta Ads Manager", "Google Ads", "TikTok Ads Manager", "Pinterest Ads", "LinkedIn Ads", "Google Merchant Center"],
@@ -39,6 +41,7 @@ const technologies = [{
   tools: ["ChatGPT + Plugins", "Langflow / FlowiseAI", "Relevance AI", "AI Campaign Generators", "Custom LLMs for scoring and optimization"],
   icon: BrainCircuit
 }];
+
 const portfolioItems = [{
   title: "Tienda Virtual Febracis — De la Crisis al Crecimiento Exponencial",
   description: "Después de 6 meses de pérdidas en medios pagos, se implementaron enfoques estratégicos logrando R$77.000 en ingresos mensuales (267% de crecimiento) con ROAS del 963% usando Meta Ads y Google Ads.",
@@ -70,11 +73,13 @@ const portfolioItems = [{
   image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
   tags: ["Google Ads", "Educación", "Performance Max"]
 }];
+
 const MediaBuying = () => {
-  return <div className="min-h-screen p-8 bg-white">
+  return (
+    <div className="min-h-screen p-4 md:p-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <Link to="/es">
-          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-6 w-full sm:w-auto bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>
@@ -101,6 +106,8 @@ const MediaBuying = () => {
         
         <PortfolioSection items={portfolioItems} />
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default MediaBuying;

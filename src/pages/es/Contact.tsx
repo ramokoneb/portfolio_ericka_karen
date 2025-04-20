@@ -9,7 +9,7 @@ const Contact = () => {
     <div className="min-h-screen p-4 md:p-8 bg-[#1c3454]">
       <div className="max-w-4xl mx-auto">
         <Link to="/es">
-          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-6 w-full sm:w-auto bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>

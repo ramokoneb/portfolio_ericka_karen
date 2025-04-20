@@ -19,10 +19,11 @@ const About = () => {
   }];
   const achievements = ["+963% de ROAS com reestruturação de campanhas para e-commerce", "+462% de aumento em conversas no WhatsApp com tracking inteligente", "-118% de CPL para instituição de ensino usando Performance Max", "Break-even em 3 meses para marca internacional com canal de vendas próprio", "Automação completa de atendimento e follow-up com IA e no-code"];
 
-  return <div className="min-h-screen bg-[#1A3554] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  return (
+    <div className="min-h-screen bg-[#1A3554] text-white">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12">
         <Link to="/pt">
-          <Button variant="outline" className="mb-8">
+          <Button variant="outline" className="mb-6 w-full sm:w-auto">
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Início
           </Button>
         </Link>
@@ -131,7 +132,8 @@ const About = () => {
           </Card>
         </section>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default About;

@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,17 +8,17 @@ const Contact = () => {
     <div className="min-h-screen p-4 md:p-8 bg-[#1c3454]">
       <div className="max-w-4xl mx-auto">
         <Link to="/en">
-          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-6 w-full sm:w-auto bg-[#6caddf] text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-slate-50">Contact Me</h1>
-        <p className="text-xl text-[#6caddf] mb-12">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-slate-50">Contact Me</h1>
+        <p className="text-lg sm:text-xl mb-8 text-[#6caddf]">
           Let's discuss how we can work together to achieve your goals.
         </p>
         
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="border-none shadow-lg bg-white mb-8">
             <CardHeader>
               <CardTitle className="text-[#1c3454]">Contact Information</CardTitle>
