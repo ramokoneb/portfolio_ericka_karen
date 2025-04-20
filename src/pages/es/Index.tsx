@@ -17,7 +17,7 @@ const Index = () => {
             Ericka Karen
           </h1>
           <div className="text-sm md:text-base lg:text-xl text-[#1C3454] max-w-2xl mx-auto space-y-2 md:space-y-3 px-2 md:px-4">
-            <p>Soy una profesional enfocada en el crecimiento, con base creativa y sólida experiencia en performance digital. Transformo el caos digital en sistemas escalables e inteligentes, combinando estrategia, automatización y medios pagos. Creo campañas más efectivas al fusionar creatividad y tecnología, y entrego soluciones híbridas que integran tráfico pago e innovación no-code.</p>
+            <p>Soy una profesional enfocada en el crecimiento, con base creativa y sólida experiencia en performance digital. Transformo el caos digital en sistemas escalables e inteligentes, combinando estrategia, automatización y medios. Creo en la fusión de creatividad y tecnología para construir campañas más eficientes y entregar soluciones híbridas con tráfico de pago e innovación no-code.</p>
           </div>
         </div>
 

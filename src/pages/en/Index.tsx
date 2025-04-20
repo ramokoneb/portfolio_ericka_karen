@@ -17,7 +17,7 @@ const Index = () => {
             Ericka Karen
           </h1>
           <div className="text-sm md:text-base lg:text-xl text-[#1C3454] max-w-2xl mx-auto space-y-2 md:space-y-3 px-2 md:px-4">
-            <p>Digital transformation specialist, combining paid media strategies with intelligent automation and AI solutions to drive exceptional results.</p>
+            <p>I am a growth-focused professional with a creative background and strong experience in digital performance. I transform digital chaos into scalable and intelligent systems, combining strategy, automation, and media. I believe in the fusion of creativity and technology to build more efficient campaigns and deliver hybrid solutions with paid traffic and no-code innovation.</p>
           </div>
         </div>
 
