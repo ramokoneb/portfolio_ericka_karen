@@ -1,6 +1,7 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone } from "lucide-react";
+import { ArrowLeft, MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone } from "lucide-react";
 import { ServiceCard } from "@/components/automation/ServiceCard";
 import { TechnologyCard } from "@/components/automation/TechnologyCard";
 import { PortfolioCard } from "@/components/automation/PortfolioCard";

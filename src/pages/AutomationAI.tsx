@@ -1,8 +1,8 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
-import { Settings, Smartphone, BrainCircuit, Database } from "lucide-react";
+import { ArrowLeft, MessageSquare, Code, Link2, Settings, Smartphone, BrainCircuit, Database } from "lucide-react";
 import { PortfolioCard } from "@/components/automation/PortfolioCard";
 import { TechnologyCard } from "@/components/automation/TechnologyCard";
 import { ServiceCard } from "@/components/automation/ServiceCard";

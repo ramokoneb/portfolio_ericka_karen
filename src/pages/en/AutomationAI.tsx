@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Bot, MessageSquare, Database, Settings, Layers3, Code, BrainCircuit, Link2, Smartphone, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
+import { ArrowLeft, MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone, Bot, Layers3, QrCode, FileCode, BarChart2, MessagesSquare, Target } from "lucide-react";
 
 const portfolioItems = [
   {
