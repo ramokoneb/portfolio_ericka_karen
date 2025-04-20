@@ -1,198 +1,183 @@
-
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Bot, MessageSquare, Zap, Database, Settings, Layers3, Code } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { Settings, Smartphone, BrainCircuit, Database } from "lucide-react";
+import { PortfolioCard } from "@/components/automation/PortfolioCard";
+import { TechnologyCard } from "@/components/automation/TechnologyCard";
+import { ServiceCard } from "@/components/automation/ServiceCard";
+import type { PortfolioItem, Technology, MainService } from "@/types/automation";
+
+const portfolioItems: PortfolioItem[] = [
+  {
+    title: "WhatsApp Automation – +80% automated inquiries",
+    description: "Automation solution developed for WhatsApp customer service, with intelligent chatbot capable of handling 80% of frequently asked questions. 95% reduction in response time and increased service satisfaction.",
+    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
+    tags: ["WhatsApp API", "n8n", "NLP", "Chatbot"],
+    tech: "WhatsApp API • n8n • NLP • Conditional logic",
+    goal: "Automated and scalable customer service",
+    highlight: "Drastic reduction in need for human support"
+  },
+  {
+    title: "AI Lead Scoring System – +65% sales team efficiency",
+    description: "Lead scoring system based on machine learning, trained with real user behavior patterns. Improved sales team efficiency by 65%, prioritizing leads with higher conversion probability.",
+    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
+    tags: ["n8n", "Supabase", "Machine Learning", "LLMs"],
+    tech: "n8n • Supabase • Custom LLMs",
+    goal: "Automatic lead qualification",
+    highlight: "Intelligence applied to buying journey"
+  },
+  {
+    title: "Automated CRM via WhatsApp – Real-time Integration",
+    description: "System that automatically creates a new lead card in CRM as soon as the first WhatsApp contact is initiated. Integration uses FlutterFlow + Lovable + n8n ensuring 100% automated flow.",
+    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
+    tags: ["FlutterFlow", "Lovable", "n8n", "CRM"],
+    tech: "FlutterFlow • Lovable • n8n",
+    goal: "Automatic lead capture and organization",
+    highlight: "Immediate sync between WhatsApp and CRM"
+  },
+  {
+    title: "Smart Tracking with Meta API – +462% in conversations",
+    description: "Implementation of tracking via ctwaclid to accurately identify ads generating WhatsApp conversations. Increase of +462.16% in conversation volume and reduction of -81.34% in cost per message sent in a week.",
+    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
+    tags: ["Meta API", "n8n", "Supabase", "Analytics"],
+    tech: "Meta API • n8n • Supabase • UTMs",
+    goal: "Precise measurement of message campaigns",
+    highlight: "Advanced tracking with real conversion data"
+  },
+  {
+    title: "WhatsApp Metrics Bot – Real-time report automation",
+    description: "System that automatically sends Meta and Google Ads campaign metrics to WhatsApp groups. Team time savings with reliable data and customized delivery for each group.",
+    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
+    tags: ["Meta API", "Google Ads API", "WhatsApp API", "n8n"],
+    tech: "Meta API • Google Ads API • Evolution API • WhatsApp API • n8n",
+    goal: "Automated campaign monitoring",
+    highlight: "Reports sent in real-time without manual intervention"
+  },
+  {
+    title: "Automated Follow-up – AI-powered lead recovery",
+    description: "System that identifies unanswered leads in WhatsApp and triggers automatic follow-up messages. Improves re-engagement time, reduces funnel abandonment and increases conversions.",
+    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
+    tags: ["n8n", "Supabase", "WhatsApp API", "Automation"],
+    tech: "n8n • Supabase • WhatsApp API",
+    goal: "Active opportunity recovery",
+    highlight: "Automatic actions based on behavior"
+  },
+  {
+    title: "AI Agents – Automated service and campaigns",
+    description: "Creation of multiple AI agents: from basic service to in-depth analysis of paid media campaigns. One agent can analyze data, suggest optimizations, and even structure Meta Ads campaigns based on current results.",
+    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
+    tags: ["ChatGPT", "Langflow", "Relevance AI", "n8n"],
+    tech: "ChatGPT Plugins • Langflow • Relevance AI • n8n",
+    goal: "Intelligent service, analysis and execution",
+    highlight: "AI with autonomy to suggest and implement actions"
+  },
+  {
+    title: "QR Code System with Automated Instance",
+    description: "Development of platform that generates unique QR Codes for each client, activating a new instance integrated via Evolution API. Enables creation of customized environments with pre-configured logic for immediate use.",
+    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
+    tags: ["Lovable", "Evolution API", "n8n"],
+    tech: "Lovable • Evolution API • n8n",
+    goal: "Automatic generation of environments and flows",
+    highlight: "Scalability and zero manual intervention for activation"
+  },
+  {
+    title: "Lead Capture Website with Lovable",
+    description: "Landing page created with Lovable focusing on lead capture for service provision. Tracking integrations and form with direct sending to CRM and WhatsApp.",
+    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
+    tags: ["Lovable", "Webhooks", "Custom CRM"],
+    tech: "Lovable • Webhooks • Custom CRM",
+    goal: "Automated lead capture and qualification",
+    highlight: "Ready to run campaigns with complete tracking"
+  }
+];
+
+const technologies: Technology[] = [
+  {
+    category: "Automation & Integration",
+    tools: ["n8n", "Make", "Zapier"],
+    icon: <Settings className="h-6 w-6" />
+  },
+  {
+    category: "Web & Mobile App Builders",
+    tools: ["Bubble", "FlutterFlow", "Lovable"],
+    icon: <Smartphone className="h-6 w-6" />
+  },
+  {
+    category: "AI & Smart Logic",
+    tools: ["ChatGPT + Plugins", "FlowiseAI", "Relevance AI", "Langflow"],
+    icon: <BrainCircuit className="h-6 w-6" />
+  },
+  {
+    category: "Databases & No-Code Backends",
+    tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
+    icon: <Database className="h-6 w-6" />
+  }
+];
+
+const mainServices: MainService[] = [
+  {
+    icon: <BrainCircuit className="h-10 w-10 text-[#8A898C]" />,
+    title: "AI & Intelligent Automation",
+    description: "Implement intelligent systems that improve decision making, optimize campaigns and enhance workflows with intelligence."
+  }, {
+    icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
+    title: "WhatsApp Automation",
+    description: "Automated messaging flows for customer service, sales and lead qualification using WhatsApp and connected APIs."
+  }, {
+    icon: <Link2 className="h-10 w-10 text-[#8A898C]" />,
+    title: "CRM & Marketing Integrations",
+    description: "Seamless automation between marketing platforms, CRMs, and communication channels."
+  }, {
+    icon: <Code className="h-10 w-10 text-[#8A898C]" />,
+    title: "No-Code Development & Workflow Automation",
+    description: "Create web apps, dashboards, automations and complete systems using intuitive platforms."
+  }
+];
 
 const AutomationAI = () => {
   const [language, setLanguage] = useState<"en" | "pt">("en");
-  
-  const content = {
-    en: {
-      title: "Automation, AI and No-Code Development",
-      subtitle: "Implementation of intelligent solutions to automate processes, optimize results through AI, and empower businesses with no-code technologies. My approach combines data science, engineering, and innovative business strategies.",
-      backButton: "Back to Home",
-      services: [
-        {
-          icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-          title: "AI Solutions",
-          description: "Implement intelligent systems to optimize processes and enhance decision-making through advanced artificial intelligence."
-        },
-        {
-          icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
-          title: "WhatsApp Automation",
-          description: "Automated messaging solutions for customer service, sales support, and lead nurturing through WhatsApp."
-        },
-        {
-          icon: <Database className="h-10 w-10 text-[#8A898C]" />,
-          title: "CRM Integration",
-          description: "Seamless connection between your marketing tools, CRM systems, and sales processes with automated data flow."
-        },
-        {
-          icon: <Code className="h-10 w-10 text-[#8A898C]" />,
-          title: "No-Code Development",
-          description: "Create powerful applications and automate workflows using no-code platforms like Zapier, Make, and n8n."
-        },
-        {
-          icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
-          title: "Workflow Automation",
-          description: "Custom workflows to automate repetitive tasks and streamline your business operations across multiple platforms."
-        }
-      ]
-    },
-    pt: {
-      title: "Automação, IA e Desenvolvimento Sem Código",
-      subtitle: "Implementação de soluções inteligentes para automatizar processos, otimizar resultados através de IA e capacitar negócios com tecnologias sem código. Minha abordagem combina ciência de dados, engenharia e estratégias de negócios inovadoras.",
-      backButton: "Voltar para Home",
-      services: [
-        {
-          icon: <Bot className="h-10 w-10 text-[#8A898C]" />,
-          title: "Soluções de IA",
-          description: "Implemente sistemas inteligentes para otimizar processos e aprimorar a tomada de decisões através de inteligência artificial avançada."
-        },
-        {
-          icon: <MessageSquare className="h-10 w-10 text-[#8A898C]" />,
-          title: "Automação de WhatsApp",
-          description: "Soluções de mensagens automatizadas para atendimento ao cliente, suporte de vendas e nutrição de leads via WhatsApp."
-        },
-        {
-          icon: <Database className="h-10 w-10 text-[#8A898C]" />,
-          title: "Integração de CRM",
-          description: "Conexão perfeita entre suas ferramentas de marketing, sistemas CRM e processos de vendas com fluxo de dados automatizado."
-        },
-        {
-          icon: <Code className="h-10 w-10 text-[#8A898C]" />,
-          title: "Desenvolvimento Sem Código",
-          description: "Crie aplicações poderosas e automatize fluxos de trabalho usando plataformas sem código como Zapier, Make e n8n."
-        },
-        {
-          icon: <Layers3 className="h-10 w-10 text-[#8A898C]" />,
-          title: "Automação de Workflows",
-          description: "Fluxos personalizados para automatizar tarefas repetitivas e otimizar as operações do seu negócio em múltiplas plataformas."
-        }
-      ]
-    }
-  };
-
-  const portfolioItems = {
-    en: [
-      {
-        title: "Customer Support Automation",
-        description: "WhatsApp automation solution that handled 80% of customer inquiries automatically, reducing response time by 95%.",
-        image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
-        tags: ["WhatsApp", "Customer Support", "Chatbot"]
-      },
-      {
-        title: "AI Lead Scoring System",
-        description: "Custom AI solution that analyzed customer behavior patterns to score leads, improving sales team efficiency by 65%.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
-        tags: ["AI", "Machine Learning", "Lead Scoring"]
-      },
-      {
-        title: "Marketing & CRM Integration",
-        description: "End-to-end integration between marketing platforms and CRM system with automated lead qualification workflows.",
-        image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=500",
-        tags: ["CRM", "Integration", "Workflow"]
-      }
-    ],
-    pt: [
-      {
-        title: "Automação de Suporte ao Cliente",
-        description: "Solução de automação do WhatsApp que tratou 80% das consultas de clientes automaticamente, reduzindo o tempo de resposta em 95%.",
-        image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=500",
-        tags: ["WhatsApp", "Suporte ao Cliente", "Chatbot"]
-      },
-      {
-        title: "Sistema de Pontuação de Leads com IA",
-        description: "Solução de IA personalizada que analisou padrões de comportamento do cliente para pontuar leads, melhorando a eficiência da equipe de vendas em 65%.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500",
-        tags: ["IA", "Machine Learning", "Pontuação de Leads"]
-      },
-      {
-        title: "Integração de Marketing & CRM",
-        description: "Integração completa entre plataformas de marketing e sistema CRM com fluxos de trabalho automatizados de qualificação de leads.",
-        image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=500",
-        tags: ["CRM", "Integração", "Workflow"]
-      }
-    ]
-  };
 
   const toggleLanguage = () => {
     setLanguage(prev => prev === "en" ? "pt" : "en");
   };
 
   return (
-    <div className="min-h-screen p-8 bg-[#000000]">
-      <div className="absolute top-4 right-4">
-        <Button 
-          variant="outline" 
-          className="rounded-full bg-white/10 text-white hover:bg-white/20" 
-          onClick={toggleLanguage}
-        >
-          {language === "en" ? "PT" : "EN"}
-        </Button>
-      </div>
-      
+    <div className="min-h-screen p-4 md:p-8 bg-[#000000]">
       <div className="max-w-6xl mx-auto">
         <Link to="/">
           <Button variant="ghost" className="mb-6 bg-white/20 hover:bg-white/30 text-white">
-            <ArrowLeft className="mr-2 h-4 w-4" /> {content[language].backButton}
+            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">{content[language].title}</h1>
-        <p className="text-xl text-white mb-12">
-          {content[language].subtitle}
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
+          Automation, AI and No-Code Development
+        </h1>
+        <p className="text-lg sm:text-xl mb-8 text-white">
+          Implementation of intelligent solutions to automate processes, optimize results through AI, and empower businesses with no-code technologies.
         </p>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {content[language].services.map((service, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black">
-              <CardHeader>
-                <div className="mb-2">
-                  {service.icon}
-                </div>
-                <CardTitle className="text-black">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base text-gray-700">{service.description}</CardDescription>
-              </CardContent>
-            </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
+          {mainServices.map((service, index) => (
+            <ServiceCard key={index} service={service} />
           ))}
         </div>
         
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-black">
-            {language === "en" ? "Portfolio & Case Studies" : "Portfólio e Cases"}
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolioItems[language].map((item, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform hover:scale-105"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-black">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700 mb-4">{item.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {item.tags.map((tag) => (
-                      <span 
-                        key={tag}
-                        className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8 md:mb-16">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">🧩 Technologies I Use</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {technologies.map((tech, index) => (
+              <TechnologyCard key={index} tech={tech} />
+            ))}
+          </div>
+        </div>
+        
+        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">📁 Portfolio</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {portfolioItems.map((item, index) => (
+              <PortfolioCard key={index} item={item} />
             ))}
           </div>
         </div>
