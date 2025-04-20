@@ -1,106 +1,61 @@
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
-import { useContactForm } from "@/hooks/useContactForm";
-import { useToast } from "@/hooks/use-toast";
-import { Send } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { MessageSquare, Linkedin, Mail } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    whatsapp: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { handleSubmit } = useContactForm();
-  const { toast } = useToast();
-
-  const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      const success = await handleSubmit(formData);
-      if (success) {
-        toast({
-          title: "Sucesso",
-          description: "Sua mensagem foi enviada com sucesso!",
-        });
-        setFormData({ name: "", email: "", whatsapp: "", message: "" });
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (error) {
-      toast({
-        title: "Erro",
-        description: "Falha ao enviar mensagem. Por favor, tente novamente mais tarde.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section id="contato" className="py-20 px-8 bg-[#1A3554]">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Vamos Conversar?</h2>
         <Card className="bg-white">
           <CardHeader>
-            <CardTitle>Entre em Contato</CardTitle>
-            <CardDescription>
-              Preencha o formulário abaixo para discutirmos seu próximo projeto.
-            </CardDescription>
+            <CardTitle>Informações de Contato</CardTitle>
           </CardHeader>
           <CardContent>
-            <form onSubmit={onSubmit} className="space-y-4">
-              <div>
-                <Input 
-                  placeholder="Seu nome" 
-                  value={formData.name}
-                  onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                  required
-                />
-              </div>
-              <div>
-                <Input 
-                  type="email" 
-                  placeholder="Seu e-mail"
-                  value={formData.email}
-                  onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                  required
-                />
-              </div>
-              <div>
-                <Input 
-                  type="tel" 
-                  placeholder="Seu WhatsApp (código do país + DDD + número)"
-                  value={formData.whatsapp}
-                  onChange={(e) => setFormData(prev => ({ ...prev, whatsapp: e.target.value.replace(/\D/g, '') }))}
-                  required
-                />
-              </div>
-              <div>
-                <Textarea 
-                  placeholder="Sua mensagem" 
-                  className="min-h-[120px]"
-                  value={formData.message}
-                  onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                  required
-                />
-              </div>
-              <Button 
-                type="submit" 
-                className="w-full bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white"
-                disabled={isSubmitting}
+            <div className="space-y-4">
+              <a 
+                href="https://wa.me/5511942002308?text=%F0%9F%87%A7%F0%9F%87%B7%20Oi%2C%20Ericka!%20Achei%20seu%20trabalho%20muito%20interessante%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os.%0A%0A%F0%9F%87%BA%F0%9F%87%B8%20Hi%20Ericka!%20I%20found%20your%20work%20really%20interesting%20and%20would%20love%20to%20know%20more%20about%20your%20services.%0A%0A%F0%9F%87%AA%F0%9F%87%B8%20%C2%A1Hola%20Ericka!%20Encontr%C3%A9%20tu%20trabajo%20muy%20interesante%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tus%20servicios." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
               >
-                <Send className="mr-2 h-4 w-4" /> {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
-              </Button>
-            </form>
+                <div className="p-2 bg-[#6caddf]/10 rounded-full mr-3">
+                  <MessageSquare className="h-5 w-5 text-[#6caddf]" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-500">WhatsApp</p>
+                  <p className="text-gray-700">+55 11 94200-2308</p>
+                </div>
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/ekarenramos/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                <div className="p-2 bg-[#6caddf]/10 rounded-full mr-3">
+                  <Linkedin className="h-5 w-5 text-[#6caddf]" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-500">LinkedIn</p>
+                  <p className="text-gray-700">ekarenramos</p>
+                </div>
+              </a>
+              <a 
+                href="mailto:contato@zonadeconversao.space" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                <div className="p-2 bg-[#6caddf]/10 rounded-full mr-3">
+                  <Mail className="h-5 w-5 text-[#6caddf]" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-500">Email</p>
+                  <p className="text-gray-700">contato@zonadeconversao.space</p>
+                </div>
+              </a>
+            </div>
           </CardContent>
         </Card>
       </div>
