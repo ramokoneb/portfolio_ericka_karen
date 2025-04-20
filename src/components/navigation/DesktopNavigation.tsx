@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu";
@@ -14,10 +13,8 @@ interface DesktopNavigationProps {
 
 export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNavigationProps) => {
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
-  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   
   const closeServicesMenu = () => setIsServicesMenuOpen(false);
-  const closeLanguageMenu = () => setIsLanguageMenuOpen(false);
 
   return (
     <div className="hidden md:flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
@@ -94,43 +91,38 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
         </NavigationMenuList>
       </NavigationMenu>
       
-      <div className="flex items-center gap-2">
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-[#1A3554] bg-white">
-                <Globe className="mr-2 h-4 w-4" />
-                {language.toUpperCase()}
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <div className="p-2 w-[100px] bg-white">
-                  <Link 
-                    to={getPathInLanguage("en")} 
-                    className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
-                    onClick={closeLanguageMenu}
-                  >
-                    EN
-                  </Link>
-                  <Link 
-                    to={getPathInLanguage("pt")} 
-                    className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
-                    onClick={closeLanguageMenu}
-                  >
-                    PT
-                  </Link>
-                  <Link 
-                    to={getPathInLanguage("es")} 
-                    className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
-                    onClick={closeLanguageMenu}
-                  >
-                    ES
-                  </Link>
-                </div>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
+      <NavigationMenu>
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-[#1A3554] bg-white">
+              <Globe className="mr-2 h-4 w-4" />
+              {language.toUpperCase()}
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <div className="p-2 w-[100px] bg-white">
+                <Link 
+                  to={getPathInLanguage("en")} 
+                  className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                >
+                  EN
+                </Link>
+                <Link 
+                  to={getPathInLanguage("pt")} 
+                  className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                >
+                  PT
+                </Link>
+                <Link 
+                  to={getPathInLanguage("es")} 
+                  className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                >
+                  ES
+                </Link>
+              </div>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
     </div>
   );
 };

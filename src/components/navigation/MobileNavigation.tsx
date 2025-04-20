@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu";
@@ -15,10 +14,8 @@ interface MobileNavigationProps {
 
 export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigationProps) => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   
   const closeSheet = () => setIsSheetOpen(false);
-  const closeLanguageMenu = () => setIsLanguageMenuOpen(false);
 
   return (
     <div className="md:hidden flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
@@ -38,21 +35,18 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                   <Link 
                     to={getPathInLanguage("en")} 
                     className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
-                    onClick={closeLanguageMenu}
                   >
                     EN
                   </Link>
                   <Link 
                     to={getPathInLanguage("pt")} 
                     className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
-                    onClick={closeLanguageMenu}
                   >
                     PT
                   </Link>
                   <Link 
                     to={getPathInLanguage("es")} 
                     className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
-                    onClick={closeLanguageMenu}
                   >
                     ES
                   </Link>
