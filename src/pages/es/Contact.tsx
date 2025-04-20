@@ -93,9 +93,9 @@ const Contact = () => {
                   <label className="text-sm font-medium text-[#1c3454]">Tu WhatsApp</label>
                   <Input 
                     type="tel" 
-                    placeholder="Ingresa tu número de WhatsApp"
+                    placeholder="Código de país + código de área + número (ej: 5511942002XXX)"
                     value={formData.whatsapp}
-                    onChange={(e) => setFormData(prev => ({ ...prev, whatsapp: e.target.value }))}
+                    onChange={(e) => setFormData(prev => ({ ...prev, whatsapp: e.target.value.replace(/\D/g, '') }))}
                     required
                   />
                 </div>
