@@ -1,12 +1,53 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, MessageSquare, Linkedin, Mail, Send } from "lucide-react";
+import { useState } from "react";
+import { useContactForm } from "@/hooks/useContactForm";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  return <div className="min-h-screen p-8 bg-[#1c3454]">
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    whatsapp: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { handleSubmit } = useContactForm();
+  const { toast } = useToast();
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const success = await handleSubmit(formData);
+      if (success) {
+        toast({
+          title: "Success",
+          description: "Your message has been sent successfully!",
+        });
+        setFormData({ name: "", email: "", whatsapp: "", message: "" });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen p-4 md:p-8 bg-[#1c3454]">
       <div className="max-w-4xl mx-auto">
         <Link to="/en">
           <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
@@ -28,21 +69,52 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-4">
+              <form onSubmit={onSubmit} className="space-y-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-[#1c3454]">Your Name</label>
-                  <Input placeholder="Enter your name" />
+                  <Input 
+                    placeholder="Enter your name" 
+                    value={formData.name}
+                    onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-[#1c3454]">Your Email</label>
-                  <Input type="email" placeholder="Enter your email" />
+                  <Input 
+                    type="email" 
+                    placeholder="Enter your email"
+                    value={formData.email}
+                    onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-[#1c3454]">Your WhatsApp</label>
+                  <Input 
+                    type="tel" 
+                    placeholder="Enter your WhatsApp number"
+                    value={formData.whatsapp}
+                    onChange={(e) => setFormData(prev => ({ ...prev, whatsapp: e.target.value }))}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-[#1c3454]">Your Message</label>
-                  <Textarea placeholder="What would you like to discuss?" className="min-h-[120px]" />
+                  <Textarea 
+                    placeholder="What would you like to discuss?" 
+                    className="min-h-[120px]"
+                    value={formData.message}
+                    onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                    required
+                  />
                 </div>
-                <Button className="w-full bg-[#6caddf] hover:bg-[#6caddf] text-[#1c3454]">
-                  <Send className="mr-2 h-4 w-4" /> Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full bg-[#6caddf] hover:bg-[#6caddf] text-[#1c3454]"
+                  disabled={isSubmitting}
+                >
+                  <Send className="mr-2 h-4 w-4" /> {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
@@ -123,7 +195,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default Contact;
