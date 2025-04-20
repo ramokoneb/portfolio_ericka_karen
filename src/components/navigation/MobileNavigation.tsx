@@ -27,7 +27,7 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
       </Link>
       
       <div className="flex items-center gap-3">
-        <NavigationMenu open={isLanguageMenuOpen} onOpenChange={setIsLanguageMenuOpen}>
+        <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-[#1A3554] bg-white h-9 w-9 p-0 flex items-center justify-center">

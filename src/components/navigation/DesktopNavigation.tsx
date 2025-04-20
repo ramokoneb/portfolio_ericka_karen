@@ -39,7 +39,6 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
             <NavigationMenuTrigger 
               className="hover:text-[#6CAAD9] text-[#1A3554] bg-white"
               onClick={() => setIsServicesMenuOpen(prev => !prev)}
-              open={isServicesMenuOpen}
             >
               {navigationContent[language].services}
             </NavigationMenuTrigger>
@@ -96,7 +95,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
       </NavigationMenu>
       
       <div className="flex items-center gap-2">
-        <NavigationMenu open={isLanguageMenuOpen} onOpenChange={setIsLanguageMenuOpen}>
+        <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-[#1A3554] bg-white">
