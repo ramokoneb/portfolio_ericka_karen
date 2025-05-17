@@ -1,102 +1,182 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone } from "lucide-react";
-import { ServiceCard } from "@/components/automation/ServiceCard";
-import { TechnologyCard } from "@/components/automation/TechnologyCard";
-import { MainService, Technology } from "@/types/automation";
+import { ArrowLeft, ArrowRight, MessageSquare, Code, BrainCircuit, Link2, Database, Settings, Smartphone, Star } from "lucide-react";
+import { ServiceCard } from "@/components/media-buying/ServiceCard";
+import { TechnologyCard } from "@/components/media-buying/TechnologyCard";
+import { HeroSection } from "@/components/media-buying/HeroSection";
+import { TestimonialCard } from "@/components/media-buying/TestimonialCard";
+import { Contact } from "@/components/media-buying/Contact";
 
-const technologies: Technology[] = [
+const technologies = [
   {
     category: "Automatización & Integración",
-    tools: ["n8n", "Make", "Zapier"],
-    icon: <Settings className="h-6 w-6" />
-  }, {
-    category: "Constructores de Web & Apps Móviles",
-    tools: ["Bubble", "FlutterFlow", "Lovable"],
-    icon: <Smartphone className="h-6 w-6" />
-  }, {
+    tools: ["n8n", "Make (Integromat)", "Zapier"],
+    icon: Settings
+  }, 
+  {
+    category: "Desarrollo No-Code",
+    tools: ["Bubble", "FlutterFlow", "Airtable"],
+    icon: Smartphone
+  }, 
+  {
     category: "IA & Lógica Inteligente",
-    tools: ["ChatGPT + Plugins", "FlowiseAI", "Relevance AI", "Langflow"],
-    icon: <BrainCircuit className="h-6 w-6" />
-  }, {
-    category: "Bases de Datos & Backends No-Code",
-    tools: ["Airtable", "Baserow", "NocoDB", "Xano", "Supabase", "Firebase"],
-    icon: <Database className="h-6 w-6" />
+    tools: ["ChatGPT + Plugins", "FlowiseAI", "Langflow"],
+    icon: BrainCircuit
+  }, 
+  {
+    category: "Datos & Backends",
+    tools: ["Supabase", "API Rest", "Meta API"],
+    icon: Database
   }
 ];
 
-const mainServices: MainService[] = [{
-  icon: <BrainCircuit className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
-  title: "IA & Automatización Inteligente",
-  description: "Implemente sistemas inteligentes que mejoren la toma de decisiones, optimicen campañas y potencien sus flujos de trabajo con inteligencia."
-}, {
-  icon: <MessageSquare className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
-  title: "Automatización de WhatsApp",
-  description: "Flujos de mensajes automatizados para atención al cliente, ventas y calificación de leads utilizando WhatsApp y APIs conectadas."
-}, {
-  icon: <Link2 className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
-  title: "CRM & Integraciones de Marketing",
-  description: "Automatización perfecta entre plataformas de marketing, CRMs y canales de comunicación."
-}, {
-  icon: <Code className="h-8 w-8 md:h-10 md:w-10 text-[#8A898C]" />,
-  title: "Desarrollo No-Code & Automatización de Workflows",
-  description: "Cree aplicaciones web, dashboards, automatizaciones y sistemas completos utilizando plataformas intuitivas."
-}];
+const services = [
+  {
+    icon: BrainCircuit,
+    title: "Automatizaciones con IA",
+    description: "Sistemas inteligentes para optimizar flujos de trabajo, marketing y procesos de soporte con inteligencia artificial."
+  }, 
+  {
+    icon: MessageSquare,
+    title: "Automatización de WhatsApp",
+    description: "Calificación de leads y engagement con clientes a través de sistemas avanzados de mensajería e integraciones de API."
+  }, 
+  {
+    icon: Link2,
+    title: "Integraciones Personalizadas",
+    description: "CRMs, herramientas de marketing y canales de comunicación trabajando en perfecta sincronización."
+  }, 
+  {
+    icon: Code,
+    title: "Desarrollo No-Code",
+    description: "Cree dashboards y aplicaciones con Bubble, FlutterFlow y otras potentes plataformas no-code."
+  },
+  {
+    icon: BrainCircuit,
+    title: "Agentes de IA para Datos y Operaciones",
+    description: "Agentes inteligentes para analizar información, tomar decisiones y ejecutar acciones en toda su stack tecnológica."
+  }
+];
+
+const benefits = [
+  {
+    highlight: "80% de automatización",
+    description: "en la atención vía WhatsApp"
+  },
+  {
+    highlight: "65% de aumento",
+    description: "en la eficiencia del equipo con sistemas de IA"
+  },
+  {
+    highlight: "400%+ de crecimiento",
+    description: "en conversaciones calificadas"
+  },
+  {
+    highlight: "Combinación de habilidades",
+    description: "lógica de ingeniería + UX + inteligencia de negocios"
+  },
+  {
+    highlight: "Comunicación",
+    description: "transparente, proactiva + entrega puntual"
+  }
+];
+
+const testimonials = [
+  {
+    quote: "Proactiva, inventiva, nunca complaciente — Karen es, sin duda, una de las profesionales más inspiradoras que he conocido.",
+    author: "Roberto Junior",
+    rating: 5
+  },
+  {
+    quote: "Extremadamente competente y siempre integrando las últimas innovaciones del mercado en su trabajo.",
+    author: "Amanda Carvalho",
+    rating: 5
+  }
+];
 
 const AutomationAI = () => {
   return (
-    <div className="min-h-screen p-4 md:p-8 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-white">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-8">
         <Link to="/es">
-          <Button variant="ghost" className="mb-4 md:mb-6 bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-6 bg-white/20 hover:bg-white/30 text-[#1c3454]">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>
         
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 text-[#1c3454]">
-          🚀 Automatización, IA y Desarrollo No/Low-Code
-        </h1>
-        <p className="text-lg md:text-xl mb-4 md:mb-6 text-[#6caddf]">
-          Sistemas inteligentes para automatizar, escalar e innovar sus operaciones digitales.
-        </p>
+        {/* Hero Section */}
+        <HeroSection 
+          title={<>Ingeniera de Automatización, Especialista en IA y No-Code <br className="hidden md:block" /> para Empresas Listas para Escalar</>}
+          subtitle="Revolucionando operaciones a través de automatización inteligente y sistemas de IA escalables."
+          description1="Transforme rutinas empresariales en motores de alto rendimiento usando automatización, inteligencia artificial y plataformas no-code."
+          description2="Mi enfoque combina mentalidad de ingeniería, inteligencia empresarial y plataformas amigables — permitiéndole escalar sin aumentar la complejidad."
+        />
         
-        <div className="p-4 md:p-6 rounded-lg mb-8 md:mb-12 bg-[#6caddf]">
-          <p className="text-base md:text-lg text-1C3454 mb-3 md:mb-4 text-[#1c3454]">
-            Transforme rutinas empresariales en motores de alto rendimiento utilizando automatización, inteligencia artificial y plataformas no-code. Creo soluciones que reducen el trabajo manual, mejoran la toma de decisiones y conectan herramientas para hacer su estrategia digital verdaderamente escalable.
-          </p>
-          <p className="text-base md:text-lg text-[#1c3454]">
-            Mi enfoque combina mentalidad de ingeniería, inteligencia empresarial y plataformas amigables, permitiéndole escalar sin aumentar la complejidad.
-          </p>
-        </div>
+        {/* Services Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">Qué Hago Por Ti</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <ServiceCard 
+                key={index} 
+                icon={service.icon} 
+                title={service.title} 
+                description={service.description} 
+              />
+            ))}
+          </div>
+        </section>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
-          {mainServices.map((service, index) => (
-            <ServiceCard key={index} service={service} />
-          ))}
-        </div>
+        {/* Why Choose Me Section */}
+        <section className="mb-16 bg-[#6caddf]/10 rounded-lg p-6 md:p-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#1c3454]">¿Por Qué Elegirme?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
+                <p className="font-bold text-[#6caddf] text-lg">{benefit.highlight}</p>
+                <p className="text-[#1c3454]/80">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
         
-        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8 md:mb-16">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">🧩 Tecnologías que Utilizo</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        {/* Technologies Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">Tecnologías y Herramientas que Domino</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {technologies.map((tech, index) => (
               <TechnologyCard key={index} tech={tech} />
             ))}
           </div>
-        </div>
+        </section>
         
-        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">
-            📁 Portafolio
-          </h2>
-          <div className="text-center mb-8">
-            <Link to="/es/portfolio/automation-ai">
-              <Button className="bg-[#6caddf] hover:bg-[#5a9ac8] text-white font-medium">
-                Ver Todos los Proyectos
-              </Button>
-            </Link>
+        {/* Testimonials Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">Feedback de Clientes</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard key={index} testimonial={testimonial} />
+            ))}
           </div>
-        </div>
+        </section>
+        
+        {/* Contact Section */}
+        <section className="mb-8">
+          <div className="bg-[#1c3454] text-white rounded-lg p-6 md:p-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">¿Listo para Automatizar y Escalar?</h2>
+            <p className="mb-6 text-white/80">
+              Construyamos soluciones inteligentes que transformen sus operaciones digitales. Envíame un mensaje y conversemos.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button className="bg-[#6caddf] hover:bg-[#5a9ac8] w-full sm:w-auto" asChild>
+                <Link to="/es/contact" className="flex items-center justify-center">
+                  Construyamos Más Inteligente <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
