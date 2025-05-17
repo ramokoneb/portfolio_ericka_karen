@@ -9,9 +9,18 @@ interface HeroSectionProps {
   subtitle: string;
   description1: string;
   description2: string;
+  ctaText?: string;
+  contactPath: string;
 }
 
-export const HeroSection = ({ title, subtitle, description1, description2 }: HeroSectionProps) => {
+export const HeroSection = ({ 
+  title, 
+  subtitle, 
+  description1, 
+  description2, 
+  ctaText = "Let's Work Together", 
+  contactPath 
+}: HeroSectionProps) => {
   return (
     <div className="mb-16">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#1c3454]">
@@ -36,9 +45,9 @@ export const HeroSection = ({ title, subtitle, description1, description2 }: Her
               I cater to businesses ready to scale through paid media platforms, deploying solutions that combine human strategy with machine efficiency.
             </p>
           </div>
-          <Link to="/en/contact" className="self-start">
+          <Link to={contactPath} className="self-start">
             <Button className="bg-[#6caddf] hover:bg-[#5a9ac8] text-white font-medium group">
-              Let's Work Together
+              {ctaText}
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>

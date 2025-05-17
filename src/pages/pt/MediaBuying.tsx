@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -112,10 +111,10 @@ const MediaBuying = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="bg-[#6caddf]/10 backdrop-blur-sm rounded-xl p-6 border border-[#6caddf]/30">
               <p className="text-base md:text-lg text-[#1c3454] mb-4">
-                Olá! Sou <span className="font-bold">Ericka Karen</span>, uma Estrategista de Mídia Paga que utiliza tecnologia de ponta, automação e IA para transformar seus investimentos em publicidade em motores de crescimento escaláveis e previsíveis.
+                Utilizando tecnologia de ponta, automação e IA, este framework de estratégia de mídia paga transforma investimentos em publicidade em motores de crescimento escaláveis e previsíveis.
               </p>
               <p className="text-base md:text-lg text-[#1c3454]">
-                Com mais de 5 anos de experiência gerenciando campanhas pagas no Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads e Pinterest Ads, minha expertise está em unir planejamento estratégico de mídia com poderosas soluções tecnológicas.
+                Apoiado por mais de 5 anos de experiência prática em Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads e Pinterest Ads, combina planejamento estratégico de mídia com soluções tecnológicas avançadas para impulsionar performance e eficiência.
               </p>
             </div>
             <div className="flex flex-col justify-center space-y-6">
