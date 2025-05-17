@@ -25,7 +25,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-[#f5f7fa] rounded-lg p-5 shadow-sm">
             <div className="flex items-center mb-3">
-              <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+              <span className="text-yellow-500">★★★★★</span>
             </div>
             <p className="italic text-[#1c3454] mb-4">
               "{testimonial.text}"

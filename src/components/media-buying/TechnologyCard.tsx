@@ -1,39 +1,34 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import React from "react";
 import { LucideIcon } from "lucide-react";
-
-interface Technology {
-  category: string;
-  tools: string[];
-  icon: LucideIcon;
-}
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 interface TechnologyCardProps {
-  tech: Technology;
+  tech: {
+    category: string;
+    tools: string[];
+    icon: LucideIcon;
+  };
 }
 
-export const TechnologyCard = ({ tech }: TechnologyCardProps) => {
-  const { category, tools, icon: Icon } = tech;
-  
+export const TechnologyCard: React.FC<TechnologyCardProps> = ({ tech }) => {
   return (
-    <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300 bg-white h-full">
+    <Card className="border border-[#94C1E7]/30 shadow-sm hover:shadow-md transition-shadow duration-300">
       <CardHeader className="pb-2">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="h-10 w-10 rounded-full bg-[#6caddf]/10 flex items-center justify-center">
-            <Icon className="h-5 w-5 text-[#6caddf]" />
-          </div>
-          <CardTitle className="text-lg text-[#1c3454]">{category}</CardTitle>
+        <div className="h-10 w-10 rounded-full bg-[#6caddf]/10 flex items-center justify-center mb-2">
+          <tech.icon className="h-5 w-5 text-[#6caddf]" />
         </div>
+        <CardTitle className="text-lg text-[#1c3454]">{tech.category}</CardTitle>
       </CardHeader>
       <CardContent>
-        <ul className="space-y-1">
-          {tools.map((tool, index) => (
-            <li key={index} className="text-sm text-[#1c3454]/80 flex items-center">
-              <span className="text-[#6caddf] mr-2">•</span>
-              <span>{tool}</span>
-            </li>
+        <CardDescription className="flex flex-wrap gap-2">
+          {tech.tools.map((tool, index) => (
+            <Badge key={index} variant="secondary" className="bg-[#f5f7fa] text-[#1c3454] hover:bg-[#e5e7ea]">
+              {tool}
+            </Badge>
           ))}
-        </ul>
+        </CardDescription>
       </CardContent>
     </Card>
   );

@@ -20,7 +20,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 }) => {
   return (
     <div className="rounded-xl bg-gradient-to-r from-[#1c3454] to-[#264b73] p-6 md:p-8 lg:p-10 text-white">
-      <h2 className="text-2xl md:text-3xl font-bold mb-4">{title}</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+        {title}
+      </h2>
       
       <p className="text-white/90 mb-6 max-w-3xl">
         {description}
