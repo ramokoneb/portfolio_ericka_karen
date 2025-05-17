@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -46,12 +47,38 @@ export default {
         popover: "hsl(var(--popover))",
       },
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '65ch',
+            h1: {
+              fontSize: '1.75rem',
+              lineHeight: '2rem',
+              fontWeight: '700',
+            },
+            h2: {
+              fontSize: '1.5rem',
+              lineHeight: '1.75rem',
+              fontWeight: '600',
+            },
+            h3: {
+              fontSize: '1.25rem',
+              lineHeight: '1.5rem',
+              fontWeight: '600',
+            },
+            p: {
+              fontSize: '1rem',
+              lineHeight: '1.5rem',
+            },
+          },
+        },
       },
     },
   },

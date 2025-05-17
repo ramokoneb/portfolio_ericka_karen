@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,23 +28,23 @@
   }
 
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-[#1c3454];
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-[#1c3454] leading-tight;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl font-bold text-[#1c3454];
+    @apply text-xl md:text-2xl font-bold text-[#1c3454] leading-tight;
   }
 
   h3 {
-    @apply text-xl md:text-2xl font-semibold text-[#1c3454];
+    @apply text-lg md:text-xl font-semibold text-[#1c3454] leading-tight;
   }
 
   h4 {
-    @apply text-lg md:text-xl font-semibold text-[#1c3454];
+    @apply text-base md:text-lg font-semibold text-[#1c3454] leading-tight;
   }
 
   p {
-    @apply text-base text-[#1c3454];
+    @apply text-base leading-relaxed text-[#1c3454];
   }
 
   /* Navigation typography */
@@ -64,11 +66,11 @@
   }
 
   .section-title {
-    @apply text-xl md:text-2xl lg:text-3xl font-semibold text-[#1A3554] mb-3 md:mb-4;
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold text-[#1A3554] mb-3 md:mb-4 leading-tight;
   }
 
   .section-subtitle {
-    @apply text-base md:text-lg text-[#6CADDE] mb-6 md:mb-8;
+    @apply text-base md:text-lg text-[#6CADDE] mb-6 md:mb-8 leading-relaxed;
   }
 
   .card-base {
@@ -86,31 +88,31 @@
 
   /* Responsive text classes */
   .text-responsive-xs {
-    @apply text-xs md:text-sm lg:text-base;
+    @apply text-xs md:text-sm leading-normal;
   }
   
   .text-responsive-sm {
-    @apply text-sm md:text-base lg:text-lg;
+    @apply text-sm md:text-base leading-relaxed;
   }
   
   .text-responsive-base {
-    @apply text-base md:text-lg lg:text-xl;
+    @apply text-base md:text-lg leading-relaxed;
   }
   
   .text-responsive-lg {
-    @apply text-lg md:text-xl lg:text-2xl;
+    @apply text-lg md:text-xl leading-tight;
   }
   
   .text-responsive-xl {
-    @apply text-xl md:text-2xl lg:text-3xl;
+    @apply text-xl md:text-2xl leading-tight;
   }
   
   .text-responsive-2xl {
-    @apply text-2xl md:text-3xl lg:text-4xl;
+    @apply text-2xl md:text-3xl leading-tight;
   }
   
   .text-responsive-3xl {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply text-3xl md:text-4xl leading-tight;
   }
   
   /* Responsive padding and margin */
@@ -119,40 +121,83 @@
   }
   
   .px-responsive {
-    @apply px-3 md:px-4 lg:px-6;
+    @apply px-4 md:px-5 lg:px-6;
   }
   
   .py-responsive {
-    @apply py-3 md:py-4 lg:py-6;
+    @apply py-4 md:py-5 lg:px-6;
   }
   
   .m-responsive {
-    @apply m-2 md:m-4 lg:m-6;
+    @apply m-2 md:m-3 lg:m-4;
   }
   
   .mx-responsive {
-    @apply mx-2 md:mx-4 lg:mx-6;
+    @apply mx-2 md:mx-3 lg:mx-4;
   }
   
   .my-responsive {
-    @apply my-3 md:my-4 lg:my-6;
+    @apply my-3 md:my-4 lg:my-5;
   }
   
   /* Responsive gap */
   .gap-responsive {
-    @apply gap-2 md:gap-4 lg:gap-6;
+    @apply gap-3 md:gap-4 lg:gap-5;
   }
   
   /* Responsive width/height */
   .size-responsive-sm {
-    @apply w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40;
+    @apply w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32;
   }
   
   .size-responsive-md {
-    @apply w-28 h-28 md:w-36 md:h-36 lg:w-48 lg:h-48;
+    @apply w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36;
   }
   
   .size-responsive-lg {
-    @apply w-36 h-36 md:w-48 md:h-48 lg:w-56 lg:h-56;
+    @apply w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40;
+  }
+
+  /* Interactive elements */
+  .interactive-element {
+    @apply relative transition-all duration-200 cursor-pointer;
+  }
+
+  .interactive-element::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-[#6CAAD9] transition-all duration-300;
+  }
+
+  .interactive-element:hover::after {
+    @apply w-full;
+  }
+
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  /* Image optimizations */
+  .responsive-image {
+    @apply w-full h-auto object-cover;
+  }
+
+  .image-container {
+    @apply relative overflow-hidden rounded-md;
+  }
+
+  .image-container img {
+    @apply transition-transform duration-300;
+  }
+
+  .image-container:hover img {
+    @apply scale-105;
+  }
+
+  /* Accessibility */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  }
+
+  .focus-outline {
+    @apply focus:outline-none focus:ring-2 focus:ring-[#6CAAD9] focus:ring-offset-2;
   }
 }

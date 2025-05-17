@@ -1,5 +1,6 @@
 
 import React from 'react';
+import ResponsiveImage from './common/ResponsiveImage';
 
 const PhotoGallery = () => {
   const photos = [
@@ -10,13 +11,14 @@ const PhotoGallery = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 py-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 py-6">
       {photos.map((photo, index) => (
-        <div key={index} className="relative aspect-[4/3] overflow-hidden rounded-lg">
-          <img
+        <div key={index} className="image-container aspect-[4/3] rounded-lg overflow-hidden shadow-sm">
+          <ResponsiveImage
             src={photo}
-            alt="Ericka Karen working"
+            alt={`Ericka Karen work sample ${index + 1}`}
             className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
           />
         </div>
       ))}

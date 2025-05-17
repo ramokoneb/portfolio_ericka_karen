@@ -11,7 +11,7 @@ const Navigation = () => {
       <DesktopNavigation language={language} getPathInLanguage={getPathInLanguage} />
       <MobileNavigation language={language} getPathInLanguage={getPathInLanguage} />
       {/* Spacing for the fixed navbar */}
-      <div className="h-16" />
+      <div className="h-16 md:h-20" />
     </>
   );
 };
