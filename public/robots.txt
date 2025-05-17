@@ -13,6 +13,8 @@ Allow: /media-buying
 Allow: /automation-ai
 Allow: /about
 Allow: /contact
+Allow: /portfolio
+Allow: /cases
 
 # Discourage crawling of non-essential paths
 Disallow: /assets/
@@ -35,3 +37,9 @@ Allow: /es/about
 Allow: /en/contact
 Allow: /pt/contact
 Allow: /es/contact
+Allow: /en/portfolio
+Allow: /pt/portfolio
+Allow: /es/portfolio
+Allow: /en/cases
+Allow: /pt/cases
+Allow: /es/cases

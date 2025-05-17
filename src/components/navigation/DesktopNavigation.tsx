@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu";
@@ -13,8 +14,10 @@ interface DesktopNavigationProps {
 
 export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNavigationProps) => {
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
+  const [isResourcesMenuOpen, setIsResourcesMenuOpen] = useState(false);
   
   const closeServicesMenu = () => setIsServicesMenuOpen(false);
+  const closeResourcesMenu = () => setIsResourcesMenuOpen(false);
 
   return (
     <div className="hidden md:flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
@@ -67,6 +70,47 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
                       : language === "pt"
                         ? "Soluções inteligentes de automação"
                         : "Soluciones inteligentes de automatización"}
+                  </p>
+                </Link>
+              </div>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          
+          <NavigationMenuItem>
+            <NavigationMenuTrigger 
+              className="hover:text-[#6CAAD9] text-[#1A3554] bg-white"
+              onClick={() => setIsResourcesMenuOpen(prev => !prev)}
+            >
+              {language === "en" ? "Resources" : language === "pt" ? "Recursos" : "Recursos"}
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <div className="w-[400px] p-4 grid grid-cols-2 gap-3 bg-white">
+                <Link 
+                  to={`/${language}/cases`} 
+                  className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white"
+                  onClick={closeResourcesMenu}
+                >
+                  <div className="font-medium">{navigationContent[language].cases}</div>
+                  <p className="text-sm text-[#1A3554]">
+                    {language === "en" 
+                      ? "Success stories and case studies" 
+                      : language === "pt"
+                        ? "Histórias de sucesso e estudos de caso"
+                        : "Historias de éxito y estudios de caso"}
+                  </p>
+                </Link>
+                <Link 
+                  to={`/${language}/portfolio`} 
+                  className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white"
+                  onClick={closeResourcesMenu}
+                >
+                  <div className="font-medium">{navigationContent[language].portfolio}</div>
+                  <p className="text-sm text-[#1A3554]">
+                    {language === "en" 
+                      ? "Project highlights and showcase" 
+                      : language === "pt"
+                        ? "Destaques de projetos e portfólio"
+                        : "Destacados de proyectos y portafolio"}
                   </p>
                 </Link>
               </div>

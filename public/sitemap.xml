@@ -48,6 +48,20 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://zonadeconversao.space/pt/contact"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonadeconversao.space/es/contact"/>
   </url>
+  <url>
+    <loc>https://zonadeconversao.space/en/portfolio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zonadeconversao.space/pt/portfolio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonadeconversao.space/es/portfolio"/>
+  </url>
+  <url>
+    <loc>https://zonadeconversao.space/en/cases</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zonadeconversao.space/pt/cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonadeconversao.space/es/cases"/>
+  </url>
   
   <!-- Portuguese pages -->
   <url>
@@ -85,6 +99,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://zonadeconversao.space/en/contact"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonadeconversao.space/es/contact"/>
   </url>
+  <url>
+    <loc>https://zonadeconversao.space/pt/portfolio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonadeconversao.space/en/portfolio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonadeconversao.space/es/portfolio"/>
+  </url>
+  <url>
+    <loc>https://zonadeconversao.space/pt/cases</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonadeconversao.space/en/cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonadeconversao.space/es/cases"/>
+  </url>
   
   <!-- Spanish pages -->
   <url>
@@ -121,5 +149,19 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://zonadeconversao.space/en/contact"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://zonadeconversao.space/pt/contact"/>
+  </url>
+  <url>
+    <loc>https://zonadeconversao.space/es/portfolio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonadeconversao.space/en/portfolio"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zonadeconversao.space/pt/portfolio"/>
+  </url>
+  <url>
+    <loc>https://zonadeconversao.space/es/cases</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonadeconversao.space/en/cases"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://zonadeconversao.space/pt/cases"/>
   </url>
 </urlset>

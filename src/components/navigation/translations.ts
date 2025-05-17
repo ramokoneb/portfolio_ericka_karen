@@ -6,7 +6,9 @@ export const navigationContent = {
     automation: "Automation, AI & No-Code",
     about: "About",
     contact: "Contact",
-    services: "Services"
+    services: "Services",
+    cases: "Cases",
+    portfolio: "Portfolio"
   },
   pt: {
     home: "Início",
@@ -14,7 +16,9 @@ export const navigationContent = {
     automation: "Automação, IA & No-Code",
     about: "Sobre",
     contact: "Contato",
-    services: "Serviços"
+    services: "Serviços",
+    cases: "Casos",
+    portfolio: "Portfólio"
   },
   es: {
     home: "Inicio",
@@ -22,6 +26,8 @@ export const navigationContent = {
     automation: "Automatización, IA & No-Code",
     about: "Sobre",
     contact: "Contacto",
-    services: "Servicios"
+    services: "Servicios",
+    cases: "Casos",
+    portfolio: "Portafolio"
   }
 } as const;

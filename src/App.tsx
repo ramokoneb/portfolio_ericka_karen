@@ -13,6 +13,8 @@ import MediaBuyingEn from "./pages/en/MediaBuying";
 import AutomationAIEn from "./pages/en/AutomationAI";
 import AboutEn from "./pages/en/About";
 import ContactEn from "./pages/en/Contact";
+import PortfolioEn from "./pages/en/Portfolio";
+import CasesEn from "./pages/en/Cases";
 
 // Páginas em português
 import IndexPt from "./pages/pt/Index";
@@ -20,6 +22,8 @@ import MediaBuyingPt from "./pages/pt/MediaBuying";
 import AutomationAIPt from "./pages/pt/AutomationAI";
 import AboutPt from "./pages/pt/About";
 import ContactPt from "./pages/pt/Contact";
+import PortfolioPt from "./pages/pt/Portfolio";
+import CasesPt from "./pages/pt/Cases";
 
 // Páginas em espanhol
 import IndexEs from "./pages/es/Index";
@@ -27,6 +31,8 @@ import MediaBuyingEs from "./pages/es/MediaBuying";
 import AutomationAIEs from "./pages/es/AutomationAI";
 import AboutEs from "./pages/es/About";
 import ContactEs from "./pages/es/Contact";
+import PortfolioEs from "./pages/es/Portfolio";
+import CasesEs from "./pages/es/Cases";
 
 import NotFound from "./pages/NotFound";
 
@@ -86,6 +92,8 @@ const App = () => {
               <Route path="/en/automation-ai" element={<AutomationAIEn />} />
               <Route path="/en/about" element={<AboutEn />} />
               <Route path="/en/contact" element={<ContactEn />} />
+              <Route path="/en/portfolio" element={<PortfolioEn />} />
+              <Route path="/en/cases" element={<CasesEn />} />
               
               {/* Rotas em português */}
               <Route path="/pt" element={<IndexPt />} />
@@ -93,6 +101,8 @@ const App = () => {
               <Route path="/pt/automation-ai" element={<AutomationAIPt />} />
               <Route path="/pt/about" element={<AboutPt />} />
               <Route path="/pt/contact" element={<ContactPt />} />
+              <Route path="/pt/portfolio" element={<PortfolioPt />} />
+              <Route path="/pt/cases" element={<CasesPt />} />
               
               {/* Rotas em espanhol */}
               <Route path="/es" element={<IndexEs />} />
@@ -100,6 +110,8 @@ const App = () => {
               <Route path="/es/automation-ai" element={<AutomationAIEs />} />
               <Route path="/es/about" element={<AboutEs />} />
               <Route path="/es/contact" element={<ContactEs />} />
+              <Route path="/es/portfolio" element={<PortfolioEs />} />
+              <Route path="/es/cases" element={<CasesEs />} />
               
               {/* Página 404 */}
               <Route path="*" element={<NotFound />} />

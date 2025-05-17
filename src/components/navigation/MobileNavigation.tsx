@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu";
@@ -87,6 +88,23 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                 onClick={closeSheet}
               >
                 {navigationContent[language].automation}
+              </Link>
+              <p className="px-3 pt-4 text-sm font-semibold text-gray-500">
+                {language === "en" ? "Resources" : language === "pt" ? "Recursos" : "Recursos"}
+              </p>
+              <Link 
+                to={`/${language}/cases`} 
+                className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                onClick={closeSheet}
+              >
+                {navigationContent[language].cases}
+              </Link>
+              <Link 
+                to={`/${language}/portfolio`} 
+                className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                onClick={closeSheet}
+              >
+                {navigationContent[language].portfolio}
               </Link>
               <Link 
                 to={`/${language}/about`} 
