@@ -10,7 +10,12 @@ export const PortfolioCard = ({ item }: PortfolioCardProps) => {
   return (
     <Card className="overflow-hidden border-none shadow-2xl hover:shadow-2xl transition-all bg-white">
       <div className="h-40 md:h-48 overflow-hidden">
-        <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform hover:scale-105" />
+        <img 
+          src={item.image} 
+          alt={item.title} 
+          className="w-full h-full object-cover transition-transform hover:scale-105" 
+          loading="lazy"
+        />
       </div>
       <CardHeader>
         <CardTitle className="text-base md:text-lg text-[#1c3454]">{item.title}</CardTitle>
