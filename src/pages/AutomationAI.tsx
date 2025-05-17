@@ -67,10 +67,10 @@ const AutomationAI = () => {
         </Link>
         
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
-          Automation, AI and No-Code Development
+          AI & No-Code Expert for Scaling Companies
         </h1>
         <p className="text-lg sm:text-xl mb-8 text-white">
-          Implementation of intelligent solutions to automate processes, optimize results through AI, and empower businesses with no-code technologies.
+          Whether you're optimizing internal operations or scaling customer interactions, I design tailored solutions that boost efficiency and free your team to focus on what matters most — growth, strategy, and innovation.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">

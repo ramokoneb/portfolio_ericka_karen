@@ -107,10 +107,10 @@ const AutomationAI = () => {
         
         {/* Hero Section */}
         <HeroSection 
-          title={<>Ingeniera de Automatización, Especialista en IA y No-Code <br className="hidden md:block" /> para Empresas Listas para Escalar</>}
+          title={<>Experta en IA & No-Code para Empresas en Crecimiento</>}
           subtitle="Revolucionando operaciones a través de automatización inteligente y sistemas de IA escalables."
-          description1="Transforme rutinas empresariales en motores de alto rendimiento usando automatización, inteligencia artificial y plataformas no-code."
-          description2="Mi enfoque combina mentalidad de ingeniería, inteligencia empresarial y plataformas amigables — permitiéndole escalar sin aumentar la complejidad."
+          description1="Ya sea que esté optimizando operaciones internas o escalando interacciones con clientes, diseño soluciones personalizadas que aumentan la eficiencia y liberan a su equipo para que se concentre en lo más importante: crecimiento, estrategia e innovación."
+          description2="Trabajo con empresas visionarias listas para escalar a través de la automatización e IA — combinando visión estratégica con sistemas inteligentes que optimizan operaciones y generan resultados medibles."
         />
         
         {/* Services Section */}

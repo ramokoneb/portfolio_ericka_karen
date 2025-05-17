@@ -107,10 +107,10 @@ const AutomationAI = () => {
         
         {/* Hero Section */}
         <HeroSection 
-          title={<>Automation Engineer, AI & No-Code <br className="hidden md:block" /> Specialist for Companies Ready to Scale</>}
+          title={<>AI & No-Code Expert for Scaling Companies</>}
           subtitle="Revolutionizing operations through intelligent automation and scalable AI systems."
-          description1="Transform business routines into high-performance engines using automation, artificial intelligence, and no-code platforms."
-          description2="My approach blends engineering mindset, business intelligence, and user-friendly platforms — empowering you to scale without increasing complexity."
+          description1="Whether you're optimizing internal operations or scaling customer interactions, I design tailored solutions that boost efficiency and free your team to focus on what matters most — growth, strategy, and innovation."
+          description2="I work with forward-thinking companies ready to scale through automation and AI — combining strategic insight with intelligent systems that streamline operations and drive measurable results."
         />
         
         {/* Services Section */}
