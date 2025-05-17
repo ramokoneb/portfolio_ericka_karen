@@ -2,17 +2,19 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
-  ArrowLeft, 
-  MessageSquare, 
-  Code, 
+  ArrowLeft,
+  ArrowRight,
   BrainCircuit, 
   Link2, 
   Database, 
   Settings, 
-  Smartphone,
-  Target,
-  LineChart
+  BarChart2,
+  TrendingUp,
+  MessageSquare,
+  Settings2
 } from "lucide-react";
+import SocialLinks from "@/components/home/SocialLinks";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
 import { TechnologyCard } from "@/components/media-buying/TechnologyCard";
 import { HeroSection } from "@/components/media-buying/HeroSection";
@@ -38,126 +40,199 @@ const mainServices = [{
   title: "Gestión de Campañas Multicanal",
   description: "Gestión integrada de medios pagos en Meta Ads, Google Ads, TikTok, LinkedIn Ads y Pinterest Ads para maximizar el alcance y la conversión."
 }, {
-  icon: LineChart,
+  icon: BarChart2,
   title: "Informes Transparentes",
   description: "Paneles de rendimiento semanales con información procesable que destacan lo que funciona, lo que se puede mejorar y los próximos pasos claros."
 }];
 
+const whyChooseMe = [{
+  icon: TrendingUp,
+  title: "Resultados Comprobados",
+  description: "Gestioné presupuestos mensuales superiores a $500K con un crecimiento constante de 3x-4x en ingresos para clientes."
+}, {
+  icon: Settings,
+  title: "Combinación Única de Habilidades",
+  description: "Mezcla de experiencia en estrategia de marketing y habilidades técnicas que unen los medios pagos con la automatización y la innovación en IA."
+}, {
+  icon: BarChart2,
+  title: "Eficiencia de Costos",
+  description: "Capacidad comprobada para reducir el costo por lead y aumentar el retorno de inversión publicitaria utilizando datos, tecnología y optimización continua."
+}, {
+  icon: MessageSquare,
+  title: "Comunicación Clara",
+  description: "Estilo de comunicación proactivo y colaborativo — siempre sabrás el estado y las perspectivas de tus campañas."
+}, {
+  icon: Settings2,
+  title: "Soluciones Personalizadas",
+  description: "Experiencia sirviendo a diversas industrias, adaptando estrategias y stacks tecnológicos para el viaje de crecimiento de cada negocio."
+}];
+
 const technologies = [{
-  category: "Plataformas de Medios Pagos 🎯",
+  category: "Plataformas de Medios Pagos",
   tools: ["Meta Ads Manager", "Google Ads (Search, Display, Shopping, YouTube)", "TikTok Ads Manager", "LinkedIn Ads", "Pinterest Ads"],
   icon: Link2
 }, {
-  category: "Seguimiento y Análisis 📊",
+  category: "Seguimiento y Análisis",
   tools: ["Google Analytics 4", "Meta Pixel & Conversion API", "Google Tag Manager", "Hotjar"],
-  icon: Code
+  icon: Database
 }, {
-  category: "Automatización e Integración ⚙️",
+  category: "Automatización e Integración",
   tools: ["n8n", "Make (Integromat)", "Zapier", "Evolution API", "Supabase"],
   icon: Settings
 }, {
-  category: "IA y Herramientas Creativas 🤖",
+  category: "IA y Herramientas Creativas",
   tools: ["ChatGPT + Plugins", "Langflow", "FlowiseAI", "Relevance AI", "Generadores de Campañas con IA", "LLMs Personalizados"],
   icon: BrainCircuit
+}, {
+  category: "Informes",
+  tools: ["API Rest", "n8n"],
+  icon: BarChart2
 }];
 
 const MediaBuying = () => {
   return (
-    <div className="min-h-screen p-4 md:p-8 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link to="/es">
-          <Button variant="ghost" className="mb-4 md:mb-6 bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-6 bg-[#6caddf]/10 text-[#1c3454] hover:bg-[#6caddf]/20 transition-colors">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>
 
-        <HeroSection 
-          title="🚀 Servicios de Medios Pagos Impulsados por Tecnología | Crecimiento Estratégico a través de Datos, IA y Automatización"
-          subtitle="Transforma tus inversiones publicitarias en motores de crecimiento escalables y predecibles"
-          description1="¡Hola! Soy Ericka Karen, una Estratega de Medios Pagos que aprovecha tecnología de vanguardia, automatización e IA para convertir tus inversiones publicitarias en motores de crecimiento escalables y predecibles."
-          description2="Con más de 5 años de experiencia gestionando campañas pagas en Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads y Pinterest Ads, mi experiencia radica en combinar la planificación estratégica de medios con potentes soluciones tecnológicas, desde seguimiento avanzado y atribución hasta automatización sin código y optimización impulsada por IA."
-        />
-        
-        <div className="p-4 md:p-6 rounded-lg mb-8 md:mb-12 bg-[#f5f7fa]">
-          <p className="text-base md:text-lg text-[#1c3454] mb-4">
-            Atiendo a empresas listas para escalar a través de Meta Ads, Google Ads, TikTok Ads, Pinterest Ads y LinkedIn Ads, implementando soluciones que combinan estrategia humana con eficiencia de máquina.
+        {/* Hero Section */}
+        <div className="mb-16 lg:mb-20">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#1c3454] leading-tight">
+            Servicios de Medios Pagos <span className="text-[#6caddf]">Impulsados por Tecnología</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl mb-8 text-[#1c3454]/80 font-light">
+            Crecimiento Estratégico a través de Datos, IA y Automatización
           </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-[#6caddf]/10 backdrop-blur-sm rounded-xl p-6 border border-[#6caddf]/30">
+              <p className="text-base md:text-lg text-[#1c3454] mb-4">
+                ¡Hola! Soy <span className="font-bold">Ericka Karen</span>, una Estratega de Medios Pagos que aprovecha tecnología de vanguardia, automatización e IA para convertir tus inversiones publicitarias en motores de crecimiento escalables y predecibles.
+              </p>
+              <p className="text-base md:text-lg text-[#1c3454]">
+                Con más de 5 años de experiencia gestionando campañas pagas en Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads y Pinterest Ads, mi experiencia radica en combinar la planificación estratégica de medios con potentes soluciones tecnológicas.
+              </p>
+            </div>
+            <div className="flex flex-col justify-center space-y-6">
+              <div className="bg-white shadow-md rounded-lg p-6 border border-gray-100">
+                <p className="text-[#1c3454] font-medium">
+                  Atiendo a empresas listas para escalar a través de Meta Ads, Google Ads, TikTok Ads, Pinterest Ads y LinkedIn Ads, implementando soluciones que combinan estrategia humana con eficiencia de máquina.
+                </p>
+              </div>
+              <Link to="/es/contact" className="self-start">
+                <Button className="bg-[#6caddf] hover:bg-[#5a9ac8] text-white font-medium group">
+                  Trabajemos Juntos
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
         
-        <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">
-          🎯 Lo Que Ofrezco:
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
-          {mainServices.map((service, index) => (
-            <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
-          ))}
+        {/* What I Deliver Section */}
+        <div className="mb-16 lg:mb-20">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454] flex items-center">
+            <span className="text-[#6caddf] mr-2">🎯</span> Lo Que Ofrezco
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 lg:gap-8">
+            {mainServices.map((service, index) => (
+              <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
+            ))}
+          </div>
         </div>
         
-        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8 md:mb-16">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">🎯 ¿Por Qué Elegirme?</h2>
-          <ul className="space-y-4 text-[#1c3454]">
-            <li className="flex items-start">
-              <span className="text-[#6caddf] mr-2">•</span>
-              <span>Carrera práctica gestionando campañas con presupuestos mensuales que superan los $500K, generando un crecimiento constante de 3x a 4x en ingresos para clientes.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#6caddf] mr-2">•</span>
-              <span>Combinación única de experiencia en estrategia de marketing y habilidades técnicas que unen los medios pagos con la automatización y la innovación en IA.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#6caddf] mr-2">•</span>
-              <span>Capacidad comprobada para reducir el costo por lead y aumentar el retorno de inversión publicitaria utilizando datos, tecnología y optimización continua.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#6caddf] mr-2">•</span>
-              <span>Estilo de comunicación proactivo y colaborativo — siempre sabrás el estado y las perspectivas de tus campañas.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#6caddf] mr-2">•</span>
-              <span>Experiencia sirviendo a diversas industrias, adaptando estrategias y stacks tecnológicos para el viaje de crecimiento de cada negocio.</span>
-            </li>
-          </ul>
+        {/* Why Choose Me Section */}
+        <div className="mb-16 lg:mb-20 bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454] flex items-center">
+            <span className="text-[#6caddf] mr-2">🎯</span> ¿Por Qué Elegirme?
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            {whyChooseMe.map((item, index) => (
+              <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50">
+                <CardHeader className="pb-2">
+                  <div className="h-10 w-10 rounded-full bg-[#6caddf]/10 flex items-center justify-center mb-2">
+                    <item.icon className="h-5 w-5 text-[#6caddf]" />
+                  </div>
+                  <CardTitle className="text-lg text-[#1c3454]">{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-sm text-[#1c3454]/80">{item.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
         
-        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8 md:mb-16">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">🎯 Tecnologías y Herramientas que Domino:</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        {/* Tech Stack Section */}
+        <div className="mb-16 lg:mb-20">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454] flex items-center">
+            <span className="text-[#6caddf] mr-2">🎯</span> Tecnologías que Domino
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             {technologies.map((tech, index) => (
               <TechnologyCard key={index} tech={tech} />
             ))}
           </div>
         </div>
         
-        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">
-            🎯 Opiniones de Clientes:
+        {/* Testimonials Section */}
+        <div className="mb-16 lg:mb-20 bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454] flex items-center">
+            <span className="text-[#6caddf] mr-2">🎯</span> Opiniones de Clientes
           </h2>
-          <div className="space-y-6">
-            <div className="bg-[#f5f7fa] p-4 rounded-lg">
-              <div className="flex items-center mb-2">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-[#f5f7fa] rounded-lg p-5 shadow-sm">
+              <div className="flex items-center mb-3">
                 <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
               </div>
-              <p className="italic text-[#1c3454]">"Ericka Karen es una profesional dedicada con gran experiencia en medios pagos y ventas a través de plataformas de medios, con un enfoque particular en Google."</p>
-              <p className="text-[#6caddf] mt-2">— Henri Tex</p>
+              <p className="italic text-[#1c3454] mb-4">
+                "Ericka Karen es una profesional dedicada con gran experiencia en medios pagos y ventas a través de plataformas de medios, con un enfoque particular en Google."
+              </p>
+              <p className="text-[#6caddf] font-medium">— Henri Tex</p>
             </div>
             
-            <div className="bg-[#f5f7fa] p-4 rounded-lg">
-              <div className="flex items-center mb-2">
+            <div className="bg-[#f5f7fa] rounded-lg p-5 shadow-sm">
+              <div className="flex items-center mb-3">
                 <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
               </div>
-              <p className="italic text-[#1c3454]">"Una profesional extremadamente competente y dedicada. Busca activamente y aplica innovaciones del mercado en su trabajo diario."</p>
-              <p className="text-[#6caddf] mt-2">— Amanda Carvalho</p>
+              <p className="italic text-[#1c3454] mb-4">
+                "Una profesional extremadamente competente y proactiva. Ella constantemente aplica innovaciones en su trabajo diario."
+              </p>
+              <p className="text-[#6caddf] font-medium">— Amanda Carvalho</p>
             </div>
           </div>
+        </div>
+        
+        {/* Contact Section */}
+        <div className="rounded-xl bg-gradient-to-r from-[#1c3454] to-[#264b73] p-6 md:p-8 lg:p-10 text-white">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Escalemos tu Negocio</h2>
           
-          <div className="mt-8 text-center">
-            <p className="text-lg text-[#1c3454] mb-4">
-              ¡Aprovechemos el poder de la tecnología y la estrategia de medios pagos para acelerar tu crecimiento!
-            </p>
+          <p className="text-white/90 mb-6 max-w-3xl">
+            ¿Listo para desbloquear el poder de la IA, la automatización y la estrategia de medios pagos? Construyamos tu próxima campaña de alto rendimiento.
+          </p>
+          
+          <div className="mb-4">
+            <SocialLinks 
+              whatsappText="WhatsApp" 
+              linkedinText="LinkedIn" 
+              emailText="Email" 
+            />
+          </div>
+          
+          <div className="mt-8 md:mt-10">
             <Link to="/es/contact">
-              <Button className="bg-[#6caddf] hover:bg-[#5a9ac8] text-white font-medium">
+              <Button className="bg-white hover:bg-gray-100 text-[#1c3454] font-medium group">
                 Contáctame
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>
