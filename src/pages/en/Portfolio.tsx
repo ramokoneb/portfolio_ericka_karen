@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { PortfolioCard } from "@/components/automation/PortfolioCard";
+import { ContactSection } from "@/components/media-buying/ContactSection";
 
 interface PortfolioItem {
   id: string;
@@ -83,10 +84,10 @@ const automationPortfolioItems: PortfolioItem[] = [
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen p-4 md:p-8 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link to="/en">
-          <Button variant="ghost" className="mb-6 bg-[#6caddf] text-[#1c3454]">
+          <Button variant="ghost" className="mb-6 bg-[#6caddf]/10 text-[#1c3454] hover:bg-[#6caddf]/20 transition-colors">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
@@ -102,6 +103,15 @@ const Portfolio = () => {
           {automationPortfolioItems.map((item) => (
             <PortfolioCard key={item.id} item={item} />
           ))}
+        </div>
+        
+        <div className="mt-16">
+          <ContactSection
+            title="Let's Scale Your Business"
+            description="Ready to unlock the power of AI, automation, and paid media strategy? Let's build your next high-performing campaign."
+            buttonText="Contact Me"
+            contactPath="/en/contact"
+          />
         </div>
       </div>
     </div>
