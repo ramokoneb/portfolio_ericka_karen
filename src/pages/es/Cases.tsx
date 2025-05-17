@@ -1,85 +1,57 @@
 
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
+import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
 
-interface Case {
-  id: string;
+interface CaseItem {
   title: string;
-  category: "media" | "automation";
   description: string;
-  results: string[];
   image: string;
   tags: string[];
 }
 
-const caseStudies: Case[] = [
+const mediaBuyingCases: CaseItem[] = [
   {
-    id: "febracis-store",
     title: "Tienda Virtual Febracis — De la Crisis al Crecimiento Exponencial",
-    category: "media",
-    description: "Después de 6 meses de pérdidas en medios pagos, se implementaron enfoques estratégicos logrando R$77.000 en ingresos mensuales (267% de crecimiento) con un ROAS de 963% usando Meta Ads y Google Ads.",
-    results: ["267% de crecimiento en ingresos", "963% ROAS", "Rentable después de 6 meses de pérdidas"],
+    description: "Después de 6 meses de pérdidas en medios pagados, implementamos enfoques estratégicos logrando R$77.000 en ingresos mensuales (267% de crecimiento) con un ROAS del 963%. La estrategia incluyó una revisión completa de la estructura de campañas, segmentación avanzada de audiencias e implementación de un sistema de seguimiento personalizado que permitió una optimización precisa del presupuesto de medios, resultando en una transformación completa de los resultados del e-commerce.",
     image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
     tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
   },
   {
-    id: "urban-effort",
     title: "Urban Effort — De Cero al Punto de Equilibrio en 3 Meses",
-    category: "media",
-    description: "Marca americana de gorras que vendía solo en Amazon creó su propio canal de ventas alcanzando el punto de equilibrio en menos de 90 días con un +291% de crecimiento en ingresos a través de campañas estratégicas.",
-    results: ["Punto de equilibrio en 90 días", "291% de crecimiento en ingresos", "Nuevo canal de ventas establecido"],
+    description: "Marca americana de gorras que vendía solo en Amazon creó su propio canal de ventas alcanzando el punto de equilibrio en menos de 90 días con un +291% de crecimiento en ingresos. Desarrollamos una estrategia multicanal enfocada en la construcción del reconocimiento de marca y la conversión directa, utilizando Meta Ads y Google Ads de forma sincronizada para alcanzar a clientes potenciales en diferentes momentos del recorrido de compra.",
     image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
     tags: ["Meta Ads", "Google Ads", "E-commerce"]
   },
   {
-    id: "borogodo",
-    title: "Borogodó Brasil — Cambio en los Ingresos en 30 Días",
-    category: "media",
-    description: "Después de una caída drástica en ventas, estrategias enfocadas en Meta Ads lograron +36% en visitas únicas, +24% en ventas, +40% en ingresos y +13% en ticket promedio en solo un mes.",
-    results: ["+36% en visitas únicas", "+24% en ventas", "+40% en ingresos", "+13% en ticket promedio"],
+    title: "Borogodó Brasil — Transformación de Ingresos en 30 Días",
+    description: "Después de una caída drástica en las ventas, estrategias enfocadas en Meta Ads lograron +36% en visitas únicas, +24% en ventas, +40% en ingresos y +13% en ticket promedio en solo un mes. El enfoque incluyó una reestructuración completa de las campañas con foco en segmentación por interés y comportamiento, creación de embudos específicos para diferentes categorías de productos e implementación de retargeting avanzado para recuperación de carritos abandonados.",
     image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
     tags: ["Meta Ads", "E-commerce", "Ingresos"]
   },
   {
-    id: "whatsapp-automation",
-    title: "Automatización de WhatsApp – +80% de consultas automatizadas",
-    category: "automation",
-    description: "Solución de automatización desarrollada para servicio al cliente vía WhatsApp, con chatbot inteligente capaz de manejar el 80% de las preguntas frecuentes. Reducción del 95% en tiempo de respuesta y aumento en la satisfacción del servicio.",
-    results: ["80% de consultas automatizadas", "95% de reducción en tiempo de respuesta", "Aumento en la satisfacción"],
-    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
-    tags: ["WhatsApp API", "n8n", "NLP", "Chatbot"]
+    title: "Vamos — +50% en Ventas con Adquisición Inteligente",
+    description: "Empresa de alquiler de vehículos pesados escaló su base de clientes con segmentación geográfica y demográfica dirigida, logrando +50% en ventas en un solo mes. La estrategia incluyó mapeo detallado de clientes potenciales por región, creación de campañas geolocalizadas con mensajes personalizados por sector y un sistema de calificación de leads que priorizaba contactos con mayor probabilidad de cierre.",
+    image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
+    tags: ["Meta Ads", "Generación de Leads", "Ventas"]
   },
   {
-    id: "lead-scoring",
-    title: "Sistema de Puntuación de Leads con IA – +65% de eficiencia",
-    category: "automation",
-    description: "Sistema de puntuación de leads basado en machine learning, entrenado con patrones de comportamiento de usuarios reales. Mejoró la eficiencia del equipo de ventas en un 65%, priorizando leads con mayor probabilidad de conversión.",
-    results: ["+65% de eficiencia en equipo de ventas", "Mayores tasas de conversión", "Mejor calidad de leads"],
-    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
-    tags: ["n8n", "Supabase", "Machine Learning", "LLMs"]
+    title: "Unileão — Reducción del 118% en CPL con Performance Max",
+    description: "Institución educativa optimizó la captación de leads con campañas Performance Max, logrando una reducción del 118% en el costo por lead y ROI positivo ya en el primer mes. El proyecto incluyó implementación avanzada de Google Ads con foco en Performance Max, creación de creative assets optimizados para diferentes segmentos de público, integración con CRM para seguimiento de conversión en matrículas y optimización continua basada en datos de calidad de los leads.",
+    image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
+    tags: ["Google Ads", "Educación", "Performance Max"]
   },
   {
-    id: "tracking-system",
-    title: "Smart Tracking con Meta API – +462% en conversaciones",
-    category: "automation",
-    description: "Implementación de seguimiento vía ctwaclid para identificar con precisión los anuncios que generaban conversaciones en WhatsApp. Aumento de +462.16% en volumen de conversaciones y reducción de -81.34% en costo por mensaje enviado en una semana.",
-    results: ["+462% en conversaciones", "-81% en costo por mensaje", "Atribución avanzada"],
-    image: "/lovable-uploads/921f2626-6b31-4de3-b77e-fd094b87d098.png",
-    tags: ["Meta API", "n8n", "Supabase", "Analytics"]
+    title: "Seguimiento Inteligente en WhatsApp — +462% en Conversaciones",
+    description: "La implementación de seguimiento vía ctwaclid en las campañas de Meta Ads llevó a un aumento del +462,16% en las conversaciones iniciadas y una reducción del 81,34% en el costo por mensaje enviado en solo una semana. El sistema personalizado permitió la identificación precisa del origen de los leads de WhatsApp, posibilitando la optimización y escalabilidad en las campañas con foco en el costo por conversación iniciada, además de una mejor atribución de resultados.",
+    image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
+    tags: ["Meta Ads", "WhatsApp", "Seguimiento"]
   }
 ];
 
 const Cases = () => {
-  const [activeTab, setActiveTab] = useState<string>("all");
-  
-  const filteredCases = activeTab === "all" 
-    ? caseStudies 
-    : caseStudies.filter(c => c.category === activeTab);
-  
   return (
     <div className="min-h-screen p-4 md:p-8 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -90,88 +62,15 @@ const Cases = () => {
         </Link>
         
         <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#1c3454]">
-          Estudios de Caso de Medios Pagos
+          Casos de Éxito en Medios Pagados
         </h1>
         <p className="text-lg md:text-xl mb-8 text-[#6caddf]">
           Resultados reales logrados con enfoques estratégicos y soluciones innovadoras.
         </p>
         
-        <Tabs defaultValue="all" className="mb-8" onValueChange={setActiveTab}>
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="all" className="text-[#1c3454]">Todos los Casos</TabsTrigger>
-            <TabsTrigger value="media" className="text-[#1c3454]">Medios Pagos</TabsTrigger>
-            <TabsTrigger value="automation" className="text-[#1c3454]">Automatización & IA</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="all" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredCases.map((caseItem) => (
-                <CaseCard key={caseItem.id} caseItem={caseItem} />
-              ))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="media" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredCases.map((caseItem) => (
-                <CaseCard key={caseItem.id} caseItem={caseItem} />
-              ))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="automation" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredCases.map((caseItem) => (
-                <CaseCard key={caseItem.id} caseItem={caseItem} />
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+        <PortfolioSection items={mediaBuyingCases} />
       </div>
     </div>
-  );
-};
-
-const CaseCard = ({ caseItem }: { caseItem: Case }) => {
-  return (
-    <Card className="overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
-      <div className="h-48 overflow-hidden">
-        <img 
-          src={caseItem.image} 
-          alt={caseItem.title} 
-          className="w-full h-full object-cover transition-transform hover:scale-105"
-        />
-      </div>
-      <CardHeader>
-        <CardTitle className="text-[#1c3454]">{caseItem.title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-gray-600 mb-4">{caseItem.description}</p>
-        <div className="mb-4">
-          <h4 className="font-semibold text-[#6caddf] mb-2">Resultados:</h4>
-          <ul className="list-disc pl-5">
-            {caseItem.results.map((result, index) => (
-              <li key={index} className="text-gray-600">{result}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {caseItem.tags.map((tag) => (
-            <span key={tag} className="px-2 py-1 bg-[#6caddf]/10 text-[#6caddf] rounded-full text-xs font-medium">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </CardContent>
-      <CardFooter>
-        <Button 
-          variant="outline" 
-          className="w-full text-[#6caddf] border-[#6caddf] hover:bg-[#6caddf] hover:text-white"
-        >
-          Ver Estudio Completo <ExternalLink className="ml-2 h-4 w-4" />
-        </Button>
-      </CardFooter>
-    </Card>
   );
 };
 
