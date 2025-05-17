@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 interface PortfolioItem {
   title: string;
@@ -13,7 +14,7 @@ export const PortfolioSection = ({
 }: PortfolioSectionProps) => {
   return <div className="glass-card p-8 rounded-lg shadow-sm bg-gray-50">
       <h2 className="section-title">📁 Strategic Case Studies</h2>
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 gap-8">
         {items.map((item, index) => <Card key={index} className="card-base overflow-hidden">
             <div className="h-48 overflow-hidden">
               <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform hover:scale-105" />
