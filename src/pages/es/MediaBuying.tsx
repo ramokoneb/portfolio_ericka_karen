@@ -44,27 +44,28 @@ const mainServices = [{
   description: "Paneles de rendimiento semanales con información procesable que destacan lo que funciona, lo que se puede mejorar y los próximos pasos claros."
 }];
 
-const whyChooseMe = [{
-  icon: TrendingUp,
-  title: "Resultados Comprobados",
-  description: "Gestioné presupuestos mensuales superiores a $500K con un crecimiento constante de 3x-4x en ingresos para clientes."
-}, {
-  icon: Settings,
-  title: "Combinación Única de Habilidades",
-  description: "Mezcla de experiencia en estrategia de marketing y habilidades técnicas que unen los medios pagos con la automatización y la innovación en IA."
-}, {
-  icon: BarChart2,
-  title: "Eficiencia de Costos",
-  description: "Capacidad comprobada para reducir el costo por lead y aumentar el retorno de inversión publicitaria utilizando datos, tecnología y optimización continua."
-}, {
-  icon: MessageSquare,
-  title: "Comunicación Clara",
-  description: "Estilo de comunicación proactivo y colaborativo — siempre sabrás el estado y las perspectivas de tus campañas."
-}, {
-  icon: Settings2,
-  title: "Soluciones Personalizadas",
-  description: "Experiencia sirviendo a diversas industrias, adaptando estrategias y stacks tecnológicos para el viaje de crecimiento de cada negocio."
-}];
+const benefits = [
+  {
+    highlight: "Resultados Comprobados",
+    description: "Gestioné presupuestos mensuales superiores a $500K con un crecimiento constante de 3x-4x en ingresos para clientes."
+  },
+  {
+    highlight: "Combinación Única de Habilidades",
+    description: "Mezcla de experiencia en estrategia de marketing y habilidades técnicas que unen los medios pagos con la automatización y la innovación en IA."
+  },
+  {
+    highlight: "Eficiencia de Costos",
+    description: "Capacidad comprobada para reducir el costo por lead y aumentar el retorno de inversión publicitaria utilizando datos, tecnología y optimización continua."
+  },
+  {
+    highlight: "Comunicación Clara",
+    description: "Estilo de comunicación proactivo y colaborativo — siempre sabrás el estado y las perspectivas de tus campañas."
+  },
+  {
+    highlight: "Soluciones Personalizadas",
+    description: "Experiencia sirviendo a diversas industrias, adaptando estrategias y stacks tecnológicos para el viaje de crecimiento de cada negocio."
+  }
+];
 
 const technologies = [{
   category: "Plataformas de Medios Pagos",
@@ -125,7 +126,7 @@ const MediaBuying = () => {
         
         <WhyChooseMeSection
           title="¿Por Qué Elegirme?"
-          items={whyChooseMe}
+          benefits={benefits}
         />
         
         <TechnologiesSection

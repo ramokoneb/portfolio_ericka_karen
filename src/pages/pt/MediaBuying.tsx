@@ -66,6 +66,29 @@ const whyChooseMe = [{
   description: "Experiência atendendo diversas indústrias, adaptando estratégias e stacks tecnológicos para a jornada de crescimento de cada negócio."
 }];
 
+const benefits = [
+  {
+    highlight: "Resultados Comprovados",
+    description: "Gerenciei orçamentos mensais superiores a $500K com crescimento consistente de 3x-4x em receita para clientes."
+  },
+  {
+    highlight: "Combinação Única de Habilidades",
+    description: "Mistura de expertise em estratégia de marketing e habilidades técnicas que unem mídia paga com automação e inovação em IA."
+  },
+  {
+    highlight: "Eficiência de Custo",
+    description: "Capacidade comprovada de reduzir custo por lead e aumentar retorno sobre investimento em anúncios usando dados, tecnologia e otimização contínua."
+  },
+  {
+    highlight: "Comunicação Clara",
+    description: "Estilo de comunicação proativo e colaborativo — você sempre saberá o status e os insights das suas campanhas."
+  },
+  {
+    highlight: "Soluções Personalizadas",
+    description: "Experiência atendendo diversas indústrias, adaptando estratégias e stacks tecnológicos para a jornada de crescimento de cada negócio."
+  }
+];
+
 const technologies = [{
   category: "Plataformas de Mídia Paga",
   tools: ["Meta Ads Manager", "Google Ads (Search, Display, Shopping, YouTube)", "TikTok Ads Manager", "LinkedIn Ads", "Pinterest Ads"],
@@ -125,7 +148,7 @@ const MediaBuying = () => {
         
         <WhyChooseMeSection
           title="Por Que Me Escolher?"
-          items={whyChooseMe}
+          benefits={benefits}
         />
         
         <TechnologiesSection

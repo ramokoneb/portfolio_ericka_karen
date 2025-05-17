@@ -66,6 +66,29 @@ const whyChooseMe = [{
   description: "Experience serving diverse industries, tailoring strategies and tech stacks for each business's growth journey."
 }];
 
+const benefits = [
+  {
+    highlight: "Proven Results",
+    description: "Managed monthly budgets exceeding $500K with consistent 3x-4x growth in revenue for clients."
+  },
+  {
+    highlight: "Unique Skill Combination",
+    description: "Blend of marketing strategy expertise and technical skills that bridge paid media with automation and AI innovation."
+  },
+  {
+    highlight: "Cost Efficiency",
+    description: "Proven ability to reduce cost per lead and increase return on ad spend using data, technology, and continuous optimization."
+  },
+  {
+    highlight: "Clear Communication",
+    description: "Proactive and collaborative communication style — you'll always know the status and insights of your campaigns."
+  },
+  {
+    highlight: "Tailored Solutions",
+    description: "Experience serving diverse industries, tailoring strategies and tech stacks for each business's growth journey."
+  }
+];
+
 const technologies = [{
   category: "Paid Media Platforms",
   tools: ["Meta Ads Manager", "Google Ads (Search, Display, Shopping, YouTube)", "TikTok Ads Manager", "LinkedIn Ads", "Pinterest Ads"],
@@ -125,7 +148,7 @@ const MediaBuying = () => {
         
         <WhyChooseMeSection
           title="Why Choose Me?"
-          items={whyChooseMe}
+          benefits={benefits}
         />
         
         <TechnologiesSection
