@@ -17,8 +17,8 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
 }) => {
   return (
     <div className="mb-16 lg:mb-20 bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10">
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454] flex items-center">
-        <span className="text-[#6caddf] mr-2">🎯</span> {title}
+      <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">
+        {title}
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

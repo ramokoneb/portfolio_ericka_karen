@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -17,7 +16,7 @@ import { ServicesSection } from "@/components/media-buying/ServicesSection";
 import { WhyChooseMeSection } from "@/components/media-buying/WhyChooseMeSection";
 import { TestimonialsSection } from "@/components/media-buying/TestimonialsSection";
 import { ContactSection } from "@/components/media-buying/ContactSection";
-import { TechnologyCard } from "@/components/media-buying/TechnologyCard";
+import { TechnologiesSection } from "@/components/media-buying/TechnologiesSection";
 
 const mainServices = [{
   icon: BrainCircuit,
@@ -129,17 +128,10 @@ const MediaBuying = () => {
           items={whyChooseMe}
         />
         
-        <div className="mb-16 lg:mb-20">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454] flex items-center">
-            <span className="text-[#6caddf] mr-2">🎯</span> Technologies I Master
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {technologies.map((tech, index) => (
-              <TechnologyCard key={index} tech={tech} />
-            ))}
-          </div>
-        </div>
+        <TechnologiesSection
+          title="Technologies I Master"
+          technologies={technologies}
+        />
         
         <TestimonialsSection
           title="Client Feedback"
