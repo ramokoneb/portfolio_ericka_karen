@@ -19,6 +19,13 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
   const closeServicesMenu = () => setIsServicesMenuOpen(false);
   const closeCasesPortfolioMenu = () => setIsCasesPortfolioMenuOpen(false);
 
+  // Common navigation link styling class
+  const navLinkClass = "text-base font-medium px-4 py-2 hover:text-[#6CAAD9] text-[#1A3554] transition-colors";
+  // Common submenu item styling
+  const subMenuItemClass = "block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white transition-colors";
+  // Common submenu description styling
+  const subMenuDescClass = "text-sm text-[#1A3554] mt-1";
+
   return (
     <div className="hidden md:flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
       <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]">
@@ -29,7 +36,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link to={`/${language}`}>
-              <NavigationMenuLink className="px-4 py-2 hover:text-[#6CAAD9] text-[#1A3554]">
+              <NavigationMenuLink className={navLinkClass}>
                 {navigationContent[language].home}
               </NavigationMenuLink>
             </Link>
@@ -37,7 +44,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
           
           <NavigationMenuItem>
             <NavigationMenuTrigger 
-              className="hover:text-[#6CAAD9] text-[#1A3554] bg-white"
+              className="hover:text-[#6CAAD9] text-base font-medium text-[#1A3554] bg-white transition-colors"
               onClick={() => setIsServicesMenuOpen(prev => !prev)}
             >
               {navigationContent[language].services}
@@ -46,11 +53,11 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
               <div className="w-[400px] p-4 grid grid-cols-2 gap-3 bg-white">
                 <Link 
                   to={`/${language}/media-buying`} 
-                  className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white"
+                  className={subMenuItemClass}
                   onClick={closeServicesMenu}
                 >
                   <div className="font-medium">{navigationContent[language].mediaBuying}</div>
-                  <p className="text-sm text-[#1A3554]">
+                  <p className={subMenuDescClass}>
                     {language === "en" 
                       ? "Strategic paid advertising campaigns" 
                       : language === "pt"
@@ -60,11 +67,11 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
                 </Link>
                 <Link 
                   to={`/${language}/automation-ai`} 
-                  className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white"
+                  className={subMenuItemClass}
                   onClick={closeServicesMenu}
                 >
                   <div className="font-medium">{navigationContent[language].automation}</div>
-                  <p className="text-sm text-[#1A3554]">
+                  <p className={subMenuDescClass}>
                     {language === "en" 
                       ? "Intelligent automation solutions" 
                       : language === "pt"
@@ -78,7 +85,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
           
           <NavigationMenuItem>
             <NavigationMenuTrigger 
-              className="hover:text-[#6CAAD9] text-[#1A3554] bg-white"
+              className="hover:text-[#6CAAD9] text-base font-medium text-[#1A3554] bg-white transition-colors"
               onClick={() => setIsCasesPortfolioMenuOpen(prev => !prev)}
             >
               {navigationContent[language].casesPortfolio}
@@ -87,11 +94,11 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
               <div className="w-[400px] p-4 grid grid-cols-2 gap-3 bg-white">
                 <Link 
                   to={`/${language}/cases/media-buying`} 
-                  className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white"
+                  className={subMenuItemClass}
                   onClick={closeCasesPortfolioMenu}
                 >
                   <div className="font-medium">{navigationContent[language].mediaPaidCases}</div>
-                  <p className="text-sm text-[#1A3554]">
+                  <p className={subMenuDescClass}>
                     {language === "en" 
                       ? "Success stories and case studies" 
                       : language === "pt"
@@ -101,11 +108,11 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
                 </Link>
                 <Link 
                   to={`/${language}/portfolio/automation-ai`} 
-                  className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white"
+                  className={subMenuItemClass}
                   onClick={closeCasesPortfolioMenu}
                 >
                   <div className="font-medium">{navigationContent[language].automationCases}</div>
-                  <p className="text-sm text-[#1A3554]">
+                  <p className={subMenuDescClass}>
                     {language === "en" 
                       ? "Project highlights and showcase" 
                       : language === "pt"
@@ -119,7 +126,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
           
           <NavigationMenuItem>
             <Link to={`/${language}/about`}>
-              <NavigationMenuLink className="px-4 py-2 hover:text-[#6CAAD9] text-[#1A3554]">
+              <NavigationMenuLink className={navLinkClass}>
                 {navigationContent[language].about}
               </NavigationMenuLink>
             </Link>
@@ -127,7 +134,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
           
           <NavigationMenuItem>
             <Link to={`/${language}/contact`}>
-              <Button className="bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
+              <Button className="bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white font-medium">
                 {navigationContent[language].contact}
               </Button>
             </Link>
@@ -138,7 +145,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-[#1A3554] bg-white">
+            <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-base font-medium text-[#1A3554] bg-white transition-colors">
               <Globe className="mr-2 h-4 w-4" />
               {language.toUpperCase()}
             </NavigationMenuTrigger>
@@ -146,19 +153,19 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
               <div className="p-2 w-[100px] bg-white">
                 <Link 
                   to={getPathInLanguage("en")} 
-                  className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                  className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white font-medium transition-colors"
                 >
                   EN
                 </Link>
                 <Link 
                   to={getPathInLanguage("pt")} 
-                  className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                  className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white font-medium transition-colors"
                 >
                   PT
                 </Link>
                 <Link 
                   to={getPathInLanguage("es")} 
-                  className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                  className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white font-medium transition-colors"
                 >
                   ES
                 </Link>

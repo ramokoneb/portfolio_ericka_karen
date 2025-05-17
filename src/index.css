@@ -45,6 +45,16 @@
     @apply text-base text-[#1c3454];
   }
 
+  /* Navigation typography */
+  .nav-link {
+    @apply text-base font-medium text-[#1A3554] hover:text-[#6CAAD9] transition-colors;
+  }
+
+  .nav-button {
+    @apply font-medium text-white bg-[#6CAAD9] hover:bg-[#6CAAD9] transition-colors;
+  }
+
+  /* Glass card & other reusable styles */
   .glass-card {
     @apply bg-[#1A3554] backdrop-blur-sm border border-primary-light/20 shadow-sm;
   }

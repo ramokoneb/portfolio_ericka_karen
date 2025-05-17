@@ -18,6 +18,13 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
   
   const closeSheet = () => setIsSheetOpen(false);
 
+  // Common mobile menu link class
+  const mobileLinkClass = "p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white font-medium transition-colors";
+  // Common section header class
+  const sectionHeaderClass = "px-3 pt-4 text-sm font-semibold text-gray-500";
+  // Language selector link class
+  const langLinkClass = "block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white font-medium transition-colors";
+
   return (
     <div className="md:hidden flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
       <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9]">
@@ -35,19 +42,19 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                 <div className="p-2 w-[100px] bg-white z-50">
                   <Link 
                     to={getPathInLanguage("en")} 
-                    className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                    className={langLinkClass}
                   >
                     EN
                   </Link>
                   <Link 
                     to={getPathInLanguage("pt")} 
-                    className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                    className={langLinkClass}
                   >
                     PT
                   </Link>
                   <Link 
                     to={getPathInLanguage("es")} 
-                    className="block p-2 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                    className={langLinkClass}
                   >
                     ES
                   </Link>
@@ -67,48 +74,48 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
             <div className="flex flex-col gap-4 pt-10">
               <Link 
                 to={`/${language}`} 
-                className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                className={mobileLinkClass}
                 onClick={closeSheet}
               >
                 {navigationContent[language].home}
               </Link>
-              <p className="px-3 pt-4 text-sm font-semibold text-gray-500">
+              <p className={sectionHeaderClass}>
                 {navigationContent[language].services}
               </p>
               <Link 
                 to={`/${language}/media-buying`} 
-                className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                className={mobileLinkClass}
                 onClick={closeSheet}
               >
                 {navigationContent[language].mediaBuying}
               </Link>
               <Link 
                 to={`/${language}/automation-ai`} 
-                className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                className={mobileLinkClass}
                 onClick={closeSheet}
               >
                 {navigationContent[language].automation}
               </Link>
-              <p className="px-3 pt-4 text-sm font-semibold text-gray-500">
+              <p className={sectionHeaderClass}>
                 {navigationContent[language].casesPortfolio}
               </p>
               <Link 
                 to={`/${language}/cases/media-buying`} 
-                className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                className={mobileLinkClass}
                 onClick={closeSheet}
               >
                 {navigationContent[language].mediaPaidCases}
               </Link>
               <Link 
                 to={`/${language}/portfolio/automation-ai`} 
-                className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                className={mobileLinkClass}
                 onClick={closeSheet}
               >
                 {navigationContent[language].automationCases}
               </Link>
               <Link 
                 to={`/${language}/about`} 
-                className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
+                className={mobileLinkClass}
                 onClick={closeSheet}
               >
                 {navigationContent[language].about}
@@ -118,7 +125,7 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                 className="mt-4"
                 onClick={closeSheet}
               >
-                <Button className="w-full bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white">
+                <Button className="w-full bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white font-medium">
                   {navigationContent[language].contact}
                 </Button>
               </Link>
