@@ -5,8 +5,9 @@ import { ArrowLeft, ArrowRight, MessageSquare, Code, BrainCircuit, Link2, Databa
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
 import { TechnologyCard } from "@/components/media-buying/TechnologyCard";
 import { HeroSection } from "@/components/media-buying/HeroSection";
-import { TestimonialCard } from "@/components/media-buying/TestimonialCard";
-import { Contact } from "@/components/media-buying/Contact";
+import { WhyChooseMeSection } from "@/components/media-buying/WhyChooseMeSection";
+import { TestimonialsSection } from "@/components/media-buying/TestimonialsSection";
+import { ContactSection } from "@/components/media-buying/ContactSection";
 
 const technologies = [
   {
@@ -84,14 +85,12 @@ const benefits = [
 
 const testimonials = [
   {
-    quote: "Proativa, inventiva, nunca acomodada — Karen é, sem dúvida, uma das profissionais mais inspiradoras que já conheci.",
-    author: "Roberto Junior",
-    rating: 5
+    text: "Proativa, inventiva, nunca acomodada — Karen é, sem dúvida, uma das profissionais mais inspiradoras que já conheci.",
+    author: "Roberto Junior"
   },
   {
-    quote: "Extremamente competente e sempre integrando as últimas inovações do mercado em seu trabalho.",
-    author: "Amanda Carvalho",
-    rating: 5
+    text: "Extremamente competente e sempre integrando as últimas inovações do mercado em seu trabalho.",
+    author: "Amanda Carvalho"
   }
 ];
 
@@ -129,17 +128,10 @@ const AutomationAI = () => {
         </section>
         
         {/* Why Choose Me Section */}
-        <section className="mb-16 bg-[#6caddf]/10 rounded-lg p-6 md:p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#1c3454]">Por Que Me Escolher?</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
-                <p className="font-bold text-[#6caddf] text-lg">{benefit.highlight}</p>
-                <p className="text-[#1c3454]/80">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <WhyChooseMeSection
+          title="Por Que Me Escolher?"
+          benefits={benefits}
+        />
         
         {/* Technologies Section */}
         <section className="mb-16">
@@ -151,32 +143,19 @@ const AutomationAI = () => {
           </div>
         </section>
         
-        {/* Testimonials Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">Feedback de Clientes</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} testimonial={testimonial} />
-            ))}
-          </div>
-        </section>
+        {/* Testimonials Section - Updated to match MediaBuying */}
+        <TestimonialsSection
+          title="Feedback de Clientes"
+          testimonials={testimonials}
+        />
         
-        {/* Contact Section */}
-        <section className="mb-8">
-          <div className="bg-[#1c3454] text-white rounded-lg p-6 md:p-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Pronto para Automatizar & Escalar?</h2>
-            <p className="mb-6 text-white/80">
-              Vamos construir soluções inteligentes que transformem suas operações digitais. Envie uma mensagem e vamos conversar.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button className="bg-[#6caddf] hover:bg-[#5a9ac8] w-full sm:w-auto" asChild>
-                <Link to="/pt/contact" className="flex items-center justify-center">
-                  Vamos Construir Mais Inteligente <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+        {/* Contact Section - Updated to match MediaBuying */}
+        <ContactSection
+          title="Vamos Escalar Seu Negócio"
+          description="Pronto para desbloquear o poder da IA, automação e estratégia de mídia paga? Vamos construir sua próxima campanha de alta performance."
+          buttonText="Entre em Contato"
+          contactPath="/pt/contact"
+        />
       </div>
     </div>
   );
