@@ -1,31 +1,36 @@
 
-import { LucideIcon } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { LucideIcon } from "lucide-react";
+
+interface Technology {
+  category: string;
+  tools: string[];
+  icon: LucideIcon;
+}
 
 interface TechnologyCardProps {
-  tech: {
-    category: string;
-    tools: string[];
-    icon: LucideIcon;
-  };
+  tech: Technology;
 }
 
 export const TechnologyCard = ({ tech }: TechnologyCardProps) => {
-  const Icon = tech.icon;
+  const { category, tools, icon: Icon } = tech;
   
   return (
-    <Card className="card-base">
-      <CardHeader>
-        <div className="mb-2">
-          <Icon className="h-10 w-10 text-[#6CADDF]" />
+    <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300 bg-white h-full">
+      <CardHeader className="pb-2">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="h-10 w-10 rounded-full bg-[#6caddf]/10 flex items-center justify-center">
+            <Icon className="h-5 w-5 text-[#6caddf]" />
+          </div>
+          <CardTitle className="text-lg text-[#1c3454]">{category}</CardTitle>
         </div>
-        <CardTitle className="text-[#1c3454]">{tech.category}</CardTitle>
       </CardHeader>
       <CardContent>
-        <ul className="space-y-2">
-          {tech.tools.map((tool, index) => (
-            <li key={index} className="text-[#6CADDF]">
-              {tool}
+        <ul className="space-y-1">
+          {tools.map((tool, index) => (
+            <li key={index} className="text-sm text-[#1c3454]/80 flex items-center">
+              <span className="text-[#6caddf] mr-2">•</span>
+              <span>{tool}</span>
             </li>
           ))}
         </ul>
