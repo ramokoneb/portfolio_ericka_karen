@@ -112,10 +112,10 @@ const MediaBuying = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="bg-[#6caddf]/10 backdrop-blur-sm rounded-xl p-6 border border-[#6caddf]/30">
               <p className="text-base md:text-lg text-[#1c3454] mb-4">
-                Hi! I'm <span className="font-bold">Ericka Karen</span>, a Paid Media Strategist who leverages cutting-edge technology, automation, and AI to turn your advertising investments into scalable, predictable growth engines.
+                Leveraging cutting-edge technology, automation, and AI, this paid media strategy framework transforms advertising investments into scalable, predictable growth engines.
               </p>
               <p className="text-base md:text-lg text-[#1c3454]">
-                Built on over 5 years of experience managing paid campaigns across Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads, and Pinterest Ads, my expertise lies in marrying strategic media planning with powerful tech solutions.
+                Backed by over 5 years of hands-on experience across Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads, and Pinterest Ads, it combines strategic media planning with advanced tech solutions to drive performance and efficiency.
               </p>
             </div>
             <div className="flex flex-col justify-center space-y-6">
