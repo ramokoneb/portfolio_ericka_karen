@@ -1,8 +1,8 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
   ArrowLeft,
-  ArrowRight,
   BrainCircuit, 
   Link2, 
   Database, 
@@ -12,11 +12,12 @@ import {
   MessageSquare,
   Settings2
 } from "lucide-react";
-import SocialLinks from "@/components/home/SocialLinks";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ServiceCard } from "@/components/media-buying/ServiceCard";
-import { TechnologyCard } from "@/components/media-buying/TechnologyCard";
 import { HeroSection } from "@/components/media-buying/HeroSection";
+import { ServicesSection } from "@/components/media-buying/ServicesSection";
+import { WhyChooseMeSection } from "@/components/media-buying/WhyChooseMeSection";
+import { TestimonialsSection } from "@/components/media-buying/TestimonialsSection";
+import { ContactSection } from "@/components/media-buying/ContactSection";
+import { TechnologyCard } from "@/components/media-buying/TechnologyCard";
 
 const mainServices = [{
   icon: BrainCircuit,
@@ -88,6 +89,17 @@ const technologies = [{
   icon: BarChart2
 }];
 
+const testimonials = [
+  {
+    text: "Ericka Karen es una profesional dedicada con gran experiencia en medios pagos y ventas a través de plataformas de medios, con un enfoque particular en Google.",
+    author: "Henri Tex"
+  },
+  {
+    text: "Una profesional extremadamente competente y proactiva. Ella constantemente aplica innovaciones en su trabajo diario.",
+    author: "Amanda Carvalho"
+  }
+];
+
 const MediaBuying = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
@@ -98,78 +110,25 @@ const MediaBuying = () => {
           </Button>
         </Link>
 
-        {/* Hero Section */}
-        <div className="mb-16 lg:mb-20">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#1c3454] leading-tight">
-            Servicios de Medios Pagos <span className="text-[#6caddf]">Impulsados por Tecnología</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl mb-8 text-[#1c3454]/80 font-light">
-            Crecimiento Estratégico a través de Datos, IA y Automatización
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-[#6caddf]/10 backdrop-blur-sm rounded-xl p-6 border border-[#6caddf]/30">
-              <p className="text-base md:text-lg text-[#1c3454] mb-4">
-                Aprovechando tecnología de vanguardia, automatización e IA, este marco estratégico de medios pagos transforma inversiones publicitarias en motores de crecimiento escalables y predecibles.
-              </p>
-              <p className="text-base md:text-lg text-[#1c3454]">
-                Respaldado por más de 5 años de experiencia práctica en Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads y Pinterest Ads, combina planificación estratégica de medios con soluciones tecnológicas avanzadas para impulsar el rendimiento y la eficiencia.
-              </p>
-            </div>
-            <div className="flex flex-col justify-center space-y-6">
-              <div className="bg-white shadow-md rounded-lg p-6 border border-gray-100">
-                <p className="text-[#1c3454] font-medium">
-                  Atiendo a empresas listas para escalar a través de Meta Ads, Google Ads, TikTok Ads, Pinterest Ads y LinkedIn Ads, implementando soluciones que combinan estrategia humana con eficiencia de máquina.
-                </p>
-              </div>
-              <Link to="/es/contact" className="self-start">
-                <Button className="bg-[#6caddf] hover:bg-[#5a9ac8] text-white font-medium group">
-                  Trabajemos Juntos
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <HeroSection
+          title={<>Servicios de Medios Pagos <span className="text-[#6caddf]">Impulsados por Tecnología</span></>}
+          subtitle="Crecimiento Estratégico a través de Datos, IA y Automatización"
+          description1="Aprovechando tecnología de vanguardia, automatización e IA, este marco estratégico de medios pagos transforma inversiones publicitarias en motores de crecimiento escalables y predecibles."
+          description2="Respaldado por más de 5 años de experiencia práctica en Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads y Pinterest Ads, combina planificación estratégica de medios con soluciones tecnológicas avanzadas para impulsar el rendimiento y la eficiencia."
+          ctaText="Trabajemos Juntos"
+          contactPath="/es/contact"
+        />
         
-        {/* What I Deliver Section */}
-        <div className="mb-16 lg:mb-20">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454] flex items-center">
-            <span className="text-[#6caddf] mr-2">🎯</span> Lo Que Ofrezco
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 lg:gap-8">
-            {mainServices.map((service, index) => (
-              <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
-            ))}
-          </div>
-        </div>
+        <ServicesSection 
+          title="Lo Que Ofrezco"
+          services={mainServices}
+        />
         
-        {/* Why Choose Me Section */}
-        <div className="mb-16 lg:mb-20 bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454] flex items-center">
-            <span className="text-[#6caddf] mr-2">🎯</span> ¿Por Qué Elegirme?
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {whyChooseMe.map((item, index) => (
-              <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50">
-                <CardHeader className="pb-2">
-                  <div className="h-10 w-10 rounded-full bg-[#6caddf]/10 flex items-center justify-center mb-2">
-                    <item.icon className="h-5 w-5 text-[#6caddf]" />
-                  </div>
-                  <CardTitle className="text-lg text-[#1c3454]">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-sm text-[#1c3454]/80">{item.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        <WhyChooseMeSection
+          title="¿Por Qué Elegirme?"
+          items={whyChooseMe}
+        />
         
-        {/* Tech Stack Section */}
         <div className="mb-16 lg:mb-20">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454] flex items-center">
             <span className="text-[#6caddf] mr-2">🎯</span> Tecnologías que Domino
@@ -182,60 +141,17 @@ const MediaBuying = () => {
           </div>
         </div>
         
-        {/* Testimonials Section */}
-        <div className="mb-16 lg:mb-20 bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454] flex items-center">
-            <span className="text-[#6caddf] mr-2">🎯</span> Opiniones de Clientes
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-[#f5f7fa] rounded-lg p-5 shadow-sm">
-              <div className="flex items-center mb-3">
-                <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
-              </div>
-              <p className="italic text-[#1c3454] mb-4">
-                "Ericka Karen es una profesional dedicada con gran experiencia en medios pagos y ventas a través de plataformas de medios, con un enfoque particular en Google."
-              </p>
-              <p className="text-[#6caddf] font-medium">— Henri Tex</p>
-            </div>
-            
-            <div className="bg-[#f5f7fa] rounded-lg p-5 shadow-sm">
-              <div className="flex items-center mb-3">
-                <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
-              </div>
-              <p className="italic text-[#1c3454] mb-4">
-                "Una profesional extremadamente competente y proactiva. Ella constantemente aplica innovaciones en su trabajo diario."
-              </p>
-              <p className="text-[#6caddf] font-medium">— Amanda Carvalho</p>
-            </div>
-          </div>
-        </div>
+        <TestimonialsSection
+          title="Opiniones de Clientes"
+          testimonials={testimonials}
+        />
         
-        {/* Contact Section */}
-        <div className="rounded-xl bg-gradient-to-r from-[#1c3454] to-[#264b73] p-6 md:p-8 lg:p-10 text-white">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Escalemos tu Negocio</h2>
-          
-          <p className="text-white/90 mb-6 max-w-3xl">
-            ¿Listo para desbloquear el poder de la IA, la automatización y la estrategia de medios pagos? Construyamos tu próxima campaña de alto rendimiento.
-          </p>
-          
-          <div className="mb-4">
-            <SocialLinks 
-              whatsappText="WhatsApp" 
-              linkedinText="LinkedIn" 
-              emailText="Email" 
-            />
-          </div>
-          
-          <div className="mt-8 md:mt-10">
-            <Link to="/es/contact">
-              <Button className="bg-white hover:bg-gray-100 text-[#1c3454] font-medium group">
-                Contáctame
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </div>
-        </div>
+        <ContactSection
+          title="Escalemos tu Negocio"
+          description="¿Listo para desbloquear el poder de la IA, la automatización y la estrategia de medios pagos? Construyamos tu próxima campaña de alto rendimiento."
+          buttonText="Contáctame"
+          contactPath="/es/contact"
+        />
       </div>
     </div>
   );
