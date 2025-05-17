@@ -1,6 +1,15 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PortfolioItem } from "@/types/automation";
+
+interface PortfolioItem {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  tech?: string;
+  goal?: string;
+  highlight?: string;
+}
 
 interface PortfolioCardProps {
   item: PortfolioItem;

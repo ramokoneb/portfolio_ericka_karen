@@ -4,9 +4,10 @@ export interface PortfolioItem {
   description: string;
   image: string;
   tags: string[];
-  tech: string;
-  goal: string;
-  highlight: string;
+  tech?: string;
+  goal?: string;
+  highlight?: string;
+  id?: string;
 }
 
 export interface Technology {

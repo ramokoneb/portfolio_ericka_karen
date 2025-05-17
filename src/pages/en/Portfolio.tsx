@@ -10,6 +10,9 @@ interface PortfolioItem {
   description: string;
   image: string;
   tags: string[];
+  tech?: string;
+  goal?: string;
+  highlight?: string;
 }
 
 const automationPortfolioItems: PortfolioItem[] = [
