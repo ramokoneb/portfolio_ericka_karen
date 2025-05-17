@@ -7,8 +7,9 @@ export const navigationContent = {
     about: "About",
     contact: "Contact",
     services: "Services",
-    cases: "Cases",
-    portfolio: "Portfolio"
+    casesPortfolio: "Cases & Portfolio",
+    mediaPaidCases: "Media Buying",
+    automationCases: "Automation, AI & No-Code"
   },
   pt: {
     home: "Início",
@@ -17,8 +18,9 @@ export const navigationContent = {
     about: "Sobre",
     contact: "Contato",
     services: "Serviços",
-    cases: "Casos",
-    portfolio: "Portfólio"
+    casesPortfolio: "Cases & Portfólios",
+    mediaPaidCases: "Mídia Paga",
+    automationCases: "Automação, IA & No-Code"
   },
   es: {
     home: "Inicio",
@@ -27,7 +29,8 @@ export const navigationContent = {
     about: "Sobre",
     contact: "Contacto",
     services: "Servicios",
-    cases: "Casos",
-    portfolio: "Portafolio"
+    casesPortfolio: "Casos & Portafolio",
+    mediaPaidCases: "Medios Pagos",
+    automationCases: "Automatización, IA & No-Code"
   }
 } as const;

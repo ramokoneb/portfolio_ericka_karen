@@ -90,21 +90,21 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                 {navigationContent[language].automation}
               </Link>
               <p className="px-3 pt-4 text-sm font-semibold text-gray-500">
-                {language === "en" ? "Resources" : language === "pt" ? "Recursos" : "Recursos"}
+                {navigationContent[language].casesPortfolio}
               </p>
               <Link 
                 to={`/${language}/cases`} 
                 className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
                 onClick={closeSheet}
               >
-                {navigationContent[language].cases}
+                {navigationContent[language].mediaPaidCases}
               </Link>
               <Link 
                 to={`/${language}/portfolio`} 
                 className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
                 onClick={closeSheet}
               >
-                {navigationContent[language].portfolio}
+                {navigationContent[language].automationCases}
               </Link>
               <Link 
                 to={`/${language}/about`} 
