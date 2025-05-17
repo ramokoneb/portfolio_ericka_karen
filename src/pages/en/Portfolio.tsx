@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import { PortfolioCard } from "@/components/automation/PortfolioCard";
+import { PortfolioSection } from "@/components/media-buying/PortfolioSection";
 import { ContactSection } from "@/components/media-buying/ContactSection";
 
 interface PortfolioItem {
@@ -16,7 +16,7 @@ interface PortfolioItem {
   highlight?: string;
 }
 
-const automationPortfolioItems: PortfolioItem[] = [
+const automationPortfolioItems = [
   {
     id: "whatsapp-automation",
     title: "WhatsApp Automation – +80% of Requests Automated",
@@ -99,20 +99,14 @@ const Portfolio = () => {
           Innovative projects combining intelligent automation, AI and no-code solutions to transform businesses.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {automationPortfolioItems.map((item) => (
-            <PortfolioCard key={item.id} item={item} />
-          ))}
-        </div>
+        <PortfolioSection items={automationPortfolioItems} />
         
-        <div className="mt-16">
-          <ContactSection
-            title="Let's Scale Your Business"
-            description="Ready to unlock the power of AI, automation, and paid media strategy? Let's build your next high-performing campaign."
-            buttonText="Contact Me"
-            contactPath="/en/contact"
-          />
-        </div>
+        <ContactSection
+          title="Let's Scale Your Business"
+          description="Ready to unlock the power of AI, automation, and paid media strategy? Let's build your next high-performing campaign."
+          buttonText="Contact Me"
+          contactPath="/en/contact"
+        />
       </div>
     </div>
   );
