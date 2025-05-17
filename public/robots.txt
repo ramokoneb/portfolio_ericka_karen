@@ -37,9 +37,9 @@ Allow: /es/about
 Allow: /en/contact
 Allow: /pt/contact
 Allow: /es/contact
-Allow: /en/portfolio/automation-ai
-Allow: /pt/portfolio/automation-ai
-Allow: /es/portfolio/automation-ai
 Allow: /en/cases/media-buying
 Allow: /pt/cases/media-buying
 Allow: /es/cases/media-buying
+Allow: /en/portfolio/automation-ai
+Allow: /pt/portfolio/automation-ai
+Allow: /es/portfolio/automation-ai

@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -14,75 +15,42 @@ import {
 } from "lucide-react";
 import { ServiceCard } from "@/components/media-buying/ServiceCard";
 import { TechnologyCard } from "@/components/media-buying/TechnologyCard";
-import { PortfolioCard } from "@/components/media-buying/PortfolioCard";
 import { HeroSection } from "@/components/media-buying/HeroSection";
 
 const mainServices = [{
   icon: BrainCircuit,
-  title: "Intelligence & Business Strategy",
-  description: "Development of media strategies aligned with business objectives, focused on scalable and sustainable results."
+  title: "Inteligencia & Estrategia de Negocio",
+  description: "Desarrollo de estrategias de medios alineadas con objetivos de negocio, enfocadas en resultados escalables y sostenibles."
 }, {
-  icon: Target,
-  title: "Advanced Media Planning",
-  description: "Strategic planning of paid campaigns with focus on qualified traffic, conversion optimization and positive ROI."
+  icon: Link2,
+  title: "Planificación Avanzada de Medios",
+  description: "Planificación estratégica de campañas pagas con enfoque en tráfico calificado, optimización de conversión y ROI positivo."
 }, {
   icon: Database,
-  title: "Advanced Tracking & Analytics",
-  description: "Implementation of advanced tracking solutions, conversion API integration and data-driven optimization systems."
+  title: "Seguimiento & Análisis Avanzado",
+  description: "Implementación de soluciones avanzadas de tracking, integración de API de conversión y sistemas de optimización basados en datos."
 }, {
-  icon: BrainCircuit,
-  title: "Applied Artificial Intelligence",
-  description: "Using AI to optimize campaign delivery, targeting, dynamic creatives and predict behavior patterns."
+  icon: Smartphone,
+  title: "Inteligencia Artificial Aplicada",
+  description: "Uso de IA para optimizar entrega de campañas, segmentación, creativos dinámicos y predecir patrones de comportamiento."
 }];
 
 const technologies = [{
-  category: "Technologies & Tools 🎯",
+  category: "Tecnologías & Herramientas 🎯",
   tools: ["Meta Ads Manager", "Google Ads", "TikTok Ads Manager", "Pinterest Ads", "LinkedIn Ads", "Google Merchant Center"],
-  icon: Target
+  icon: Link2
 }, {
-  category: "Technologies & Tools 📊",
+  category: "Tecnologías & Herramientas 📊",
   tools: ["Google Analytics (GA4)", "Google Tag Manager", "Meta Pixel & Conversion API (CAPI)", "Meta Events Manager", "Hotjar", "Looker Studio / Data Studio", "Supermetrics", "UTMs, ctwaclid, fbclid, gclid"],
-  icon: LineChart
+  icon: Code
 }, {
-  category: "Technologies & Tools ⚙️",
+  category: "Tecnologías & Herramientas ⚙️",
   tools: ["n8n", "Make (Integromat)", "Zapier", "Evolution API", "Supabase"],
   icon: Settings
 }, {
-  category: "Technologies & Tools 🤖",
+  category: "Tecnologías & Herramientas 🤖",
   tools: ["ChatGPT + Plugins", "Langflow / FlowiseAI", "Relevance AI", "AI Campaign Generators", "Custom LLMs for scoring and optimization"],
   icon: BrainCircuit
-}];
-
-const portfolioItems = [{
-  title: "Febracis Virtual Store — From Crisis to Exponential Growth",
-  description: "After 6 months of losses in paid media, implemented strategic approaches achieving R$77,000 in monthly revenue (267% growth) with 963% ROAS using Meta Ads and Google Ads.",
-  image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
-  tags: ["Meta Ads", "Google Ads", "ROAS", "E-commerce"]
-}, {
-  title: "Urban Effort — From Zero to Breakeven in 3 Months",
-  description: "American hat brand selling only on Amazon created its own sales channel reaching breakeven in under 90 days with +291% revenue growth through strategic campaigns.",
-  image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
-  tags: ["Meta Ads", "Google Ads", "E-commerce"]
-}, {
-  title: "Borogodó Brasil — Revenue Turnaround in 30 Days",
-  description: "After a drastic drop in sales, focused Meta Ads strategies achieved +36% unique visits, +24% sales, +40% revenue and +13% average ticket in just one month.",
-  image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
-  tags: ["Meta Ads", "E-commerce", "Revenue"]
-}, {
-  title: "Vamos — +50% in Sales with Intelligent Acquisition",
-  description: "Heavy vehicle rental company scaled its customer base with targeted geographic and demographic segmentation, achieving +50% sales in a single month.",
-  image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
-  tags: ["Meta Ads", "Lead Gen", "Sales"]
-}, {
-  title: "Intelligent WhatsApp Tracking — +462% in Conversations",
-  description: "Implementation of ctwaclid tracking in Meta Ads campaigns led to +462.16% increase in initiated conversations and 81.34% reduction in cost per message sent in just one week.",
-  image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
-  tags: ["Meta Ads", "WhatsApp", "Tracking"]
-}, {
-  title: "Unileão — 118% Reduction in CPL with Performance Max",
-  description: "Educational institution optimized lead capture with Performance Max campaigns, achieving 118% reduction in cost per lead and positive ROI from the first month.",
-  image: "/lovable-uploads/31fc646a-6cf4-478c-9d76-e389e609a2bb.png",
-  tags: ["Google Ads", "Education", "Performance Max"]
 }];
 
 const MediaBuying = () => {
@@ -96,10 +64,10 @@ const MediaBuying = () => {
         </Link>
 
         <HeroSection 
-          title="Servicios de Medios Pagos y Performance Estratégico"
-          subtitle="Campañas basadas en datos, inteligencia de performance y seguimiento avanzado para escalar tus resultados."
-          description1="Transforma tus inversiones en medios pagos en motores de crecimiento predecibles y escalables. Combino inteligencia estratégica con sistemas de seguimiento avanzados para asegurar que cada campaña genere un impacto medible."
-          description2="Mi enfoque integra estrategia de negocios, datos de performance e inteligencia artificial — entregando campañas que consistentemente alcanzan un ROI positivo."
+          title="🚀 Servicios de Medios Pagos & Performance Estratégica"
+          subtitle="Campañas orientadas por datos, inteligencia de performance y seguimiento avanzado para escalar tus resultados."
+          description1="Transforma tus inversiones en medios pagos en motores de crecimiento predecibles y escalables. Combino inteligencia estratégica con sistemas avanzados de seguimiento para garantizar que cada campaña genere impacto mensurable."
+          description2="Mi enfoque integra estrategia de negocio, datos de performance e inteligencia artificial — entregando campañas que consistentemente alcanzan ROI positivo."
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
@@ -117,12 +85,16 @@ const MediaBuying = () => {
           </div>
         </div>
         
-        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">📁 Portafolio</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {portfolioItems.map((item, index) => (
-              <PortfolioCard key={index} item={item} />
-            ))}
+        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg mb-8">
+          <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">
+            📈 Casos de Éxito
+          </h2>
+          <div className="text-center mb-8">
+            <Link to="/es/cases/media-buying">
+              <Button className="bg-[#6caddf] hover:bg-[#5a9ac8] text-white font-medium">
+                Ver Todos los Estudios de Caso
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
