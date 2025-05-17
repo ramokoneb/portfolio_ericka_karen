@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, Globe, X } from "lucide-react";
 import { navigationContent } from "./translations";
 import type { Language } from "@/hooks/useNavigationLanguage";
+import { motion } from "framer-motion";
 
 interface MobileNavigationProps {
   language: Language;
@@ -53,7 +54,11 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                 <Globe className="h-5 w-5" />
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="p-3 w-[110px] bg-white z-50 rounded-md shadow-lg">
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-3 w-[110px] bg-white z-50 rounded-md shadow-lg"
+                >
                   <Link 
                     to={getPathInLanguage("en")} 
                     className={langLinkClass}
@@ -75,7 +80,7 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                   >
                     ES
                   </Link>
-                </div>
+                </motion.div>
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -110,7 +115,12 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                 </Button>
               </div>
               
-              <div className="flex-1 overflow-auto py-2">
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.1 }}
+                className="flex-1 overflow-auto py-2"
+              >
                 <nav className="flex flex-col">
                   <Link 
                     to={`/${language}`} 
@@ -164,7 +174,7 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                     {navigationContent[language].about}
                   </Link>
                 </nav>
-              </div>
+              </motion.div>
               
               <div className="p-4 border-t border-[#6CAAD9]/20">
                 <Link 

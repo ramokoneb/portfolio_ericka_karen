@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface ResponsiveImageProps {
   src: string;
@@ -7,6 +8,7 @@ interface ResponsiveImageProps {
   className?: string;
   sizes?: string;
   loading?: 'lazy' | 'eager';
+  animate?: boolean;
 }
 
 const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
@@ -14,7 +16,8 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
   alt,
   className = '',
   sizes = '100vw',
-  loading = 'lazy'
+  loading = 'lazy',
+  animate = false
 }) => {
   // Generate multiple image sizes for srcSet
   // This is a simplified version, in a real implementation
@@ -36,16 +39,31 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
     `;
   };
 
-  return (
+  const imageElement = (
     <img
       src={src}
       srcSet={generateSrcSet()}
       sizes={sizes}
       alt={alt}
       loading={loading}
-      className={`w-full h-auto ${className}`}
+      className={`w-full h-auto rounded-md ${className}`}
     />
   );
+
+  if (animate) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="overflow-hidden rounded-md"
+      >
+        {imageElement}
+      </motion.div>
+    );
+  }
+
+  return imageElement;
 };
 
 export default ResponsiveImage;

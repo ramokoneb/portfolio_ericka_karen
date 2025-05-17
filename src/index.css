@@ -27,12 +27,13 @@
     @apply bg-white text-foreground antialiased font-sans;
   }
 
+  /* Typography System */
   h1 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-[#1c3454] leading-tight;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-[#1c3454] leading-tight tracking-tight;
   }
 
   h2 {
-    @apply text-xl md:text-2xl font-bold text-[#1c3454] leading-tight;
+    @apply text-xl md:text-2xl font-bold text-[#1c3454] leading-tight tracking-tight;
   }
 
   h3 {
@@ -56,34 +57,40 @@
     @apply font-medium text-white bg-[#6CAAD9] hover:bg-[#6CAAD9] transition-colors;
   }
 
-  /* Glass card & other reusable styles */
+  /* Card & container styles */
   .glass-card {
-    @apply bg-[#1A3554] backdrop-blur-sm border border-primary-light/20 shadow-sm;
+    @apply bg-white/80 backdrop-blur-sm border border-[#94C1E7]/20 shadow-sm rounded-lg;
   }
 
-  .minimalist-button {
-    @apply bg-primary hover:bg-primary-dark text-white transition-colors duration-200;
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-6 md:py-8 lg:py-12;
   }
 
+  .card-base {
+    @apply bg-white border border-[#94C1E7]/20 shadow-sm hover:shadow-md transition-shadow duration-200 rounded-lg overflow-hidden;
+  }
+  
+  /* Touch-friendly elements */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  /* Responsive spacing helpers */
+  .spacing-y {
+    @apply py-6 md:py-8 lg:py-12;
+  }
+  
+  .spacing-x {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+  
+  /* Section formatting */
   .section-title {
-    @apply text-xl md:text-2xl lg:text-3xl font-semibold text-[#1A3554] mb-3 md:mb-4 leading-tight;
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold text-[#1A3554] mb-3 md:mb-4 leading-tight tracking-tight;
   }
 
   .section-subtitle {
     @apply text-base md:text-lg text-[#6CADDE] mb-6 md:mb-8 leading-relaxed;
-  }
-
-  .card-base {
-    @apply bg-white border border-primary-light/20 shadow-sm hover:shadow-md transition-shadow duration-200;
-  }
-  
-  /* Mobile spacing helpers */
-  .mobile-container {
-    @apply px-4 md:px-6 lg:px-8;
-  }
-  
-  .mobile-section {
-    @apply py-6 md:py-8 lg:py-12;
   }
 
   /* Responsive text classes */
@@ -169,27 +176,6 @@
 
   .interactive-element:hover::after {
     @apply w-full;
-  }
-
-  .touch-target {
-    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
-  }
-
-  /* Image optimizations */
-  .responsive-image {
-    @apply w-full h-auto object-cover;
-  }
-
-  .image-container {
-    @apply relative overflow-hidden rounded-md;
-  }
-
-  .image-container img {
-    @apply transition-transform duration-300;
-  }
-
-  .image-container:hover img {
-    @apply scale-105;
   }
 
   /* Accessibility */
