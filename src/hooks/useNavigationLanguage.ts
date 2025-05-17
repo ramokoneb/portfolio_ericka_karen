@@ -22,18 +22,22 @@ export const useNavigationLanguage = () => {
   const getPathInLanguage = (targetLang: Language) => {
     const path = location.pathname;
     const currentLang = path.startsWith("/pt") ? "pt" : path.startsWith("/es") ? "es" : "en";
-    let newPath = path;
     
-    if (currentLang !== targetLang) {
-      if (path === `/${currentLang}`) {
-        newPath = `/${targetLang}`;
-      } else {
-        const restOfPath = path.substring(3);
-        newPath = `/${targetLang}${restOfPath}`;
-      }
+    // For root paths (just language prefix)
+    if (path === `/${currentLang}`) {
+      return `/${targetLang}`;
     }
     
-    return newPath;
+    // For the new case and portfolio paths with additional segments
+    if (path.includes("/cases/") || path.includes("/portfolio/")) {
+      const segments = path.split('/');
+      segments[1] = targetLang; // Replace language segment
+      return segments.join('/');
+    }
+    
+    // For other paths
+    const restOfPath = path.substring(3); // Remove current language prefix
+    return `/${targetLang}${restOfPath}`;
   };
 
   return { language, getPathInLanguage };

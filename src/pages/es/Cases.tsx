@@ -90,7 +90,7 @@ const Cases = () => {
         </Link>
         
         <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#1c3454]">
-          Estudios de Caso
+          Estudios de Caso de Medios Pagos
         </h1>
         <p className="text-lg md:text-xl mb-8 text-[#6caddf]">
           Resultados reales logrados con enfoques estratégicos y soluciones innovadoras.

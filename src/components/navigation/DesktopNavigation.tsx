@@ -86,7 +86,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
             <NavigationMenuContent>
               <div className="w-[400px] p-4 grid grid-cols-2 gap-3 bg-white">
                 <Link 
-                  to={`/${language}/cases`} 
+                  to={`/${language}/cases/media-buying`} 
                   className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white"
                   onClick={closeCasesPortfolioMenu}
                 >
@@ -100,7 +100,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
                   </p>
                 </Link>
                 <Link 
-                  to={`/${language}/portfolio`} 
+                  to={`/${language}/portfolio/automation-ai`} 
                   className="block p-3 rounded-lg hover:bg-[#6CAAD9] text-[#1A3554] hover:text-white"
                   onClick={closeCasesPortfolioMenu}
                 >

@@ -83,10 +83,10 @@ const Portfolio = () => {
         </Link>
         
         <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#1c3454]">
-          Portfólio
+          Automação, IA & No-Code Portfólio
         </h1>
         <p className="text-lg md:text-xl mb-8 text-[#6caddf]">
-          Uma seleção de projetos mostrando expertise em mídia paga, automação e soluções de IA.
+          Uma seleção de projetos mostrando expertise em automação, IA e soluções No-Code.
         </p>
         
         <Tabs defaultValue="all" className="mb-8" onValueChange={setActiveTab}>

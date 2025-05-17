@@ -92,8 +92,8 @@ const App = () => {
               <Route path="/en/automation-ai" element={<AutomationAIEn />} />
               <Route path="/en/about" element={<AboutEn />} />
               <Route path="/en/contact" element={<ContactEn />} />
-              <Route path="/en/portfolio" element={<PortfolioEn />} />
-              <Route path="/en/cases" element={<CasesEn />} />
+              <Route path="/en/portfolio/automation-ai" element={<PortfolioEn />} />
+              <Route path="/en/cases/media-buying" element={<CasesEn />} />
               
               {/* Rotas em português */}
               <Route path="/pt" element={<IndexPt />} />
@@ -101,8 +101,8 @@ const App = () => {
               <Route path="/pt/automation-ai" element={<AutomationAIPt />} />
               <Route path="/pt/about" element={<AboutPt />} />
               <Route path="/pt/contact" element={<ContactPt />} />
-              <Route path="/pt/portfolio" element={<PortfolioPt />} />
-              <Route path="/pt/cases" element={<CasesPt />} />
+              <Route path="/pt/portfolio/automation-ai" element={<PortfolioPt />} />
+              <Route path="/pt/cases/media-buying" element={<CasesPt />} />
               
               {/* Rotas em espanhol */}
               <Route path="/es" element={<IndexEs />} />
@@ -110,8 +110,16 @@ const App = () => {
               <Route path="/es/automation-ai" element={<AutomationAIEs />} />
               <Route path="/es/about" element={<AboutEs />} />
               <Route path="/es/contact" element={<ContactEs />} />
-              <Route path="/es/portfolio" element={<PortfolioEs />} />
-              <Route path="/es/cases" element={<CasesEs />} />
+              <Route path="/es/portfolio/automation-ai" element={<PortfolioEs />} />
+              <Route path="/es/cases/media-buying" element={<CasesEs />} />
+              
+              {/* Handle old routes for backward compatibility */}
+              <Route path="/en/portfolio" element={<Navigate to="/en/portfolio/automation-ai" replace />} />
+              <Route path="/en/cases" element={<Navigate to="/en/cases/media-buying" replace />} />
+              <Route path="/pt/portfolio" element={<Navigate to="/pt/portfolio/automation-ai" replace />} />
+              <Route path="/pt/cases" element={<Navigate to="/pt/cases/media-buying" replace />} />
+              <Route path="/es/portfolio" element={<Navigate to="/es/portfolio/automation-ai" replace />} />
+              <Route path="/es/cases" element={<Navigate to="/es/cases/media-buying" replace />} />
               
               {/* Página 404 */}
               <Route path="*" element={<NotFound />} />

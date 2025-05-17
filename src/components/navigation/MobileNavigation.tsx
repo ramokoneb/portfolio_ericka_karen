@@ -93,14 +93,14 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                 {navigationContent[language].casesPortfolio}
               </p>
               <Link 
-                to={`/${language}/cases`} 
+                to={`/${language}/cases/media-buying`} 
                 className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
                 onClick={closeSheet}
               >
                 {navigationContent[language].mediaPaidCases}
               </Link>
               <Link 
-                to={`/${language}/portfolio`} 
+                to={`/${language}/portfolio/automation-ai`} 
                 className="p-3 hover:bg-[#6CAAD9] rounded text-[#1A3554] hover:text-white"
                 onClick={closeSheet}
               >
