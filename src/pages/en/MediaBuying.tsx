@@ -139,6 +139,7 @@ const MediaBuying = () => {
           description2="Backed by over 5 years of hands-on experience across Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads, and Pinterest Ads, it combines strategic media planning with advanced tech solutions to drive performance and efficiency."
           ctaText="Let's Work Together"
           contactPath="/en/contact"
+          strategicText="I cater to businesses ready to scale through paid media platforms, deploying solutions that combine human strategy with machine efficiency."
         />
         
         <ServicesSection 

@@ -140,6 +140,7 @@ const MediaBuying = () => {
           description2="Apoiado por mais de 5 anos de experiência prática em Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads e Pinterest Ads, combina planejamento estratégico de mídia com soluções tecnológicas avançadas para impulsionar performance e eficiência."
           ctaText="Vamos Trabalhar Juntos"
           contactPath="/pt/contact"
+          strategicText="Atendo empresas prontas para escalar através de plataformas de mídia paga, implementando soluções que combinam estratégia humana com eficiência de máquina."
         />
         
         <ServicesSection 

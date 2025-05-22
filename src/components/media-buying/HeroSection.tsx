@@ -11,6 +11,7 @@ interface HeroSectionProps {
   description2: string;
   ctaText?: string;
   contactPath?: string;
+  strategicText?: string;
 }
 
 export const HeroSection = ({ 
@@ -19,7 +20,8 @@ export const HeroSection = ({
   description1, 
   description2, 
   ctaText = "Let's Work Together", 
-  contactPath = "/en/contact" 
+  contactPath = "/en/contact",
+  strategicText = "I cater to businesses ready to scale through paid media platforms, deploying solutions that combine human strategy with machine efficiency."
 }: HeroSectionProps) => {
   return (
     <div className="mb-16">
@@ -42,7 +44,7 @@ export const HeroSection = ({
         <div className="flex flex-col justify-center space-y-6">
           <div className="bg-white shadow-md rounded-lg p-6 border border-gray-100">
             <p className="text-[#1c3454] font-medium">
-              I cater to businesses ready to scale through paid media platforms, deploying solutions that combine human strategy with machine efficiency.
+              {strategicText}
             </p>
           </div>
           {contactPath && (

@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
@@ -21,49 +22,71 @@ import { TechnologiesSection } from "@/components/media-buying/TechnologiesSecti
 const mainServices = [{
   icon: BrainCircuit,
   title: "Planificación y Ejecución Estratégica de Medios Pagos",
-  description: "Campañas diseñadas para tráfico calificado, generación de leads y crecimiento de ventas alineados con sus objetivos de negocio únicos."
+  description: "Campañas diseñadas para tráfico calificado, generación de leads y crecimiento de ventas alineados con tus objetivos de negocio únicos."
 }, {
   icon: Database,
   title: "Seguimiento y Análisis Avanzado",
-  description: "Integración perfecta de Google Analytics 4, API de Conversión de Meta, Google Tag Manager y tecnología de seguimiento líder en la industria para garantizar que cada clic sea contabilizado y optimizado."
+  description: "Integración perfecta de Google Analytics 4, API de Conversión de Meta, Google Tag Manager y tecnología de seguimiento líder en la industria para garantizar que cada clic sea contabilizado."
 }, {
   icon: Settings,
   title: "Automatización Impulsada por Tecnología",
-  description: "Usando herramientas no-code como n8n, Make (Integromat) y Zapier, automatizo informes de campaña, alertas y flujos de trabajo, ahorrándole tiempo y aumentando la agilidad."
+  description: "Usando herramientas no-code como n8n, Make (Integromat) y Zapier, automatizo informes de campaña, alertas y flujos de trabajo — ahorrándote tiempo y aumentando la agilidad."
 }, {
   icon: BrainCircuit,
   title: "Optimización Impulsada por IA",
-  description: "Aprovecho herramientas de IA (ChatGPT + Plugins, Langflow, LLMs personalizados) para la generación dinámica de creativos, segmentación de audiencia y gestión predictiva de ofertas, mejorando continuamente el rendimiento de las campañas."
+  description: "Utilizo herramientas de IA (ChatGPT + Plugins, Langflow, LLMs personalizados) para generación dinámica de creativos, segmentación de audiencia y gestión predictiva de pujas."
 }, {
   icon: Link2,
   title: "Gestión de Campañas Multicanal",
-  description: "Gestión integrada de medios pagos en Meta Ads, Google Ads, TikTok, LinkedIn Ads y Pinterest Ads para maximizar el alcance y la conversión."
+  description: "Gestión integrada de medios pagos en Meta Ads, Google Ads, TikTok, LinkedIn Ads y Pinterest Ads para maximizar alcance y conversión."
 }, {
   icon: BarChart2,
   title: "Informes Transparentes",
-  description: "Paneles de rendimiento semanales con información procesable que destacan lo que funciona, lo que se puede mejorar y los próximos pasos claros."
+  description: "Dashboards de rendimiento semanales con insights accionables que destacan lo que está funcionando, lo que puede mejorarse y próximos pasos claros."
+}];
+
+const whyChooseMe = [{
+  icon: TrendingUp,
+  title: "Resultados Probados",
+  description: "He gestionado presupuestos mensuales superiores a $500K con crecimiento constante de 3x-4x en ingresos para clientes."
+}, {
+  icon: Settings,
+  title: "Combinación Única de Habilidades",
+  description: "Mezcla de experiencia en estrategia de marketing y habilidades técnicas que unen medios pagos con automatización e innovación en IA."
+}, {
+  icon: BarChart2,
+  title: "Eficiencia de Costos",
+  description: "Capacidad probada para reducir costo por lead y aumentar retorno sobre inversión usando datos, tecnología y optimización continua."
+}, {
+  icon: MessageSquare,
+  title: "Comunicación Clara",
+  description: "Estilo de comunicación proactivo y colaborativo — siempre sabrás el estado y los insights de tus campañas."
+}, {
+  icon: Settings2,
+  title: "Soluciones Personalizadas",
+  description: "Experiencia atendiendo diversas industrias, adaptando estrategias y stacks tecnológicos para el viaje de crecimiento de cada negocio."
 }];
 
 const benefits = [
   {
-    highlight: "Resultados Comprobados",
-    description: "Gestioné presupuestos mensuales superiores a $500K con un crecimiento constante de 3x-4x en ingresos para clientes."
+    highlight: "Resultados Probados",
+    description: "He gestionado presupuestos mensuales superiores a $500K con crecimiento constante de 3x-4x en ingresos para clientes."
   },
   {
     highlight: "Combinación Única de Habilidades",
-    description: "Mezcla de experiencia en estrategia de marketing y habilidades técnicas que unen los medios pagos con la automatización y la innovación en IA."
+    description: "Mezcla de experiencia en estrategia de marketing y habilidades técnicas que unen medios pagos con automatización e innovación en IA."
   },
   {
     highlight: "Eficiencia de Costos",
-    description: "Capacidad comprobada para reducir el costo por lead y aumentar el retorno de inversión publicitaria utilizando datos, tecnología y optimización continua."
+    description: "Capacidad probada para reducir costo por lead y aumentar retorno sobre inversión usando datos, tecnología y optimización continua."
   },
   {
     highlight: "Comunicación Clara",
-    description: "Estilo de comunicación proactivo y colaborativo — siempre sabrás el estado y las perspectivas de tus campañas."
+    description: "Estilo de comunicación proactivo y colaborativo — siempre sabrás el estado y los insights de tus campañas."
   },
   {
     highlight: "Soluciones Personalizadas",
-    description: "Experiencia sirviendo a diversas industrias, adaptando estrategias y stacks tecnológicos para el viaje de crecimiento de cada negocio."
+    description: "Experiencia atendiendo diversas industrias, adaptando estrategias y stacks tecnológicos para el viaje de crecimiento de cada negocio."
   }
 ];
 
@@ -91,11 +114,11 @@ const technologies = [{
 
 const testimonials = [
   {
-    text: "Ericka Karen es una profesional dedicada con gran experiencia en medios pagos y ventas a través de plataformas de medios, con un enfoque particular en Google.",
+    text: "Ericka Karen es una profesional dedicada con fuerte experiencia en medios pagos y ventas a través de plataformas de medios, con enfoque particular en Google.",
     author: "Henri Tex"
   },
   {
-    text: "Una profesional extremadamente competente y proactiva. Ella constantemente aplica innovaciones en su trabajo diario.",
+    text: "Una profesional extremadamente competente y proactiva. Constantemente aplica innovaciones en su trabajo diario.",
     author: "Amanda Carvalho"
   }
 ];
@@ -111,12 +134,13 @@ const MediaBuying = () => {
         </Link>
 
         <HeroSection
-          title={<>Servicios de Medios Pagos <span className="text-[#6caddf]">Impulsados por Tecnología</span></>}
+          title={<>Servicios de Medios Pagos <span className="text-[#6caddf]">Potenciados por Tecnología</span></>}
           subtitle="Crecimiento Estratégico a través de Datos, IA y Automatización"
-          description1="Aprovechando tecnología de vanguardia, automatización e IA, este marco estratégico de medios pagos transforma inversiones publicitarias en motores de crecimiento escalables y predecibles."
-          description2="Respaldado por más de 5 años de experiencia práctica en Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads y Pinterest Ads, combina planificación estratégica de medios con soluciones tecnológicas avanzadas para impulsar el rendimiento y la eficiencia."
+          description1="Utilizando tecnología de vanguardia, automatización e IA, este framework de estrategia de medios pagos transforma inversiones publicitarias en motores de crecimiento escalables y predecibles."
+          description2="Respaldado por más de 5 años de experiencia práctica en Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads y Pinterest Ads, combina planificación estratégica de medios con soluciones tecnológicas avanzadas para impulsar rendimiento y eficiencia."
           ctaText="Trabajemos Juntos"
           contactPath="/es/contact"
+          strategicText="Atiendo a empresas listas para escalar a través de plataformas de medios pagos, implementando soluciones que combinan estrategia humana con eficiencia de máquina."
         />
         
         <ServicesSection 
@@ -135,13 +159,13 @@ const MediaBuying = () => {
         />
         
         <TestimonialsSection
-          title="Opiniones de Clientes"
+          title="Feedback de Clientes"
           testimonials={testimonials}
         />
         
         <ContactSection
-          title="Escalemos tu Negocio"
-          description="¿Listo para desbloquear el poder de la IA, la automatización y la estrategia de medios pagos? Construyamos tu próxima campaña de alto rendimiento."
+          title="Escalemos Tu Negocio"
+          description="¿Listo para desbloquear el poder de la IA, automatización y estrategia de medios pagos? Construyamos tu próxima campaña de alto rendimiento."
           buttonText="Contáctame"
           contactPath="/es/contact"
         />
