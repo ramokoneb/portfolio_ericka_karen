@@ -10,13 +10,13 @@ const Contact = () => {
       <div className="max-w-4xl mx-auto">
         <Link to="/pt">
           <Button variant="ghost" className="mb-4 md:mb-6 w-full sm:w-auto bg-[#6caddf] text-[#1c3454]">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Início
+            <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para o Início
           </Button>
         </Link>
         
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-50">Entre em Contato</h1>
         <p className="text-base md:text-xl mb-8 text-[#6caddf]">
-          Vamos discutir como podemos trabalhar juntos para alcançar seus objetivos.
+          Vamos discutir como podemos trabalhar juntos para atingir seus objetivos.
         </p>
         
         <Card className="border-none shadow-lg bg-white mb-6 md:mb-8">
@@ -63,7 +63,7 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-[#6caddf]" />
                 </div>
                 <div>
-                  <p className="text-xs md:text-sm font-medium text-gray-500">E-mail</p>
+                  <p className="text-xs md:text-sm font-medium text-gray-500">Email</p>
                   <p className="text-sm md:text-base text-gray-700">contato@zonadeconversao.space</p>
                 </div>
               </a>
@@ -73,7 +73,7 @@ const Contact = () => {
             
         <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg">
           <h2 className="text-lg md:text-xl font-semibold mb-4 text-[#1c3454]">
-            Horário de Atendimento
+            Horário de Funcionamento
           </h2>
           <div className="space-y-2 text-sm md:text-base">
             <p className="flex justify-between">

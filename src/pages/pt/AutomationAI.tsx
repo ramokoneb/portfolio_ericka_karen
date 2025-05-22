@@ -11,7 +11,7 @@ import { ContactSection } from "@/components/media-buying/ContactSection";
 
 const technologies = [
   {
-    category: "Automação & Integração",
+    category: "Automação e Integração",
     tools: ["n8n", "Make (Integromat)", "Zapier"],
     icon: Settings
   }, 
@@ -21,12 +21,12 @@ const technologies = [
     icon: Smartphone
   }, 
   {
-    category: "IA & Lógica Inteligente",
+    category: "IA e Lógica Inteligente",
     tools: ["ChatGPT + Plugins", "FlowiseAI", "Langflow"],
     icon: BrainCircuit
   }, 
   {
-    category: "Dados & Backends",
+    category: "Dados e Backends",
     tools: ["Supabase", "API Rest", "Meta API"],
     icon: Database
   }
@@ -36,12 +36,12 @@ const services = [
   {
     icon: BrainCircuit,
     title: "Automações com IA",
-    description: "Sistemas inteligentes para otimizar workflows, marketing e processos de suporte com inteligência artificial."
+    description: "Sistemas inteligentes para otimizar fluxos de trabalho, marketing e processos de suporte com inteligência artificial."
   }, 
   {
     icon: MessageSquare,
     title: "Automação de WhatsApp",
-    description: "Qualificação de leads e engajamento com clientes via sistemas avançados de mensagens e integrações de API."
+    description: "Qualificação de leads e engajamento com clientes através de sistemas avançados de mensagens e integrações de API."
   }, 
   {
     icon: Link2,
@@ -51,11 +51,11 @@ const services = [
   {
     icon: Code,
     title: "Desenvolvimento No-Code",
-    description: "Crie dashboards e aplicativos com Bubble, FlutterFlow e outras poderosas plataformas no-code."
+    description: "Crie dashboards e aplicações com Bubble, FlutterFlow e outras plataformas no-code poderosas."
   },
   {
     icon: BrainCircuit,
-    title: "Agentes de IA para Dados & Operações",
+    title: "Agentes de IA para Dados e Operações",
     description: "Agentes inteligentes para analisar informações, tomar decisões e executar ações em toda sua stack tecnológica."
   }
 ];
@@ -63,7 +63,7 @@ const services = [
 const benefits = [
   {
     highlight: "80% de automação",
-    description: "no atendimento via WhatsApp"
+    description: "em atendimento via WhatsApp"
   },
   {
     highlight: "65% de aumento",
@@ -104,17 +104,15 @@ const AutomationAI = () => {
           </Button>
         </Link>
         
-        {/* Hero Section */}
         <HeroSection 
           title={<>Especialista em IA & No-Code para Empresas em Crescimento</>}
           subtitle="Revolucionando operações através de automação inteligente e sistemas de IA escaláveis."
-          description1="Seja otimizando operações internas ou escalando interações com clientes, eu projeto soluções personalizadas que aumentam a eficiência e liberam sua equipe para focar no que mais importa — crescimento, estratégia e inovação."
+          description1="Seja otimizando operações internas ou escalando interações com clientes, desenho soluções personalizadas que aumentam a eficiência e liberam sua equipe para focar no que mais importa — crescimento, estratégia e inovação."
           description2="Trabalho com empresas visionárias prontas para escalar através da automação e IA — combinando visão estratégica com sistemas inteligentes que otimizam operações e geram resultados mensuráveis."
         />
         
-        {/* Services Section */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">O que Faço Por Você</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">O Que Faço Por Você</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <ServiceCard 
@@ -127,15 +125,13 @@ const AutomationAI = () => {
           </div>
         </section>
         
-        {/* Why Choose Me Section */}
         <WhyChooseMeSection
           title="Por Que Me Escolher?"
           benefits={benefits}
         />
         
-        {/* Technologies Section */}
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">Tecnologias & Ferramentas que Domino</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">Tecnologias que Domino</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {technologies.map((tech, index) => (
               <TechnologyCard key={index} tech={tech} />
@@ -143,13 +139,11 @@ const AutomationAI = () => {
           </div>
         </section>
         
-        {/* Testimonials Section - Updated to match MediaBuying */}
         <TestimonialsSection
           title="Feedback de Clientes"
           testimonials={testimonials}
         />
         
-        {/* Contact Section - Updated to match MediaBuying */}
         <ContactSection
           title="Vamos Escalar Seu Negócio"
           description="Pronto para desbloquear o poder da IA, automação e estratégia de mídia paga? Vamos construir sua próxima campanha de alta performance."

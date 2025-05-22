@@ -16,7 +16,7 @@ const Contact = () => {
         
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-50">Contáctame</h1>
         <p className="text-base md:text-xl mb-8 text-[#6caddf]">
-          Hablemos sobre cómo podemos trabajar juntos para lograr tus objetivos.
+          Hablemos sobre cómo podemos trabajar juntos para alcanzar tus objetivos.
         </p>
         
         <Card className="border-none shadow-lg bg-white mb-6 md:mb-8">
@@ -63,7 +63,7 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-[#6caddf]" />
                 </div>
                 <div>
-                  <p className="text-xs md:text-sm font-medium text-gray-500">Correo</p>
+                  <p className="text-xs md:text-sm font-medium text-gray-500">Email</p>
                   <p className="text-sm md:text-base text-gray-700">contato@zonadeconversao.space</p>
                 </div>
               </a>
