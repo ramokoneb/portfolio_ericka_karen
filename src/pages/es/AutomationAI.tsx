@@ -110,6 +110,9 @@ const AutomationAI = () => {
           subtitle="Revolucionando operaciones a través de automatización inteligente y sistemas de IA escalables."
           description1="Ya sea que esté optimizando operaciones internas o escalando interacciones con clientes, diseño soluciones personalizadas que aumentan la eficiencia y liberan a su equipo para que se concentre en lo más importante: crecimiento, estrategia e innovación."
           description2="Trabajo con empresas visionarias listas para escalar a través de la automatización e IA — combinando visión estratégica con sistemas inteligentes que optimizan operaciones y generan resultados medibles."
+          ctaText="Trabajemos Juntos"
+          contactPath="/es/contact"
+          strategicText="Atiendo a empresas listas para escalar a través de plataformas de automatización, implementando soluciones que combinan estrategia humana con eficiencia de máquina."
         />
         
         {/* Services Section */}
@@ -143,13 +146,13 @@ const AutomationAI = () => {
           </div>
         </section>
         
-        {/* Testimonials Section - Updated to match MediaBuying */}
+        {/* Testimonials Section */}
         <TestimonialsSection
           title="Feedback de Clientes"
           testimonials={testimonials}
         />
         
-        {/* Contact Section - Updated to match MediaBuying */}
+        {/* Contact Section */}
         <ContactSection
           title="Escalemos tu Negocio"
           description="¿Listo para desbloquear el poder de la IA, la automatización y la estrategia de medios pagos? Construyamos tu próxima campaña de alto rendimiento."

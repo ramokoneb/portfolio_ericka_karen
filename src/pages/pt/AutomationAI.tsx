@@ -109,6 +109,9 @@ const AutomationAI = () => {
           subtitle="Revolucionando operações através de automação inteligente e sistemas de IA escaláveis."
           description1="Seja otimizando operações internas ou escalando interações com clientes, desenho soluções personalizadas que aumentam a eficiência e liberam sua equipe para focar no que mais importa — crescimento, estratégia e inovação."
           description2="Trabalho com empresas visionárias prontas para escalar através da automação e IA — combinando visão estratégica com sistemas inteligentes que otimizam operações e geram resultados mensuráveis."
+          ctaText="Vamos Trabalhar Juntos"
+          contactPath="/pt/contact"
+          strategicText="Atendo empresas prontas para escalar através de plataformas de automação, implementando soluções que combinam estratégia humana com eficiência de máquina."
         />
         
         <section className="mb-16">

@@ -110,6 +110,9 @@ const AutomationAI = () => {
           subtitle="Revolutionizing operations through intelligent automation and scalable AI systems."
           description1="Whether you're optimizing internal operations or scaling customer interactions, I design tailored solutions that boost efficiency and free your team to focus on what matters most — growth, strategy, and innovation."
           description2="I work with forward-thinking companies ready to scale through automation and AI — combining strategic insight with intelligent systems that streamline operations and drive measurable results."
+          ctaText="Let's Work Together"
+          contactPath="/en/contact"
+          strategicText="I cater to businesses ready to scale through automation platforms, deploying solutions that combine human strategy with machine efficiency."
         />
         
         {/* Services Section */}
@@ -143,13 +146,13 @@ const AutomationAI = () => {
           </div>
         </section>
         
-        {/* Testimonials Section - Updated to match MediaBuying */}
+        {/* Testimonials Section */}
         <TestimonialsSection
           title="Client Feedback"
           testimonials={testimonials}
         />
         
-        {/* Contact Section - Updated to match MediaBuying */}
+        {/* Contact Section */}
         <ContactSection
           title="Let's Scale Your Business"
           description="Ready to unlock the power of AI, automation, and paid media strategy? Let's build your next high-performing campaign."
