@@ -26,7 +26,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#6CAAD9",
+          DEFAULT: "#34AEEF",
           dark: "#00275B",
           light: "#94C1E7",
           darker: "#122D4D"
@@ -40,7 +40,7 @@ export default {
           foreground: "#122D4D"
         },
         accent: {
-          DEFAULT: "#6CAAD9",
+          DEFAULT: "#34AEEF",
           foreground: "#00275B"
         },
         card: "hsl(var(--card))",

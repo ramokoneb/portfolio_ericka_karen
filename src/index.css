@@ -15,7 +15,7 @@
     --popover-foreground: #122D4D;
     --border: #94C1E7;
     --input: #94C1E7;
-    --ring: #6CAAD9;
+    --ring: #34AEEF;
     --radius: 0.5rem;
   }
 
@@ -50,11 +50,11 @@
 
   /* Navigation typography */
   .nav-link {
-    @apply text-base font-medium text-[#1A3554] hover:text-[#6CAAD9] transition-colors;
+    @apply text-base font-medium text-[#1A3554] hover:text-[#34AEEF] transition-colors;
   }
 
   .nav-button {
-    @apply font-medium text-white bg-[#6CAAD9] hover:bg-[#6CAAD9] transition-colors;
+    @apply font-medium text-white bg-[#34AEEF] hover:bg-[#34AEEF] transition-colors;
   }
 
   /* Card & container styles */
@@ -171,7 +171,7 @@
   }
 
   .interactive-element::after {
-    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-[#6CAAD9] transition-all duration-300;
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-[#34AEEF] transition-all duration-300;
   }
 
   .interactive-element:hover::after {
@@ -184,6 +184,6 @@
   }
 
   .focus-outline {
-    @apply focus:outline-none focus:ring-2 focus:ring-[#6CAAD9] focus:ring-offset-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-[#34AEEF] focus:ring-offset-2;
   }
 }
