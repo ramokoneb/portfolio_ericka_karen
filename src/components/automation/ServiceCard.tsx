@@ -17,7 +17,7 @@ export const ServiceCard = ({ service }: ServiceCardProps) => {
     >
       <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black h-full rounded-lg overflow-hidden">
         <CardHeader className="px-4 pt-5 pb-2 md:px-6 md:pt-6 md:pb-3">
-          <div className="mb-4 text-[#6CAAD9] touch-target flex justify-start">
+          <div className="mb-4 text-[#34AEEF] touch-target flex justify-start">
             {service.icon}
           </div>
           <CardTitle className="text-lg md:text-xl text-[#1c3454] tracking-tight">{service.title}</CardTitle>

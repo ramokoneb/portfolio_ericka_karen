@@ -26,7 +26,7 @@ export const PortfolioCard = ({ item }: PortfolioCardProps) => {
         <p className="text-base mb-4 text-[#1c3454] opacity-80 leading-relaxed">{item.description}</p>
         <div className="flex flex-wrap gap-2">
           {item.tags.map(tag => (
-            <span key={tag} className="px-2 py-1 bg-[#6CAAD9]/10 rounded-full text-xs font-medium text-[#1c3454]">
+            <span key={tag} className="px-2 py-1 bg-[#34AEEF]/10 rounded-full text-xs font-medium text-[#1c3454]">
               {tag}
             </span>
           ))}

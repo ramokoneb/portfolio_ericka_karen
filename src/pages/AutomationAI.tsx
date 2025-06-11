@@ -92,7 +92,7 @@ const AutomationAI = () => {
           <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-[#1c3454]">📁 Portfolio</h2>
           <div className="text-center mb-8">
             <Link to="/en/portfolio/automation-ai">
-              <Button className="bg-[#6caddf] hover:bg-[#5a9ac8] text-white font-medium">
+              <Button className="bg-[#34AEEF] hover:bg-[#5a9ac8] text-white font-medium">
                 View All Projects
               </Button>
             </Link>

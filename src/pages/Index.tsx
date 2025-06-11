@@ -39,7 +39,7 @@ const Index = () => {
       <div className="absolute top-4 right-4">
         <Button 
           variant="outline" 
-          className="rounded-full bg-[#1A3554] text-white hover:bg-[#6CAAD9] text-xs md:text-sm" 
+          className="rounded-full bg-[#1A3554] text-white hover:bg-[#34AEEF] text-xs md:text-sm" 
           onClick={toggleLanguage}
         >
           {language === "en" ? "PT" : "EN"}
@@ -55,7 +55,7 @@ const Index = () => {
               alt="Ericka Karen"
             />
           </div>
-          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-[#6CAAD9] mb-3 md:mb-6">
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-[#34AEEF] mb-3 md:mb-6">
             {content[language].name}
           </h1>
           <div className="text-sm md:text-base lg:text-xl text-[#1C3454] max-w-2xl mx-auto px-2 md:px-4">
@@ -67,7 +67,7 @@ const Index = () => {
           <Link to="/media-buying" className="w-full md:w-auto">
             <Button 
               size="lg" 
-              className="w-full text-sm md:text-base px-3 py-4 md:px-6 md:py-5 lg:px-8 lg:py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white"
+              className="w-full text-sm md:text-base px-3 py-4 md:px-6 md:py-5 lg:px-8 lg:py-6 bg-[#34AEEF] hover:bg-[#34AEEF] text-white"
             >
               <LineChart className="mr-2 h-4 w-4 md:h-5 md:w-5" />
               {content[language].mediaButton}
@@ -76,7 +76,7 @@ const Index = () => {
           <Link to="/automation-ai" className="w-full md:w-auto">
             <Button 
               size="lg" 
-              className="w-full text-sm md:text-base px-3 py-4 md:px-6 md:py-5 lg:px-8 lg:py-6 bg-[#6CAAD9] hover:bg-[#6CAAD9] text-white"
+              className="w-full text-sm md:text-base px-3 py-4 md:px-6 md:py-5 lg:px-8 lg:py-6 bg-[#34AEEF] hover:bg-[#34AEEF] text-white"
             >
               <Bot className="mr-2 h-4 w-4 md:h-5 md:w-5" />
               {content[language].automationButton}
@@ -85,15 +85,15 @@ const Index = () => {
         </div>
 
         <div className="flex flex-wrap gap-2 md:gap-4 justify-center mt-6 md:mt-12">
-          <Button variant="outline" size="sm" className="bg-white hover:bg-[#6CAAD9] hover:text-white border-[#94C1E7] text-[#1A3554] text-xs md:text-sm lg:text-base px-2 py-1 md:px-3 md:py-2">
+          <Button variant="outline" size="sm" className="bg-white hover:bg-[#34AEEF] hover:text-white border-[#94C1E7] text-[#1A3554] text-xs md:text-sm lg:text-base px-2 py-1 md:px-3 md:py-2">
             <MessageSquare className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" />
             {content[language].whatsapp}
           </Button>
-          <Button variant="outline" size="sm" className="bg-white hover:bg-[#6CAAD9] hover:text-white border-[#94C1E7] text-[#1A3554] text-xs md:text-sm lg:text-base px-2 py-1 md:px-3 md:py-2">
+          <Button variant="outline" size="sm" className="bg-white hover:bg-[#34AEEF] hover:text-white border-[#94C1E7] text-[#1A3554] text-xs md:text-sm lg:text-base px-2 py-1 md:px-3 md:py-2">
             <Linkedin className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" />
             {content[language].linkedin}
           </Button>
-          <Button variant="outline" size="sm" className="bg-white hover:bg-[#6CAAD9] hover:text-white border-[#94C1E7] text-[#1A3554] text-xs md:text-sm lg:text-base px-2 py-1 md:px-3 md:py-2">
+          <Button variant="outline" size="sm" className="bg-white hover:bg-[#34AEEF] hover:text-white border-[#94C1E7] text-[#1A3554] text-xs md:text-sm lg:text-base px-2 py-1 md:px-3 md:py-2">
             <Mail className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" />
             {content[language].email}
           </Button>
