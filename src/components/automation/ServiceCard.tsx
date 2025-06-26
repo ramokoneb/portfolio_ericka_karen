@@ -10,20 +10,20 @@ interface ServiceCardProps {
 export const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
     <motion.div
-      whileHover={{ y: -5 }}
+      whileHover={{ y: -4 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white text-black h-full rounded-lg overflow-hidden">
-        <CardHeader className="px-4 pt-5 pb-2 md:px-6 md:pt-6 md:pb-3">
-          <div className="mb-4 text-[#34AEEF] touch-target flex justify-start">
+      <Card className="border border-[#E2E8F0] shadow-sm hover:shadow-md transition-all duration-300 bg-white h-full">
+        <CardHeader className="px-6 pt-6 pb-4">
+          <div className="mb-4 p-3 bg-[#3182CE]/10 rounded-xl text-[#3182CE] w-fit">
             {service.icon}
           </div>
-          <CardTitle className="text-lg md:text-xl text-[#1c3454] tracking-tight">{service.title}</CardTitle>
+          <CardTitle className="text-xl md:text-2xl text-[#1A202C] font-semibold leading-tight">{service.title}</CardTitle>
         </CardHeader>
-        <CardContent className="px-4 pb-5 md:px-6 md:pb-6">
-          <CardDescription className="text-base text-[#1c3454] opacity-80 leading-relaxed">
+        <CardContent className="px-6 pb-6">
+          <CardDescription className="text-base text-[#4A5568] leading-relaxed">
             {service.description}
           </CardDescription>
         </CardContent>

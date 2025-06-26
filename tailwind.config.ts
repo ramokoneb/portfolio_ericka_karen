@@ -20,39 +20,39 @@ export default {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "#E2E8F0",
+        input: "#E2E8F0",
+        ring: "#3182CE",
+        background: "#FAFBFC",
+        foreground: "#1A202C",
         primary: {
-          DEFAULT: "#34AEEF",
-          dark: "#00275B",
-          light: "#94C1E7",
-          darker: "#122D4D"
+          DEFAULT: "#3182CE",
+          dark: "#2C5282",
+          light: "#63B3ED",
+          darker: "#2A4A6B"
         },
         secondary: {
-          DEFAULT: "#94C1E7",
-          foreground: "#122D4D"
+          DEFAULT: "#E2E8F0",
+          foreground: "#1A202C"
         },
         muted: {
-          DEFAULT: "#94C1E7",
-          foreground: "#122D4D"
+          DEFAULT: "#F7FAFC",
+          foreground: "#4A5568"
         },
         accent: {
-          DEFAULT: "#34AEEF",
-          foreground: "#00275B"
+          DEFAULT: "#3182CE",
+          foreground: "#FFFFFF"
         },
-        card: "hsl(var(--card))",
-        popover: "hsl(var(--popover))",
+        card: "#FFFFFF",
+        popover: "#FFFFFF",
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        lg: '12px',
+        md: '8px',
+        sm: '6px',
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out",

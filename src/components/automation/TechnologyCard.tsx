@@ -8,19 +8,19 @@ interface TechnologyCardProps {
 
 export const TechnologyCard = ({ tech }: TechnologyCardProps) => {
   return (
-    <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
-      <CardHeader className="px-4 pt-5 pb-2 md:px-6 md:pt-6 md:pb-3">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="text-[#34AEEF]">
+    <Card className="border border-[#E2E8F0] shadow-sm hover:shadow-md transition-all duration-300 h-full bg-white">
+      <CardHeader className="px-6 pt-6 pb-4">
+        <div className="flex items-center gap-4 mb-3">
+          <div className="p-3 bg-[#3182CE]/10 rounded-xl text-[#3182CE]">
             {tech.icon}
           </div>
-          <CardTitle className="text-base md:text-lg text-[#1c3454]">{tech.category}</CardTitle>
+          <CardTitle className="text-lg md:text-xl text-[#1A202C] font-semibold">{tech.category}</CardTitle>
         </div>
       </CardHeader>
-      <CardContent className="px-4 pb-5 md:px-6 md:pb-6">
+      <CardContent className="px-6 pb-6">
         <div className="flex flex-wrap gap-2">
           {tech.tools.map(tool => (
-            <span key={tool} className="px-3 py-1.5 bg-[#34AEEF]/10 rounded-full text-sm text-[#1c3454]">
+            <span key={tool} className="px-3 py-2 bg-[#F7FAFC] border border-[#E2E8F0] rounded-lg text-sm text-[#4A5568] font-medium">
               {tool}
             </span>
           ))}

@@ -9,8 +9,8 @@ interface PortfolioCardProps {
 
 export const PortfolioCard = ({ item }: PortfolioCardProps) => {
   return (
-    <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all bg-white h-full">
-      <div className="h-40 md:h-48 overflow-hidden">
+    <Card className="overflow-hidden border border-[#E2E8F0] shadow-sm hover:shadow-md transition-all duration-300 bg-white h-full">
+      <div className="h-48 md:h-56 overflow-hidden bg-[#F7FAFC]">
         <ResponsiveImage 
           src={item.image} 
           alt={item.title} 
@@ -19,14 +19,14 @@ export const PortfolioCard = ({ item }: PortfolioCardProps) => {
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
         />
       </div>
-      <CardHeader className="px-4 pt-4 pb-2 md:px-6 md:pt-5 md:pb-3">
-        <CardTitle className="text-lg text-[#1c3454]">{item.title}</CardTitle>
+      <CardHeader className="px-6 pt-6 pb-4">
+        <CardTitle className="text-xl text-[#1A202C] font-semibold leading-tight">{item.title}</CardTitle>
       </CardHeader>
-      <CardContent className="px-4 pb-5 md:px-6 md:pb-6">
-        <p className="text-base mb-4 text-[#1c3454] opacity-80 leading-relaxed">{item.description}</p>
+      <CardContent className="px-6 pb-6">
+        <p className="text-base mb-6 text-[#4A5568] leading-relaxed">{item.description}</p>
         <div className="flex flex-wrap gap-2">
           {item.tags.map(tag => (
-            <span key={tag} className="px-2 py-1 bg-[#34AEEF]/10 rounded-full text-xs font-medium text-[#1c3454]">
+            <span key={tag} className="px-3 py-2 bg-[#F7FAFC] border border-[#E2E8F0] rounded-lg text-sm font-medium text-[#4A5568]">
               {tag}
             </span>
           ))}
