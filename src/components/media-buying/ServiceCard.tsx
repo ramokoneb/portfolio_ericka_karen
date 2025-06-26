@@ -1,6 +1,5 @@
 
 import { LucideIcon } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -10,18 +9,20 @@ interface ServiceCardProps {
 
 export const ServiceCard = ({ icon: Icon, title, description }: ServiceCardProps) => {
   return (
-    <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-white h-full">
-      <CardHeader className="pb-2">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="h-10 w-10 rounded-full bg-[#6caddf]/10 flex items-center justify-center">
-            <Icon className="h-5 w-5 text-[#6caddf]" />
-          </div>
-          <CardTitle className="text-lg text-[#1c3454]">{title}</CardTitle>
+    <div className="group p-8 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+      <div className="flex items-start space-x-4">
+        <div className="flex-shrink-0 w-12 h-12 bg-[#34AEEF]/10 rounded-xl flex items-center justify-center group-hover:bg-[#34AEEF]/20 transition-colors duration-300">
+          <Icon className="h-6 w-6 text-[#34AEEF]" />
         </div>
-      </CardHeader>
-      <CardContent className="pt-2">
-        <CardDescription className="text-sm text-[#1c3454]/80">{description}</CardDescription>
-      </CardContent>
-    </Card>
+        <div className="flex-1 min-w-0">
+          <h3 className="text-xl font-medium text-gray-900 mb-3 leading-tight">
+            {title}
+          </h3>
+          <p className="text-gray-600 leading-relaxed">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };

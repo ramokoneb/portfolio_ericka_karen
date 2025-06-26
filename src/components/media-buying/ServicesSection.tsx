@@ -19,16 +19,18 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   services 
 }) => {
   return (
-    <div className="mb-16 lg:mb-20">
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">
-        {title}
-      </h2>
+    <section className="max-w-6xl mx-auto mb-20">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+          {title}
+        </h2>
+      </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {services.map((service, index) => (
           <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };

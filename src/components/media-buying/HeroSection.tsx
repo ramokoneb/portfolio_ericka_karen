@@ -24,39 +24,43 @@ export const HeroSection = ({
   strategicText = "I cater to businesses ready to scale through paid media platforms, deploying solutions that combine human strategy with machine efficiency."
 }: HeroSectionProps) => {
   return (
-    <div className="mb-16">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#1c3454]">
-        {title}
-      </h1>
-      <p className="text-xl md:text-2xl mb-6 text-[#6caddf]">
-        {subtitle}
-      </p>
-      
-      <div className="grid md:grid-cols-2 gap-8 mb-8">
-        <div className="bg-[#6caddf]/10 backdrop-blur-sm rounded-xl p-6 border border-[#6caddf]/30">
-          <p className="text-base md:text-lg text-[#1c3454] mb-4">
+    <section className="max-w-4xl mx-auto text-center mb-20">
+      <div className="space-y-8">
+        <div className="space-y-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 leading-tight tracking-tight">
+            {title}
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto">
+            {subtitle}
+          </p>
+        </div>
+        
+        <div className="max-w-3xl mx-auto space-y-6">
+          <p className="text-lg text-gray-700 leading-relaxed">
             {description1}
           </p>
-          <p className="text-base md:text-lg text-[#1c3454]">
+          <p className="text-lg text-gray-700 leading-relaxed">
             {description2}
           </p>
+          <p className="text-base text-gray-600 font-medium bg-gray-50 px-6 py-4 rounded-lg">
+            {strategicText}
+          </p>
         </div>
-        <div className="flex flex-col justify-center space-y-6">
-          <div className="bg-white shadow-md rounded-lg p-6 border border-gray-100">
-            <p className="text-[#1c3454] font-medium">
-              {strategicText}
-            </p>
-          </div>
-          {contactPath && (
-            <Link to={contactPath} className="self-start">
-              <Button className="bg-[#6caddf] hover:bg-[#5a9ac8] text-white font-medium group">
+        
+        {contactPath && (
+          <div className="pt-6">
+            <Link to={contactPath}>
+              <Button 
+                size="lg" 
+                className="bg-[#34AEEF] hover:bg-[#2B9DE5] text-white px-8 py-4 rounded-lg text-lg font-medium shadow-sm hover:shadow-md transition-all duration-200"
+              >
                 {ctaText}
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-          )}
-        </div>
+          </div>
+        )}
       </div>
-    </div>
+    </section>
   );
 };

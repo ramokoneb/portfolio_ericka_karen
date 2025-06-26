@@ -16,24 +16,39 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   testimonials 
 }) => {
   return (
-    <div className="mb-16 lg:mb-20 bg-white rounded-xl shadow-lg p-6 md:p-8 lg:p-10">
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">
-        {title}
-      </h2>
+    <section className="max-w-4xl mx-auto mb-20">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+          {title}
+        </h2>
+      </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-[#f5f7fa] rounded-lg p-5 shadow-sm">
-            <div className="flex items-center mb-3">
-              <span className="text-yellow-500">★★★★★</span>
+          <div key={index} className="group p-8 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div className="flex items-center mb-4">
+              <div className="flex space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="w-4 h-4 bg-yellow-400 rounded-full"></div>
+                ))}
+              </div>
             </div>
-            <p className="italic text-[#1c3454] mb-4">
+            <blockquote className="text-gray-700 leading-relaxed mb-6 text-lg">
               "{testimonial.text}"
-            </p>
-            <p className="text-[#6caddf] font-medium">— {testimonial.author}</p>
+            </blockquote>
+            <div className="flex items-center">
+              <div className="w-10 h-10 bg-[#34AEEF]/10 rounded-full flex items-center justify-center mr-3">
+                <span className="text-[#34AEEF] font-medium text-sm">
+                  {testimonial.author.charAt(0)}
+                </span>
+              </div>
+              <p className="text-gray-900 font-medium">
+                {testimonial.author}
+              </p>
+            </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

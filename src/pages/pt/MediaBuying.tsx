@@ -45,28 +45,6 @@ const mainServices = [{
   description: "Dashboards de desempenho semanais com insights acionáveis que destacam o que está funcionando, o que pode ser melhorado e próximos passos claros."
 }];
 
-const whyChooseMe = [{
-  icon: TrendingUp,
-  title: "Resultados Comprovados",
-  description: "Gerenciei orçamentos mensais superiores a $500K com crescimento consistente de 3x-4x em receita para clientes."
-}, {
-  icon: Settings,
-  title: "Combinação Única de Habilidades",
-  description: "Mistura de expertise em estratégia de marketing e habilidades técnicas que unem mídia paga com automação e inovação em IA."
-}, {
-  icon: BarChart2,
-  title: "Eficiência de Custo",
-  description: "Capacidade comprovada de reduzir custo por lead e aumentar retorno sobre investimento em anúncios usando dados, tecnologia e otimização contínua."
-}, {
-  icon: MessageSquare,
-  title: "Comunicação Clara",
-  description: "Estilo de comunicação proativo e colaborativo — você sempre saberá o status e os insights das suas campanhas."
-}, {
-  icon: Settings2,
-  title: "Soluções Personalizadas",
-  description: "Experiência atendendo diversas indústrias, adaptando estratégias e stacks tecnológicos para a jornada de crescimento de cada negócio."
-}];
-
 const benefits = [
   {
     highlight: "Resultados Comprovados",
@@ -125,16 +103,16 @@ const testimonials = [
 
 const MediaBuying = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-6 py-8">
         <Link to="/pt">
-          <Button variant="ghost" className="mb-6 bg-[#6caddf]/10 text-[#1c3454] hover:bg-[#6caddf]/20 transition-colors">
+          <Button variant="ghost" className="mb-8 text-gray-600 hover:text-gray-900 hover:bg-gray-50">
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Início
           </Button>
         </Link>
 
         <HeroSection
-          title={<>Serviços de Mídia Paga <span className="text-[#6caddf]">Potencializados por Tecnologia</span></>}
+          title={<>Serviços de Mídia Paga <span className="text-[#34AEEF]">Potencializados por Tecnologia</span></>}
           subtitle="Crescimento Estratégico através de Dados, IA e Automação"
           description1="Utilizando tecnologia de ponta, automação e IA, este framework de estratégia de mídia paga transforma investimentos em publicidade em motores de crescimento escaláveis e previsíveis."
           description2="Apoiado por mais de 5 anos de experiência prática em Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads e Pinterest Ads, combina planejamento estratégico de mídia com soluções tecnológicas avançadas para impulsionar performance e eficiência."
