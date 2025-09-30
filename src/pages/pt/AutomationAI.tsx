@@ -96,16 +96,16 @@ const testimonials = [
 
 const AutomationAI = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 py-8">
+    <div className="min-h-screen w-full relative">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12 relative z-10">
         <Link to="/pt">
-          <Button variant="ghost" className="mb-6 bg-white/20 hover:bg-white/30 text-[#1c3454]">
+          <Button variant="ghost" className="mb-6 hover:bg-white/10">
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Início
           </Button>
         </Link>
         
         <HeroSection 
-          title={<>Especialista em IA & No-Code para Empresas em Crescimento</>}
+          title={<>Especialista em <span className="text-primary-dark">IA & No-Code</span> para Empresas em Crescimento</>}
           subtitle="Revolucionando operações através de automação inteligente e sistemas de IA escaláveis."
           description1="Seja otimizando operações internas ou escalando interações com clientes, desenho soluções personalizadas que aumentam a eficiência e liberam sua equipe para focar no que mais importa — crescimento, estratégia e inovação."
           description2="Trabalho com empresas visionárias prontas para escalar através da automação e IA — combinando visão estratégica com sistemas inteligentes que otimizam operações e geram resultados mensuráveis."
@@ -115,7 +115,7 @@ const AutomationAI = () => {
         />
         
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">O Que Faço Por Você</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-darker mb-8 text-center">O Que Faço Por Você</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <ServiceCard 
@@ -134,7 +134,7 @@ const AutomationAI = () => {
         />
         
         <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#1c3454]">Tecnologias que Domino</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-darker mb-8 text-center">Tecnologias que Domino</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {technologies.map((tech, index) => (
               <TechnologyCard key={index} tech={tech} />

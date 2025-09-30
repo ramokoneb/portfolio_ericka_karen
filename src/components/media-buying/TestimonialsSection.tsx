@@ -16,16 +16,16 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   testimonials 
 }) => {
   return (
-    <section className="max-w-5xl mx-auto mb-20">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary-darker mb-4">
+    <section className="max-w-5xl mx-auto mb-16">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-primary-darker">
           {title}
         </h2>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="glass-card p-6 md:p-8 transition-all duration-300 hover:translate-x-[-2px] hover:translate-y-[-2px]">
+          <div key={index} className="glass-card p-6 md:p-8">
             <div className="flex items-center mb-4">
               <div className="flex space-x-1">
                 {[...Array(5)].map((_, i) => (

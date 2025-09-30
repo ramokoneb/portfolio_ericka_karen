@@ -21,37 +21,34 @@ export const HeroSection = ({
   children 
 }: HeroSectionProps) => {
   return (
-    <section className="text-center space-y-8 mb-16 md:mb-20">
-      <div className="space-y-6">
+    <section className="mb-12 md:mb-16">
+      <div className="glass-card p-8 md:p-12 space-y-6">
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#1A202C] tracking-tight leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-darker leading-tight tracking-tight">
             {title}
           </h1>
           {subtitle && (
-            <p className="text-xl md:text-2xl text-[#3182CE] font-medium">
+            <p className="text-xl md:text-2xl text-primary-dark font-bold">
               {subtitle}
             </p>
           )}
         </div>
-        <p className="text-lg md:text-xl text-[#4A5568] leading-relaxed max-w-4xl mx-auto">
+        <p className="text-base md:text-lg text-primary-darker leading-relaxed">
           {description}
         </p>
+      
+        {ctaText && ctaLink && (
+          <div className="pt-2">
+            <Link to={ctaLink}>
+              <Button size="lg" className="w-full md:w-auto">
+                {ctaText}
+              </Button>
+            </Link>
+          </div>
+        )}
+      
+        {children}
       </div>
-      
-      {ctaText && ctaLink && (
-        <div className="pt-4">
-          <Link to={ctaLink}>
-            <Button 
-              size="lg" 
-              className="text-lg px-8 py-4 h-auto rounded-xl font-medium"
-            >
-              {ctaText}
-            </Button>
-          </Link>
-        </div>
-      )}
-      
-      {children}
     </section>
   );
 };

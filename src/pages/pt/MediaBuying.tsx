@@ -103,16 +103,16 @@ const testimonials = [
 
 const MediaBuying = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-6 py-8">
+    <div className="min-h-screen w-full relative">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12 relative z-10">
         <Link to="/pt">
-          <Button variant="ghost" className="mb-8 text-gray-600 hover:text-gray-900 hover:bg-gray-50">
+          <Button variant="ghost" className="mb-6 hover:bg-white/10">
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Início
           </Button>
         </Link>
 
         <HeroSection
-          title={<>Serviços de Mídia Paga <span className="text-[#34AEEF]">Potencializados por Tecnologia</span></>}
+          title={<>Serviços de <span className="text-primary-dark">Mídia Paga</span> Potencializados por Tecnologia</>}
           subtitle="Crescimento Estratégico através de Dados, IA e Automação"
           description1="Utilizando tecnologia de ponta, automação e IA, este framework de estratégia de mídia paga transforma investimentos em publicidade em motores de crescimento escaláveis e previsíveis."
           description2="Apoiado por mais de 5 anos de experiência prática em Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads e Pinterest Ads, combina planejamento estratégico de mídia com soluções tecnológicas avançadas para impulsionar performance e eficiência."
