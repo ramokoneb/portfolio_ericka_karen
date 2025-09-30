@@ -12,12 +12,12 @@ interface TechnologyCardProps {
 
 export const TechnologyCard: React.FC<TechnologyCardProps> = ({ tech }) => {
   return (
-    <div className="group p-8 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+    <div className="glass-card p-6 md:p-8 transition-all duration-300 hover:translate-x-[-2px] hover:translate-y-[-2px]">
       <div className="flex items-center space-x-4 mb-6">
-        <div className="w-12 h-12 bg-[#34AEEF]/10 rounded-xl flex items-center justify-center group-hover:bg-[#34AEEF]/20 transition-colors duration-300">
-          <tech.icon className="h-6 w-6 text-[#34AEEF]" />
+        <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
+          <tech.icon className="h-6 w-6 text-primary-dark" />
         </div>
-        <h3 className="text-xl font-medium text-gray-900">
+        <h3 className="text-xl font-bold text-primary-darker">
           {tech.category}
         </h3>
       </div>
@@ -26,7 +26,7 @@ export const TechnologyCard: React.FC<TechnologyCardProps> = ({ tech }) => {
         {tech.tools.map((tool, index) => (
           <span 
             key={index} 
-            className="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-100 hover:bg-gray-100 transition-colors duration-200"
+            className="px-3 py-2 bg-primary/5 text-primary-darker rounded-full text-sm font-medium border-2 border-primary/20"
           >
             {tool}
           </span>

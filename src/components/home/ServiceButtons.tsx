@@ -12,25 +12,26 @@ interface ServiceButtonsProps {
 
 const ServiceButtons = ({ basePath, mediaButtonText, automationButtonText }: ServiceButtonsProps) => {
   return (
-    <div className="flex flex-col gap-4 md:flex-row md:gap-6 justify-center max-w-2xl mx-auto">
-      <Link to={`${basePath}/media-buying`} className="w-full">
+    <div className="flex flex-col gap-4 md:flex-row md:gap-6 justify-center">
+      <Link to={`${basePath}/media-buying`} className="flex-1">
         <Button 
           size="lg" 
-          className="w-full min-h-[56px] md:min-h-[64px] text-base md:text-lg px-8 py-4 bg-[#3182CE] hover:bg-[#2C5282] text-white flex items-center justify-center whitespace-normal text-center rounded-xl shadow-sm transition-all duration-200 hover:shadow-md font-medium"
+          className="w-full flex items-center justify-center gap-2 whitespace-normal text-center"
           aria-label="Media Buying Services"
         >
-          <LineChart className="shrink-0 mr-3 h-5 w-5 md:h-6 md:w-6" aria-hidden="true" />
-          {mediaButtonText}
+          <LineChart className="shrink-0 h-5 w-5 md:h-6 md:w-6" aria-hidden="true" />
+          <span className="text-sm md:text-base">{mediaButtonText}</span>
         </Button>
       </Link>
-      <Link to={`${basePath}/automation-ai`} className="w-full">
+      <Link to={`${basePath}/automation-ai`} className="flex-1">
         <Button 
+          variant="outline"
           size="lg" 
-          className="w-full min-h-[56px] md:min-h-[64px] text-base md:text-lg px-8 py-4 bg-white hover:bg-[#3182CE] text-[#3182CE] hover:text-white border border-[#3182CE] flex items-center justify-center whitespace-normal text-center rounded-xl shadow-sm transition-all duration-200 hover:shadow-md font-medium"
+          className="w-full flex items-center justify-center gap-2 whitespace-normal text-center"
           aria-label="Automation and AI Services"
         >
-          <Bot className="shrink-0 mr-3 h-5 w-5 md:h-6 md:w-6" aria-hidden="true" />
-          {automationButtonText}
+          <Bot className="shrink-0 h-5 w-5 md:h-6 md:w-6" aria-hidden="true" />
+          <span className="text-sm md:text-base">{automationButtonText}</span>
         </Button>
       </Link>
     </div>
