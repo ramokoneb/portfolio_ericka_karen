@@ -7,16 +7,19 @@
 
 @layer base {
   :root {
-    --background: #FAFBFC;
-    --foreground: #1A202C;
-    --card: #FFFFFF;
-    --card-foreground: #1A202C;
-    --popover: #FFFFFF;
-    --popover-foreground: #1A202C;
-    --border: #E2E8F0;
-    --input: #E2E8F0;
-    --ring: #3182CE;
-    --radius: 12px;
+    --background: 199 89% 74%;
+    --foreground: 214 100% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 214 100% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 100% 20%;
+    --primary: 199 89% 74%;
+    --primary-dark: 217 92% 45%;
+    --primary-darker: 214 100% 20%;
+    --border: 217 92% 45%;
+    --input: 217 92% 45%;
+    --ring: 217 92% 45%;
+    --radius: 24px;
   }
 
   * {
@@ -24,38 +27,94 @@
   }
 
   body {
-    @apply bg-[#FAFBFC] text-[#1A202C] antialiased font-sans;
+    @apply antialiased font-sans;
     font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(199 89% 80%) 100%);
+    background-attachment: fixed;
+    color: hsl(var(--foreground));
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(0deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(45deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 100px 100px;
+    z-index: 0;
+    pointer-events: none;
   }
 
   /* Typography System */
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1A202C] leading-tight tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight;
+    color: hsl(var(--primary-darker));
   }
 
   h2 {
-    @apply text-2xl md:text-3xl font-semibold text-[#1A202C] leading-tight tracking-tight;
+    @apply text-2xl md:text-3xl font-bold leading-tight tracking-tight;
+    color: hsl(var(--primary-darker));
   }
 
   h3 {
-    @apply text-xl md:text-2xl font-medium text-[#1A202C] leading-tight;
+    @apply text-xl md:text-2xl font-bold leading-tight;
+    color: hsl(var(--primary-darker));
   }
 
   h4 {
-    @apply text-lg md:text-xl font-medium text-[#1A202C] leading-tight;
+    @apply text-lg md:text-xl font-semibold leading-tight;
+    color: hsl(var(--primary-darker));
   }
 
   p {
-    @apply text-base leading-relaxed text-[#4A5568];
+    @apply text-base md:text-lg leading-relaxed;
+    color: hsl(var(--primary-darker));
   }
 
   /* Card styles */
   .glass-card {
-    @apply bg-white/95 backdrop-blur-sm border border-[#E2E8F0] shadow-sm rounded-xl;
+    background: hsl(var(--card));
+    border: 3px solid hsl(var(--primary-dark));
+    border-radius: var(--radius);
+    box-shadow: 
+      6px 6px 0 hsl(var(--primary-dark)),
+      0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .glass-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 
+      8px 8px 0 hsl(var(--primary-dark)),
+      0 15px 40px rgba(0, 0, 0, 0.15);
   }
 
   .minimal-card {
-    @apply bg-white border border-[#E2E8F0] shadow-sm hover:shadow-md transition-all duration-300 rounded-xl overflow-hidden;
+    background: hsl(var(--card));
+    border: 3px solid hsl(var(--primary-dark));
+    border-radius: var(--radius);
+    box-shadow: 
+      4px 4px 0 hsl(var(--primary-dark)),
+      0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  .minimal-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 
+      6px 6px 0 hsl(var(--primary-dark)),
+      0 10px 30px rgba(0, 0, 0, 0.12);
   }
   
   /* Touch-friendly elements */
@@ -65,20 +124,57 @@
 
   /* Section formatting */
   .section-title {
-    @apply text-2xl md:text-3xl font-semibold text-[#1A202C] mb-4 leading-tight tracking-tight;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight tracking-tight;
+    color: hsl(var(--primary-darker));
   }
 
   .section-subtitle {
-    @apply text-lg md:text-xl text-[#4A5568] mb-8 leading-relaxed;
+    @apply text-lg md:text-xl leading-relaxed mb-8;
+    color: hsl(var(--primary-darker));
   }
 
   /* Buttons */
   .btn-primary {
-    @apply bg-[#3182CE] text-white hover:bg-[#2C5282] transition-colors duration-200 rounded-lg px-6 py-3 font-medium;
+    background: hsl(var(--primary-dark));
+    color: white;
+    border: 3px solid hsl(var(--primary-darker));
+    border-radius: 999px;
+    padding: 0.875rem 2rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    box-shadow: 
+      4px 4px 0 hsl(var(--primary-darker)),
+      0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .btn-primary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 
+      6px 6px 0 hsl(var(--primary-darker)),
+      0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
   .btn-secondary {
-    @apply bg-white text-[#3182CE] border border-[#3182CE] hover:bg-[#3182CE] hover:text-white transition-colors duration-200 rounded-lg px-6 py-3 font-medium;
+    background: white;
+    color: hsl(var(--primary-dark));
+    border: 3px solid hsl(var(--primary-dark));
+    border-radius: 999px;
+    padding: 0.875rem 2rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    box-shadow: 
+      4px 4px 0 hsl(var(--primary-dark)),
+      0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 
+      6px 6px 0 hsl(var(--primary-dark)),
+      0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
   /* Interactive elements */
@@ -100,6 +196,14 @@
   }
 
   .focus-outline {
-    @apply focus:outline-none focus:ring-2 focus:ring-[#3182CE] focus:ring-offset-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    ring-color: hsl(var(--primary-dark));
+  }
+
+  /* Profile image styling */
+  .profile-image {
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   }
 }

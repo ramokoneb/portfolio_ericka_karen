@@ -20,39 +20,40 @@ export default {
     },
     extend: {
       colors: {
-        border: "#E2E8F0",
-        input: "#E2E8F0",
-        ring: "#3182CE",
-        background: "#FAFBFC",
-        foreground: "#1A202C",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#3182CE",
-          dark: "#2C5282",
-          light: "#63B3ED",
-          darker: "#2A4A6B"
+          DEFAULT: "hsl(var(--primary))",
+          dark: "hsl(var(--primary-dark))",
+          darker: "hsl(var(--primary-darker))",
         },
         secondary: {
-          DEFAULT: "#E2E8F0",
-          foreground: "#1A202C"
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--foreground))"
         },
         muted: {
-          DEFAULT: "#F7FAFC",
-          foreground: "#4A5568"
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--foreground))"
         },
         accent: {
-          DEFAULT: "#3182CE",
+          DEFAULT: "hsl(var(--primary-dark))",
           foreground: "#FFFFFF"
         },
-        card: "#FFFFFF",
-        popover: "#FFFFFF",
+        card: "hsl(var(--card))",
+        "card-foreground": "hsl(var(--card-foreground))",
+        popover: "hsl(var(--popover))",
+        "popover-foreground": "hsl(var(--popover-foreground))",
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
       borderRadius: {
-        lg: '12px',
-        md: '8px',
-        sm: '6px',
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 4px)',
+        sm: 'calc(var(--radius) - 8px)',
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out",

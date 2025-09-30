@@ -6,22 +6,25 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3182CE] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-base font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0 relative",
   {
     variants: {
       variant: {
-        default: "bg-[#3182CE] text-white hover:bg-[#2C5282] shadow-sm hover:shadow-md",
-        destructive: "bg-red-500 text-white hover:bg-red-600 shadow-sm",
-        outline: "border border-[#E2E8F0] bg-white hover:bg-[#F7FAFC] text-[#1A202C]",
-        secondary: "bg-[#F7FAFC] text-[#1A202C] hover:bg-[#E2E8F0] shadow-sm",
-        ghost: "hover:bg-[#F7FAFC] hover:text-[#1A202C] text-[#4A5568]",
-        link: "text-[#3182CE] underline-offset-4 hover:underline",
+        default: "bg-primary-dark text-white border-3 border-primary-darker rounded-full shadow-[4px_4px_0_hsl(var(--primary-darker))] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_hsl(var(--primary-darker))]",
+        destructive:
+          "bg-red-500 text-white border-3 border-red-700 rounded-full shadow-[4px_4px_0_rgb(185,28,28)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_rgb(185,28,28)]",
+        outline:
+          "border-3 border-primary-dark bg-white text-primary-dark rounded-full shadow-[4px_4px_0_hsl(var(--primary-dark))] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_hsl(var(--primary-dark))]",
+        secondary:
+          "bg-white text-primary-dark border-3 border-primary rounded-full shadow-[4px_4px_0_hsl(var(--primary))] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_hsl(var(--primary))]",
+        ghost: "hover:bg-white/20 rounded-full",
+        link: "text-primary-darker underline-offset-4 hover:underline font-bold",
       },
       size: {
-        default: "h-10 min-h-[44px] px-4 py-2",
-        sm: "h-9 min-h-[40px] rounded-lg px-3",
-        lg: "h-12 min-h-[48px] rounded-xl px-6",
-        icon: "h-10 w-10 min-h-[44px] min-w-[44px]",
+        default: "h-12 px-6 py-3",
+        sm: "h-10 rounded-full px-4",
+        lg: "h-14 rounded-full px-8 text-lg",
+        icon: "h-12 w-12 rounded-full",
       },
     },
     defaultVariants: {
