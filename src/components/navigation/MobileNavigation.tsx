@@ -34,15 +34,15 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
   }, []);
 
   // Common mobile menu link class
-  const mobileLinkClass = "p-4 hover:bg-[#6CAAD9]/10 rounded-md text-[#1A3554] hover:text-[#6CAAD9] font-medium transition-colors touch-target";
+  const mobileLinkClass = "p-4 hover:bg-primary/10 rounded-md text-primary-darker hover:text-primary-dark font-medium transition-colors touch-target";
   // Common section header class
-  const sectionHeaderClass = "px-3 pt-5 pb-2 text-sm font-semibold text-[#6CAAD9] uppercase tracking-wider";
+  const sectionHeaderClass = "px-3 pt-5 pb-2 text-sm font-semibold text-primary-dark uppercase tracking-wider";
   // Language selector link class
-  const langLinkClass = "block p-3 hover:bg-[#6CAAD9]/10 rounded-md text-[#1A3554] hover:text-[#6CAAD9] font-medium transition-colors touch-target";
+  const langLinkClass = "block p-3 hover:bg-primary/10 rounded-md text-primary-darker hover:text-primary-dark font-medium transition-colors touch-target";
 
   return (
     <div className={`md:hidden flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 ${scrolled ? 'shadow-md' : 'shadow-sm'} transition-shadow duration-300`}>
-      <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9] focus-outline" aria-label="Home">
+      <Link to={`/${language}`} className="text-xl font-bold text-primary-dark focus-outline" aria-label="Home">
         EK
       </Link>
       
@@ -50,7 +50,7 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-[#1A3554] bg-white h-11 w-11 p-0 flex items-center justify-center rounded-full focus-outline touch-target">
+              <NavigationMenuTrigger className="hover:text-primary-dark text-primary-darker bg-white h-11 w-11 p-0 flex items-center justify-center rounded-full focus-outline touch-target">
                 <Globe className="h-5 w-5" />
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -88,17 +88,17 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
         
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
-            <Button size="icon" variant="outline" className="bg-white text-[#1A3554] h-11 w-11 p-0 rounded-full focus-outline touch-target">
+            <Button size="icon" variant="outline" className="bg-white text-primary-darker h-11 w-11 p-0 rounded-full focus-outline touch-target">
               <Menu className="h-5 w-5" />
               <span className="sr-only">Menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[85%] bg-white p-0">
             <div className="flex flex-col h-full">
-              <div className="flex justify-between items-center p-4 border-b border-[#6CAAD9]/20">
+              <div className="flex justify-between items-center p-4 border-b border-primary/20">
                 <Link 
                   to={`/${language}`} 
-                  className="text-xl font-bold text-[#6CAAD9]"
+                  className="text-xl font-bold text-primary-dark"
                   onClick={closeSheet}
                   aria-label="Home"
                 >
@@ -107,7 +107,7 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                 <Button 
                   size="icon" 
                   variant="outline" 
-                  className="bg-white text-[#1A3554] h-10 w-10 p-0 rounded-full"
+                  className="bg-white text-primary-darker h-10 w-10 p-0 rounded-full"
                   onClick={closeSheet}
                   aria-label="Close menu"
                 >
@@ -176,12 +176,12 @@ export const MobileNavigation = ({ language, getPathInLanguage }: MobileNavigati
                 </nav>
               </motion.div>
               
-              <div className="p-4 border-t border-[#6CAAD9]/20">
+              <div className="p-4 border-t border-primary/20">
                 <Link 
                   to={`/${language}/contact`}
                   onClick={closeSheet}
                 >
-                  <Button className="w-full bg-[#6CAAD9] hover:bg-[#5a9bcd] text-white font-medium h-12 focus-outline">
+                  <Button className="w-full bg-primary-dark hover:bg-primary-darker text-white font-medium h-12 focus-outline">
                     {navigationContent[language].contact}
                   </Button>
                 </Link>

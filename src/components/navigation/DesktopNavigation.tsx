@@ -34,15 +34,15 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
   }, []);
 
   // Common navigation link styling class
-  const navLinkClass = "text-base font-medium px-4 py-2 hover:text-[#6CAAD9] text-[#1A3554] transition-colors focus-outline";
+  const navLinkClass = "text-base font-medium px-4 py-2 hover:text-primary-dark text-primary-darker transition-colors focus-outline";
   // Common submenu item styling
-  const subMenuItemClass = "block p-3 rounded-lg hover:bg-[#6CAAD9]/10 text-[#1A3554] hover:text-[#6CAAD9] transition-colors focus-outline";
+  const subMenuItemClass = "block p-3 rounded-lg hover:bg-primary/10 text-primary-darker hover:text-primary-dark transition-colors focus-outline";
   // Common submenu description styling
-  const subMenuDescClass = "text-sm text-[#1A3554] opacity-80 mt-1";
+  const subMenuDescClass = "text-sm text-primary-darker opacity-80 mt-1";
 
   return (
     <div className={`hidden md:flex items-center justify-between p-4 bg-white fixed top-0 left-0 right-0 z-50 ${scrolled ? 'shadow-md' : 'shadow-sm'} transition-shadow duration-300`}>
-      <Link to={`/${language}`} className="text-xl font-bold text-[#6CAAD9] focus-outline" aria-label="Home">
+      <Link to={`/${language}`} className="text-xl font-bold text-primary-dark focus-outline" aria-label="Home">
         ERICKA KAREN
       </Link>
       
@@ -58,7 +58,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
           
           <NavigationMenuItem>
             <NavigationMenuTrigger 
-              className="hover:text-[#6CAAD9] text-base font-medium text-[#1A3554] bg-white transition-colors focus-outline"
+              className="hover:text-primary-dark text-base font-medium text-primary-darker bg-white transition-colors focus-outline"
               onClick={() => setIsServicesMenuOpen(prev => !prev)}
             >
               {navigationContent[language].services}
@@ -99,7 +99,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
           
           <NavigationMenuItem>
             <NavigationMenuTrigger 
-              className="hover:text-[#6CAAD9] text-base font-medium text-[#1A3554] bg-white transition-colors focus-outline"
+              className="hover:text-primary-dark text-base font-medium text-primary-darker bg-white transition-colors focus-outline"
               onClick={() => setIsCasesPortfolioMenuOpen(prev => !prev)}
             >
               {navigationContent[language].casesPortfolio}
@@ -146,9 +146,9 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
             </Link>
           </NavigationMenuItem>
           
-          <NavigationMenuItem>
+           <NavigationMenuItem>
             <Link to={`/${language}/contact`}>
-              <Button className="bg-[#6CAAD9] hover:bg-[#5a9bcd] text-white font-medium focus-outline">
+              <Button className="bg-primary-dark hover:bg-primary-darker text-white font-medium focus-outline">
                 {navigationContent[language].contact}
               </Button>
             </Link>
@@ -159,7 +159,7 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="hover:text-[#6CAAD9] text-base font-medium text-[#1A3554] bg-white transition-colors focus-outline">
+            <NavigationMenuTrigger className="hover:text-primary-dark text-base font-medium text-primary-darker bg-white transition-colors focus-outline">
               <Globe className="mr-2 h-4 w-4" />
               {language.toUpperCase()}
             </NavigationMenuTrigger>
@@ -167,21 +167,21 @@ export const DesktopNavigation = ({ language, getPathInLanguage }: DesktopNaviga
               <div className="p-2 w-[100px] bg-white rounded-lg shadow-lg">
                 <Link 
                   to={getPathInLanguage("en")} 
-                  className="block p-2 hover:bg-[#6CAAD9]/10 rounded-md text-[#1A3554] hover:text-[#6CAAD9] font-medium transition-colors focus-outline"
+                  className="block p-2 hover:bg-primary/10 rounded-md text-primary-darker hover:text-primary-dark font-medium transition-colors focus-outline"
                   aria-label="Switch to English"
                 >
                   EN
                 </Link>
                 <Link 
                   to={getPathInLanguage("pt")} 
-                  className="block p-2 hover:bg-[#6CAAD9]/10 rounded-md text-[#1A3554] hover:text-[#6CAAD9] font-medium transition-colors focus-outline"
+                  className="block p-2 hover:bg-primary/10 rounded-md text-primary-darker hover:text-primary-dark font-medium transition-colors focus-outline"
                   aria-label="Switch to Portuguese"
                 >
                   PT
                 </Link>
                 <Link 
                   to={getPathInLanguage("es")} 
-                  className="block p-2 hover:bg-[#6CAAD9]/10 rounded-md text-[#1A3554] hover:text-[#6CAAD9] font-medium transition-colors focus-outline"
+                  className="block p-2 hover:bg-primary/10 rounded-md text-primary-darker hover:text-primary-dark font-medium transition-colors focus-outline"
                   aria-label="Switch to Spanish"
                 >
                   ES

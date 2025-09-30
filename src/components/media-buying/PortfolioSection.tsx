@@ -16,13 +16,10 @@ export const PortfolioSection = ({
   items
 }: PortfolioSectionProps) => {
   return (
-    <div className="glass-card p-8 rounded-lg shadow-sm bg-gray-50">
-      <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#1A3554] mb-3 md:mb-4">
-        Strategic Case Studies
-      </h2>
-      <div className="grid md:grid-cols-2 gap-8">
+    <div className="mb-16">
+      <div className="grid md:grid-cols-2 gap-6">
         {items.map((item, index) => (
-          <Card key={index} className="card-base overflow-hidden">
+          <Card key={index} className="overflow-hidden">
             <div className="h-48 overflow-hidden">
               <img 
                 src={item.image} 
@@ -31,15 +28,15 @@ export const PortfolioSection = ({
               />
             </div>
             <CardHeader>
-              <CardTitle className="text-primary-darker">{item.title}</CardTitle>
+              <CardTitle>{item.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-primary-dark/80 mb-4">{item.description}</p>
+              <p className="mb-4 leading-relaxed">{item.description}</p>
               <div className="flex flex-wrap gap-2">
                 {item.tags.map(tag => (
                   <span 
                     key={tag} 
-                    className="px-2 py-1 bg-primary-light/10 text-primary-dark rounded-full text-xs font-medium border border-primary-light/20"
+                    className="px-3 py-2 bg-primary/5 border-2 border-primary/20 rounded-full text-sm font-medium"
                   >
                     {tag}
                   </span>

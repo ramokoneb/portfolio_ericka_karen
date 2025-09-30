@@ -53,20 +53,22 @@ const mediaBuyingCases: CaseItem[] = [
 
 const Cases = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen w-full relative">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12 relative z-10">
         <Link to="/pt">
-          <Button variant="ghost" className="mb-6 bg-[#6caddf]/10 text-[#1c3454] hover:bg-[#6caddf]/20 transition-colors">
+          <Button variant="ghost" className="mb-6 hover:bg-white/10">
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Início
           </Button>
         </Link>
         
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#1c3454]">
-          Casos de Sucesso em Mídia Paga
-        </h1>
-        <p className="text-lg md:text-xl mb-8 text-[#6caddf]">
-          Resultados reais alcançados com abordagens estratégicas e soluções inovadoras.
-        </p>
+        <div className="glass-card p-8 md:p-12 mb-8 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-primary-darker">
+            Casos de Sucesso em Mídia Paga
+          </h1>
+          <p className="text-lg md:text-xl text-primary-dark font-bold">
+            Resultados reais alcançados com abordagens estratégicas e soluções inovadoras.
+          </p>
+        </div>
         
         <PortfolioSection items={mediaBuyingCases} />
         
