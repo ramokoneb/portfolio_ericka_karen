@@ -6,20 +6,20 @@ import { ArrowLeft, MessageSquare, Linkedin, Mail } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen p-4 md:p-8 bg-[#1c3454]">
+    <div className="min-h-screen p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
         <Link to="/en">
-          <Button variant="ghost" className="mb-4 md:mb-6 w-full sm:w-auto bg-[#6caddf] text-[#1c3454]">
+          <Button className="mb-4 md:mb-6 w-full sm:w-auto glass-card">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
         
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-50">Contact Me</h1>
-        <p className="text-base md:text-xl mb-8 text-[#6caddf]">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">Contact Me</h1>
+        <p className="text-base md:text-xl mb-8">
           Let's discuss how we can work together to achieve your goals.
         </p>
         
-        <Card className="border-none shadow-lg bg-white mb-6 md:mb-8">
+        <Card className="glass-card mb-6 md:mb-8">
           <CardHeader>
             <CardTitle className="text-xl md:text-2xl text-[#1c3454]">Contact Information</CardTitle>
           </CardHeader>
@@ -71,8 +71,8 @@ const Contact = () => {
           </CardContent>
         </Card>
             
-        <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg">
-          <h2 className="text-lg md:text-xl font-semibold mb-4 text-[#1c3454]">
+        <div className="glass-card p-4 md:p-6">
+          <h2 className="text-lg md:text-xl font-semibold mb-4">
             Office Hours
           </h2>
           <div className="space-y-2 text-sm md:text-base">

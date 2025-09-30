@@ -96,10 +96,10 @@ const testimonials = [
 
 const AutomationAI = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-8">
         <Link to="/es">
-          <Button variant="ghost" className="mb-6 bg-white/20 hover:bg-white/30 text-[#1c3454]">
+          <Button className="mb-6 glass-card">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>
