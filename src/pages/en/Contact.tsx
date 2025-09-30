@@ -59,17 +59,17 @@ const Contact = () => {
                   </div>
                 </a>
                 <a 
-                  href="mailto:contato@zonadeconversao.space" 
+                  href="mailto:letsbuild@nocodeverse.cloud" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center p-4 rounded-xl hover:bg-primary/5 transition-colors border-2 border-primary/20"
                 >
-                  <div className="p-3 bg-primary/10 rounded-xl mr-4">
+                  <div className="p-3 bg-primary/10 rounded-xl mr-4 flex-shrink-0">
                     <Mail className="h-6 w-6 text-primary-dark" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-sm font-medium text-primary-dark mb-1">Email</p>
-                    <p className="text-base text-primary-darker font-bold">contato@zonadeconversao.space</p>
+                    <p className="text-base text-primary-darker font-bold break-all">letsbuild@nocodeverse.cloud</p>
                   </div>
                 </a>
               </div>
