@@ -71,31 +71,31 @@ const automationPortfolioItems: PortfolioItem[] = [
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen w-full relative">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12 relative z-10">
         <Link to="/es">
-          <Button className="mb-6 glass-card">
+          <Button variant="ghost" className="mb-6 hover:bg-white/10">
             <ArrowLeft className="mr-2 h-4 w-4" /> Volver al Inicio
           </Button>
         </Link>
         
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#1c3454]">
-          Portafolio de Automatización & IA
-        </h1>
-        <p className="text-lg md:text-xl mb-8 text-[#6caddf]">
-          Proyectos innovadores combinando automatización inteligente, IA y soluciones no-code para transformar negocios.
-        </p>
+        <div className="glass-card p-8 md:p-12 mb-8 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-primary-darker">
+            Portafolio de Automatización & IA
+          </h1>
+          <p className="text-lg md:text-xl text-primary-dark font-bold">
+            Proyectos innovadores combinando automatización inteligente, IA y soluciones no-code para transformar negocios.
+          </p>
+        </div>
         
         <PortfolioSection items={automationPortfolioItems} />
         
-        <div className="mt-16">
-          <ContactSection
-            title="Escalemos Tu Negocio"
-            description="¿Listo para desbloquear el poder de la IA, automatización y estrategia de medios pagos? Construyamos tu próxima campaña de alto rendimiento."
-            buttonText="Contáctame" 
-            contactPath="/es/contact"
-          />
-        </div>
+        <ContactSection
+          title="Escalemos Tu Negocio"
+          description="¿Listo para desbloquear el poder de la IA, automatización y estrategia de medios pagos? Construyamos tu próxima campaña de alto rendimiento."
+          buttonText="Contáctame" 
+          contactPath="/es/contact"
+        />
       </div>
     </div>
   );
