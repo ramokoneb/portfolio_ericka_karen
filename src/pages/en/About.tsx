@@ -52,49 +52,49 @@ const About = () => {
           </div>
         </div>
 
-        <Card className="bg-white border-[#6CAAD9] mb-6 md:mb-12 shadow-sm">
+        <Card className="mb-6 glass-card">
           <CardHeader>
-            <CardTitle className="text-xl sm:text-2xl text-[#1c3454]">What drives me</CardTitle>
+            <CardTitle className="text-xl sm:text-2xl text-primary-darker">What drives me</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-base sm:text-lg text-[#1c3454]">
+            <p className="text-base sm:text-lg text-primary-darker">
               I believe that the future of performance lies in the union between data, automation, and accessible technology. That's why I develop solutions that connect paid media, automated flows, and intelligent AI agents, optimizing digital operations end-to-end — from lead capture to conversion.
             </p>
           </CardContent>
         </Card>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#1c3454]">My projects</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary-darker">My projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <Card className="bg-white border-[#6CAAD9] shadow-sm">
+            <Card className="glass-card">
               <CardHeader>
-                <CardTitle className="text-[#1c3454]">Zona de Conversão Digital</CardTitle>
+                <CardTitle className="text-primary-darker">Zona de Conversão Digital</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-[#1c3454]">Performance agency specialized in paid media campaigns focused on ROI, scale, and measurable results. Beyond traffic management, it develops technological solutions aimed at the digital marketing market, combining performance, automation, and data intelligence for small and medium businesses.</p>
+                <p className="text-primary-darker">Performance agency specialized in paid media campaigns focused on ROI, scale, and measurable results. Beyond traffic management, it develops technological solutions aimed at the digital marketing market, combining performance, automation, and data intelligence for small and medium businesses.</p>
               </CardContent>
             </Card>
-            <Card className="bg-white border-[#6CAAD9] shadow-sm">
+            <Card className="glass-card">
               <CardHeader>
-                <CardTitle className="text-[#1c3454]">Nocodeverse</CardTitle>
+                <CardTitle className="text-primary-darker">Nocodeverse</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-[#1c3454]">Automation and artificial intelligence laboratory for businesses looking to scale with no-code technology. Creates custom solutions with n8n, Make, Supabase, and applied AI, optimizing processes, customer service, and decision-making across different areas beyond marketing.</p>
+                <p className="text-primary-darker">Automation and artificial intelligence laboratory for businesses looking to scale with no-code technology. Creates custom solutions with n8n, Make, Supabase, and applied AI, optimizing processes, customer service, and decision-making across different areas beyond marketing.</p>
               </CardContent>
             </Card>
           </div>
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#1c3454]">Technical Expertise</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary-darker">Technical Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {expertiseAreas.map((area, index) => (
-              <Card key={index} className="bg-white border-[#6CAAD9] shadow-sm">
+              <Card key={index} className="glass-card">
                 <CardHeader>
-                  <CardTitle className="text-lg sm:text-xl text-[#1c3454]">{area.title}</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl text-primary-darker">{area.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="list-disc pl-6 space-y-2 text-sm sm:text-base text-[#1c3454]">
+                  <ul className="list-disc pl-6 space-y-2 text-sm sm:text-base text-primary-darker">
                     {area.items.map((item, idx) => (
                       <li key={idx}>{item}</li>
                     ))}
@@ -106,11 +106,11 @@ const About = () => {
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#1c3454]">Delivered Results</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary-darker">Delivered Results</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {achievements.map((achievement, index) => (
-              <Card key={index} className="bg-white border-[#6CAAD9] shadow-sm">
-                <CardContent className="pt-6 text-[#1c3454]">
+              <Card key={index} className="glass-card">
+                <CardContent className="pt-6 text-primary-darker">
                   <p className="text-sm sm:text-base">{achievement}</p>
                 </CardContent>
               </Card>
@@ -119,11 +119,11 @@ const About = () => {
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#1c3454]">What I can build with you</h2>
-          <Card className="bg-white border-[#6CAAD9] shadow-sm">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary-darker">What I can build with you</h2>
+          <Card className="glass-card">
             <CardContent className="pt-6">
-              <p className="mb-4 text-[#1c3454]">If you seek predictable, scalable, and intelligent growth, I can help you:</p>
-              <ul className="list-disc pl-6 space-y-2 text-[#1c3454]">
+              <p className="mb-4 text-primary-darker">If you seek predictable, scalable, and intelligent growth, I can help you:</p>
+              <ul className="list-disc pl-6 space-y-2 text-primary-darker">
                 <li>Scale campaigns with a focus on results</li>
                 <li>Automate processes to save time and reduce errors</li>
                 <li>Use artificial intelligence to make better and faster decisions</li>
@@ -134,10 +134,10 @@ const About = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#1c3454]">Let's talk?</h2>
-          <Card className="bg-white border-[#6CAAD9] shadow-sm mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary-darker">Let's talk?</h2>
+          <Card className="glass-card mb-12">
             <CardContent className="pt-6">
-              <p className="text-lg text-[#1c3454]">
+              <p className="text-lg text-primary-darker">
                 I am ready to collaborate with companies, startups, or agencies that see technology and performance as the most direct path to growth. Whether in Portuguese, English, or Spanish — let's take your digital operation to the next level.
               </p>
             </CardContent>

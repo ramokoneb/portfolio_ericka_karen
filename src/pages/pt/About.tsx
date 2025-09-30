@@ -53,7 +53,7 @@ const About = () => {
             </div>
           </div>
 
-          <Card className="mb-6">
+          <Card className="mb-6 glass-card">
             <CardHeader>
               <CardTitle>O que me move</CardTitle>
             </CardHeader>
@@ -67,7 +67,7 @@ const About = () => {
           <section className="mb-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary-darker">Meus projetos</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              <Card>
+              <Card className="glass-card">
                 <CardHeader>
                   <CardTitle>Zona de Conversão Digital</CardTitle>
                 </CardHeader>
@@ -75,7 +75,7 @@ const About = () => {
                   <p className="text-primary-darker">Agência de performance especializada em campanhas de mídia paga com foco em ROI, escala e resultados mensuráveis. Além da gestão de tráfego, desenvolve soluções tecnológicas voltadas para o mercado de marketing digital, combinando performance, automação e inteligência de dados para pequenas e médias empresas.</p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="glass-card">
                 <CardHeader>
                   <CardTitle>Nocodeverse</CardTitle>
                 </CardHeader>
@@ -90,7 +90,7 @@ const About = () => {
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary-darker">Expertise Técnica</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {expertiseAreas.map((area, index) => (
-                <Card key={index}>
+                <Card key={index} className="glass-card">
                   <CardHeader>
                     <CardTitle className="text-lg md:text-xl">{area.title}</CardTitle>
                   </CardHeader>
@@ -110,7 +110,7 @@ const About = () => {
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary-darker">Resultados Entregues</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {achievements.map((achievement, index) => (
-                <Card key={index}>
+                <Card key={index} className="glass-card">
                   <CardContent className="pt-6 text-primary-darker">
                     <p className="text-sm md:text-base">{achievement}</p>
                   </CardContent>
@@ -121,7 +121,7 @@ const About = () => {
 
           <section className="mb-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary-darker">O que posso construir com você</h2>
-            <Card>
+            <Card className="glass-card">
               <CardContent className="pt-6">
                 <p className="mb-4 text-primary-darker">Se você busca crescimento previsível, escalável e inteligente, posso ajudá-lo a:</p>
                 <ul className="list-disc pl-6 space-y-2 text-primary-darker">
@@ -136,7 +136,7 @@ const About = () => {
 
           <section>
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary-darker">Vamos conversar?</h2>
-            <Card>
+            <Card className="glass-card">
               <CardContent className="pt-6">
                 <p className="text-lg text-primary-darker">
                   Estou pronta para colaborar com empresas, startups ou agências que enxergam a tecnologia e a performance como o caminho mais direto para o crescimento. Seja em português, inglês ou espanhol — vamos levar sua operação digital para o próximo nível.

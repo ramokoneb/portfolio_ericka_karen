@@ -52,49 +52,49 @@ const About = () => {
           </div>
         </div>
 
-        <Card className="bg-white border-[#6CAAD9] mb-6 md:mb-12 shadow-sm">
+        <Card className="mb-6 glass-card">
           <CardHeader>
-            <CardTitle className="text-xl sm:text-2xl text-[#1c3454]">Lo que me impulsa</CardTitle>
+            <CardTitle className="text-xl sm:text-2xl text-primary-darker">Lo que me impulsa</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-base sm:text-lg text-[#1c3454]">
+            <p className="text-base sm:text-lg text-primary-darker">
               Creo que el futuro del performance está en la unión entre datos, automatización y tecnología accesible. Por eso desarrollo soluciones que conectan medios pagos, flujos automatizados y agentes inteligentes de IA, optimizando las operaciones digitales de extremo a extremo — desde la captación de leads hasta la conversión.
             </p>
           </CardContent>
         </Card>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#1c3454]">Mis proyectos</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary-darker">Mis proyectos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <Card className="bg-white border-[#6CAAD9] shadow-sm">
+            <Card className="glass-card">
               <CardHeader>
-                <CardTitle className="text-[#1c3454]">Zona de Conversão Digital</CardTitle>
+                <CardTitle className="text-primary-darker">Zona de Conversão Digital</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-[#1c3454]">Agencia de performance especializada en campañas de medios pagos enfocadas en ROI, escala y resultados medibles. Más allá de la gestión de tráfico, desarrolla soluciones tecnológicas dirigidas al mercado de marketing digital, combinando rendimiento, automatización e inteligencia de datos para pequeñas y medianas empresas.</p>
+                <p className="text-primary-darker">Agencia de performance especializada en campañas de medios pagos enfocadas en ROI, escala y resultados medibles. Más allá de la gestión de tráfico, desarrolla soluciones tecnológicas dirigidas al mercado de marketing digital, combinando rendimiento, automatización e inteligencia de datos para pequeñas y medianas empresas.</p>
               </CardContent>
             </Card>
-            <Card className="bg-white border-[#6CAAD9] shadow-sm">
+            <Card className="glass-card">
               <CardHeader>
-                <CardTitle className="text-[#1c3454]">Nocodeverse</CardTitle>
+                <CardTitle className="text-primary-darker">Nocodeverse</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-[#1c3454]">Laboratorio de automatización e inteligencia artificial para empresas que buscan escalar con tecnología no-code. Crea soluciones personalizadas con n8n, Make, Supabase e IA aplicada, optimizando procesos, servicio al cliente y toma de decisiones en diferentes áreas más allá del marketing.</p>
+                <p className="text-primary-darker">Laboratorio de automatización e inteligencia artificial para empresas que buscan escalar con tecnología no-code. Crea soluciones personalizadas con n8n, Make, Supabase e IA aplicada, optimizando procesos, servicio al cliente y toma de decisiones en diferentes áreas más allá del marketing.</p>
               </CardContent>
             </Card>
           </div>
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#1c3454]">Experiencia Técnica</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary-darker">Experiencia Técnica</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {expertiseAreas.map((area, index) => (
-              <Card key={index} className="bg-white border-[#6CAAD9] shadow-sm">
+              <Card key={index} className="glass-card">
                 <CardHeader>
-                  <CardTitle className="text-lg sm:text-xl text-[#1c3454]">{area.title}</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl text-primary-darker">{area.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="list-disc pl-6 space-y-2 text-sm sm:text-base text-[#1c3454]">
+                  <ul className="list-disc pl-6 space-y-2 text-sm sm:text-base text-primary-darker">
                     {area.items.map((item, idx) => (
                       <li key={idx}>{item}</li>
                     ))}
@@ -106,11 +106,11 @@ const About = () => {
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#1c3454]">Resultados Entregados</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary-darker">Resultados Entregados</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {achievements.map((achievement, index) => (
-              <Card key={index} className="bg-white border-[#6CAAD9] shadow-sm">
-                <CardContent className="pt-6 text-[#1c3454]">
+              <Card key={index} className="glass-card">
+                <CardContent className="pt-6 text-primary-darker">
                   <p className="text-sm sm:text-base">{achievement}</p>
                 </CardContent>
               </Card>
@@ -119,11 +119,11 @@ const About = () => {
         </section>
 
         <section className="mb-6 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#1c3454]">Lo que puedo construir contigo</h2>
-          <Card className="bg-white border-[#6CAAD9] shadow-sm">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary-darker">Lo que puedo construir contigo</h2>
+          <Card className="glass-card">
             <CardContent className="pt-6">
-              <p className="mb-4 text-[#1c3454]">Si buscas un crecimiento predecible, escalable e inteligente, puedo ayudarte a:</p>
-              <ul className="list-disc pl-6 space-y-2 text-[#1c3454]">
+              <p className="mb-4 text-primary-darker">Si buscas un crecimiento predecible, escalable e inteligente, puedo ayudarte a:</p>
+              <ul className="list-disc pl-6 space-y-2 text-primary-darker">
                 <li>Escalar campañas con enfoque en resultados</li>
                 <li>Automatizar procesos para ahorrar tiempo y reducir errores</li>
                 <li>Utilizar inteligencia artificial para tomar decisiones mejores y más rápidas</li>
@@ -134,10 +134,10 @@ const About = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-[#1c3454]">¿Hablamos?</h2>
-          <Card className="bg-white border-[#6CAAD9] shadow-sm mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary-darker">¿Hablamos?</h2>
+          <Card className="glass-card mb-12">
             <CardContent className="pt-6">
-              <p className="text-lg text-[#1c3454]">
+              <p className="text-lg text-primary-darker">
                 Estoy lista para colaborar con empresas, startups o agencias que ven la tecnología y el rendimiento como el camino más directo hacia el crecimiento. Ya sea en portugués, inglés o español — llevemos tu operación digital al siguiente nivel.
               </p>
             </CardContent>
